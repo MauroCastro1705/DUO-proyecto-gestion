@@ -19,6 +19,14 @@ config/icon="res://icon.svg"
 
 Global="*res://Code/global.gd"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/script-ide/plugin.cfg")
+
+[global_group]
+
+jugador=""
+
 [input]
 
 salto={
