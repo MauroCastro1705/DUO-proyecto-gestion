@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://dlvgs6jllkkut"]
+
+[ext_resource type="PackedScene" uid="uid://c6k5nnpbypshi" path="res://addons/maaacks_menus_template/base/scenes/menus/main_menu/main_menu.tscn" id="1_q1iss"]
+[ext_resource type="Script" uid="uid://chrpmb5gvr1wa" path="res://Levels/scenes/menus/main_menu/main_menu.gd" id="2_g2ige"]
+[ext_resource type="PackedScene" uid="uid://bdb2fmb6d7tja" path="res://Levels/scenes/menus/options_menu/master_options_menu_with_tabs.tscn" id="3_vogdo"]
+[ext_resource type="PackedScene" uid="uid://dumutc27bjxqb" path="res://Levels/scenes/credits/credits.tscn" id="4_em3mn"]
+
+[node name="MainMenu" instance=ExtResource("1_q1iss")]
+script = ExtResource("2_g2ige")
+options_packed_scene = ExtResource("3_vogdo")
+credits_packed_scene = ExtResource("4_em3mn")
+
+[node name="BackgroundMusicPlayer" parent="." index="1"]
+bus = &"Master"
+
+[node name="TitleLabel" parent="MenuContainer/TitleMargin/TitleContainer" index="0"]
+text = "DUO"
+
+[node name="SubTitleLabel" parent="MenuContainer/SubTitleMargin/SubTitleContainer" index="0"]
+text = "Juego para gestion de proyectos"

@@ -1,0 +1,10 @@
+[gd_scene load_steps=4 format=3 uid="uid://jtqy6bsgix7o"]
+
+[ext_resource type="PackedScene" path="res://addons/maaacks_menus_template/base/scenes/opening/opening.tscn" id="1_c8xn0"]
+[ext_resource type="Script" path="res://Levels/scenes/opening/opening.gd" id="2_gs4g6"]
+[ext_resource type="Texture2D" path="res://Levels/assets/godot_engine_logo/logo_vertical_color_dark.png" id="3_p3erp"]
+
+[node name="Opening" instance=ExtResource("1_c8xn0")]
+script = ExtResource("2_gs4g6")
+next_scene = "res://Levels/scenes/menus/main_menu/main_menu_with_animations.tscn"
+images = Array[Texture2D]([ExtResource("3_p3erp")])

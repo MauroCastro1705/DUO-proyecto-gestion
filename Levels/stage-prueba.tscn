@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cpjkelsqxc364"]
+[gd_scene load_steps=9 format=3 uid="uid://cpjkelsqxc364"]
 
 [ext_resource type="Script" uid="uid://cdiy1lchrrem" path="res://Levels/stage_prueba.gd" id="1_3vi3g"]
 [ext_resource type="PackedScene" uid="uid://tbbpbwsjlk7m" path="res://Levels/piso/floor.tscn" id="1_7o80q"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://bbs86ttvb6dhi" path="res://characters/Gordo.tscn" id="3_0ause"]
 [ext_resource type="PackedScene" uid="uid://ccslrkwy1uquh" path="res://Levels/Objetos/caja_1.tscn" id="5_xh7jf"]
 [ext_resource type="PackedScene" uid="uid://dd78a61wcwfb6" path="res://Levels/Objetos/boton.tscn" id="6_w1alv"]
+[ext_resource type="Script" uid="uid://cyh0d64pfygbl" path="res://addons/maaacks_menus_template/base/scripts/pause_menu_controller.gd" id="7_h4rts"]
+[ext_resource type="PackedScene" uid="uid://ckwusaxwybu4g" path="res://Levels/scenes/overlaid_menus/pause_menu.tscn" id="8_0frsq"]
 
 [node name="Stage-prueba" type="Node2D"]
 script = ExtResource("1_3vi3g")
@@ -58,6 +60,12 @@ offset_bottom = 192.0
 theme_override_font_sizes/font_size = 30
 text = "\"A\" y \"D\" para moverse
 \"espacio\" para saltar
-\"Q\" para cambiar de personaje"
+\"Q\" para cambiar de personaje
+\"esc\" pausa"
+
+[node name="PauseMenuController" type="Node" parent="."]
+script = ExtResource("7_h4rts")
+pause_menu_packed = ExtResource("8_0frsq")
+metadata/_custom_type_script = "uid://cyh0d64pfygbl"
 
 [connection signal="boton_pulsado" from="Boton" to="." method="_on_boton_boton_pulsado"]
