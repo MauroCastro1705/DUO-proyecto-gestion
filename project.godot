@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Juego-Gestion-DUO"
-run/main_scene="uid://3ht2b6g4whk7"
+run/main_scene="uid://cpjkelsqxc364"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
