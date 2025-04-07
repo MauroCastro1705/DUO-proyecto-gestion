@@ -25,3 +25,6 @@ offset_right = 23.0
 offset_bottom = 31.0
 text = "gordo
 "
+
+[node name="Camera2D" type="Camera2D" parent="."]
+enabled = false

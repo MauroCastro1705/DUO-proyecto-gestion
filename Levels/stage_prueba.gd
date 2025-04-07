@@ -6,6 +6,7 @@ var player2: CharacterBody2D
 @onready var posicionPuertaInicial = %puerta.global_position.y
 var posicionPuertaFinal = -102
 var is_moved: bool = false
+
 func _ready() -> void:
 	# Referencias a los personajes
 	player1 = %Gordo
@@ -13,7 +14,9 @@ func _ready() -> void:
 	active_player = player1
 	player1.is_active = true
 	player2.is_active = false  # Inicia desactivado
-	
+		# Activar la cámara del jugador activo
+	player1.get_node("Camera2D").enabled = true
+	player2.get_node("Camera2D").enabled = false
 
 
 func _input(event: InputEvent) -> void:
@@ -29,7 +32,9 @@ func swap_characters() -> void:
 		active_player = player1
 		player1.is_active = true
 		player2.is_active = false
-
+	# Activar la cámara del nuevo personaje activo
+	player1.get_node("Camera2D").enabled = player1.is_active
+	player2.get_node("Camera2D").enabled = player2.is_active
 
 func _on_boton_boton_pulsado() -> void:		
 	if is_moved:

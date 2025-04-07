@@ -6,7 +6,9 @@ extends CharacterBody2D
 var gravity = Global.gravity
 
 var is_active: bool = false  #variable para controlar si se recibe input
-
+func _ready() -> void:
+	pass
+	
 func _process(delta: float) -> void:
 	var direction = Vector2.ZERO
 	if is_active:
