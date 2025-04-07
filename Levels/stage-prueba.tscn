@@ -43,4 +43,21 @@ position = Vector2(615, 570)
 [node name="Boton" parent="." instance=ExtResource("6_w1alv")]
 position = Vector2(881, 615)
 
+[node name="Floor3" parent="." instance=ExtResource("1_7o80q")]
+position = Vector2(1731, 647)
+
+[node name="Floor4" parent="." instance=ExtResource("1_7o80q")]
+position = Vector2(1459, 52)
+rotation = 1.57079
+
+[node name="Label" type="Label" parent="."]
+offset_left = 288.0
+offset_top = 60.0
+offset_right = 734.0
+offset_bottom = 192.0
+theme_override_font_sizes/font_size = 30
+text = "\"A\" y \"D\" para moverse
+\"espacio\" para saltar
+\"Q\" para cambiar de personaje"
+
 [connection signal="boton_pulsado" from="Boton" to="." method="_on_boton_boton_pulsado"]
