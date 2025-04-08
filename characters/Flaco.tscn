@@ -1,11 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://3ht2b6g4whk7"]
+[gd_scene load_steps=4 format=3 uid="uid://3ht2b6g4whk7"]
 
 [ext_resource type="Script" uid="uid://db8l0ggud4ttd" path="res://characters/characters_code/flaco.gd" id="1_b4tiw"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_w2kys"]
-size = Vector2(40, 109)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b4tiw"]
+radius = 19.0
+height = 107.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b4tiw"]
+size = Vector2(32, 39)
 
 [node name="Flaco" type="CharacterBody2D" groups=["jugador"]]
+collision_layer = 3
 script = ExtResource("1_b4tiw")
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -17,7 +22,8 @@ color = Color(0, 0.392631, 0.392631, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 0.5)
-shape = SubResource("RectangleShape2D_w2kys")
+shape = SubResource("CapsuleShape2D_b4tiw")
+debug_color = Color(0.740988, 0.339757, 0.808076, 0.42)
 
 [node name="Label" type="Label" parent="."]
 offset_left = -21.0
@@ -28,3 +34,14 @@ text = "Flaco"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 enabled = false
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 42.5)
+shape = SubResource("RectangleShape2D_b4tiw")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

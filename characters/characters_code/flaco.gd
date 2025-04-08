@@ -18,7 +18,7 @@ func _process(delta: float) -> void:
 			direction.x -= 1
 		if Input.is_action_just_pressed("salto") and is_on_floor():
 			velocity.y = -jump_force  # La fuerza del salto va hacia arriba, por eso es negativa
-		if Input.is_action_pressed("accion"):
+		if Input.is_action_pressed("empujar"):
 			hacer_accion()
 	velocity.x = direction.x * speed     # Aplica movimiento horizontal
 	velocity.y += gravity * delta    # Aplicar gravedad al personaje
@@ -27,3 +27,14 @@ func _process(delta: float) -> void:
 func hacer_accion():
 	pass
 	
+
+###collision con cajas####
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.is_in_group("arrastrables"):
+		body.collision_layer = 1
+		body.collision_mask = 1
+
+func _on_area_2d_body_exited(body: Node2D) -> void:
+	if body.is_in_group("arrastrables"):
+		body.collision_layer = 2
+		body.collision_mask = 2

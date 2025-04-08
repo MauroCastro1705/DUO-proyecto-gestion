@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://cpjkelsqxc364"]
+[gd_scene load_steps=10 format=3 uid="uid://cpjkelsqxc364"]
 
 [ext_resource type="Script" uid="uid://cdiy1lchrrem" path="res://Levels/stage_prueba.gd" id="1_3vi3g"]
 [ext_resource type="PackedScene" uid="uid://tbbpbwsjlk7m" path="res://Levels/piso/floor.tscn" id="1_7o80q"]
 [ext_resource type="PackedScene" uid="uid://3ht2b6g4whk7" path="res://characters/Flaco.tscn" id="2_0ause"]
 [ext_resource type="PackedScene" uid="uid://bbs86ttvb6dhi" path="res://characters/Gordo.tscn" id="3_0ause"]
 [ext_resource type="PackedScene" uid="uid://ccslrkwy1uquh" path="res://Levels/Objetos/caja_1.tscn" id="5_xh7jf"]
+[ext_resource type="PackedScene" uid="uid://duj67f7bmlhfw" path="res://Levels/Objetos/caja_2.tscn" id="6_0frsq"]
 [ext_resource type="PackedScene" uid="uid://dd78a61wcwfb6" path="res://Levels/Objetos/boton.tscn" id="6_w1alv"]
 [ext_resource type="Script" uid="uid://cyh0d64pfygbl" path="res://addons/maaacks_menus_template/base/scripts/pause_menu_controller.gd" id="7_h4rts"]
 [ext_resource type="PackedScene" uid="uid://ckwusaxwybu4g" path="res://Levels/scenes/overlaid_menus/pause_menu.tscn" id="8_0frsq"]
@@ -13,54 +14,70 @@
 script = ExtResource("1_3vi3g")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 1159.0
-offset_bottom = 662.0
+offset_left = -1488.0
+offset_right = 1548.0
+offset_bottom = 659.0
 color = Color(0.447976, 0.701043, 0.680561, 1)
-
-[node name="Floor2" parent="." instance=ExtResource("1_7o80q")]
-position = Vector2(575, 647)
-
-[node name="puerta" parent="." instance=ExtResource("1_7o80q")]
-unique_name_in_owner = true
-modulate = Color(0.643673, 0.40346, 0.33315, 1)
-position = Vector2(1137, 43)
-rotation = 1.5708
-
-[node name="Floor" parent="." instance=ExtResource("1_7o80q")]
-position = Vector2(-182, 235)
 
 [node name="Flaco" parent="." instance=ExtResource("2_0ause")]
 unique_name_in_owner = true
 z_index = 10
-position = Vector2(44, 110)
+position = Vector2(-643, 152)
 
 [node name="Gordo" parent="." instance=ExtResource("3_0ause")]
 unique_name_in_owner = true
 z_index = 10
-position = Vector2(165, 135)
+position = Vector2(-511, 162)
+
+[node name="Floor2" parent="." instance=ExtResource("1_7o80q")]
+position = Vector2(-333, 648)
+
+[node name="puerta" parent="." instance=ExtResource("1_7o80q")]
+unique_name_in_owner = true
+modulate = Color(0.643673, 0.40346, 0.33315, 1)
+position = Vector2(1137, 45)
+rotation = 1.5708
+
+[node name="Floor" parent="." instance=ExtResource("1_7o80q")]
+position = Vector2(-145, 251)
 
 [node name="Caja1" parent="." instance=ExtResource("5_xh7jf")]
-position = Vector2(615, 570)
+position = Vector2(-33, 564)
 
 [node name="Boton" parent="." instance=ExtResource("6_w1alv")]
 position = Vector2(881, 615)
 
+[node name="Caja2" parent="." instance=ExtResource("6_0frsq")]
+position = Vector2(-535, 575)
+
 [node name="Floor3" parent="." instance=ExtResource("1_7o80q")]
-position = Vector2(1731, 647)
+position = Vector2(825, 648)
+
+[node name="Floor6" parent="." instance=ExtResource("1_7o80q")]
+position = Vector2(-924.002, 510.004)
+rotation = 1.57079
+
+[node name="Floor7" parent="." instance=ExtResource("1_7o80q")]
+position = Vector2(71.0001, 1028)
+rotation = -1.5708
+
+[node name="Floor5" parent="." instance=ExtResource("1_7o80q")]
+position = Vector2(279, -319)
+rotation = 1.57079
 
 [node name="Floor4" parent="." instance=ExtResource("1_7o80q")]
-position = Vector2(1459, 52)
+position = Vector2(1429, 93)
 rotation = 1.57079
 
 [node name="Label" type="Label" parent="."]
-offset_left = 288.0
-offset_top = 60.0
-offset_right = 734.0
-offset_bottom = 192.0
+offset_left = -429.0
+offset_top = 14.0
+offset_right = 236.0
+offset_bottom = 266.0
 theme_override_font_sizes/font_size = 30
-text = "\"A\" y \"D\" para moverse
-\"espacio\" para saltar
+text = "\"A\" y \"D\" para moverse \"espacio\" para saltar
 \"Q\" para cambiar de personaje
+\"E\" para mover cajas
 \"esc\" pausa"
 
 [node name="PauseMenuController" type="Node" parent="."]

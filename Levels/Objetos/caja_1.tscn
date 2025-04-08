@@ -1,9 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://ccslrkwy1uquh"]
+[gd_scene load_steps=4 format=3 uid="uid://ccslrkwy1uquh"]
+
+[ext_resource type="Script" uid="uid://dw83lgn8fjcce" path="res://Levels/Objetos/objetos_code/caja_1.gd" id="1_uj4g3"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_uj4g3"]
+absorbent = true
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kaosh"]
 size = Vector2(114.5, 110)
 
-[node name="Caja1" type="RigidBody2D"]
+[node name="Caja1" type="RigidBody2D" groups=["arrastrables"]]
+collision_layer = 2
+collision_mask = 2
+mass = 500.0
+physics_material_override = SubResource("PhysicsMaterial_uj4g3")
+script = ExtResource("1_uj4g3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(7.25, 2)
@@ -17,8 +27,8 @@ offset_bottom = 57.0
 color = Color(0.54, 0.3861, 0.027, 1)
 
 [node name="Label" type="Label" parent="."]
-offset_left = -9.0
-offset_top = -5.0
-offset_right = 31.0
-offset_bottom = 18.0
-text = "caja"
+offset_left = -33.0
+offset_top = -15.0
+offset_right = 46.0
+offset_bottom = 14.0
+text = "caja tipo 1"

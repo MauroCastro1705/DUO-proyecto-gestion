@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://duj67f7bmlhfw"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_v6ynx"]
+absorbent = true
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v6ynx"]
+size = Vector2(220, 72)
+
+[node name="Caja2" type="RigidBody2D" groups=["arrastrables"]]
+collision_layer = 2
+collision_mask = 2
+mass = 500.0
+physics_material_override = SubResource("PhysicsMaterial_v6ynx")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -108.0
+offset_top = -35.0
+offset_right = 112.0
+offset_bottom = 37.0
+color = Color(0.545513, 0.612768, 0.241264, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(2, 1)
+shape = SubResource("RectangleShape2D_v6ynx")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -36.0
+offset_top = -15.0
+offset_right = 43.0
+offset_bottom = 14.0
+text = "caja tipo 2"

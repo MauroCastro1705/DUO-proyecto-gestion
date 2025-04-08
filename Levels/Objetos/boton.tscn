@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dd78a61wcwfb6"]
 
-[ext_resource type="Script" uid="uid://25ldds1vm7nn" path="res://Levels/Objetos/boton.gd" id="1_n0i7u"]
+[ext_resource type="Script" uid="uid://25ldds1vm7nn" path="res://Levels/Objetos/objetos_code/boton.gd" id="1_n0i7u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cm74e"]
 size = Vector2(40, 7)

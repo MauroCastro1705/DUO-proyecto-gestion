@@ -1,11 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://bbs86ttvb6dhi"]
+[gd_scene load_steps=5 format=3 uid="uid://bbs86ttvb6dhi"]
 
 [ext_resource type="Script" uid="uid://m850xbhl28ts" path="res://characters/characters_code/gordo.gd" id="2_cfd2t"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_35gpn"]
-size = Vector2(139.5, 76)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x4tk1"]
+radius = 39.0
+height = 142.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x4tk1"]
+size = Vector2(116, 75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cfd2t"]
+size = Vector2(152, 84)
 
 [node name="Gordo" type="CharacterBody2D" groups=["jugador"]]
+collision_layer = 3
 script = ExtResource("2_cfd2t")
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -16,7 +24,9 @@ offset_bottom = 39.0
 color = Color(0.768732, 0.204326, 0.25174, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_35gpn")
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_x4tk1")
+debug_color = Color(0.81993, 0.338419, 0.571267, 0.42)
 
 [node name="Label" type="Label" parent="."]
 offset_left = -23.0
@@ -28,3 +38,29 @@ text = "gordo
 
 [node name="Camera2D" type="Camera2D" parent="."]
 enabled = false
+
+[node name="Area2D" type="Area2D" parent="."]
+visible = false
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 14)
+shape = SubResource("RectangleShape2D_x4tk1")
+
+[node name="empujarCajas" type="Area2D" parent="."]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="empujarCajas"]
+shape = SubResource("RectangleShape2D_cfd2t")
+
+[node name="Label_empujando" type="Label" parent="."]
+offset_left = -49.0
+offset_top = -81.0
+offset_right = 40.0
+offset_bottom = -52.0
+text = "Empujando🫥"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
