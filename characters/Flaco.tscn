@@ -1,10 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://3ht2b6g4whk7"]
+[gd_scene load_steps=5 format=3 uid="uid://3ht2b6g4whk7"]
 
 [ext_resource type="Script" uid="uid://db8l0ggud4ttd" path="res://characters/characters_code/flaco.gd" id="1_b4tiw"]
+[ext_resource type="Texture2D" uid="uid://cfogesl1oei1k" path="res://assets/characters/chica.png" id="2_un0js"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b4tiw"]
-radius = 19.0
-height = 107.0
+radius = 13.0
+height = 58.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b4tiw"]
 size = Vector2(32, 39)
@@ -13,24 +14,10 @@ size = Vector2(32, 39)
 collision_layer = 3
 script = ExtResource("1_b4tiw")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -21.0
-offset_top = -54.0
-offset_right = 19.0
-offset_bottom = 55.0
-color = Color(0, 0.392631, 0.392631, 1)
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 0.5)
+position = Vector2(0, 26)
 shape = SubResource("CapsuleShape2D_b4tiw")
 debug_color = Color(0.740988, 0.339757, 0.808076, 0.42)
-
-[node name="Label" type="Label" parent="."]
-offset_left = -21.0
-offset_top = -54.0
-offset_right = 19.0
-offset_bottom = -31.0
-text = "Flaco"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 enabled = false
@@ -42,6 +29,11 @@ collision_mask = 3
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0, 42.5)
 shape = SubResource("RectangleShape2D_b4tiw")
+
+[node name="CharacterSprite" type="Sprite2D" parent="."]
+position = Vector2(1.90735e-06, 27)
+scale = Vector2(0.4375, 0.4375)
+texture = ExtResource("2_un0js")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

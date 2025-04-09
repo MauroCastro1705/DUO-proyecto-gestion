@@ -1,46 +1,33 @@
-[gd_scene load_steps=5 format=3 uid="uid://bbs86ttvb6dhi"]
+[gd_scene load_steps=7 format=3 uid="uid://bbs86ttvb6dhi"]
 
+[ext_resource type="Texture2D" uid="uid://bclcaley2pmde" path="res://assets/characters/gordo.png" id="2_3mxsi"]
 [ext_resource type="Script" uid="uid://m850xbhl28ts" path="res://characters/characters_code/gordo.gd" id="2_cfd2t"]
+[ext_resource type="PackedScene" uid="uid://dexu88uj2gnl5" path="res://characters/proyectil.tscn" id="2_jfpom"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x4tk1"]
-radius = 39.0
-height = 142.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jfpom"]
+size = Vector2(79, 49)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x4tk1"]
-size = Vector2(116, 75)
+size = Vector2(62, 75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cfd2t"]
-size = Vector2(152, 84)
+size = Vector2(68, 81)
 
 [node name="Gordo" type="CharacterBody2D" groups=["jugador"]]
 collision_layer = 3
 script = ExtResource("2_cfd2t")
-
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -70.0
-offset_top = -39.0
-offset_right = 70.0
-offset_bottom = 39.0
-color = Color(0.768732, 0.204326, 0.25174, 1)
+projectile_scene = ExtResource("2_jfpom")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3.5, -0.499994)
 rotation = 1.5708
-shape = SubResource("CapsuleShape2D_x4tk1")
+shape = SubResource("RectangleShape2D_jfpom")
 debug_color = Color(0.81993, 0.338419, 0.571267, 0.42)
-
-[node name="Label" type="Label" parent="."]
-offset_left = -23.0
-offset_top = -18.0
-offset_right = 23.0
-offset_bottom = 31.0
-text = "gordo
-"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 enabled = false
 
 [node name="Area2D" type="Area2D" parent="."]
-visible = false
 collision_layer = 3
 collision_mask = 3
 
@@ -53,6 +40,7 @@ collision_layer = 3
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="empujarCajas"]
+position = Vector2(0, -1.5)
 shape = SubResource("RectangleShape2D_cfd2t")
 
 [node name="Label_empujando" type="Label" parent="."]
@@ -60,7 +48,21 @@ offset_left = -49.0
 offset_top = -81.0
 offset_right = 40.0
 offset_bottom = -52.0
-text = "Empujando🫥"
+text = "Empujando"
+
+[node name="CharacterSprite" type="Sprite2D" parent="."]
+position = Vector2(-2, -4)
+scale = Vector2(0.360335, 0.360335)
+texture = ExtResource("2_3mxsi")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(2, -22)
+
+[node name="Trayectoria" type="Line2D" parent="Marker2D"]
+unique_name_in_owner = true
+width = 5.0
+default_color = Color(0.807843, 0.317647, 0.160784, 0.501961)
+antialiased = true
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

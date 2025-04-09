@@ -42,13 +42,22 @@ rotation = 1.5708
 position = Vector2(-145, 251)
 
 [node name="Caja1" parent="." instance=ExtResource("5_xh7jf")]
-position = Vector2(-33, 564)
+position = Vector2(434, 559)
+
+[node name="Caja1" parent="Caja1" instance=ExtResource("5_xh7jf")]
+position = Vector2(-548, 4)
+
+[node name="Caja1" parent="Caja1/Caja1" instance=ExtResource("5_xh7jf")]
+position = Vector2(12, -114)
+
+[node name="Caja1" parent="Caja1/Caja1/Caja1" instance=ExtResource("5_xh7jf")]
+position = Vector2(17, -113)
 
 [node name="Boton" parent="." instance=ExtResource("6_w1alv")]
 position = Vector2(881, 615)
 
 [node name="Caja2" parent="." instance=ExtResource("6_0frsq")]
-position = Vector2(-535, 575)
+position = Vector2(246, 575)
 
 [node name="Floor3" parent="." instance=ExtResource("1_7o80q")]
 position = Vector2(825, 648)
@@ -68,6 +77,16 @@ rotation = 1.57079
 [node name="Floor4" parent="." instance=ExtResource("1_7o80q")]
 position = Vector2(1429, 93)
 rotation = 1.57079
+
+[node name="Label2" type="Label" parent="."]
+offset_left = -832.0
+offset_top = 331.0
+offset_right = -167.0
+offset_bottom = 583.0
+theme_override_font_sizes/font_size = 20
+text = "apreta \"F\" para entrar en modo lanzamiento
+Ajusta el angulo con \"A\" y \"D\"
+apreta \"ctrl\" para lanzar a tu compañero"
 
 [node name="Label" type="Label" parent="."]
 offset_left = -429.0

@@ -7,6 +7,7 @@ var player2: CharacterBody2D
 var posicionPuertaFinal = -102
 var is_moved: bool = false
 
+
 func _ready() -> void:
 	# Referencias a los personajes
 	player1 = %Gordo

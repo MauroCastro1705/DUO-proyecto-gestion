@@ -23,7 +23,11 @@ func _process(delta: float) -> void:
 	velocity.x = direction.x * speed     # Aplica movimiento horizontal
 	velocity.y += gravity * delta    # Aplicar gravedad al personaje
 	move_and_slide()
-
+	##VOLTEAR SPRITE###
+	if velocity.x != 0:
+		$CharacterSprite.flip_h = velocity.x > 0
+		
+		
 func hacer_accion():
 	pass
 	

@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://dexu88uj2gnl5"]
+
+[ext_resource type="Texture2D" uid="uid://cfogesl1oei1k" path="res://assets/characters/chica.png" id="1_j4oqk"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5ng0n"]
+radius = 9.0
+height = 36.0
+
+[node name="Proyectil" type="RigidBody2D"]
+collision_layer = 2
+collision_mask = 2
+mass = 600.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_5ng0n")
+
+[node name="Chica" type="Sprite2D" parent="."]
+position = Vector2(-1, -2)
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("1_j4oqk")
