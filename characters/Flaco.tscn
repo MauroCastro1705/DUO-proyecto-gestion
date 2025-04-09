@@ -1,36 +1,24 @@
-[gd_scene load_steps=5 format=3 uid="uid://3ht2b6g4whk7"]
+[gd_scene load_steps=4 format=3 uid="uid://3ht2b6g4whk7"]
 
 [ext_resource type="Script" uid="uid://db8l0ggud4ttd" path="res://characters/characters_code/flaco.gd" id="1_b4tiw"]
 [ext_resource type="Texture2D" uid="uid://cfogesl1oei1k" path="res://assets/characters/chica.png" id="2_un0js"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b4tiw"]
-radius = 13.0
-height = 58.0
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_b4tiw"]
-size = Vector2(32, 39)
+radius = 9.0
+height = 50.0
 
 [node name="Flaco" type="CharacterBody2D" groups=["jugador"]]
-collision_layer = 3
+z_index = 100
+collision_layer = 4
+collision_mask = 29
 script = ExtResource("1_b4tiw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 26)
+position = Vector2(0, 28)
 shape = SubResource("CapsuleShape2D_b4tiw")
 debug_color = Color(0.740988, 0.339757, 0.808076, 0.42)
-
-[node name="Area2D" type="Area2D" parent="."]
-collision_layer = 3
-collision_mask = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, 42.5)
-shape = SubResource("RectangleShape2D_b4tiw")
 
 [node name="CharacterSprite" type="Sprite2D" parent="."]
 position = Vector2(1.90735e-06, 27)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("2_un0js")
-
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

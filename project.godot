@@ -99,6 +99,15 @@ zoom_out={
 
 locale/translations=PackedStringArray("res://addons/maaacks_menus_template/base/translations/menus_translations.en.translation", "res://addons/maaacks_menus_template/base/translations/menus_translations.fr.translation")
 
+[layer_names]
+
+2d_physics/layer_1="suelo"
+2d_physics/layer_2="personaje grande"
+2d_physics/layer_3="personaje chico"
+2d_physics/layer_4="cajas"
+2d_physics/layer_5="plataforma-pj-grande"
+2d_physics/layer_6="proyectil"
+
 [maaacks_menus_template]
 
 disable_plugin_dialogues=true

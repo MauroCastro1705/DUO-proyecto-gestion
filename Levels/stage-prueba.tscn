@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://b73qawm74b6b8" path="res://Levels/Objetos/caja_3.tscn" id="10_v7ql1"]
 
 [node name="Stage-prueba" type="Node2D"]
+z_index = 1
 script = ExtResource("1_3vi3g")
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -22,7 +23,6 @@ color = Color(0.694118, 0.627451, 0.415686, 1)
 
 [node name="Flaco" parent="." instance=ExtResource("2_0ause")]
 unique_name_in_owner = true
-z_index = 10
 position = Vector2(-823, 149)
 
 [node name="Gordo" parent="." instance=ExtResource("3_0ause")]
@@ -55,7 +55,7 @@ position = Vector2(2026, 564)
 position = Vector2(681, 563)
 
 [node name="Boton" parent="." instance=ExtResource("6_w1alv")]
-position = Vector2(881, 615)
+position = Vector2(867, 615)
 
 [node name="Caja2" parent="." instance=ExtResource("6_0frsq")]
 position = Vector2(499, 583)
@@ -85,7 +85,7 @@ offset_right = 1937.0
 offset_bottom = 601.0
 theme_override_font_sizes/font_size = 20
 text = "apreta \"F\" para entrar en modo lanzamiento
-Ajusta el angulo con \"A\" y \"D\"
+Ajusta el angulo con \"W\" y \"S\"
 apreta \"ctrl\" para lanzar a tu compañero"
 
 [node name="Label" type="Label" parent="."]

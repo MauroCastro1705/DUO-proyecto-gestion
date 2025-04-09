@@ -9,27 +9,35 @@ var angle_speed := 2.0  # Velocidad de rotación de la dirección
 @onready var push_area = $empujarCajas
 var joint: PinJoint2D = null
 var current_box: RigidBody2D = null
-@onready var empujando = $Label_empujando
+
 var modo_disparo:bool = false
 ##movimiento##
 @export var speed: float = 180.0 #Velocidad horizontal
 @export var jump_force: float = 300.0 #Fuerza del salto
 var gravity = Global.gravity
-
+@onready var texto_character = %TextoGordo
+@onready var TimerLabel = $TimerLabel
 var is_active: bool = false  #variable para controlarjugador activo
 
 func _ready() -> void:
-	empujando.visible = false
+	texto_character.visible = false
 	
 func _process(delta: float) -> void:
 	var direction = Vector2.ZERO
 	#MODO DISPARO#
+	if Input.is_action_pressed("cambiar") and Global.can_swap == false:			
+		texto_character.text = "No se puede cambiar de personaje ahora"
+		texto_character.visible = true
+		TimerLabel.start()
 	if Input.is_action_just_pressed("modo-disparo") and modo_disparo == false:
 		modo_disparo=true
+		Global.can_swap=false
 		print("modo disparo true")
+
 	elif Input.is_action_just_pressed("modo-disparo") and modo_disparo == true:
 		modo_disparo=false
 		line.clear_points()
+		Global.can_swap=true
 		print("modo disparo false")
 	if modo_disparo == true:
 		if Input.is_action_pressed("abajo"):
@@ -51,14 +59,15 @@ func _process(delta: float) -> void:
 		###LOGICA EMPUJAR CAJAS###
 		if Input.is_action_just_pressed("empujar") and joint == null:
 			print("empujando")
-			empujando.visible = true
+			texto_character.visible = true
+			texto_character.text = "Empujando"
 			for body in push_area.get_overlapping_bodies():
 				if body is RigidBody2D:
 					current_box = body
 					create_joint_with_box(current_box)
 					break
 		if Input.is_action_just_released("empujar"):
-			empujando.visible = false
+			texto_character.visible = false
 			remove_joint()
 			
 	velocity.x = direction.x * speed     # Aplica movimiento horizontal
@@ -74,15 +83,6 @@ func hacer_accion():
 	
 
 ###collision con cajas####
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body.is_in_group("arrastrables"):
-		body.collision_layer = 1
-		body.collision_mask = 1
-
-func _on_area_2d_body_exited(body: Node2D) -> void:
-	if body.is_in_group("arrastrables"):
-		body.collision_layer = 2
-		body.collision_mask = 2
 
 ### EMPUJAR CAJAS apretando BOTON
 func create_joint_with_box(box: RigidBody2D):
@@ -116,3 +116,7 @@ func draw_trajectory():
 		var point = pos + velocitys * t + Vector2(0, gravity) * t * t * 0.5
 		points.append(point)		
 		line.points = points
+
+#timer para texto sobre el personaje
+func _on_timer_label_timeout() -> void:
+	texto_character.visible = false

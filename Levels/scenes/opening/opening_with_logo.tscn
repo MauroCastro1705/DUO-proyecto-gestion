@@ -8,3 +8,6 @@
 script = ExtResource("2_gs4g6")
 next_scene = "res://Levels/scenes/menus/main_menu/main_menu_with_animations.tscn"
 images = Array[Texture2D]([ExtResource("3_p3erp")])
+
+[node name="BackgroundMusicPlayer" parent="." index="0"]
+bus = &"Master"
