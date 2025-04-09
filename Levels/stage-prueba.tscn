@@ -115,4 +115,13 @@ position_smoothing_enabled = true
 position_smoothing_speed = 8.0
 metadata/entity_name = "camera"
 
+[node name="Label3" type="Label" parent="."]
+offset_left = -1327.0
+offset_top = 331.0
+offset_right = -662.0
+offset_bottom = 583.0
+theme_override_font_sizes/font_size = 30
+text = "mantene apretado \"shift\" para
+ ver mas del mapa"
+
 [connection signal="boton_pulsado" from="Boton" to="." method="_on_boton_boton_pulsado"]
