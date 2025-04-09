@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cpjkelsqxc364"]
+[gd_scene load_steps=11 format=3 uid="uid://cpjkelsqxc364"]
 
 [ext_resource type="Script" uid="uid://cdiy1lchrrem" path="res://Levels/stage_prueba.gd" id="1_3vi3g"]
 [ext_resource type="PackedScene" uid="uid://tbbpbwsjlk7m" path="res://Levels/piso/floor.tscn" id="1_7o80q"]
@@ -9,28 +9,29 @@
 [ext_resource type="PackedScene" uid="uid://dd78a61wcwfb6" path="res://Levels/Objetos/boton.tscn" id="6_w1alv"]
 [ext_resource type="Script" uid="uid://cyh0d64pfygbl" path="res://addons/maaacks_menus_template/base/scripts/pause_menu_controller.gd" id="7_h4rts"]
 [ext_resource type="PackedScene" uid="uid://ckwusaxwybu4g" path="res://Levels/scenes/overlaid_menus/pause_menu.tscn" id="8_0frsq"]
+[ext_resource type="PackedScene" uid="uid://b73qawm74b6b8" path="res://Levels/Objetos/caja_3.tscn" id="10_v7ql1"]
 
 [node name="Stage-prueba" type="Node2D"]
 script = ExtResource("1_3vi3g")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -1488.0
-offset_right = 1548.0
+offset_right = 2598.0
 offset_bottom = 659.0
-color = Color(0.447976, 0.701043, 0.680561, 1)
+color = Color(0.694118, 0.627451, 0.415686, 1)
 
 [node name="Flaco" parent="." instance=ExtResource("2_0ause")]
 unique_name_in_owner = true
 z_index = 10
-position = Vector2(-643, 152)
+position = Vector2(-823, 149)
 
 [node name="Gordo" parent="." instance=ExtResource("3_0ause")]
 unique_name_in_owner = true
 z_index = 10
-position = Vector2(-511, 162)
+position = Vector2(-896, 159)
 
 [node name="Floor2" parent="." instance=ExtResource("1_7o80q")]
-position = Vector2(-333, 648)
+position = Vector2(-890, 645)
 
 [node name="puerta" parent="." instance=ExtResource("1_7o80q")]
 unique_name_in_owner = true
@@ -39,50 +40,49 @@ position = Vector2(1137, 45)
 rotation = 1.5708
 
 [node name="Floor" parent="." instance=ExtResource("1_7o80q")]
-position = Vector2(-145, 251)
+position = Vector2(-362, 245)
+
+[node name="Caja6" parent="." instance=ExtResource("5_xh7jf")]
+position = Vector2(2060, 378)
+
+[node name="Caja5" parent="." instance=ExtResource("5_xh7jf")]
+position = Vector2(2042, 474)
+
+[node name="Caja4" parent="." instance=ExtResource("5_xh7jf")]
+position = Vector2(2026, 564)
 
 [node name="Caja1" parent="." instance=ExtResource("5_xh7jf")]
-position = Vector2(434, 559)
-
-[node name="Caja1" parent="Caja1" instance=ExtResource("5_xh7jf")]
-position = Vector2(-548, 4)
-
-[node name="Caja1" parent="Caja1/Caja1" instance=ExtResource("5_xh7jf")]
-position = Vector2(12, -114)
-
-[node name="Caja1" parent="Caja1/Caja1/Caja1" instance=ExtResource("5_xh7jf")]
-position = Vector2(17, -113)
+position = Vector2(681, 563)
 
 [node name="Boton" parent="." instance=ExtResource("6_w1alv")]
 position = Vector2(881, 615)
 
 [node name="Caja2" parent="." instance=ExtResource("6_0frsq")]
-position = Vector2(246, 575)
+position = Vector2(499, 583)
 
 [node name="Floor3" parent="." instance=ExtResource("1_7o80q")]
 position = Vector2(825, 648)
 
 [node name="Floor6" parent="." instance=ExtResource("1_7o80q")]
-position = Vector2(-924.002, 510.004)
+position = Vector2(-1471, 507)
 rotation = 1.57079
 
 [node name="Floor7" parent="." instance=ExtResource("1_7o80q")]
-position = Vector2(71.0001, 1028)
-rotation = -1.5708
+position = Vector2(-51, 781)
 
 [node name="Floor5" parent="." instance=ExtResource("1_7o80q")]
-position = Vector2(279, -319)
+position = Vector2(242, -313)
 rotation = 1.57079
 
 [node name="Floor4" parent="." instance=ExtResource("1_7o80q")]
-position = Vector2(1429, 93)
+position = Vector2(2570, 89)
 rotation = 1.57079
 
 [node name="Label2" type="Label" parent="."]
-offset_left = -832.0
-offset_top = 331.0
-offset_right = -167.0
-offset_bottom = 583.0
+offset_left = 1272.0
+offset_top = 349.0
+offset_right = 1937.0
+offset_bottom = 601.0
 theme_override_font_sizes/font_size = 20
 text = "apreta \"F\" para entrar en modo lanzamiento
 Ajusta el angulo con \"A\" y \"D\"
@@ -103,5 +103,16 @@ text = "\"A\" y \"D\" para moverse \"espacio\" para saltar
 script = ExtResource("7_h4rts")
 pause_menu_packed = ExtResource("8_0frsq")
 metadata/_custom_type_script = "uid://cyh0d64pfygbl"
+
+[node name="Floor8" parent="." instance=ExtResource("1_7o80q")]
+position = Vector2(1976, 648)
+
+[node name="Caja3" parent="." instance=ExtResource("10_v7ql1")]
+position = Vector2(-1021, 532)
+
+[node name="Camera2D" type="Camera2D" parent="." groups=["scene_manager_entity_nodes"]]
+position_smoothing_enabled = true
+position_smoothing_speed = 8.0
+metadata/entity_name = "camera"
 
 [connection signal="boton_pulsado" from="Boton" to="." method="_on_boton_boton_pulsado"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://njwyxtijv6uc"]
 
-[ext_resource type="PackedScene" path="res://addons/maaacks_menus_template/base/scenes/menus/options_menu/option_control/list_option_control.tscn" id="1_ncx4c"]
-[ext_resource type="Script" path="res://Levels/scenes/menus/options_menu/audio/audio_input_option_control.gd" id="2_w7v0i"]
+[ext_resource type="PackedScene" uid="uid://b6bl3n5mp3m1e" path="res://addons/maaacks_menus_template/base/scenes/menus/options_menu/option_control/list_option_control.tscn" id="1_ncx4c"]
+[ext_resource type="Script" uid="uid://ba2c2ud5bha0x" path="res://Levels/scenes/menus/options_menu/audio/audio_input_option_control.gd" id="2_w7v0i"]
 
 [node name="AudioInputOptionControl" instance=ExtResource("1_ncx4c")]
 script = ExtResource("2_w7v0i")

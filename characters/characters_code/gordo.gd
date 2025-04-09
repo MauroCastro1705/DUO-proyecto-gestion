@@ -13,7 +13,7 @@ var current_box: RigidBody2D = null
 var modo_disparo:bool = false
 ##movimiento##
 @export var speed: float = 180.0 #Velocidad horizontal
-@export var jump_force: float = 200.0 #Fuerza del salto
+@export var jump_force: float = 300.0 #Fuerza del salto
 var gravity = Global.gravity
 
 var is_active: bool = false  #variable para controlarjugador activo
@@ -32,9 +32,9 @@ func _process(delta: float) -> void:
 		line.clear_points()
 		print("modo disparo false")
 	if modo_disparo == true:
-		if Input.is_action_pressed("izquierda"):
+		if Input.is_action_pressed("abajo"):
 			aim_dir = aim_dir.rotated(-angle_speed * delta)
-		if Input.is_action_pressed("derecha"):
+		if Input.is_action_pressed("arriba"):
 			aim_dir = aim_dir.rotated(angle_speed * delta)
 		draw_trajectory()
 		if Input.is_action_just_pressed("disparar"):  # ctrl
@@ -64,10 +64,11 @@ func _process(delta: float) -> void:
 	velocity.x = direction.x * speed     # Aplica movimiento horizontal
 	velocity.y += gravity * delta    # Aplicar gravedad al personaje
 	move_and_slide()
-	if velocity.x != 0:
+	if velocity.x != 0:#flip sprite
 		$CharacterSprite.flip_h = velocity.x > 0
-	
-	
+
+
+
 func hacer_accion():
 	pass
 	
@@ -83,14 +84,14 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 		body.collision_layer = 2
 		body.collision_mask = 2
 
-### EMPUJAR CAJAS CON BOTON
+### EMPUJAR CAJAS apretando BOTON
 func create_joint_with_box(box: RigidBody2D):
 	joint = PinJoint2D.new()
 	joint.node_a = get_path()  # Personaje
 	joint.node_b = box.get_path()  # Caja	
 	joint.position = global_position.lerp(box.global_position, 0.5)	
 	get_parent().add_child(joint)
-
+	
 func remove_joint():
 	if joint and joint.get_parent():
 		joint.queue_free()

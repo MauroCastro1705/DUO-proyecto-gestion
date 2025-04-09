@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cdvbp1ip18itr"]
 
-[ext_resource type="PackedScene" path="res://addons/maaacks_menus_template/base/scenes/loading_screen/loading_screen.tscn" id="1_1h6h8"]
-[ext_resource type="Script" path="res://Levels/scenes/loading_screen/loading_screen_with_shader_caching.gd" id="2_wd3uu"]
+[ext_resource type="PackedScene" uid="uid://cd0jbh4metflb" path="res://addons/maaacks_menus_template/base/scenes/loading_screen/loading_screen.tscn" id="1_1h6h8"]
+[ext_resource type="Script" uid="uid://b8skd4xm7jly1" path="res://Levels/scenes/loading_screen/loading_screen_with_shader_caching.gd" id="2_wd3uu"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_klnwy"]
 

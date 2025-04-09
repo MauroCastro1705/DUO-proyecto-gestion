@@ -6,6 +6,7 @@ var player2: CharacterBody2D
 @onready var posicionPuertaInicial = %puerta.global_position.y
 var posicionPuertaFinal = -102
 var is_moved: bool = false
+@onready var camera = $Camera2D
 
 
 func _ready() -> void:
@@ -15,10 +16,15 @@ func _ready() -> void:
 	active_player = player1
 	player1.is_active = true
 	player2.is_active = false  # Inicia desactivado
+	camera.position = active_player.global_position
 		# Activar la cámara del jugador activo
-	player1.get_node("Camera2D").enabled = true
-	player2.get_node("Camera2D").enabled = false
-
+	#player1.get_node("Camera2D").enabled = true
+	#player2.get_node("Camera2D").enabled = false
+	
+func _process(delta: float) -> void:
+	##ANIMACION CAMARA ENTRE PERSONAJES
+	if active_player:
+		camera.global_position = camera.global_position.lerp(active_player.global_position, delta * 8.0)
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("cambiar"):

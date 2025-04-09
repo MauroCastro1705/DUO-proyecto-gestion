@@ -19,9 +19,6 @@ position = Vector2(0, 26)
 shape = SubResource("CapsuleShape2D_b4tiw")
 debug_color = Color(0.740988, 0.339757, 0.808076, 0.42)
 
-[node name="Camera2D" type="Camera2D" parent="."]
-enabled = false
-
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 3
 collision_mask = 3

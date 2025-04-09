@@ -397,8 +397,8 @@ layout_mode = 2
 text = "Continue"
 
 [node name="Icon_svg" type="Sprite2D" parent="." index="10"]
-position = Vector2(297, 388)
-scale = Vector2(2.32061, 2.23386)
+position = Vector2(263, 315)
+scale = Vector2(1.09924, 1.05814)
 texture = ExtResource("5_dt8wh")
 
 [connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/ContinueGameButton" to="." method="_on_continue_game_button_pressed"]
