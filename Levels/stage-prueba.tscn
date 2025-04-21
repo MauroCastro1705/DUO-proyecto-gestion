@@ -1,12 +1,21 @@
-[gd_scene load_steps=11 format=3 uid="uid://cpjkelsqxc364"]
+[gd_scene load_steps=20 format=3 uid="uid://cpjkelsqxc364"]
 
 [ext_resource type="Script" uid="uid://cdiy1lchrrem" path="res://Levels/stage_prueba.gd" id="1_3vi3g"]
 [ext_resource type="PackedScene" uid="uid://tbbpbwsjlk7m" path="res://Levels/piso/floor.tscn" id="1_7o80q"]
 [ext_resource type="PackedScene" uid="uid://3ht2b6g4whk7" path="res://characters/Flaco.tscn" id="2_0ause"]
+[ext_resource type="Texture2D" uid="uid://byfh070wslkxt" path="res://assets/Background/NightSky_Tile_1.png" id="2_siv67"]
 [ext_resource type="PackedScene" uid="uid://bbs86ttvb6dhi" path="res://characters/Gordo.tscn" id="3_0ause"]
+[ext_resource type="Texture2D" uid="uid://bbjxiyj6t2xvn" path="res://assets/Background/Building_Asset_1.png" id="3_sg5sg"]
+[ext_resource type="Texture2D" uid="uid://dnm4knecb5h5m" path="res://assets/Background/Far_Building_Asset_1.png" id="3_who0o"]
+[ext_resource type="Texture2D" uid="uid://cieu8ekpewkvf" path="res://assets/Background/Building_Asset_2.png" id="4_kflaj"]
+[ext_resource type="Texture2D" uid="uid://b083eagby3240" path="res://assets/Background/Far_Building_Asset_2.png" id="4_lh1ow"]
+[ext_resource type="Texture2D" uid="uid://ctlg1xyrnwsdq" path="res://assets/Background/Building_Asset_3.png" id="5_4c5ie"]
+[ext_resource type="Texture2D" uid="uid://cjwy47u0h4ps8" path="res://assets/Background/Far_Building_Asset_3.png" id="5_am73i"]
 [ext_resource type="PackedScene" uid="uid://ccslrkwy1uquh" path="res://Levels/Objetos/caja_1.tscn" id="5_xh7jf"]
 [ext_resource type="PackedScene" uid="uid://duj67f7bmlhfw" path="res://Levels/Objetos/caja_2.tscn" id="6_0frsq"]
+[ext_resource type="Texture2D" uid="uid://dtj5xmv2ousgd" path="res://assets/Background/Far_Building_Asset_4.png" id="6_bousr"]
 [ext_resource type="PackedScene" uid="uid://dd78a61wcwfb6" path="res://Levels/Objetos/boton.tscn" id="6_w1alv"]
+[ext_resource type="Texture2D" uid="uid://br5hnruvrsf0j" path="res://assets/Background/Building_Asset_4.png" id="6_who0o"]
 [ext_resource type="Script" uid="uid://cyh0d64pfygbl" path="res://addons/maaacks_menus_template/base/scripts/pause_menu_controller.gd" id="7_h4rts"]
 [ext_resource type="PackedScene" uid="uid://ckwusaxwybu4g" path="res://Levels/scenes/overlaid_menus/pause_menu.tscn" id="8_0frsq"]
 [ext_resource type="PackedScene" uid="uid://b73qawm74b6b8" path="res://Levels/Objetos/caja_3.tscn" id="10_v7ql1"]
@@ -15,17 +24,89 @@
 z_index = 1
 script = ExtResource("1_3vi3g")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -1488.0
-offset_right = 2598.0
-offset_bottom = 659.0
-color = Color(0.694118, 0.627451, 0.415686, 1)
+[node name="background-fondo" type="Node" parent="."]
 
-[node name="Flaco" parent="." instance=ExtResource("2_0ause")]
+[node name="NightSkyTile1" type="Sprite2D" parent="background-fondo"]
+position = Vector2(349, 242)
+scale = Vector2(2.61198, 1.36481)
+texture = ExtResource("2_siv67")
+
+[node name="FarBuildingAsset1" type="Sprite2D" parent="background-fondo"]
+position = Vector2(-1125, 642)
+texture = ExtResource("3_who0o")
+
+[node name="FarBuildingAsset5" type="Sprite2D" parent="background-fondo"]
+position = Vector2(2103, 551.694)
+scale = Vector2(1, 3.00716)
+texture = ExtResource("4_lh1ow")
+
+[node name="FarBuildingAsset6" type="Sprite2D" parent="background-fondo"]
+position = Vector2(428, 610.305)
+scale = Vector2(1, 2.39446)
+texture = ExtResource("4_lh1ow")
+
+[node name="FarBuildingAsset2" type="Sprite2D" parent="background-fondo"]
+position = Vector2(-1695, 693.5)
+scale = Vector2(1, 1.70222)
+texture = ExtResource("4_lh1ow")
+
+[node name="FarBuildingAsset3" type="Sprite2D" parent="background-fondo"]
+position = Vector2(28, 715)
+texture = ExtResource("5_am73i")
+
+[node name="FarBuildingAsset8" type="Sprite2D" parent="background-fondo"]
+position = Vector2(-437, 508)
+texture = ExtResource("6_bousr")
+
+[node name="FarBuildingAsset7" type="Sprite2D" parent="background-fondo"]
+position = Vector2(1430, 609)
+texture = ExtResource("6_bousr")
+
+[node name="FarBuildingAsset9" type="Sprite2D" parent="background-fondo"]
+position = Vector2(2609, 604)
+texture = ExtResource("6_bousr")
+
+[node name="FarBuildingAsset4" type="Sprite2D" parent="background-fondo"]
+position = Vector2(790, 617)
+texture = ExtResource("6_bousr")
+
+[node name="background-edificios" type="Node" parent="."]
+
+[node name="BuildingAsset1" type="Sprite2D" parent="background-edificios"]
+position = Vector2(-805, 608)
+texture = ExtResource("3_sg5sg")
+
+[node name="BuildingAsset2" type="Sprite2D" parent="background-edificios"]
+position = Vector2(947, 689)
+texture = ExtResource("4_kflaj")
+
+[node name="BuildingAsset3" type="Sprite2D" parent="background-edificios"]
+position = Vector2(543, 728)
+texture = ExtResource("5_4c5ie")
+
+[node name="BuildingAsset4" type="Sprite2D" parent="background-edificios"]
+position = Vector2(1251, 741)
+texture = ExtResource("6_who0o")
+
+[node name="BuildingAsset5" type="Sprite2D" parent="background-edificios"]
+position = Vector2(2092.5, 689.5)
+texture = ExtResource("4_kflaj")
+
+[node name="BuildingAsset6" type="Sprite2D" parent="background-edificios"]
+position = Vector2(1688.5, 728.5)
+texture = ExtResource("5_4c5ie")
+
+[node name="BuildingAsset7" type="Sprite2D" parent="background-edificios"]
+position = Vector2(2396.5, 741.5)
+texture = ExtResource("6_who0o")
+
+[node name="personajes" type="Node" parent="."]
+
+[node name="Flaco" parent="personajes" instance=ExtResource("2_0ause")]
 unique_name_in_owner = true
 position = Vector2(-823, 149)
 
-[node name="Gordo" parent="." instance=ExtResource("3_0ause")]
+[node name="Gordo" parent="personajes" instance=ExtResource("3_0ause")]
 unique_name_in_owner = true
 z_index = 10
 position = Vector2(-896, 159)
@@ -78,27 +159,6 @@ rotation = 1.57079
 position = Vector2(2570, 89)
 rotation = 1.57079
 
-[node name="Label2" type="Label" parent="."]
-offset_left = 1272.0
-offset_top = 349.0
-offset_right = 1937.0
-offset_bottom = 601.0
-theme_override_font_sizes/font_size = 20
-text = "apreta \"F\" para entrar en modo lanzamiento
-Ajusta el angulo con \"W\" y \"S\"
-apreta \"ctrl\" para lanzar a tu compañero"
-
-[node name="Label" type="Label" parent="."]
-offset_left = -429.0
-offset_top = 14.0
-offset_right = 236.0
-offset_bottom = 266.0
-theme_override_font_sizes/font_size = 30
-text = "\"A\" y \"D\" para moverse \"espacio\" para saltar
-\"Q\" para cambiar de personaje
-\"E\" para mover cajas
-\"esc\" pausa"
-
 [node name="PauseMenuController" type="Node" parent="."]
 script = ExtResource("7_h4rts")
 pause_menu_packed = ExtResource("8_0frsq")
@@ -110,18 +170,41 @@ position = Vector2(1976, 648)
 [node name="Caja3" parent="." instance=ExtResource("10_v7ql1")]
 position = Vector2(-1021, 532)
 
+[node name="textos" type="Node" parent="."]
+
+[node name="Label2" type="Label" parent="textos"]
+offset_left = 1272.0
+offset_top = 349.0
+offset_right = 1937.0
+offset_bottom = 601.0
+theme_override_font_sizes/font_size = 20
+text = "apreta \"F\" para entrar en modo lanzamiento
+Ajusta el angulo con \"W\" y \"S\"
+apreta \"ctrl\" para lanzar a tu compañero"
+
+[node name="Label" type="Label" parent="textos"]
+offset_left = -429.0
+offset_top = 14.0
+offset_right = 236.0
+offset_bottom = 266.0
+theme_override_font_sizes/font_size = 30
+text = "\"A\" y \"D\" para moverse \"espacio\" para saltar
+\"Q\" para cambiar de personaje
+\"E\" para mover cajas
+\"esc\" pausa"
+
+[node name="Label3" type="Label" parent="textos"]
+offset_left = -1251.0
+offset_top = 324.0
+offset_right = -586.0
+offset_bottom = 576.0
+theme_override_font_sizes/font_size = 30
+text = "mantene apretado \"shift\" para
+ ver mas del mapa"
+
 [node name="Camera2D" type="Camera2D" parent="." groups=["scene_manager_entity_nodes"]]
 position_smoothing_enabled = true
 position_smoothing_speed = 8.0
 metadata/entity_name = "camera"
-
-[node name="Label3" type="Label" parent="."]
-offset_left = -1327.0
-offset_top = 331.0
-offset_right = -662.0
-offset_bottom = 583.0
-theme_override_font_sizes/font_size = 30
-text = "mantene apretado \"shift\" para
- ver mas del mapa"
 
 [connection signal="boton_pulsado" from="Boton" to="." method="_on_boton_boton_pulsado"]
