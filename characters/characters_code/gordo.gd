@@ -13,7 +13,7 @@ var current_box: RigidBody2D = null
 var modo_disparo:bool = false
 ##movimiento##
 @export var speed: float = 180.0 #Velocidad horizontal
-@export var jump_force: float = 300.0 #Fuerza del salto
+@export var jump_force: float = 200.0 #Fuerza del salto
 var gravity = Global.gravity
 @onready var texto_character = %TextoGordo
 @onready var TimerLabel = $TimerLabel

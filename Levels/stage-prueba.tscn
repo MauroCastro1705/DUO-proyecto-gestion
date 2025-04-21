@@ -109,7 +109,8 @@ position = Vector2(-823, 149)
 [node name="Gordo" parent="personajes" instance=ExtResource("3_0ause")]
 unique_name_in_owner = true
 z_index = 10
-position = Vector2(-896, 159)
+position = Vector2(1755, 550)
+launch_power = 900.0
 
 [node name="Floor2" parent="." instance=ExtResource("1_7o80q")]
 position = Vector2(-890, 645)
