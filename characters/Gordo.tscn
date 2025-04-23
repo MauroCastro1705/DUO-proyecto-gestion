@@ -1,9 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://bbs86ttvb6dhi"]
+[gd_scene load_steps=10 format=3 uid="uid://bbs86ttvb6dhi"]
 
 [ext_resource type="Script" uid="uid://m850xbhl28ts" path="res://characters/characters_code/gordo.gd" id="2_cfd2t"]
 [ext_resource type="PackedScene" uid="uid://dexu88uj2gnl5" path="res://characters/proyectil.tscn" id="2_jfpom"]
 [ext_resource type="Texture2D" uid="uid://bll21hkcm6v13" path="res://assets/characters/Ramiro/ramiroCompleto.png" id="4_1d7tw"]
 [ext_resource type="Texture2D" uid="uid://51yfew627mfu" path="res://assets/doted-line.png" id="4_jfpom"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_jfpom"]
+polygon = PackedVector2Array(-20, -42, 2, -42, 6, -46, 17, -50, 26, -44, 27, -32, 24, -19, 24, 1, 21, 12, 28, 27, 23, 35, 8, 36, -20, 35, -22, 14, -28, -11, -25, -31)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jfpom"]
 size = Vector2(79, 49)
@@ -23,6 +26,10 @@ collision_mask = 9
 script = ExtResource("2_cfd2t")
 projectile_scene = ExtResource("2_jfpom")
 launch_power = 100.0
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+visible = false
+occluder = SubResource("OccluderPolygon2D_jfpom")
 
 [node name="colision-general" type="CollisionShape2D" parent="."]
 position = Vector2(3.5, -0.499994)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://cpjkelsqxc364"]
+[gd_scene load_steps=21 format=3 uid="uid://cpjkelsqxc364"]
 
 [ext_resource type="Script" uid="uid://cdiy1lchrrem" path="res://Levels/stage_prueba.gd" id="1_3vi3g"]
 [ext_resource type="PackedScene" uid="uid://tbbpbwsjlk7m" path="res://Levels/piso/floor.tscn" id="1_7o80q"]
@@ -19,6 +19,7 @@
 [ext_resource type="Script" uid="uid://cyh0d64pfygbl" path="res://addons/maaacks_menus_template/base/scripts/pause_menu_controller.gd" id="7_h4rts"]
 [ext_resource type="PackedScene" uid="uid://ckwusaxwybu4g" path="res://Levels/scenes/overlaid_menus/pause_menu.tscn" id="8_0frsq"]
 [ext_resource type="PackedScene" uid="uid://b73qawm74b6b8" path="res://Levels/Objetos/caja_3.tscn" id="10_v7ql1"]
+[ext_resource type="PackedScene" uid="uid://cwfe1busr0b28" path="res://Levels/Objetos/poste-luz.tscn" id="20_lh1ow"]
 
 [node name="Stage-prueba" type="Node2D"]
 z_index = 1
@@ -157,7 +158,7 @@ position = Vector2(499, 583)
 position = Vector2(825, 648)
 
 [node name="Floor6" parent="." instance=ExtResource("1_7o80q")]
-position = Vector2(-1471, 507)
+position = Vector2(-1481, 921)
 rotation = 1.57079
 
 [node name="Floor7" parent="." instance=ExtResource("1_7o80q")]
@@ -218,5 +219,30 @@ text = "mantene apretado \"shift\" para
 position_smoothing_enabled = true
 position_smoothing_speed = 8.0
 metadata/entity_name = "camera"
+
+[node name="luces-y-postes" type="Node" parent="."]
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="luces-y-postes"]
+position = Vector2(-1448, -257)
+rotation = -0.446982
+color = Color(0.996078, 1, 1, 1)
+energy = 0.69
+blend_mode = 2
+shadow_enabled = true
+height = 0.5
+max_distance = 3527.0
+
+[node name="CanvasModulate" type="CanvasModulate" parent="luces-y-postes"]
+position = Vector2(-206, 485)
+color = Color(0.770822, 0.664877, 0.963789, 1)
+
+[node name="Poste-luz2" parent="luces-y-postes" instance=ExtResource("20_lh1ow")]
+position = Vector2(270, 397)
+
+[node name="Poste-luz3" parent="luces-y-postes" instance=ExtResource("20_lh1ow")]
+position = Vector2(-524, -5)
+
+[node name="Poste-luz" parent="luces-y-postes" instance=ExtResource("20_lh1ow")]
+position = Vector2(-1332, 396)
 
 [connection signal="boton_pulsado" from="Boton" to="." method="_on_boton_boton_pulsado"]

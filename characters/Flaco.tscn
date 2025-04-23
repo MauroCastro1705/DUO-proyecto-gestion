@@ -1,7 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://3ht2b6g4whk7"]
+[gd_scene load_steps=5 format=3 uid="uid://3ht2b6g4whk7"]
 
 [ext_resource type="Script" uid="uid://db8l0ggud4ttd" path="res://characters/characters_code/flaco.gd" id="1_b4tiw"]
 [ext_resource type="Texture2D" uid="uid://c6n7wq11ykk3n" path="res://assets/characters/Laura/Default_Laura.png" id="2_un0js"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_un0js"]
+polygon = PackedVector2Array(-10, 5, 8, 5, 9, 35, 6, 49, 0, 52, -7, 51, -11, 34, -12, 15)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b4tiw"]
 radius = 9.0
@@ -12,6 +15,10 @@ z_index = 100
 collision_layer = 4
 collision_mask = 29
 script = ExtResource("1_b4tiw")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+visible = false
+occluder = SubResource("OccluderPolygon2D_un0js")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 28)
