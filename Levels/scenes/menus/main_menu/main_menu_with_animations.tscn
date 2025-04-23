@@ -1,10 +1,16 @@
-[gd_scene load_steps=19 format=3 uid="uid://dqxrxn884ncl7"]
+[gd_scene load_steps=25 format=3 uid="uid://dqxrxn884ncl7"]
 
 [ext_resource type="PackedScene" uid="uid://c6k5nnpbypshi" path="res://addons/maaacks_menus_template/base/scenes/menus/main_menu/main_menu.tscn" id="1_jv2f8"]
 [ext_resource type="Script" uid="uid://dx3diaxviil07" path="res://Levels/scenes/menus/main_menu/main_menu_with_animations.gd" id="2_dt8wh"]
 [ext_resource type="PackedScene" uid="uid://bdb2fmb6d7tja" path="res://Levels/scenes/menus/options_menu/master_options_menu_with_tabs.tscn" id="3_s34cn"]
 [ext_resource type="PackedScene" uid="uid://dumutc27bjxqb" path="res://Levels/scenes/credits/credits.tscn" id="4_5n5tg"]
-[ext_resource type="Texture2D" uid="uid://6jgithbt5svq" path="res://assets/icon.svg.png" id="5_dt8wh"]
+[ext_resource type="Texture2D" uid="uid://byfh070wslkxt" path="res://assets/Background/NightSky_Tile_1.png" id="5_judgq"]
+[ext_resource type="Texture2D" uid="uid://dnm4knecb5h5m" path="res://assets/Background/Far_Building_Asset_1.png" id="6_kwlq3"]
+[ext_resource type="Texture2D" uid="uid://dtj5xmv2ousgd" path="res://assets/Background/Far_Building_Asset_4.png" id="7_k7fhm"]
+[ext_resource type="Texture2D" uid="uid://cieu8ekpewkvf" path="res://assets/Background/Building_Asset_2.png" id="8_sfsvc"]
+[ext_resource type="Texture2D" uid="uid://ctlg1xyrnwsdq" path="res://assets/Background/Building_Asset_3.png" id="9_gg3x4"]
+[ext_resource type="Texture2D" uid="uid://br5hnruvrsf0j" path="res://assets/Background/Building_Asset_4.png" id="10_0c21y"]
+[ext_resource type="FontFile" uid="uid://2leqju2pt1f7" path="res://assets/fonts/Grunge.ttf" id="11_kwlq3"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "Intro"
@@ -356,17 +362,42 @@ game_scene_path = "uid://cpjkelsqxc364"
 options_packed_scene = ExtResource("3_s34cn")
 credits_packed_scene = ExtResource("4_5n5tg")
 
-[node name="MenuAnimationPlayer" type="AnimationPlayer" parent="." index="1"]
+[node name="NightSkyTile1" type="Sprite2D" parent="." index="0"]
+position = Vector2(590, 281)
+texture = ExtResource("5_judgq")
+
+[node name="FarBuildingAsset1" type="Sprite2D" parent="." index="1"]
+position = Vector2(620, 435)
+texture = ExtResource("6_kwlq3")
+
+[node name="FarBuildingAsset4" type="Sprite2D" parent="." index="2"]
+position = Vector2(262, 397)
+texture = ExtResource("7_k7fhm")
+
+[node name="BuildingAsset2" type="Sprite2D" parent="." index="3"]
+position = Vector2(126, 471)
+texture = ExtResource("8_sfsvc")
+
+[node name="BuildingAsset3" type="Sprite2D" parent="." index="4"]
+position = Vector2(895, 483)
+scale = Vector2(1.17915, 1.17915)
+texture = ExtResource("9_gg3x4")
+
+[node name="BuildingAsset4" type="Sprite2D" parent="." index="5"]
+position = Vector2(436, 516)
+texture = ExtResource("10_0c21y")
+
+[node name="MenuAnimationPlayer" type="AnimationPlayer" parent="." index="7"]
 libraries = {
 &"": SubResource("AnimationLibrary_2kqig")
 }
 
-[node name="MenuAnimationTree" type="AnimationTree" parent="." index="2"]
+[node name="MenuAnimationTree" type="AnimationTree" parent="." index="8"]
 tree_root = SubResource("AnimationNodeStateMachine_vikuh")
 anim_player = NodePath("../MenuAnimationPlayer")
 parameters/conditions/intro_done = false
 
-[node name="BackgroundMusicPlayer" parent="." index="3"]
+[node name="BackgroundMusicPlayer" parent="." index="9"]
 bus = &"Master"
 
 [node name="VersionContainer" parent="VersionMargin" index="0"]
@@ -376,29 +407,43 @@ modulate = Color(1, 1, 1, 0)
 modulate = Color(1, 1, 1, 0)
 
 [node name="TitleLabel" parent="MenuContainer/TitleMargin/TitleContainer" index="0"]
+theme_override_fonts/font = ExtResource("11_kwlq3")
 text = "Ya no hay Bondis"
 
 [node name="SubTitleContainer" parent="MenuContainer/SubTitleMargin" index="0"]
 modulate = Color(1, 1, 1, 0)
 
 [node name="SubTitleLabel" parent="MenuContainer/SubTitleMargin/SubTitleContainer" index="0"]
+theme_override_fonts/font = ExtResource("11_kwlq3")
 text = "Un juego para Gestion de Proyectos"
 
 [node name="MenuButtonsContainer" parent="MenuContainer/MenuButtonsMargin" index="0"]
 modulate = Color(1, 1, 1, 0)
 
 [node name="MenuButtonsBoxContainer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer" index="0"]
+offset_left = -160.0
+offset_top = -143.0
+offset_right = 118.0
+offset_bottom = 93.0
 lock = true
+
+[node name="NewGameButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="0"]
+theme_override_fonts/font = ExtResource("11_kwlq3")
 
 [node name="ContinueGameButton" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="1"]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
+theme_override_fonts/font = ExtResource("11_kwlq3")
 text = "Continue"
 
-[node name="Icon_svg" type="Sprite2D" parent="." index="10"]
-position = Vector2(263, 315)
-scale = Vector2(1.09924, 1.05814)
-texture = ExtResource("5_dt8wh")
+[node name="OptionsButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="2"]
+theme_override_fonts/font = ExtResource("11_kwlq3")
+
+[node name="CreditsButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="3"]
+theme_override_fonts/font = ExtResource("11_kwlq3")
+
+[node name="ExitButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="4"]
+theme_override_fonts/font = ExtResource("11_kwlq3")
 
 [connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/ContinueGameButton" to="." method="_on_continue_game_button_pressed"]

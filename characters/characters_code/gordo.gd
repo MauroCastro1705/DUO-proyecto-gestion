@@ -74,7 +74,8 @@ func _process(delta: float) -> void:
 	velocity.y += gravity * delta    # Aplicar gravedad al personaje
 	move_and_slide()
 	if velocity.x != 0:#flip sprite
-		$CharacterSprite.flip_h = velocity.x > 0
+		$RamiroCompleto.flip_h = velocity.x < 0
+
 
 
 
