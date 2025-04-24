@@ -1,8 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://tbbpbwsjlk7m"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ij4hf"]
-rough = true
-absorbent = true
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ij4hf"]
 size = Vector2(1155.75, 46)

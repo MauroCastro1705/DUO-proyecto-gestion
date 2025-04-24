@@ -7,10 +7,10 @@ var player2: CharacterBody2D
 var posicionPuertaFinal = -102
 var is_moved: bool = false
 @onready var camera = $Camera2D
-var normal_zoom := Vector2(1, 1)
+var normal_zoom := Vector2(2.4, 2.4)
 var zoomed_out := Vector2(0.5, 0.5) # ajustar
 var zoom_speed := 5.0
-var target_zoom := Vector2(1, 1)
+var target_zoom := normal_zoom
 
 func _ready() -> void:
 	# Referencias a los personajes

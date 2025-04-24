@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://cpjkelsqxc364"]
+[gd_scene load_steps=24 format=3 uid="uid://cpjkelsqxc364"]
 
 [ext_resource type="Script" uid="uid://cdiy1lchrrem" path="res://Levels/stage_prueba.gd" id="1_3vi3g"]
 [ext_resource type="PackedScene" uid="uid://tbbpbwsjlk7m" path="res://Levels/piso/floor.tscn" id="1_7o80q"]
@@ -19,7 +19,10 @@
 [ext_resource type="Script" uid="uid://cyh0d64pfygbl" path="res://addons/maaacks_menus_template/base/scripts/pause_menu_controller.gd" id="7_h4rts"]
 [ext_resource type="PackedScene" uid="uid://ckwusaxwybu4g" path="res://Levels/scenes/overlaid_menus/pause_menu.tscn" id="8_0frsq"]
 [ext_resource type="PackedScene" uid="uid://b73qawm74b6b8" path="res://Levels/Objetos/caja_3.tscn" id="10_v7ql1"]
+[ext_resource type="Script" uid="uid://bn08egecc2egg" path="res://Levels/label_fps.gd" id="20_bousr"]
 [ext_resource type="PackedScene" uid="uid://cwfe1busr0b28" path="res://Levels/Objetos/poste-luz.tscn" id="20_lh1ow"]
+[ext_resource type="PackedScene" uid="uid://bf5b82fejpexj" path="res://Levels/Objetos/entel.tscn" id="21_am73i"]
+[ext_resource type="PackedScene" uid="uid://ecrh4ox5dkd2" path="res://characters/ui/ui_settings.tscn" id="23_ogtjw"]
 
 [node name="Stage-prueba" type="Node2D"]
 z_index = 1
@@ -181,7 +184,7 @@ metadata/_custom_type_script = "uid://cyh0d64pfygbl"
 position = Vector2(1976, 648)
 
 [node name="Caja3" parent="." instance=ExtResource("10_v7ql1")]
-position = Vector2(-1021, 532)
+position = Vector2(-928, 567)
 
 [node name="textos" type="Node" parent="."]
 
@@ -196,22 +199,22 @@ Ajusta el angulo con \"W\" y \"S\"
 apreta \"ctrl\" para lanzar a tu compañero"
 
 [node name="Label" type="Label" parent="textos"]
-offset_left = -429.0
-offset_top = 14.0
-offset_right = 236.0
-offset_bottom = 266.0
-theme_override_font_sizes/font_size = 30
+offset_left = -1078.0
+offset_top = 96.0
+offset_right = -648.0
+offset_bottom = 259.0
+theme_override_font_sizes/font_size = 19
 text = "\"A\" y \"D\" para moverse \"espacio\" para saltar
 \"Q\" para cambiar de personaje
 \"E\" para mover cajas
 \"esc\" pausa"
 
 [node name="Label3" type="Label" parent="textos"]
-offset_left = -1251.0
-offset_top = 324.0
-offset_right = -586.0
-offset_bottom = 576.0
-theme_override_font_sizes/font_size = 30
+offset_left = -1194.0
+offset_top = 491.0
+offset_right = -750.0
+offset_bottom = 608.0
+theme_override_font_sizes/font_size = 19
 text = "mantene apretado \"shift\" para
  ver mas del mapa"
 
@@ -220,12 +223,22 @@ position_smoothing_enabled = true
 position_smoothing_speed = 8.0
 metadata/entity_name = "camera"
 
+[node name="label_fps" type="Label" parent="Camera2D"]
+offset_left = 156.0
+offset_top = -134.0
+offset_right = 361.0
+offset_bottom = -53.0
+theme_override_font_sizes/font_size = 18
+text = "fps"
+script = ExtResource("20_bousr")
+
 [node name="luces-y-postes" type="Node" parent="."]
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="luces-y-postes"]
-position = Vector2(-1448, -257)
+visible = false
+position = Vector2(-1397, -146)
 rotation = -0.446982
-color = Color(0.996078, 1, 1, 1)
+color = Color(0.000203304, 0.859004, 0.874766, 1)
 energy = 0.69
 blend_mode = 2
 shadow_enabled = true
@@ -234,15 +247,21 @@ max_distance = 3527.0
 
 [node name="CanvasModulate" type="CanvasModulate" parent="luces-y-postes"]
 position = Vector2(-206, 485)
-color = Color(0.770822, 0.664877, 0.963789, 1)
+color = Color(0.40727, 0.195815, 0.658606, 1)
 
 [node name="Poste-luz2" parent="luces-y-postes" instance=ExtResource("20_lh1ow")]
-position = Vector2(270, 397)
+position = Vector2(290, 397)
 
 [node name="Poste-luz3" parent="luces-y-postes" instance=ExtResource("20_lh1ow")]
 position = Vector2(-524, -5)
 
 [node name="Poste-luz" parent="luces-y-postes" instance=ExtResource("20_lh1ow")]
-position = Vector2(-1332, 396)
+position = Vector2(-1241, 394)
+
+[node name="entel" parent="luces-y-postes" instance=ExtResource("21_am73i")]
+position = Vector2(-680, 223)
+scale = Vector2(0.47, 0.47)
+
+[node name="UI_settings" parent="." instance=ExtResource("23_ogtjw")]
 
 [connection signal="boton_pulsado" from="Boton" to="." method="_on_boton_boton_pulsado"]

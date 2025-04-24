@@ -1,14 +1,19 @@
-[gd_scene load_steps=5 format=3 uid="uid://3ht2b6g4whk7"]
+[gd_scene load_steps=7 format=3 uid="uid://3ht2b6g4whk7"]
 
 [ext_resource type="Script" uid="uid://db8l0ggud4ttd" path="res://characters/characters_code/flaco.gd" id="1_b4tiw"]
-[ext_resource type="Texture2D" uid="uid://c6n7wq11ykk3n" path="res://assets/characters/Laura/Default_Laura.png" id="2_un0js"]
-
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_un0js"]
-polygon = PackedVector2Array(-10, 5, 8, 5, 9, 35, 6, 49, 0, 52, -7, 51, -11, 34, -12, 15)
+[ext_resource type="Texture2D" uid="uid://deesu8boxigcq" path="res://characters/charA04.png" id="2_un0js"]
+[ext_resource type="Texture2D" uid="uid://4fe2xv0a8uqe" path="res://characters/charA04_n.png" id="3_2nft3"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b4tiw"]
 radius = 9.0
 height = 50.0
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_g4hnv"]
+diffuse_texture = ExtResource("2_un0js")
+normal_texture = ExtResource("3_2nft3")
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_un0js"]
+polygon = PackedVector2Array(-12, 8, -8, 4, -6, 7, -1, 3, 3, 9, 12, 4, 15, 5, 10, 11, 12, 20, 4, 26, 5, 33, 4, 50, 0, 39, -6, 50, -6, 24, -7, 15, -12, 15)
 
 [node name="Flaco" type="CharacterBody2D" node_paths=PackedStringArray("raycast_down") groups=["jugador"]]
 z_index = 100
@@ -17,23 +22,27 @@ collision_mask = 29
 script = ExtResource("1_b4tiw")
 raycast_down = NodePath("RayCast2D")
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
-visible = false
-occluder = SubResource("OccluderPolygon2D_un0js")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 28)
+position = Vector2(0, -25)
 shape = SubResource("CapsuleShape2D_b4tiw")
 debug_color = Color(0.740988, 0.339757, 0.808076, 0.42)
 
 [node name="DefaultLaura" type="Sprite2D" parent="."]
-position = Vector2(-1, 26)
-scale = Vector2(0.182927, 0.182927)
-texture = ExtResource("2_un0js")
+position = Vector2(-52, -78)
+scale = Vector2(0.14228, 0.14228)
+texture = SubResource("CanvasTexture_g4hnv")
+centered = false
+offset = Vector2(87.31, 0)
+flip_h = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="DefaultLaura"]
+show_behind_parent = true
+z_index = -6
+position = Vector2(365.477, 175.71)
+scale = Vector2(7.02839, 7.02839)
+occluder = SubResource("OccluderPolygon2D_un0js")
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
-position = Vector2(0, 28)
-target_position = Vector2(0, 40)
+position = Vector2(0, -27)
 collision_mask = 16
 hit_from_inside = true
-collide_with_areas = true

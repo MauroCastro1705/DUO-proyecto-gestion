@@ -47,7 +47,7 @@ func _process(delta: float) -> void:
 	
 	##VOLTEAR SPRITE###
 	if velocity.x != 0:
-		$DefaultLaura.flip_h = velocity.x < 0
+		$DefaultLaura.flip_h = velocity.x > 0
 		
 		
 func hacer_accion():

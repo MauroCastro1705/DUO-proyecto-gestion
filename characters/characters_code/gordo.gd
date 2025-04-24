@@ -15,15 +15,27 @@ var modo_disparo:bool = false
 @export var speed: float = 180.0 #Velocidad horizontal
 @export var speedLauraOnTop:float = 90.0 #velocidad con laura encima
 @export var jump_force: float = 200.0 #Fuerza del salto
-
 var gravity = Global.gravity
 @onready var texto_character = %TextoGordo
 @onready var TimerLabel = $TimerLabel
 var is_active: bool = false  #variable para controlarjugador activo
 
+var jump_text_edit: LineEdit = null # Initialize as null
+
 func _ready() -> void:
 	texto_character.visible = false
 	
+	## seteo Salto GRANDE desde UI
+		# Assuming your main game scene is the parent of the UIOverlay
+	var ui_node = get_node("/root/Stage-prueba/UI_settings") # Adjust the node name if different
+	jump_text_edit = ui_node.get_node("GDEsaltoFuerza/GDEsaltoFuerza_edit") as LineEdit
+	
+	if is_instance_valid(ui_node) and ui_node.has_signal("jump_height_changed"):
+		ui_node.jump_height_changed.connect(_on_jump_height_from_ui)
+	else:
+		printerr("Error: Could not connect to jump_height_changed signal in UI_settings.")
+
+
 func _process(delta: float) -> void:
 	var direction = Vector2.ZERO
 	#MODO DISPARO#
@@ -79,9 +91,10 @@ func _process(delta: float) -> void:
 	velocity.y += gravity * delta    # Aplicar gravedad al personaje
 	move_and_slide()
 	if velocity.x != 0:#flip sprite
-		$RamiroCompleto.flip_h = velocity.x < 0
-
-
+		$RamiroCompleto.flip_h = velocity.x > 0
+	
+	if is_on_floor() and Input.is_action_just_pressed("salto"):
+		velocity.y = jump_force
 
 
 func hacer_accion():
@@ -126,3 +139,13 @@ func draw_trajectory():
 #timer para texto sobre el personaje
 func _on_timer_label_timeout() -> void:
 	texto_character.visible = false
+
+## salto GDE en ui
+func _on_jump_height_from_ui(new_height):
+	jump_force = new_height
+	print("Jump height updated:", jump_force)
+	_update_jump_text_edit() # Update the text box when the value changes from UI
+
+func _update_jump_text_edit():
+	if is_instance_valid(jump_text_edit):
+		jump_text_edit.text = str(jump_force)

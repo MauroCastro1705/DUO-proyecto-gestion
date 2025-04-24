@@ -1,12 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://bbs86ttvb6dhi"]
+[gd_scene load_steps=13 format=3 uid="uid://bbs86ttvb6dhi"]
 
 [ext_resource type="Script" uid="uid://m850xbhl28ts" path="res://characters/characters_code/gordo.gd" id="2_cfd2t"]
 [ext_resource type="PackedScene" uid="uid://dexu88uj2gnl5" path="res://characters/proyectil.tscn" id="2_jfpom"]
 [ext_resource type="Texture2D" uid="uid://bll21hkcm6v13" path="res://assets/characters/Ramiro/ramiroCompleto.png" id="4_1d7tw"]
 [ext_resource type="Texture2D" uid="uid://51yfew627mfu" path="res://assets/doted-line.png" id="4_jfpom"]
-
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_jfpom"]
-polygon = PackedVector2Array(-20, -42, 2, -42, 6, -46, 17, -50, 26, -44, 27, -32, 24, -19, 24, 1, 21, 12, 28, 27, 23, 35, 8, 36, -20, 35, -22, 14, -28, -11, -25, -31)
+[ext_resource type="Texture2D" uid="uid://ktix763lhdkn" path="res://characters/charB01.png" id="5_sl5xk"]
+[ext_resource type="Texture2D" uid="uid://dap74tgc6dand" path="res://characters/charB01_n.png" id="6_ooeog"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jfpom"]
 size = Vector2(79, 49)
@@ -19,6 +18,13 @@ size = Vector2(64, 80)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1d7tw"]
 size = Vector2(50, 20)
 
+[sub_resource type="CanvasTexture" id="CanvasTexture_ig0o8"]
+diffuse_texture = ExtResource("5_sl5xk")
+normal_texture = ExtResource("6_ooeog")
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_jfpom"]
+polygon = PackedVector2Array(-18, -35, -8, -38, 4, -36, 9, -40, 15, -35, 23, -38, 26, -36, 26, -29, 25, -20, 24, -10, 21, 0, 19, 2, 19, 20, 23, 30, 14, 33, 11, 30, 3, 37, -15, 38, -17, 25, -16, 20, -18, 10, -24, -7, -23, -28)
+
 [node name="Gordo" type="CharacterBody2D" groups=["jugador"]]
 z_index = 2
 collision_layer = 2
@@ -27,17 +33,14 @@ script = ExtResource("2_cfd2t")
 projectile_scene = ExtResource("2_jfpom")
 launch_power = 100.0
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
-visible = false
-occluder = SubResource("OccluderPolygon2D_jfpom")
-
 [node name="colision-general" type="CollisionShape2D" parent="."]
-position = Vector2(3.5, -0.499994)
+position = Vector2(3.5, -38.5)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_jfpom")
 debug_color = Color(0.81993, 0.338419, 0.571267, 0.42)
 
 [node name="empujarCajas" type="Area2D" parent="."]
+position = Vector2(0, -38)
 collision_layer = 2
 collision_mask = 8
 
@@ -48,9 +51,9 @@ shape = SubResource("RectangleShape2D_cfd2t")
 [node name="TextoGordo" type="Label" parent="."]
 unique_name_in_owner = true
 offset_left = -120.0
-offset_top = -159.0
+offset_top = -197.0
 offset_right = 116.0
-offset_bottom = -48.0
+offset_bottom = -86.0
 theme_override_font_sizes/font_size = 15
 text = "Empujando"
 horizontal_alignment = 1
@@ -58,7 +61,7 @@ vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(0, -67)
+position = Vector2(0, -105)
 
 [node name="Trayectoria" type="Line2D" parent="Marker2D"]
 unique_name_in_owner = true
@@ -74,9 +77,9 @@ wait_time = 0.7
 one_shot = true
 
 [node name="plataforma-hombros" type="CharacterBody2D" parent="."]
+position = Vector2(0, -38)
 collision_layer = 16
 collision_mask = 20
-platform_on_leave = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="plataforma-hombros"]
 position = Vector2(4, -30)
@@ -84,9 +87,22 @@ shape = SubResource("RectangleShape2D_1d7tw")
 one_way_collision = true
 debug_color = Color(0.256769, 0.626522, 0.296495, 0.42)
 
-[node name="RamiroCompleto" type="Sprite2D" parent="."]
+[node name="RamiroCompleto2" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(3.99998, -6)
 scale = Vector2(0.0986133, 0.0986134)
 texture = ExtResource("4_1d7tw")
+
+[node name="RamiroCompleto" type="Sprite2D" parent="."]
+position = Vector2(0, -43)
+scale = Vector2(0.117647, 0.117647)
+texture = SubResource("CanvasTexture_ig0o8")
+flip_h = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RamiroCompleto"]
+show_behind_parent = true
+position = Vector2(0, 42.4998)
+scale = Vector2(8.5, 8.49999)
+occluder = SubResource("OccluderPolygon2D_jfpom")
 
 [connection signal="timeout" from="TimerLabel" to="." method="_on_timer_label_timeout"]
