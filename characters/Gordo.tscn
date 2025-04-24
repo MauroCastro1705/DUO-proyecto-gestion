@@ -73,9 +73,10 @@ antialiased = true
 wait_time = 0.7
 one_shot = true
 
-[node name="plataforma-hombros" type="StaticBody2D" parent="."]
+[node name="plataforma-hombros" type="CharacterBody2D" parent="."]
 collision_layer = 16
 collision_mask = 20
+platform_on_leave = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="plataforma-hombros"]
 position = Vector2(4, -30)

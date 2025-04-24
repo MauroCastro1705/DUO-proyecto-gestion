@@ -13,7 +13,9 @@ var current_box: RigidBody2D = null
 var modo_disparo:bool = false
 ##movimiento##
 @export var speed: float = 180.0 #Velocidad horizontal
+@export var speedLauraOnTop:float = 90.0 #velocidad con laura encima
 @export var jump_force: float = 200.0 #Fuerza del salto
+
 var gravity = Global.gravity
 @onready var texto_character = %TextoGordo
 @onready var TimerLabel = $TimerLabel
@@ -70,7 +72,10 @@ func _process(delta: float) -> void:
 			texto_character.visible = false
 			remove_joint()
 			
-	velocity.x = direction.x * speed     # Aplica movimiento horizontal
+	if Global.lauraOnTop:
+		velocity.x = direction.x * speedLauraOnTop
+	else:
+		velocity.x = direction.x * speed     # Aplica movimiento horizontal
 	velocity.y += gravity * delta    # Aplicar gravedad al personaje
 	move_and_slide()
 	if velocity.x != 0:#flip sprite

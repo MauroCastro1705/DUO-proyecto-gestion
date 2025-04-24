@@ -10,11 +10,12 @@ polygon = PackedVector2Array(-10, 5, 8, 5, 9, 35, 6, 49, 0, 52, -7, 51, -11, 34,
 radius = 9.0
 height = 50.0
 
-[node name="Flaco" type="CharacterBody2D" groups=["jugador"]]
+[node name="Flaco" type="CharacterBody2D" node_paths=PackedStringArray("raycast_down") groups=["jugador"]]
 z_index = 100
 collision_layer = 4
 collision_mask = 29
 script = ExtResource("1_b4tiw")
+raycast_down = NodePath("RayCast2D")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
 visible = false
@@ -29,3 +30,10 @@ debug_color = Color(0.740988, 0.339757, 0.808076, 0.42)
 position = Vector2(-1, 26)
 scale = Vector2(0.182927, 0.182927)
 texture = ExtResource("2_un0js")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(0, 28)
+target_position = Vector2(0, 40)
+collision_mask = 16
+hit_from_inside = true
+collide_with_areas = true
