@@ -87,22 +87,22 @@ shape = SubResource("RectangleShape2D_1d7tw")
 one_way_collision = true
 debug_color = Color(0.256769, 0.626522, 0.296495, 0.42)
 
-[node name="RamiroCompleto2" type="Sprite2D" parent="."]
+[node name="RamiroCompleto-LIGHT" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(3.99998, -6)
-scale = Vector2(0.0986133, 0.0986134)
-texture = ExtResource("4_1d7tw")
-
-[node name="RamiroCompleto" type="Sprite2D" parent="."]
 position = Vector2(0, -43)
 scale = Vector2(0.117647, 0.117647)
 texture = SubResource("CanvasTexture_ig0o8")
 flip_h = true
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="RamiroCompleto"]
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RamiroCompleto-LIGHT"]
 show_behind_parent = true
 position = Vector2(0, 42.4998)
 scale = Vector2(8.5, 8.49999)
 occluder = SubResource("OccluderPolygon2D_jfpom")
+
+[node name="RamiroCompleto" type="Sprite2D" parent="."]
+position = Vector2(3, -43)
+scale = Vector2(0.0955316, 0.0955316)
+texture = ExtResource("4_1d7tw")
 
 [connection signal="timeout" from="TimerLabel" to="." method="_on_timer_label_timeout"]

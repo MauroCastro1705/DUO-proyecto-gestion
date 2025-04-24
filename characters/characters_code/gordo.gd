@@ -91,7 +91,7 @@ func _process(delta: float) -> void:
 	velocity.y += gravity * delta    # Aplicar gravedad al personaje
 	move_and_slide()
 	if velocity.x != 0:#flip sprite
-		$RamiroCompleto.flip_h = velocity.x > 0
+		$RamiroCompleto.flip_h = velocity.x < 0
 	
 	if is_on_floor() and Input.is_action_just_pressed("salto"):
 		velocity.y = jump_force
