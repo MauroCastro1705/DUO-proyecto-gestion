@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfn577pow2knj"]
+
+[ext_resource type="Texture2D" uid="uid://2sxnug2i23d7" path="res://icon.svg" id="1_bfycm"]
+
+[sub_resource type="GDScript" id="GDScript_36gwp"]
+script/source = "extends Camera2D
+@export var target_path: NodePath
+@onready var target = get_node(target_path)
+
+func _physics_process(delta):
+	if is_instance_valid(target):
+		global_position = target.global_position
+"
+
+[node name="Node" type="Node"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(266, 213)
+texture = ExtResource("1_bfycm")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+script = SubResource("GDScript_36gwp")
+target_path = NodePath("../Sprite2D")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Camera2D"]
+scale = Vector2(0.296875, 0.25)
+texture = ExtResource("1_bfycm")

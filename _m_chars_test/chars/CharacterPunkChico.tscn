@@ -1,0 +1,70 @@
+[gd_scene load_steps=11 format=3 uid="uid://c7us60xwkn3td"]
+
+[ext_resource type="Script" uid="uid://cdmb0uxgjbsvk" path="res://_m_chars_test/chars/CharacterPunkChico.gd" id="1_5wcyk"]
+[ext_resource type="Texture2D" uid="uid://b1h1s5de6vkth" path="res://_m_chars_test/chars/assets/Char_px_finales_para_escalar_sprites.png" id="2_2cilw"]
+[ext_resource type="Texture2D" uid="uid://7hrjq8biyt75" path="res://_m_chars_test/chars/assets/charA04.png" id="2_muwrt"]
+[ext_resource type="Texture2D" uid="uid://csoj4x8kjn7yx" path="res://_m_chars_test/chars/assets/charA04_n.png" id="3_2cilw"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1gur3"]
+radius = 14.0
+height = 90.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5wcyk"]
+size = Vector2(17, 59)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_1gur3"]
+diffuse_texture = ExtResource("2_muwrt")
+normal_texture = ExtResource("3_2cilw")
+
+[sub_resource type="Gradient" id="Gradient_e8bk1"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_gkw1b"]
+gradient = SubResource("Gradient_e8bk1")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 1)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_gkw1b"]
+polygon = PackedVector2Array(-70.0389, -284.047, -85.6031, -315.175, -101.167, -334.63, -81.7121, -342.412, -23.3463, -311.284, 7.7821, -357.977, 35.0195, -330.739, 62.2568, -342.412, 77.821, -319.066, 81.7121, -287.938, 89.4942, -268.482, 81.7121, -249.027, 73.93, -280.156, 42.8016, -260.7, 31.1284, -217.899, 46.6926, -198.444, 42.8016, -167.315, 35.0195, -159.533, 31.1284, -128.405, 31.1284, -70.0389, 38.9105, -11.6732, 19.4553, -66.1479, 3.89105, -132.296, -7.7821, -128.405, -27.2374, -62.2568, -27.2374, -3.89105, -35.0195, -77.821, -35.0195, -116.732, -23.3463, -147.86, -31.1284, -167.315, -15.5642, -178.988, 0, -190.661, -7.7821, -210.117, -42.8016, -194.553, -66.1479, -210.117, -66.1479, -221.79, -46.6926, -225.681, -66.1479, -241.245, -81.7121, -237.354)
+
+[node name="CharacterPunkChico" type="CharacterBody2D"]
+script = ExtResource("1_5wcyk")
+speed = 400.0
+jump_velocity = 650.0
+sprite_node_path = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://cdmb0uxgjbsvk"
+
+[node name="CharPxFinalesParaEscalarSprites" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(6, -90)
+texture = ExtResource("2_2cilw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -45)
+shape = SubResource("CapsuleShape2D_1gur3")
+debug_color = Color(0, 0.6, 0.164706, 0.419608)
+
+[node name="PushArea" type="Area2D" parent="."]
+
+[node name="PushDetectionShape" type="CollisionShape2D" parent="PushArea"]
+position = Vector2(-18, -29.5)
+shape = SubResource("RectangleShape2D_5wcyk")
+debug_color = Color(0.0446472, 0.413503, 0.496849, 0.42)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 1)
+scale = Vector2(0.257, 0.257)
+texture = SubResource("CanvasTexture_1gur3")
+offset = Vector2(0, -270.405)
+
+[node name="PointLight2D" type="PointLight2D" parent="Sprite2D"]
+visible = false
+z_index = -1
+position = Vector2(-7.7821, -229.572)
+color = Color(8.66354e-07, 0.279364, 0.518054, 1)
+texture = SubResource("GradientTexture2D_gkw1b")
+texture_scale = 11.52
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Sprite2D"]
+occluder = SubResource("OccluderPolygon2D_gkw1b")
