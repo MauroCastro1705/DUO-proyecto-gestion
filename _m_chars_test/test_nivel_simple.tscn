@@ -1,10 +1,10 @@
 [gd_scene load_steps=10 format=3 uid="uid://dt1eqajov6kib"]
 
-[ext_resource type="PackedScene" uid="uid://c7us60xwkn3td" path="res://_m_chars_test/chars/CharacterPunkChico.tscn" id="2_qtr0o"]
-[ext_resource type="PackedScene" uid="uid://gg8j6p1mup5a" path="res://_m_chars_test/chars/CharacterPunkGrande.tscn" id="3_csadi"]
-[ext_resource type="Script" uid="uid://d0qyiwpc1wt3i" path="res://_m_chars_test/chars/CharacterManager.gd" id="4_dixmh"]
+[ext_resource type="PackedScene" uid="uid://c7us60xwkn3td" path="res://_m_chars_test/chars/character_punk_chico.tscn" id="2_qtr0o"]
+[ext_resource type="PackedScene" uid="uid://gg8j6p1mup5a" path="res://_m_chars_test/chars/character_punk_grande.tscn" id="3_csadi"]
+[ext_resource type="Script" uid="uid://d0qyiwpc1wt3i" path="res://_m_chars_test/chars/character_manager.gd" id="4_dixmh"]
 [ext_resource type="PackedScene" uid="uid://tbbpbwsjlk7m" path="res://Levels/piso/floor.tscn" id="5_csadi"]
-[ext_resource type="Script" uid="uid://dwhpiluau1rpy" path="res://_m_chars_test/camara/CameraManager.gd" id="5_qtr0o"]
+[ext_resource type="Script" uid="uid://dwhpiluau1rpy" path="res://_m_chars_test/camara/camera_manager.gd" id="5_qtr0o"]
 [ext_resource type="Texture2D" uid="uid://b1h1s5de6vkth" path="res://_m_chars_test/chars/assets/Char_px_finales_para_escalar_sprites.png" id="6_a6vgv"]
 [ext_resource type="PackedScene" uid="uid://bf5b82fejpexj" path="res://Levels/Objetos/entel.tscn" id="7_v1yr6"]
 
@@ -34,9 +34,9 @@ character_chico_path = NodePath("../CharacterPunkChico")
 character_grande_path = NodePath("../CharacterPunkGrande")
 
 [node name="Camera2DconCameraManager" type="Camera2D" parent="."]
-offset = Vector2(0, -150)
 script = ExtResource("5_qtr0o")
 character_manager_path = NodePath("../character_manager")
+vertical_follow_offset = -150.0
 
 [node name="Floor" parent="." instance=ExtResource("5_csadi")]
 position = Vector2(553, 568)

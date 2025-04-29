@@ -1,4 +1,4 @@
-# CharacterManager.gd
+# character_maanager.gd v4.3
 # Attach it to a empty Node named CharacterManager in your main scene
 extends Node
 
@@ -22,8 +22,8 @@ func _ready() -> void:
 	
 	# Control de errores si no hay chars asignados
 	if characters.is_empty():
-		printerr("CM: No characters.")
-		set_process_unhandled_input(false)
+		printerr("CM: No characters valid assigned. Disabling input.")
+		set_process(false)
 		return
 
 	# Set initial active character . solo se ejecutaria si characters no esta vacio
@@ -39,7 +39,7 @@ func _ready() -> void:
 		#_switch_to_next_character()
 		#get_viewport().set_input_as_handled() # Consume el input
 
-func _process(delta: float) -> void: # Or _physics_process
+func _process(_delta: float) -> void: # Or _physics_process
 	# Check ONCE per frame if the action was JUST pressed down
 	if Input.is_action_just_pressed("cambio_manager"):
 		# Optional: Check if switching is allowed (e.g., Global.can_swap)

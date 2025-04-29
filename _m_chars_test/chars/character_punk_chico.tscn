@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://c7us60xwkn3td"]
 
-[ext_resource type="Script" uid="uid://cdmb0uxgjbsvk" path="res://_m_chars_test/chars/CharacterPunkChico.gd" id="1_5wcyk"]
+[ext_resource type="Script" uid="uid://cdmb0uxgjbsvk" path="res://_m_chars_test/chars/character_punk_chico.gd" id="1_5wcyk"]
 [ext_resource type="Texture2D" uid="uid://b1h1s5de6vkth" path="res://_m_chars_test/chars/assets/Char_px_finales_para_escalar_sprites.png" id="2_2cilw"]
 [ext_resource type="Texture2D" uid="uid://7hrjq8biyt75" path="res://_m_chars_test/chars/assets/charA04.png" id="2_muwrt"]
 [ext_resource type="Texture2D" uid="uid://csoj4x8kjn7yx" path="res://_m_chars_test/chars/assets/charA04_n.png" id="3_2cilw"]
@@ -32,6 +32,7 @@ polygon = PackedVector2Array(-70.0389, -284.047, -85.6031, -315.175, -101.167, -
 script = ExtResource("1_5wcyk")
 speed = 400.0
 jump_velocity = 650.0
+fall_gravity_multiplier = 2.5
 sprite_node_path = NodePath("Sprite2D")
 metadata/_custom_type_script = "uid://cdmb0uxgjbsvk"
 

@@ -1,3 +1,4 @@
+# character_punk_chico.gd v4.4
 extends CharacterPunkBase
 class_name CharacterPunkChico
 

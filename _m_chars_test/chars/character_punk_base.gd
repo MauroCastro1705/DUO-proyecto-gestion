@@ -1,4 +1,4 @@
-# CharacterPunkBase.gd v4.4
+# character_punk_base.gd v4.4
 extends CharacterBody2D
 class_name CharacterPunkBase
 
@@ -6,13 +6,14 @@ class_name CharacterPunkBase
 @export var speed: float = 200.0
 @export var jump_velocity: float = 450.0
 @export var friction: float = 4000.0 # Used for grounded deceleration
+@export var fall_gravity_multiplier: float = 2.0 # Multiplier for gravity when falling (e.g., 1.5, 2.0)
 
 @export_group("Node References")
 @export var sprite_node_path: NodePath = ^""
 
 @onready var sprite: Sprite2D = get_node_or_null(sprite_node_path) as Sprite2D
 
-var gravity: float = ProjectSettings.get_setting("physics/2d/default_gravity")
+var base_gravity: float = ProjectSettings.get_setting("physics/2d/default_gravity")
 var is_active: bool = false
 
 
@@ -27,9 +28,16 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
+	 # Calculate effective gravity for this frame
+	var effective_gravity = base_gravity
+	
+	# Apply higher gravity if falling (and not on floor already)
+	if velocity.y > 0 and not is_on_floor():
+		effective_gravity = base_gravity * fall_gravity_multiplier
+	
 	# Apply gravity
 	if not is_on_floor():
-		velocity.y += gravity * delta
+		velocity.y += effective_gravity * delta
 	
 	if is_active:
 		# Basic Horizontal Movement (can be overridden or extended)
@@ -73,7 +81,7 @@ func _update_sprite_facing_direction() -> void:
 	if sprite and velocity.x != 0:
 		var base_scale_x_magnitude: float = abs(sprite.scale.x) # lee X scale en editor
 		var target_direction: float = sign(velocity.x) # Direccion sign() returns -1.0, 0.0, or 1.0
-		var target_scale_x: float = base_scale_x_magnitude * target_direction * -1 # 3. Calculate the new target scale.x value
+		var target_scale_x: float = base_scale_x_magnitude * target_direction * -1 # 3. Calculate the new target scale.x value. Multiply by target direction and -1 because base sprite faces LEFT
 		
 		if not is_equal_approx(sprite.scale.x, target_scale_x): # 4. Apply the new scale.x only if it actually needs to change
 			sprite.scale.x = target_scale_x
@@ -108,11 +116,4 @@ func _on_deactivated() -> void:
 
 func _on_activated() -> void:
 	# Base class can leave this empty
-	pass
-
-
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
 	pass
