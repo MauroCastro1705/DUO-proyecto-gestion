@@ -61,11 +61,12 @@ func _physics_process(delta: float) -> void:
 	var current_target_zoom: float
 	#    Define an action like "zoom_out" in Project Settings -> Input Map
 	if Input.is_action_pressed("zoom_out"):
+		print("Zoomeando")
 		current_target_zoom = overview_zoom_level
 	else:
 		current_target_zoom = playing_zoom_level
 		# Construct the target zoom vector using the renamed variable
-		_target_zoom = Vector2(current_target_zoom, current_target_zoom)
+	_target_zoom = Vector2(current_target_zoom, current_target_zoom)
 
 	# 3. INTERPOLACIONES accion
 	# Smoothly interpolate the camera's actual zoom towards the target zoom

@@ -37,6 +37,7 @@ character_grande_path = NodePath("../CharacterPunkGrande")
 script = ExtResource("5_qtr0o")
 character_manager_path = NodePath("../character_manager")
 vertical_follow_offset = -150.0
+overview_zoom_level = 4.0
 
 [node name="Floor" parent="." instance=ExtResource("5_csadi")]
 position = Vector2(553, 568)
