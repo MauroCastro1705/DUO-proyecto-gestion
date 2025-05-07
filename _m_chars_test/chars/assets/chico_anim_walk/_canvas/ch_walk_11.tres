@@ -1,0 +1,8 @@
+[gd_resource type="CanvasTexture" load_steps=3 format=3 uid="uid://bbg61hes6prxy"]
+
+[ext_resource type="Texture2D" uid="uid://degft0jvbpjh" path="res://_m_chars_test/chars/assets/chico_anim_walk/diffuse/bondi_char_07_RIG_08_00010.png" id="1_qcihk"]
+[ext_resource type="Texture2D" uid="uid://c5skn7t5u00mj" path="res://_m_chars_test/chars/assets/chico_anim_walk/normal/bondi_char_07_RIG_08_00001_n_11.png" id="2_qcihk"]
+
+[resource]
+diffuse_texture = ExtResource("1_qcihk")
+normal_texture = ExtResource("2_qcihk")
