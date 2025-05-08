@@ -149,3 +149,6 @@ func _on_jump_height_from_ui(new_height):
 func _update_jump_text_edit():
 	if is_instance_valid(jump_text_edit):
 		jump_text_edit.text = str(jump_force)
+		
+	
+	
