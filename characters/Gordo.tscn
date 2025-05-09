@@ -50,10 +50,10 @@ shape = SubResource("RectangleShape2D_cfd2t")
 
 [node name="TextoGordo" type="Label" parent="."]
 unique_name_in_owner = true
-offset_left = -120.0
-offset_top = -197.0
-offset_right = 116.0
-offset_bottom = -86.0
+offset_left = -106.0
+offset_top = -162.0
+offset_right = 130.0
+offset_bottom = -51.0
 theme_override_font_sizes/font_size = 15
 text = "Empujando"
 horizontal_alignment = 1

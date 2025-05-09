@@ -25,15 +25,15 @@ var jump_text_edit: LineEdit = null # Initialize as null
 func _ready() -> void:
 	texto_character.visible = false
 	
-	## seteo Salto GRANDE desde UI
-		# Assuming your main game scene is the parent of the UIOverlay
-	var ui_node = get_node("/root/Stage-prueba/UI_settings") # Adjust the node name if different
-	jump_text_edit = ui_node.get_node("GDEsaltoFuerza/GDEsaltoFuerza_edit") as LineEdit
-	
-	if is_instance_valid(ui_node) and ui_node.has_signal("jump_height_changed"):
-		ui_node.jump_height_changed.connect(_on_jump_height_from_ui)
-	else:
-		printerr("Error: Could not connect to jump_height_changed signal in UI_settings.")
+	### seteo Salto GRANDE desde UI
+	#	# Assuming your main game scene is the parent of the UIOverlay
+	#var ui_node = get_node("/root/Stage-prueba/UI_settings") # Adjust the node name if different
+	#jump_text_edit = ui_node.get_node("GDEsaltoFuerza/GDEsaltoFuerza_edit") as LineEdit
+	#
+	#if is_instance_valid(ui_node) and ui_node.has_signal("jump_height_changed"):
+	#	ui_node.jump_height_changed.connect(_on_jump_height_from_ui)
+	#else:
+	#	printerr("Error: Could not connect to jump_height_changed signal in UI_settings.")
 
 
 func _process(delta: float) -> void:
@@ -150,5 +150,4 @@ func _update_jump_text_edit():
 	if is_instance_valid(jump_text_edit):
 		jump_text_edit.text = str(jump_force)
 		
-	
-	
+		
