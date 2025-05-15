@@ -29,7 +29,6 @@ shape = SubResource("CapsuleShape2D_b4tiw")
 debug_color = Color(0.740988, 0.339757, 0.808076, 0.42)
 
 [node name="DefaultLaura-light" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(-52, -78)
 scale = Vector2(0.14228, 0.14228)
 texture = SubResource("CanvasTexture_g4hnv")
@@ -50,6 +49,7 @@ collision_mask = 16
 hit_from_inside = true
 
 [node name="DefaultLaura" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(0, -29)
 scale = Vector2(0.193598, 0.193598)
 texture = ExtResource("4_g4hnv")
