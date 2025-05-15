@@ -13,6 +13,8 @@ var big_character_velocity := Vector2.ZERO
 @export var fast_fall_multiplier: float = 2.0
 @onready var sprite = $LauraSprites
 
+
+
 func _ready() -> void:
 	Global.lauraOnTop = false
 
@@ -63,16 +65,41 @@ func hacer_accion():
 	pass
 	
 func update_animation(direction: Vector2):
-	if direction.x != 0:
-		sprite.play("walk")
-		sprite.flip_h = direction.x > 0
+	if Emociones.laura_mood_enojado:
+		if direction.x != 0:
+			sprite.play("walk_enojado")
+			sprite.flip_h = direction.x > 0
+		else:
+			sprite.play("idle")
 	else:
-		sprite.play("idle")
+		if direction.x != 0:
+			sprite.play("walk")
+			sprite.flip_h = direction.x > 0
+		else:
+			sprite.play("idle")
+
+
+#·····VARIABLES EN GLOBAL.gd···
+# Emociones.laura_mood_enojado = false
+# Emociones.laura_mood_cauto = false
+# Emociones.laura_mood_ignorando = false
+# Emociones.laura_mood_rockeando = false
+# Emociones.laura_mood_normal = true
+#······································
 
 func check_emocion(emocion:String):
 	match emocion:
 		"normal":
 			print("emocion normal")
+			Emociones.laura_mood_normal = true#ESTE
+			Emociones.laura_mood_enojado= false
+			Emociones.laura_mood_cauto = false
+			Emociones.laura_mood_ignorando= false
+			Emociones.laura_mood_rockeando= false
 		"enojada":
 			print("emocion enojada")
-			
+			Emociones.laura_mood_normal = false
+			Emociones.laura_mood_enojado= true #ESTE
+			Emociones.laura_mood_cauto = false
+			Emociones.laura_mood_ignorando= false
+			Emociones.laura_mood_rockeando= false
