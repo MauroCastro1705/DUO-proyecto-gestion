@@ -8,6 +8,7 @@ var is_active: bool = false  #variable para controlar si se recibe input
 @export var raycast_down: RayCast2D  # arrastrá tu RayCast2D en el editor aquí
 var is_on_big_character = false
 var big_character_velocity := Vector2.ZERO
+@onready var sprite = $LauraSprites
 
 func _ready() -> void:
 	Global.lauraOnTop = false
@@ -44,14 +45,19 @@ func _process(delta: float) -> void:
 	if is_on_big_character:
 		velocity.x += big_character_velocity.x
 	move_and_slide()
-	
+	update_animation(direction)
 	##VOLTEAR SPRITE###
 	if velocity.x != 0:
-		$DefaultLaura.flip_h = velocity.x < 0
+		$LauraSprites.flip_h = velocity.x > 0
 		
 		
 func hacer_accion():
 	pass
 	
-
+func update_animation(direction: Vector2):
+	if direction.x != 0:
+		sprite.play("walk")
+		sprite.flip_h = direction.x < 0
+	else:
+		sprite.play("idle")
 ###collision con cajas####

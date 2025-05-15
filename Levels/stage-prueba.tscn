@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://cdiy1lchrrem" path="res://Levels/stage_prueba.gd" id="1_3vi3g"]
 [ext_resource type="PackedScene" uid="uid://tbbpbwsjlk7m" path="res://Levels/piso/floor.tscn" id="1_7o80q"]
-[ext_resource type="PackedScene" uid="uid://3ht2b6g4whk7" path="res://characters/Flaco.tscn" id="2_0ause"]
+[ext_resource type="PackedScene" uid="uid://3ht2b6g4whk7" path="res://characters/Laura.tscn" id="2_0ause"]
 [ext_resource type="Texture2D" uid="uid://byfh070wslkxt" path="res://assets/Background/NightSky_Tile_1.png" id="2_siv67"]
-[ext_resource type="PackedScene" uid="uid://bbs86ttvb6dhi" path="res://characters/Gordo.tscn" id="3_0ause"]
+[ext_resource type="PackedScene" uid="uid://bbs86ttvb6dhi" path="res://characters/Ramiro.tscn" id="3_0ause"]
 [ext_resource type="Texture2D" uid="uid://bbjxiyj6t2xvn" path="res://assets/Background/Building_Asset_1.png" id="3_sg5sg"]
 [ext_resource type="Texture2D" uid="uid://dnm4knecb5h5m" path="res://assets/Background/Far_Building_Asset_1.png" id="3_who0o"]
 [ext_resource type="Texture2D" uid="uid://cieu8ekpewkvf" path="res://assets/Background/Building_Asset_2.png" id="4_kflaj"]

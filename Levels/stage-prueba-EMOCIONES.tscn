@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://buaykj4mfqsby"]
+[gd_scene load_steps=18 format=3 uid="uid://buaykj4mfqsby"]
 
 [ext_resource type="Script" uid="uid://2k28c50c4nhw" path="res://Levels/stage_prueba_emociones.gd" id="1_3pfn6"]
 [ext_resource type="Texture2D" uid="uid://byfh070wslkxt" path="res://assets/Background/NightSky_Tile_1.png" id="2_ncoa7"]
@@ -10,15 +10,13 @@
 [ext_resource type="Texture2D" uid="uid://cieu8ekpewkvf" path="res://assets/Background/Building_Asset_2.png" id="8_7iwrj"]
 [ext_resource type="Texture2D" uid="uid://ctlg1xyrnwsdq" path="res://assets/Background/Building_Asset_3.png" id="9_vwqpb"]
 [ext_resource type="Texture2D" uid="uid://br5hnruvrsf0j" path="res://assets/Background/Building_Asset_4.png" id="10_rlioi"]
-[ext_resource type="PackedScene" uid="uid://3ht2b6g4whk7" path="res://characters/Flaco.tscn" id="11_fybgb"]
-[ext_resource type="PackedScene" uid="uid://bbs86ttvb6dhi" path="res://characters/Gordo.tscn" id="12_w6mdm"]
+[ext_resource type="PackedScene" uid="uid://3ht2b6g4whk7" path="res://characters/Laura.tscn" id="11_fybgb"]
+[ext_resource type="PackedScene" uid="uid://bbs86ttvb6dhi" path="res://characters/Ramiro.tscn" id="12_w6mdm"]
 [ext_resource type="PackedScene" uid="uid://tbbpbwsjlk7m" path="res://Levels/piso/floor.tscn" id="13_ph503"]
 [ext_resource type="Script" uid="uid://cyh0d64pfygbl" path="res://addons/maaacks_menus_template/base/scripts/pause_menu_controller.gd" id="17_txp1u"]
 [ext_resource type="PackedScene" uid="uid://ckwusaxwybu4g" path="res://Levels/scenes/overlaid_menus/pause_menu.tscn" id="18_eqfty"]
-[ext_resource type="Script" uid="uid://bn08egecc2egg" path="res://Levels/label_fps.gd" id="20_1mtaq"]
 [ext_resource type="PackedScene" uid="uid://cwfe1busr0b28" path="res://Levels/Objetos/poste-luz.tscn" id="21_mpaah"]
 [ext_resource type="PackedScene" uid="uid://bf5b82fejpexj" path="res://Levels/Objetos/entel.tscn" id="22_riehi"]
-[ext_resource type="PackedScene" uid="uid://ecrh4ox5dkd2" path="res://characters/ui/ui_settings.tscn" id="23_1s5c3"]
 
 [node name="Stage-prueba-EMOCIONES" type="Node2D"]
 z_index = 1
@@ -149,18 +147,10 @@ rotation = 1.57079
 position = Vector2(2050, 859)
 
 [node name="Camera2D" type="Camera2D" parent="." groups=["scene_manager_entity_nodes"]]
+position = Vector2(-5, 10)
 position_smoothing_enabled = true
 position_smoothing_speed = 8.0
 metadata/entity_name = "camera"
-
-[node name="label_fps" type="Label" parent="Camera2D"]
-offset_left = 156.0
-offset_top = -134.0
-offset_right = 361.0
-offset_bottom = -53.0
-theme_override_font_sizes/font_size = 18
-text = "fps"
-script = ExtResource("20_1mtaq")
 
 [node name="luces-y-postes" type="Node" parent="."]
 
@@ -200,5 +190,3 @@ position = Vector2(-1789, 611)
 [node name="entel" parent="luces-y-postes" instance=ExtResource("22_riehi")]
 position = Vector2(-323, 835)
 scale = Vector2(0.47, 0.47)
-
-[node name="UI_settings" parent="." instance=ExtResource("23_1s5c3")]

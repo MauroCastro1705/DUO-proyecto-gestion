@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://bbs86ttvb6dhi"]
 
-[ext_resource type="Script" uid="uid://m850xbhl28ts" path="res://characters/characters_code/gordo.gd" id="2_cfd2t"]
+[ext_resource type="Script" uid="uid://m850xbhl28ts" path="res://characters/characters_code/Ramiro.gd" id="2_cfd2t"]
 [ext_resource type="PackedScene" uid="uid://dexu88uj2gnl5" path="res://characters/proyectil.tscn" id="2_jfpom"]
 [ext_resource type="Texture2D" uid="uid://bll21hkcm6v13" path="res://assets/characters/Ramiro/ramiroCompleto.png" id="4_1d7tw"]
 [ext_resource type="Texture2D" uid="uid://51yfew627mfu" path="res://assets/doted-line.png" id="4_jfpom"]
