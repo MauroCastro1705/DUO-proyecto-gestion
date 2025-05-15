@@ -30,5 +30,5 @@ var laura_texto_mood_rockeado:String = "estoy rockeando"
 #EMOCIONES-COMPARTIDAS----------
 
 
-var mood_enojado:bool = false
-var texto_mood_enojado:String = "estoy enojado"
+var ambos_mood_enojado:bool = false
+var ambos_texto_mood_enojado:String = "estoy enojado"
