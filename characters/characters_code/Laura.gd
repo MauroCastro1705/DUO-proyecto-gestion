@@ -8,6 +8,8 @@ var is_active: bool = false  #variable para controlar si se recibe input
 @export var raycast_down: RayCast2D  # arrastrá tu RayCast2D en el editor aquí
 var is_on_big_character = false
 var big_character_velocity := Vector2.ZERO
+@export var max_fall_speed: float = 1000.0
+@export var fast_fall_multiplier: float = 2.0
 @onready var sprite = $LauraSprites
 
 func _ready() -> void:
@@ -38,6 +40,13 @@ func _process(delta: float) -> void:
 			direction.x -= 1
 		if Input.is_action_just_pressed("salto") and is_on_floor():
 			velocity.y = -jump_force  # La fuerza del salto va hacia arriba, por eso es negativa
+		else:
+		# Aplicar gravedad
+			if velocity.y > 0:  # Está cayendo
+				velocity.y += gravity * fast_fall_multiplier * delta
+			else:
+				velocity.y += gravity * delta
+			
 		if Input.is_action_pressed("empujar"):
 			hacer_accion()
 	velocity.x = direction.x * speed     # Aplica movimiento horizontal
@@ -46,18 +55,14 @@ func _process(delta: float) -> void:
 		velocity.x += big_character_velocity.x
 	move_and_slide()
 	update_animation(direction)
-	##VOLTEAR SPRITE###
-	if velocity.x != 0:
-		$LauraSprites.flip_h = velocity.x > 0
-		
-		
+
 func hacer_accion():
 	pass
 	
 func update_animation(direction: Vector2):
 	if direction.x != 0:
 		sprite.play("walk")
-		sprite.flip_h = direction.x < 0
+		sprite.flip_h = direction.x > 0
 	else:
 		sprite.play("idle")
 ###collision con cajas####

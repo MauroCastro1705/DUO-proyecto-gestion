@@ -5,8 +5,8 @@ var player1: CharacterBody2D
 var player2: CharacterBody2D
 var is_moved: bool = false
 @onready var camera = $Camera2D
-var normal_zoom := Vector2(2.4, 2.4)
-var zoomed_out := Vector2(0.5, 0.5) # ajustar
+var normal_zoom := Vector2(2.0, 2.0)
+var zoomed_out := Vector2(0.9, 0.9) # ajustar
 var zoom_speed := 5.0
 var target_zoom := normal_zoom
 
@@ -26,7 +26,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	##ANIMACION CAMARA ENTRE PERSONAJES
 	if active_player:
-		camera.global_position = camera.global_position.lerp(active_player.global_position, delta * 8.0)
+		camera.global_position = camera.global_position.lerp(to_local(active_player.global_position), delta * 8.0)
 	camera.zoom = camera.zoom.lerp(target_zoom, delta * zoom_speed)
 	
 	
