@@ -96,6 +96,8 @@ func check_emocion(emocion:String):
 			Emociones.laura_mood_cauto = false
 			Emociones.laura_mood_ignorando= false
 			Emociones.laura_mood_rockeando= false
+			Dialogic.start("timeline_test2")
+			get_viewport().set_input_as_handled()
 		"enojada":
 			print("emocion enojada")
 			Emociones.laura_mood_normal = false
@@ -103,3 +105,5 @@ func check_emocion(emocion:String):
 			Emociones.laura_mood_cauto = false
 			Emociones.laura_mood_ignorando= false
 			Emociones.laura_mood_rockeando= false
+			Dialogic.start("timeline_test")
+			get_viewport().set_input_as_handled()
