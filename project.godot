@@ -125,6 +125,7 @@ locale/translations=PackedStringArray("res://addons/maaacks_menus_template/base/
 2d_physics/layer_4="cajas"
 2d_physics/layer_5="plataforma-pj-grande"
 2d_physics/layer_6="proyectil"
+2d_physics/layer_7="zona-emociones"
 
 [maaacks_menus_template]
 

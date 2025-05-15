@@ -25,7 +25,7 @@ normal_texture = ExtResource("6_ooeog")
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_jfpom"]
 polygon = PackedVector2Array(-18, -35, -8, -38, 4, -36, 9, -40, 15, -35, 23, -38, 26, -36, 26, -29, 25, -20, 24, -10, 21, 0, 19, 2, 19, 20, 23, 30, 14, 33, 11, 30, 3, 37, -15, 38, -17, 25, -16, 20, -18, 10, -24, -7, -23, -28)
 
-[node name="Gordo" type="CharacterBody2D" groups=["jugador"]]
+[node name="Ramiro" type="CharacterBody2D" groups=["jugador"]]
 z_index = 2
 collision_layer = 2
 collision_mask = 9

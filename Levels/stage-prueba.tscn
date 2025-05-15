@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://cpjkelsqxc364"]
+[gd_scene load_steps=25 format=3 uid="uid://cpjkelsqxc364"]
 
 [ext_resource type="Script" uid="uid://cdiy1lchrrem" path="res://Levels/stage_prueba.gd" id="1_3vi3g"]
 [ext_resource type="PackedScene" uid="uid://tbbpbwsjlk7m" path="res://Levels/piso/floor.tscn" id="1_7o80q"]
@@ -23,6 +23,9 @@
 [ext_resource type="PackedScene" uid="uid://cwfe1busr0b28" path="res://Levels/Objetos/poste-luz.tscn" id="20_lh1ow"]
 [ext_resource type="PackedScene" uid="uid://bf5b82fejpexj" path="res://Levels/Objetos/entel.tscn" id="21_am73i"]
 [ext_resource type="PackedScene" uid="uid://ecrh4ox5dkd2" path="res://characters/ui/ui_settings.tscn" id="23_ogtjw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ogtjw"]
+size = Vector2(222.5, 185)
 
 [node name="Stage-prueba" type="Node2D"]
 z_index = 1
@@ -264,4 +267,13 @@ scale = Vector2(0.47, 0.47)
 
 [node name="UI_settings" parent="." instance=ExtResource("23_ogtjw")]
 
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 64
+collision_mask = 70
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-275, 134)
+shape = SubResource("RectangleShape2D_ogtjw")
+
 [connection signal="boton_pulsado" from="Boton" to="." method="_on_boton_boton_pulsado"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

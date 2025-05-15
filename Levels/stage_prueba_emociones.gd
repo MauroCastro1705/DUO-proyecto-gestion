@@ -12,8 +12,8 @@ var target_zoom := normal_zoom
 
 func _ready() -> void:
 	# Referencias a los personajes
-	player1 = %Gordo
-	player2 = %Flaco	
+	player1 = $Ramiro
+	player2 = $Laura
 	active_player = player1
 	player1.is_active = true
 	player2.is_active = false  # Inicia desactivado
@@ -47,3 +47,19 @@ func swap_characters() -> void:
 		active_player = player1
 		player1.is_active = true
 		player2.is_active = false
+
+####COLISIONES CON ZONAS QUE CAMBIAN EMOCIONES SEGUN JUGADOR
+
+func _on_area_enojo_laura_body_entered2(body: Node2D) -> void:
+	if body.is_in_group("jugador"):
+		print("Es personaje entro:", body)
+		if body.has_method("check_emocion"):
+			print("colision")
+			body.check_emocion("enojada")
+
+
+func _on_area_enojo_laura_body_exited2(body: Node2D) -> void:
+	if body.is_in_group("jugador"):
+		print("Es personaje salio:", body)
+		if body.has_method("check_emocion"):
+			body.check_emocion("normal")

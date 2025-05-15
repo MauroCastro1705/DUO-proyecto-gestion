@@ -1,4 +1,5 @@
 extends CharacterBody2D
+
 # Velocidad del personaje (pixeles por segundo)
 @export var speed: float = 200.0        # Velocidad horizontal
 @export var jump_force: float = 400.0   # Fuerza del salto
@@ -17,7 +18,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 		# Detectar si estamos sobre el personaje grande
-	if raycast_down.is_colliding():		
+	if raycast_down.is_colliding():
 		var collider = raycast_down.get_collider()
 		if collider.name == "plataforma-hombros":
 			is_on_big_character = true
@@ -49,12 +50,14 @@ func _process(delta: float) -> void:
 			
 		if Input.is_action_pressed("empujar"):
 			hacer_accion()
+			
 	velocity.x = direction.x * speed     # Aplica movimiento horizontal
 	velocity.y += gravity * delta    # Aplicar gravedad al personaje
 	if is_on_big_character:
 		velocity.x += big_character_velocity.x
 	move_and_slide()
 	update_animation(direction)
+	
 
 func hacer_accion():
 	pass
@@ -65,4 +68,11 @@ func update_animation(direction: Vector2):
 		sprite.flip_h = direction.x > 0
 	else:
 		sprite.play("idle")
-###collision con cajas####
+
+func check_emocion(emocion:String):
+	match emocion:
+		"normal":
+			print("emocion normal")
+		"enojada":
+			print("emocion enojada")
+			

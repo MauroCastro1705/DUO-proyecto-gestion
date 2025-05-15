@@ -57,3 +57,8 @@ func _on_boton_boton_pulsado() -> void:
 	else:
 		%puerta.global_position.y = posicionPuertaFinal
 		is_moved=true
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	print("entro algo")
+	print(body)

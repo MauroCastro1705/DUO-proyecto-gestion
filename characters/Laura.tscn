@@ -1,6 +1,6 @@
 [gd_scene load_steps=104 format=3 uid="uid://3ht2b6g4whk7"]
 
-[ext_resource type="Script" uid="uid://db8l0ggud4ttd" path="res://characters/characters_code/Laura.gd" id="1_b4tiw"]
+[ext_resource type="Script" uid="uid://drlr805adhwjn" path="res://characters/characters_code/laura.gd" id="1_ny0kd"]
 [ext_resource type="Texture2D" uid="uid://deesu8boxigcq" path="res://characters/charA04.png" id="2_un0js"]
 [ext_resource type="Texture2D" uid="uid://4fe2xv0a8uqe" path="res://characters/charA04_n.png" id="3_2nft3"]
 [ext_resource type="Texture2D" uid="uid://b4ngbvdsx6bqp" path="res://_m_chars_test/chars/assets/animaciones/ch_idle/ch_idle01_00001.png" id="4_gx270"]
@@ -421,7 +421,7 @@ animations = [{
 z_index = 100
 collision_layer = 4
 collision_mask = 29
-script = ExtResource("1_b4tiw")
+script = ExtResource("1_ny0kd")
 raycast_down = NodePath("RayCast2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -456,4 +456,4 @@ scale = Vector2(0.142, 0.142)
 sprite_frames = SubResource("SpriteFrames_urixy")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.36534
+frame_progress = 0.748941
