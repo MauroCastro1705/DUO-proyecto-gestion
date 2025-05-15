@@ -194,7 +194,7 @@ position = Vector2(2062, 961)
 
 [node name="Camera2D" type="Camera2D" parent="." groups=["scene_manager_entity_nodes"]]
 position = Vector2(-5, 10)
-offset = Vector2(100, -30)
+offset = Vector2(50, -30)
 position_smoothing_enabled = true
 position_smoothing_speed = 8.0
 metadata/entity_name = "camera"
