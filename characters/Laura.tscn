@@ -103,10 +103,8 @@ radius = 19.0
 height = 86.0
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_w3eq5"]
-load_path = "res://.godot/imported/charA04.png-3447af5286f412fa4ea9ad56a589c791.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kleer"]
-load_path = "res://.godot/imported/charA04_n.png-5685124964cef6f442932c69ef3518c2.ctex"
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_g4hnv"]
 diffuse_texture = SubResource("CompressedTexture2D_w3eq5")
