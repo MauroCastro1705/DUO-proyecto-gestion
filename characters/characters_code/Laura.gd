@@ -13,12 +13,10 @@ var big_character_velocity := Vector2.ZERO
 @export var fast_fall_multiplier: float = 2.0
 @onready var sprite = $LauraSprites
 
-
-
 func _ready() -> void:
 	Global.lauraOnTop = false
 
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 		# Detectar si estamos sobre el personaje grande
 	if raycast_down.is_colliding():
 		var collider = raycast_down.get_collider()
@@ -71,7 +69,7 @@ func update_animation(direction: Vector2):
 			sprite.flip_h = direction.x > 0
 		else:
 			sprite.play("idle")
-	else:
+	else:#laura estado normal
 		if direction.x != 0:
 			sprite.play("walk")
 			sprite.flip_h = direction.x > 0

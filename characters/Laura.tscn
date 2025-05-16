@@ -101,8 +101,8 @@
 [ext_resource type="Texture2D" uid="uid://cft3yu8ih62va" path="res://_m_chars_test/chars/assets/animaciones/ch_walk_cool/ch_walk_cool01_00024.png" id="99_j2ov1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b4tiw"]
-radius = 9.0
-height = 50.0
+radius = 19.0
+height = 86.0
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_g4hnv"]
 diffuse_texture = ExtResource("2_un0js")
@@ -419,13 +419,14 @@ animations = [{
 
 [node name="Laura" type="CharacterBody2D" node_paths=PackedStringArray("raycast_down") groups=["jugador"]]
 z_index = 100
+position = Vector2(0, -1)
 collision_layer = 4
 collision_mask = 29
 script = ExtResource("1_ny0kd")
 raycast_down = NodePath("RayCast2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -25)
+position = Vector2(0, -43)
 shape = SubResource("CapsuleShape2D_b4tiw")
 debug_color = Color(0.740988, 0.339757, 0.808076, 0.42)
 
@@ -451,9 +452,8 @@ collision_mask = 16
 hit_from_inside = true
 
 [node name="LauraSprites" type="AnimatedSprite2D" parent="."]
-position = Vector2(1.00001, -34)
-scale = Vector2(0.142, 0.142)
+position = Vector2(-0.999992, -53)
+scale = Vector2(0.22725, 0.22725)
 sprite_frames = SubResource("SpriteFrames_urixy")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.748941

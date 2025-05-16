@@ -194,7 +194,7 @@ position = Vector2(2062, 961)
 
 [node name="Camera2D" type="Camera2D" parent="." groups=["scene_manager_entity_nodes"]]
 position = Vector2(-5, 10)
-offset = Vector2(50, -30)
+offset = Vector2(50, -170)
 position_smoothing_enabled = true
 position_smoothing_speed = 8.0
 metadata/entity_name = "camera"
@@ -280,7 +280,7 @@ shape = SubResource("RectangleShape2D_0yrxn")
 position = Vector2(-3641, 913)
 
 [node name="Ramiro" parent="." instance=ExtResource("12_w6mdm")]
-position = Vector2(-3713, 927)
+position = Vector2(-3713, 894)
 
 [connection signal="body_entered" from="Area_enojo_laura" to="." method="_on_area_enojo_laura_body_entered2"]
 [connection signal="body_exited" from="Area_enojo_laura" to="." method="_on_area_enojo_laura_body_exited2"]

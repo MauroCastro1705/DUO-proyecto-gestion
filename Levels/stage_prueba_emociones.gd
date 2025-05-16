@@ -5,8 +5,8 @@ var player1: CharacterBody2D
 var player2: CharacterBody2D
 var is_moved: bool = false
 @onready var camera = $Camera2D
-var normal_zoom := Vector2(2.0, 2.0)
-var zoomed_out := Vector2(0.9, 0.9) # ajustar
+var normal_zoom := Vector2(1.0, 1.0)
+var zoomed_out := Vector2(0.5, 0.5) # ajustar
 var zoom_speed := 5.0
 var target_zoom := normal_zoom
 

@@ -11,6 +11,7 @@ var joint: PinJoint2D = null
 var current_box: RigidBody2D = null
 
 var modo_disparo:bool = false
+
 ##movimiento##
 @export var speed: float = 180.0 #Velocidad horizontal
 @export var speedLauraOnTop:float = 90.0 #velocidad con laura encima
@@ -19,24 +20,14 @@ var gravity = Global.gravity
 @onready var texto_character = %TextoGordo
 @onready var TimerLabel = $TimerLabel
 var is_active: bool = false  #variable para controlarjugador activo
+@onready var sprite = $AnimatedSprite2D
 
 var jump_text_edit: LineEdit = null # Initialize as null
 
 func _ready() -> void:
 	texto_character.visible = false
 	
-	### seteo Salto GRANDE desde UI
-	#	# Assuming your main game scene is the parent of the UIOverlay
-	#var ui_node = get_node("/root/Stage-prueba/UI_settings") # Adjust the node name if different
-	#jump_text_edit = ui_node.get_node("GDEsaltoFuerza/GDEsaltoFuerza_edit") as LineEdit
-	#
-	#if is_instance_valid(ui_node) and ui_node.has_signal("jump_height_changed"):
-	#	ui_node.jump_height_changed.connect(_on_jump_height_from_ui)
-	#else:
-	#	printerr("Error: Could not connect to jump_height_changed signal in UI_settings.")
-
-
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	var direction = Vector2.ZERO
 	#MODO DISPARO#
 	if Input.is_action_pressed("cambiar") and Global.can_swap == false:			
@@ -61,7 +52,7 @@ func _process(delta: float) -> void:
 		draw_trajectory()
 		if Input.is_action_just_pressed("disparar"):  # ctrl
 			launch_projectile()	
-			
+
 	#MOVER PERSONAJE#
 	if is_active and modo_disparo==false:
 		if Input.is_action_pressed("derecha"):
@@ -70,40 +61,47 @@ func _process(delta: float) -> void:
 			direction.x -= 1
 		if Input.is_action_just_pressed("salto") and is_on_floor():
 			velocity.y = -jump_force  # La fuerza del salto va hacia arriba, por eso es negativa
+		if is_on_floor() and Input.is_action_just_pressed("salto"):
+			velocity.y = jump_force
 		###LOGICA EMPUJAR CAJAS###
 		if Input.is_action_just_pressed("empujar") and joint == null:
-			print("empujando")
-			texto_character.visible = true
-			texto_character.text = "Empujando"
-			for body in push_area.get_overlapping_bodies():
-				if body is RigidBody2D:
-					current_box = body
-					create_joint_with_box(current_box)
-					break
+			empujar_caja()
 		if Input.is_action_just_released("empujar"):
 			texto_character.visible = false
 			remove_joint()
-			
+		
 	if Global.lauraOnTop:
 		velocity.x = direction.x * speedLauraOnTop
 	else:
 		velocity.x = direction.x * speed     # Aplica movimiento horizontal
 	velocity.y += gravity * delta    # Aplicar gravedad al personaje
 	move_and_slide()
-	if velocity.x != 0:#flip sprite
-		$RamiroCompleto.flip_h = velocity.x < 0
-	
-	if is_on_floor() and Input.is_action_just_pressed("salto"):
-		velocity.y = jump_force
+	update_animation(direction)
 
 
 func hacer_accion():
 	pass
 	
 
-###collision con cajas####
-
+###ANIMACIONES####
+func update_animation(direction: Vector2):
+	if direction.x != 0:
+		sprite.play("walk")
+		sprite.flip_h = direction.x > 0
+	else:
+		sprite.play("idle")
+		
 ### EMPUJAR CAJAS apretando BOTON
+func empujar_caja():
+	print("empujando")
+	texto_character.visible = true
+	texto_character.text = "Empujando"
+	for body in push_area.get_overlapping_bodies():
+		if body is RigidBody2D:
+			current_box = body
+			create_joint_with_box(current_box)
+			break
+
 func create_joint_with_box(box: RigidBody2D):
 	joint = PinJoint2D.new()
 	joint.node_a = get_path()  # Personaje
@@ -139,15 +137,3 @@ func draw_trajectory():
 #timer para texto sobre el personaje
 func _on_timer_label_timeout() -> void:
 	texto_character.visible = false
-
-## salto GDE en ui
-func _on_jump_height_from_ui(new_height):
-	jump_force = new_height
-	print("Jump height updated:", jump_force)
-	_update_jump_text_edit() # Update the text box when the value changes from UI
-
-func _update_jump_text_edit():
-	if is_instance_valid(jump_text_edit):
-		jump_text_edit.text = str(jump_force)
-		
-		
