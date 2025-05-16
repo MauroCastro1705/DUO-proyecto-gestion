@@ -1,28 +1,20 @@
 extends CharacterBody2D
-###LANZAR COMPAÑERO##
-@export var projectile_scene: PackedScene
-@export var launch_power := 800.0  # fuerza de la parabola
-@onready var line := %Trayectoria
-var aim_dir := Vector2.LEFT  # Dirección inicial (puede ser cualquier)
-var angle_speed := 2.0  # Velocidad de rotación de la dirección
+
 ###para empujar cajas####
 @onready var push_area = $empujarCajas
 var joint: PinJoint2D = null
 var current_box: RigidBody2D = null
 
-var modo_disparo:bool = false
-
 ##movimiento##
 @export var speed: float = 180.0 #Velocidad horizontal
 @export var speedLauraOnTop:float = 90.0 #velocidad con laura encima
-@export var jump_force: float = 200.0 #Fuerza del salto
+@export var jump_force: float = 300.0 #Fuerza del salto
 var gravity = Global.gravity
 @onready var texto_character = %TextoGordo
 @onready var TimerLabel = $TimerLabel
 var is_active: bool = false  #variable para controlarjugador activo
 @onready var sprite = $AnimatedSprite2D
 
-var jump_text_edit: LineEdit = null # Initialize as null
 
 func _ready() -> void:
 	texto_character.visible = false
@@ -34,35 +26,15 @@ func _physics_process(delta: float) -> void:
 		texto_character.text = "No se puede cambiar de personaje ahora"
 		texto_character.visible = true
 		TimerLabel.start()
-	if Input.is_action_just_pressed("modo-disparo") and modo_disparo == false:
-		modo_disparo=true
-		Global.can_swap=false
-		print("modo disparo true")
-
-	elif Input.is_action_just_pressed("modo-disparo") and modo_disparo == true:
-		modo_disparo=false
-		line.clear_points()
-		Global.can_swap=true
-		print("modo disparo false")
-	if modo_disparo == true:
-		if Input.is_action_pressed("abajo"):
-			aim_dir = aim_dir.rotated(-angle_speed * delta)
-		if Input.is_action_pressed("arriba"):
-			aim_dir = aim_dir.rotated(angle_speed * delta)
-		draw_trajectory()
-		if Input.is_action_just_pressed("disparar"):  # ctrl
-			launch_projectile()	
 
 	#MOVER PERSONAJE#
-	if is_active and modo_disparo==false:
+	if is_active :
 		if Input.is_action_pressed("derecha"):
 			direction.x += 1
 		if Input.is_action_pressed("izquierda"):
 			direction.x -= 1
 		if Input.is_action_just_pressed("salto") and is_on_floor():
-			velocity.y = -jump_force  # La fuerza del salto va hacia arriba, por eso es negativa
-		if is_on_floor() and Input.is_action_just_pressed("salto"):
-			velocity.y = jump_force
+			velocity.y = -jump_force
 		###LOGICA EMPUJAR CAJAS###
 		if Input.is_action_just_pressed("empujar") and joint == null:
 			empujar_caja()
@@ -83,7 +55,7 @@ func hacer_accion():
 	pass
 	
 
-###ANIMACIONES####
+###---ANIMACIONES----####
 func update_animation(direction: Vector2):
 	if direction.x != 0:
 		sprite.play("walk")
@@ -115,24 +87,6 @@ func remove_joint():
 	joint = null
 	current_box = null
 
-###DISPARAR
-func launch_projectile():
-	var projectile = projectile_scene.instantiate()
-	projectile.global_position = $Marker2D.global_position + aim_dir.normalized() * 8.0
-	get_tree().current_scene.add_child(projectile)
-	projectile.linear_velocity = aim_dir.normalized() * launch_power
-
-func draw_trajectory():
-	line.clear_points()
-	var points = []
-	var pos = Vector2.ZERO
-	var velocitys = aim_dir.normalized() * launch_power
-	var timestep = 0.1
-	for i in range(30):
-		var t = i * timestep
-		var point = pos + velocitys * t + Vector2(0, gravity) * t * t * 0.5
-		points.append(point)		
-		line.points = points
 
 #timer para texto sobre el personaje
 func _on_timer_label_timeout() -> void:

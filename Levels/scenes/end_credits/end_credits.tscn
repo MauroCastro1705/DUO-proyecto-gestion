@@ -10,6 +10,7 @@ script = ExtResource("2_yfjq0")
 main_menu_scene = "res://Levels/scenes/menus/main_menu/main_menu_with_animations.tscn"
 
 [node name="BackgroundMusicPlayer" parent="." index="0" instance=ExtResource("3_aw1oy")]
+bus = &"Master"
 
 [node name="BackgroundColor" type="ColorRect" parent="." index="1"]
 layout_mode = 1
@@ -32,6 +33,33 @@ stretch_mode = 5
 
 [node name="ScrollContainer" parent="." index="3"]
 scroll_vertical = 0
+
+[node name="HeaderSpace" parent="ScrollContainer/VBoxContainer" index="0"]
+custom_minimum_size = Vector2(0, 600)
+
+[node name="CreditsLabel" parent="ScrollContainer/VBoxContainer" index="1"]
+custom_minimum_size = Vector2(800, 0)
+text = "[center][font_size=48]Ya no hay Bondis[/font_size]
+[center][font_size=40]Un juego para Gestion de Proyectos[/font_size]
+
+[font_size=32]Productor[/font_size]
+Person 1  
+
+[font_size=32]Programacion[/font_size]
+Person 1  
+
+[font_size=32]Game Design[/font_size]
+Person 1  
+
+[font_size=32]Arte[/font_size]
+Person 1
+  
+[font_size=32]Guion[/font_size]
+Person 1  
+"
+
+[node name="FooterSpace" parent="ScrollContainer/VBoxContainer" index="2"]
+custom_minimum_size = Vector2(0, 600)
 
 [node name="CenterContainer" type="CenterContainer" parent="." index="4"]
 layout_mode = 0

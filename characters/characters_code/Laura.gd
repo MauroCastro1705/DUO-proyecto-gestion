@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 # Velocidad del personaje (pixeles por segundo)
 @export var speed: float = 200.0        # Velocidad horizontal
-@export var jump_force: float = 400.0   # Fuerza del salto
+@export var jump_force: float = 800.0   # Fuerza del salto
 var gravity = Global.gravity
 var is_active: bool = false  #variable para controlar si se recibe input
 #plataforma

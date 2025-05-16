@@ -1,7 +1,6 @@
-[gd_scene load_steps=57 format=3 uid="uid://bbs86ttvb6dhi"]
+[gd_scene load_steps=56 format=3 uid="uid://bbs86ttvb6dhi"]
 
 [ext_resource type="Script" uid="uid://m850xbhl28ts" path="res://characters/characters_code/Ramiro.gd" id="2_cfd2t"]
-[ext_resource type="PackedScene" uid="uid://dexu88uj2gnl5" path="res://characters/proyectil.tscn" id="2_jfpom"]
 [ext_resource type="Texture2D" uid="uid://ksk8pwddi2sn" path="res://_m_chars_test/chars/assets/animaciones/gde_walk/gde_walk01_00001.png" id="3_8uh63"]
 [ext_resource type="Texture2D" uid="uid://51yfew627mfu" path="res://assets/doted-line.png" id="4_jfpom"]
 [ext_resource type="Texture2D" uid="uid://bce2j3ts008i8" path="res://_m_chars_test/chars/assets/animaciones/gde_walk/gde_walk01_00002.png" id="4_kj2mt"]
@@ -225,8 +224,6 @@ z_index = 4
 collision_layer = 2
 collision_mask = 9
 script = ExtResource("2_cfd2t")
-projectile_scene = ExtResource("2_jfpom")
-launch_power = 100.0
 
 [node name="colision-general" type="CollisionShape2D" parent="."]
 position = Vector2(-2, -81)
