@@ -4,7 +4,7 @@
 
 [resource]
 shader = ExtResource("1_o0y0p")
-shader_parameter/r_displacement = Vector2(3, 0)
+shader_parameter/r_displacement = Vector2(0, 0)
 shader_parameter/g_displacement = Vector2(0, 0)
 shader_parameter/b_displacement = Vector2(-3, 0)
 shader_parameter/height = 0.7

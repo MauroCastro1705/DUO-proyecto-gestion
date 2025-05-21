@@ -6,7 +6,7 @@ var joint: PinJoint2D = null
 var current_box: RigidBody2D = null
 
 ##movimiento##
-@export var speed: float = 180.0 #Velocidad horizontal
+@export var speed: float = 130.0 #Velocidad horizontal
 @export var speedLauraOnTop:float = 90.0 #velocidad con laura encima
 @export var jump_force: float = 350.0 #Fuerza del salto
 var gravity = Global.gravity
@@ -14,7 +14,6 @@ var gravity = Global.gravity
 @onready var TimerLabel = $TimerLabel
 var is_active: bool = false  #variable para controlarjugador activo
 @onready var sprite = $AnimatedSprite2D
-
 
 func _ready() -> void:
 	texto_character.visible = false
@@ -26,6 +25,8 @@ func _physics_process(delta: float) -> void:
 		_cambiar_esta_desabilitado()
 
 	#MOVER PERSONAJE#
+	if Emociones.seguir_a_laura and not is_active:
+		_seguir_a_laura()
 	if is_active :
 		direction = _procesar_input_movimiento()
 	if Global.lauraOnTop:
@@ -54,6 +55,15 @@ func _procesar_input_movimiento() -> Vector2:
 func hacer_accion():
 	pass
 	
+func _seguir_a_laura():
+		var objetivo = get_tree().get_nodes_in_group("grupo-laura")
+		var laura = objetivo[0]
+		print(laura)
+		var direccion_x = sign(laura.global_position.x - global_position.x)
+		velocity.x = direccion_x * speed
+
+		move_and_slide()
+		
 func _cambiar_esta_desabilitado():
 		texto_character.text = "No se puede cambiar de personaje ahora"
 		texto_character.visible = true

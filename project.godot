@@ -81,8 +81,8 @@ audio/channel_defaults={
 
 [display]
 
-window/size/viewport_width=800
-window/size/viewport_height=600
+window/size/viewport_width=1280
+window/size/viewport_height=720
 
 [editor_plugins]
 
@@ -92,6 +92,8 @@ enabled=PackedStringArray("res://addons/Todo_Manager/plugin.cfg", "res://addons/
 
 jugador=""
 arrastrables=""
+grupo-laura=""
+grupo-ramiro=""
 
 [gui]
 
@@ -197,9 +199,12 @@ copy_path="res://Levels"
 
 [physics]
 
+2d/run_on_separate_thread=true
 common/physics_ticks_per_second=90
 common/max_physics_steps_per_frame=1
 common/physics_jitter_fix=0.0
+2d/physics_engine="GodotPhysics2D"
+common/physics_interpolation=true
 
 [rendering]
 

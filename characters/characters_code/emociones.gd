@@ -1,4 +1,8 @@
 extends Node
+#GENERALES
+
+var seguir_a_laura := false
+
 #EMOCIONES-GORDO----------
 var gordo_mood_normal:bool = true
 var gordo_mood_bobo:bool = false

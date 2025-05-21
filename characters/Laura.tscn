@@ -419,7 +419,7 @@ animations = [{
 "speed": 30.0
 }]
 
-[node name="Laura" type="CharacterBody2D" node_paths=PackedStringArray("raycast_down") groups=["jugador"]]
+[node name="Laura" type="CharacterBody2D" node_paths=PackedStringArray("raycast_down") groups=["grupo-laura", "jugador"]]
 z_index = 100
 collision_layer = 4
 collision_mask = 29

@@ -65,7 +65,7 @@ func _no_esta_sobre_personaje():
 		big_character_velocity = Vector2.ZERO
 
 func hacer_accion():
-	pass
+	Emociones.seguir_a_laura = true
 
 ##ANIMACIONES##
 func update_animation(direction: Vector2):
