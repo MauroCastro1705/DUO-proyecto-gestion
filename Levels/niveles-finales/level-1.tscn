@@ -32,7 +32,7 @@ color = Color(0.594293, 0.359856, 0.336166, 1)
 position = Vector2(51, 579)
 
 [node name="StartPosition" type="Marker2D" parent="."]
-position = Vector2(-500, 399)
+position = Vector2(-518, 542)
 script = ExtResource("3_od2q2")
 
 [node name="Cambio_de_nivel" type="Area2D" parent="."]

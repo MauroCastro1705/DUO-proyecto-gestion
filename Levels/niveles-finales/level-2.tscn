@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://s1kwh8h5vnqp"]
+[gd_scene load_steps=5 format=3 uid="uid://s1kwh8h5vnqp"]
 
 [ext_resource type="Script" uid="uid://dai1oaxbrtt20" path="res://Levels/niveles-finales/niveles-finales-codigo/level_2.gd" id="1_suuef"]
 [ext_resource type="PackedScene" uid="uid://tbbpbwsjlk7m" path="res://Levels/piso/floor.tscn" id="2_suuef"]
-[ext_resource type="PackedScene" uid="uid://dktpyqccjg6xt" path="res://Levels/niveles-finales/level-3.tscn" id="2_x576l"]
 [ext_resource type="Script" uid="uid://cmkcnti1nqccl" path="res://Levels/niveles-finales/niveles-finales-codigo/start_position.gd" id="4_dk5s2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_od2q2"]
@@ -10,7 +9,6 @@ size = Vector2(158.5, 342)
 
 [node name="level-2" type="Node2D"]
 script = ExtResource("1_suuef")
-proximo_nivel = ExtResource("2_x576l")
 
 [node name="Label" type="Label" parent="."]
 z_index = 1
@@ -32,7 +30,7 @@ color = Color(0.0735187, 0.349214, 0.363563, 1)
 position = Vector2(51, 579)
 
 [node name="StartPosition" type="Marker2D" parent="."]
-position = Vector2(-500, 399)
+position = Vector2(-511, 537)
 script = ExtResource("4_dk5s2")
 
 [node name="Cambio_de_nivel" type="Area2D" parent="."]

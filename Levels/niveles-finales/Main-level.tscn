@@ -12,11 +12,11 @@ primer_nivel = ExtResource("2_nt61k")
 
 [node name="Laura" parent="." instance=ExtResource("1_0d4cm")]
 unique_name_in_owner = true
-position = Vector2(-54, 391)
+position = Vector2(-43, 653)
 
 [node name="Ramiro" parent="." instance=ExtResource("2_vth4m")]
 unique_name_in_owner = true
-position = Vector2(-230, 462)
+position = Vector2(-181, 655)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(685, 489)
