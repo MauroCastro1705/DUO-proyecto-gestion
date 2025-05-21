@@ -28,14 +28,8 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
 
-directories/dch_directory={
-"Laura": "res://Dialogos/Laura.dch",
-"Ramiro": "res://Dialogos/Ramiro.dch"
-}
-directories/dtl_directory={
-"timeline_test": "res://Dialogos/timeline_test.dtl",
-"timeline_test2": "res://Dialogos/timeline_test2.dtl"
-}
+directories/dch_directory={}
+directories/dtl_directory={}
 layout/style_directory={
 "": "res://Dialogos/tema_dialogos.tres",
 "tema_dialogos": "res://Dialogos/tema_dialogos.tres"
