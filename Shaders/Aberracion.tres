@@ -1,0 +1,12 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://3cl61os2erjb"]
+
+[ext_resource type="Shader" uid="uid://c2a7n2wfs2jvu" path="res://Shaders/Aberracion.gdshader" id="1_o0y0p"]
+
+[resource]
+shader = ExtResource("1_o0y0p")
+shader_parameter/r_displacement = Vector2(3, 0)
+shader_parameter/g_displacement = Vector2(0, 0)
+shader_parameter/b_displacement = Vector2(-3, 0)
+shader_parameter/height = 0.7
+shader_parameter/width = 0.5
+shader_parameter/fade = 0.7

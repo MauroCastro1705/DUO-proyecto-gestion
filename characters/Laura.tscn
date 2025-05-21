@@ -458,3 +458,5 @@ scale = Vector2(0.22725, 0.22725)
 sprite_frames = SubResource("SpriteFrames_urixy")
 animation = &"walk_enojado"
 autoplay = "idle"
+frame = 4
+frame_progress = 0.7005

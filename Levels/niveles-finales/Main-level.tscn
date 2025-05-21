@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://ly7uwab207yy"]
+[gd_scene load_steps=6 format=3 uid="uid://ly7uwab207yy"]
 
 [ext_resource type="PackedScene" uid="uid://3ht2b6g4whk7" path="res://characters/Laura.tscn" id="1_0d4cm"]
 [ext_resource type="Script" uid="uid://j8w122vmdhnp" path="res://Levels/niveles-finales/niveles-finales-codigo/main_level.gd" id="1_vth4m"]
 [ext_resource type="PackedScene" uid="uid://cvyr2lyjsacuc" path="res://Levels/niveles-finales/level-1.tscn" id="2_nt61k"]
 [ext_resource type="PackedScene" uid="uid://bbs86ttvb6dhi" path="res://characters/Ramiro.tscn" id="2_vth4m"]
+[ext_resource type="Material" uid="uid://blwkmwfdegnyj" path="res://Shaders/crt-shader.tres" id="5_gcwvk"]
 
 [node name="Main-level" type="Node2D"]
 script = ExtResource("1_vth4m")
@@ -11,15 +12,24 @@ primer_nivel = ExtResource("2_nt61k")
 
 [node name="Laura" parent="." instance=ExtResource("1_0d4cm")]
 unique_name_in_owner = true
-position = Vector2(-51, 390)
+position = Vector2(-54, 391)
 
 [node name="Ramiro" parent="." instance=ExtResource("2_vth4m")]
 unique_name_in_owner = true
-position = Vector2(-227, 461)
+position = Vector2(-230, 462)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(7, 0)
-offset = Vector2(0, -130)
+offset = Vector2(-50, -130)
 
 [node name="Level_Container" type="Node2D" parent="."]
 position = Vector2(2, 5)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+material = ExtResource("5_gcwvk")
+offset_left = -102.0
+offset_top = -213.0
+offset_right = 898.0
+offset_bottom = 787.0
