@@ -28,8 +28,16 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
 
-directories/dch_directory={}
-directories/dtl_directory={}
+directories/dch_directory={
+"Laura": "res://Dialogos/Laura.dch",
+"Ramiro": "res://Dialogos/Ramiro.dch",
+"character": "res://character.dch"
+}
+directories/dtl_directory={
+"timeline434": "res://Dialogos/timeline434.dtl",
+"timeline_test": "res://Dialogos/timeline_test.dtl",
+"timeline_test2": "res://Dialogos/timeline_test2.dtl"
+}
 layout/style_directory={
 "": "res://Dialogos/tema_dialogos.tres",
 "tema_dialogos": "res://Dialogos/tema_dialogos.tres"
@@ -38,7 +46,7 @@ glossary/default_case_sensitive=true
 layout/style_list=["res://Dialogos/tema_dialogos.tres"]
 layout/default_style="res://Dialogos/tema_dialogos.tres"
 variables={}
-extensions_folder="res://addons/dialogic_additions"
+extensions_folder="res://Dialogos"
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
 text/text_reveal_skip_delay=0.1
