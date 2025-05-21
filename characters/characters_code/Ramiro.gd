@@ -8,7 +8,7 @@ var current_box: RigidBody2D = null
 ##movimiento##
 @export var speed: float = 180.0 #Velocidad horizontal
 @export var speedLauraOnTop:float = 90.0 #velocidad con laura encima
-@export var jump_force: float = 300.0 #Fuerza del salto
+@export var jump_force: float = 350.0 #Fuerza del salto
 var gravity = Global.gravity
 @onready var texto_character = %TextoGordo
 @onready var TimerLabel = $TimerLabel
@@ -21,27 +21,13 @@ func _ready() -> void:
 	
 func _physics_process(delta: float) -> void:
 	var direction = Vector2.ZERO
-	#MODO DISPARO#
+	#SI cambio de pj esta desabilitado#
 	if Input.is_action_pressed("cambiar") and Global.can_swap == false:			
-		texto_character.text = "No se puede cambiar de personaje ahora"
-		texto_character.visible = true
-		TimerLabel.start()
+		_cambiar_esta_desabilitado()
 
 	#MOVER PERSONAJE#
 	if is_active :
-		if Input.is_action_pressed("derecha"):
-			direction.x += 1
-		if Input.is_action_pressed("izquierda"):
-			direction.x -= 1
-		if Input.is_action_just_pressed("salto") and is_on_floor():
-			velocity.y = -jump_force
-		###LOGICA EMPUJAR CAJAS###
-		if Input.is_action_just_pressed("empujar") and joint == null:
-			empujar_caja()
-		if Input.is_action_just_released("empujar"):
-			texto_character.visible = false
-			remove_joint()
-		
+		direction = _procesar_input_movimiento()
 	if Global.lauraOnTop:
 		velocity.x = direction.x * speedLauraOnTop
 	else:
@@ -50,11 +36,29 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	update_animation(direction)
 
+func _procesar_input_movimiento() -> Vector2:
+	var dir = Vector2.ZERO
+	if Input.is_action_pressed("derecha"):
+		dir.x += 1
+	if Input.is_action_pressed("izquierda"):
+		dir.x -= 1
+	if Input.is_action_just_pressed("salto") and is_on_floor():
+		velocity.y = -jump_force
+	if Input.is_action_just_pressed("empujar") and joint == null:
+		empujar_caja()
+	if Input.is_action_just_released("empujar"):
+		texto_character.visible = false
+		remove_joint()
+	return dir
 
 func hacer_accion():
 	pass
 	
-
+func _cambiar_esta_desabilitado():
+		texto_character.text = "No se puede cambiar de personaje ahora"
+		texto_character.visible = true
+		TimerLabel.start()
+		
 ###---ANIMACIONES----####
 func update_animation(direction: Vector2):
 	if direction.x != 0:
@@ -91,3 +95,24 @@ func remove_joint():
 #timer para texto sobre el personaje
 func _on_timer_label_timeout() -> void:
 	texto_character.visible = false
+
+func check_emocion(emocion:String):
+	match emocion:
+		"normal":
+			print("emocion normal")
+			Emociones.gordo_mood_normal = true#ESTE
+			Emociones.gordo_mood_enojado= false
+			Emociones.gordo_mood_rockeando = false
+			Emociones.gordo_mood_triste= false
+			Emociones.gordo_mood_bobo= false
+			Dialogic.start("timeline_test2")
+			get_viewport().set_input_as_handled()
+		"enojado":
+			print("emocion enojada")
+			Emociones.gordo_mood_normal = false
+			Emociones.gordo_mood_enojado= true#ESTE
+			Emociones.gordo_mood_rockeando = false
+			Emociones.gordo_mood_triste= false
+			Emociones.gordo_mood_bobo= false
+			Dialogic.start("timeline_test")
+			get_viewport().set_input_as_handled()
