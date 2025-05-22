@@ -9,11 +9,14 @@ var current_box: RigidBody2D = null
 @export var speed: float = 130.0 #Velocidad horizontal
 @export var speedLauraOnTop:float = 90.0 #velocidad con laura encima
 @export var jump_force: float = 350.0 #Fuerza del salto
-var gravity = Global.gravity
+@onready var sprite = $AnimatedSprite2D
 @onready var texto_character = %TextoGordo
 @onready var TimerLabel = $TimerLabel
 var is_active: bool = false  #variable para controlarjugador activo
-@onready var sprite = $AnimatedSprite2D
+var gravity = Global.gravity
+var is_jumping := false
+var played_apex = false
+
 
 func _ready() -> void:
 	texto_character.visible = false
@@ -45,6 +48,9 @@ func _procesar_input_movimiento() -> Vector2:
 		dir.x -= 1
 	if Input.is_action_just_pressed("salto") and is_on_floor():
 		velocity.y = -jump_force
+		is_jumping = true #para animacion
+		played_apex = false
+		sprite.play("pre_salto")
 	if Input.is_action_just_pressed("empujar") and joint == null:
 		empujar_caja()
 	if Input.is_action_just_released("empujar"):
@@ -71,12 +77,38 @@ func _cambiar_esta_desabilitado():
 		
 ###---ANIMACIONES----####
 func update_animation(direction: Vector2):
+	if not is_on_floor():
+		if velocity.y < 0:
+			if sprite.animation != "salto":
+				sprite.play("salto")  # Mientras sube
+		elif velocity.y > 0:
+			if sprite.animation != "caida":
+				sprite.play("caida")  # Mientras cae
+		return  # No seguir con animaciones normales
+	if Emociones.gordo_mood_normal:
+		_animacion_normal(direction)
+	if Emociones.gordo_mood_enojado:
+		_animacion_enojado(direction)
+		
+		
+func _animacion_normal(direction : Vector2):
 	if direction.x != 0:
 		sprite.play("walk")
 		sprite.flip_h = direction.x > 0
 	else:
 		sprite.play("idle")
 		
+func _animacion_enojado(direction : Vector2):
+	if direction.x != 0:
+		sprite.play("enojado_walk")
+		sprite.flip_h = direction.x > 0
+	else:
+		sprite.play("enojado_idle")
+#MAS ANIMACIONES DE HUMOR
+
+
+
+
 ### EMPUJAR CAJAS apretando BOTON
 func empujar_caja():
 	print("empujando")
@@ -115,8 +147,6 @@ func check_emocion(emocion:String):
 			Emociones.gordo_mood_rockeando = false
 			Emociones.gordo_mood_triste= false
 			Emociones.gordo_mood_bobo= false
-			Dialogic.start("timeline_test2")
-			get_viewport().set_input_as_handled()
 		"enojado":
 			print("emocion enojada")
 			Emociones.gordo_mood_normal = false
@@ -124,5 +154,3 @@ func check_emocion(emocion:String):
 			Emociones.gordo_mood_rockeando = false
 			Emociones.gordo_mood_triste= false
 			Emociones.gordo_mood_bobo= false
-			Dialogic.start("timeline_test")
-			get_viewport().set_input_as_handled()
