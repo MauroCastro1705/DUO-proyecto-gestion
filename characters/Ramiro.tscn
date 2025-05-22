@@ -753,7 +753,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk",
-"speed": 30.0
+"speed": 55.0
 }]
 
 [node name="Ramiro" type="CharacterBody2D" groups=["grupo-ramiro", "jugador"]]
@@ -820,9 +820,9 @@ one_shot = true
 position = Vector2(-4, -99)
 scale = Vector2(0.435, 0.435)
 sprite_frames = SubResource("SpriteFrames_w370e")
-animation = &"enojado_walk"
+animation = &"walk"
 autoplay = "walk"
-frame = 16
-frame_progress = 0.777607
+frame_progress = 0.110149
+speed_scale = 1.8
 
 [connection signal="timeout" from="TimerLabel" to="." method="_on_timer_label_timeout"]

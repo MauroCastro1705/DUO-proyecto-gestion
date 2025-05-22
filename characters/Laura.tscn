@@ -104,7 +104,7 @@
 [ext_resource type="Texture2D" uid="uid://cft3yu8ih62va" path="res://_m_chars_test/chars/assets/animaciones/ch_walk_cool/ch_walk_cool01_00024.png" id="99_j2ov1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b4tiw"]
-radius = 19.0
+radius = 17.0
 height = 86.0
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_w3eq5"]
@@ -494,5 +494,5 @@ hit_from_inside = true
 position = Vector2(-0.999992, -53)
 scale = Vector2(0.22725, 0.22725)
 sprite_frames = SubResource("SpriteFrames_urixy")
-animation = &"caida"
+animation = &"walk"
 autoplay = "idle"

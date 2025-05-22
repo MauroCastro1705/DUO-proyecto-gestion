@@ -12,18 +12,18 @@ fill_from = Vector2(0.486239, 0.513761)
 fill_to = Vector2(0.972477, 0.53211)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xjmvp"]
-radius = 43.0
+radius = 76.2365
 
 [node name="entel" type="StaticBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(33, -115)
-scale = Vector2(0.285, 0.285)
+position = Vector2(77, -273)
+scale = Vector2(0.665179, 0.665179)
 texture = ExtResource("1_xjmvp")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(16.0004, -167.125)
-scale = Vector2(5.84374, 5.44141)
+position = Vector2(13, -373)
+scale = Vector2(9.6875, 8.84375)
 color = Color(0.615686, 0.8, 0.533333, 0.839216)
 energy = 2.0
 shadow_enabled = true
@@ -31,6 +31,6 @@ texture = SubResource("GradientTexture2D_o4blh")
 height = 150.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(48, -181)
+position = Vector2(88, -434)
 shape = SubResource("CircleShape2D_xjmvp")
 one_way_collision = true
