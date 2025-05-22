@@ -11,6 +11,8 @@ var is_active: bool = false  #variable para controlar si se recibe input
 #plataforma
 var is_on_big_character = false
 var big_character_velocity := Vector2.ZERO
+var is_jumping := false
+var played_apex = false
 
 func _ready() -> void:
 	Global.lauraOnTop = false
@@ -23,7 +25,6 @@ func _physics_process(delta: float) -> void:
 	if is_active:
 		direction = _procesar_input_movimiento()
 		_aplicar_gravedad(delta)
-
 	_handle_velocity(direction, delta)
 	update_animation(direction)
 	move_and_slide()
@@ -36,6 +37,9 @@ func _procesar_input_movimiento() -> Vector2:
 		dir.x -= 1
 	if Input.is_action_just_pressed("salto") and is_on_floor():
 		velocity.y = -jump_force
+		is_jumping = true #para animacion
+		played_apex = false
+		sprite.play("pre_salto")
 	if Input.is_action_pressed("empujar"):
 		hacer_accion()
 	return dir
@@ -69,6 +73,14 @@ func hacer_accion():
 
 ##ANIMACIONES##
 func update_animation(direction: Vector2):
+	if not is_on_floor():
+		if velocity.y < 0:
+			if sprite.animation != "salto":
+				sprite.play("salto")  # Mientras sube
+		elif velocity.y > 0:
+			if sprite.animation != "caida":
+				sprite.play("caida")  # Mientras cae
+		return  # No seguir con animaciones normales
 	if Emociones.laura_mood_enojado:
 		_animacion_enojado(direction)
 	else:#laura estado normal
@@ -87,6 +99,8 @@ func _animacion_normal(direction: Vector2):
 		sprite.flip_h = direction.x > 0
 	else:
 		sprite.play("idle")
+		
+
 
 #·····VARIABLES EN EMOCIONES.gd···
 # Emociones.laura_mood_enojado = false

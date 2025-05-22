@@ -1,10 +1,9 @@
-[gd_scene load_steps=19 format=3 uid="uid://buaykj4mfqsby"]
+[gd_scene load_steps=22 format=3 uid="uid://buaykj4mfqsby"]
 
 [ext_resource type="Script" uid="uid://2k28c50c4nhw" path="res://Levels/niveles-de-prueba/stage_prueba_emociones.gd" id="1_3pfn6"]
 [ext_resource type="Texture2D" uid="uid://byfh070wslkxt" path="res://assets/Background/NightSky_Tile_1.png" id="2_ncoa7"]
 [ext_resource type="Texture2D" uid="uid://dnm4knecb5h5m" path="res://assets/Background/Far_Building_Asset_1.png" id="3_ndk0a"]
 [ext_resource type="Texture2D" uid="uid://b083eagby3240" path="res://assets/Background/Far_Building_Asset_2.png" id="4_y6rmg"]
-[ext_resource type="Texture2D" uid="uid://cjwy47u0h4ps8" path="res://assets/Background/Far_Building_Asset_3.png" id="5_6urcc"]
 [ext_resource type="Texture2D" uid="uid://dtj5xmv2ousgd" path="res://assets/Background/Far_Building_Asset_4.png" id="6_5uk7i"]
 [ext_resource type="Texture2D" uid="uid://bbjxiyj6t2xvn" path="res://assets/Background/Building_Asset_1.png" id="7_s1j4c"]
 [ext_resource type="Texture2D" uid="uid://cieu8ekpewkvf" path="res://assets/Background/Building_Asset_2.png" id="8_7iwrj"]
@@ -13,8 +12,12 @@
 [ext_resource type="PackedScene" uid="uid://3ht2b6g4whk7" path="res://characters/Laura.tscn" id="11_fybgb"]
 [ext_resource type="PackedScene" uid="uid://bbs86ttvb6dhi" path="res://characters/Ramiro.tscn" id="12_w6mdm"]
 [ext_resource type="PackedScene" uid="uid://tbbpbwsjlk7m" path="res://Levels/piso/floor.tscn" id="13_ph503"]
+[ext_resource type="PackedScene" uid="uid://cgpjlc8f01his" path="res://Levels/Objetos/plataforma-1.tscn" id="17_ek2me"]
 [ext_resource type="Script" uid="uid://cyh0d64pfygbl" path="res://addons/maaacks_menus_template/base/scripts/pause_menu_controller.gd" id="17_txp1u"]
 [ext_resource type="PackedScene" uid="uid://ckwusaxwybu4g" path="res://Levels/scenes/overlaid_menus/pause_menu.tscn" id="18_eqfty"]
+[ext_resource type="PackedScene" uid="uid://d3x8hqee1635q" path="res://Levels/Objetos/plataforma-2.tscn" id="18_nfak7"]
+[ext_resource type="PackedScene" uid="uid://dvik1r3to8hq2" path="res://Levels/Objetos/plataforma-3.tscn" id="19_5f0r5"]
+[ext_resource type="PackedScene" uid="uid://d1c8t78wpgo4a" path="res://Levels/Objetos/plataforma-4.tscn" id="20_iqwrl"]
 [ext_resource type="PackedScene" uid="uid://cwfe1busr0b28" path="res://Levels/Objetos/poste-luz.tscn" id="21_mpaah"]
 [ext_resource type="PackedScene" uid="uid://bf5b82fejpexj" path="res://Levels/Objetos/entel.tscn" id="22_riehi"]
 
@@ -43,118 +46,68 @@ z_index = -1
 position = Vector2(-3725, 645)
 scale = Vector2(1.3, 1.3)
 texture = ExtResource("3_ndk0a")
+metadata/_edit_lock_ = true
 
 [node name="FarBuildingAsset5" type="Sprite2D" parent="background-fondo"]
 z_index = -1
 position = Vector2(2094, 787)
 scale = Vector2(1.3, 1.3)
 texture = ExtResource("4_y6rmg")
-
-[node name="FarBuildingAsset6" type="Sprite2D" parent="background-fondo"]
-z_index = -1
-position = Vector2(428, 704.305)
-scale = Vector2(1.3, 1.3)
-texture = ExtResource("4_y6rmg")
+metadata/_edit_lock_ = true
 
 [node name="FarBuildingAsset2" type="Sprite2D" parent="background-fondo"]
 z_index = -1
-position = Vector2(-4053, 806)
-scale = Vector2(1.3, 1.3)
+position = Vector2(-4053, 415.625)
+scale = Vector2(1.3, 4.77)
 texture = ExtResource("4_y6rmg")
-
-[node name="FarBuildingAsset3" type="Sprite2D" parent="background-fondo"]
-z_index = -1
-position = Vector2(37, 741)
-scale = Vector2(1.3, 1.3)
-texture = ExtResource("5_6urcc")
-
-[node name="FarBuildingAsset8" type="Sprite2D" parent="background-fondo"]
-z_index = -1
-position = Vector2(-915, 624)
-scale = Vector2(1.3, 1.3)
-texture = ExtResource("6_5uk7i")
-
-[node name="FarBuildingAsset10" type="Sprite2D" parent="background-fondo"]
-z_index = -4
-position = Vector2(-1675, 623)
-scale = Vector2(1.3, 1.3)
-texture = ExtResource("6_5uk7i")
+metadata/_edit_lock_ = true
 
 [node name="FarBuildingAsset7" type="Sprite2D" parent="background-fondo"]
 z_index = -1
 position = Vector2(1538, 602)
 scale = Vector2(1.3, 1.3)
 texture = ExtResource("6_5uk7i")
+metadata/_edit_lock_ = true
 
 [node name="FarBuildingAsset9" type="Sprite2D" parent="background-fondo"]
 z_index = -1
 position = Vector2(2654, 623)
 scale = Vector2(1.3, 1.3)
 texture = ExtResource("6_5uk7i")
-
-[node name="FarBuildingAsset4" type="Sprite2D" parent="background-fondo"]
-z_index = -1
-position = Vector2(740, 607)
-scale = Vector2(1.3, 1.3)
-texture = ExtResource("6_5uk7i")
+metadata/_edit_lock_ = true
 
 [node name="background-edificios" type="Node" parent="."]
 
 [node name="BuildingAsset1" type="Sprite2D" parent="background-edificios"]
 z_index = -4
-position = Vector2(-2339, 558)
-scale = Vector2(1.5, 1.5)
+position = Vector2(-1801, 325)
+scale = Vector2(2.27941, 2.27941)
 texture = ExtResource("7_s1j4c")
-
-[node name="BuildingAsset2" type="Sprite2D" parent="background-edificios"]
-position = Vector2(908, 673)
-scale = Vector2(1.5, 1.5)
-texture = ExtResource("8_7iwrj")
-
-[node name="BuildingAsset3" type="Sprite2D" parent="background-edificios"]
-position = Vector2(443, 716)
-scale = Vector2(1.5, 1.5)
-texture = ExtResource("9_vwqpb")
-
-[node name="BuildingAsset4" type="Sprite2D" parent="background-edificios"]
-position = Vector2(1207, 734)
-scale = Vector2(1.5, 1.5)
-texture = ExtResource("10_rlioi")
+metadata/_edit_lock_ = true
 
 [node name="BuildingAsset11" type="Sprite2D" parent="background-edificios"]
-position = Vector2(-3778, 743)
-scale = Vector2(1.5, 1.5)
+position = Vector2(-3696, 303)
+scale = Vector2(4.68592, 4.68592)
 texture = ExtResource("10_rlioi")
+metadata/_edit_lock_ = true
 
 [node name="BuildingAsset5" type="Sprite2D" parent="background-edificios"]
-position = Vector2(2273, 667)
-scale = Vector2(1.5, 1.5)
+position = Vector2(1845, 278)
+scale = Vector2(3.25988, 3.57038)
 texture = ExtResource("8_7iwrj")
-
-[node name="BuildingAsset9" type="Sprite2D" parent="background-edificios"]
-position = Vector2(-184, 687)
-scale = Vector2(1.5, 1.5)
-texture = ExtResource("8_7iwrj")
-
-[node name="BuildingAsset6" type="Sprite2D" parent="background-edificios"]
-position = Vector2(1708, 718)
-scale = Vector2(1.5, 1.5)
-texture = ExtResource("9_vwqpb")
+metadata/_edit_lock_ = true
 
 [node name="BuildingAsset8" type="Sprite2D" parent="background-edificios"]
-position = Vector2(-1197, 732)
-scale = Vector2(1.5, 1.5)
+position = Vector2(741, 504)
+scale = Vector2(2.91068, 2.91531)
 texture = ExtResource("9_vwqpb")
+metadata/_edit_lock_ = true
 
 [node name="BuildingAsset7" type="Sprite2D" parent="background-edificios"]
-position = Vector2(2649, 751)
-scale = Vector2(1.5, 1.5)
+position = Vector2(2406, 347)
+scale = Vector2(3.52256, 4.41787)
 texture = ExtResource("10_rlioi")
-
-[node name="BuildingAsset10" type="Sprite2D" parent="background-edificios"]
-position = Vector2(-609, 750)
-scale = Vector2(1.5, 1.5)
-texture = ExtResource("10_rlioi")
+metadata/_edit_lock_ = true
 
 [node name="pisos" type="Node" parent="."]
 
@@ -257,10 +210,11 @@ position = Vector2(-3811, 719)
 metadata/_edit_lock_ = true
 
 [node name="entel" parent="luces-y-postes" instance=ExtResource("22_riehi")]
-position = Vector2(-501, 948)
+position = Vector2(-1045, 947)
 scale = Vector2(0.47, 0.47)
 
 [node name="Label" type="Label" parent="."]
+z_index = 10
 offset_left = -3279.0
 offset_top = 792.0
 offset_right = -3002.0
@@ -277,10 +231,34 @@ position = Vector2(-2959.75, 802)
 shape = SubResource("RectangleShape2D_0yrxn")
 
 [node name="Laura" parent="." instance=ExtResource("11_fybgb")]
-position = Vector2(-3641, 913)
+z_index = 5
+position = Vector2(-2874, 589)
 
 [node name="Ramiro" parent="." instance=ExtResource("12_w6mdm")]
-position = Vector2(-3781, 930)
+z_index = 5
+position = Vector2(-1476, 930)
+
+[node name="Plataforma-1" parent="." instance=ExtResource("17_ek2me")]
+z_index = 2
+position = Vector2(-2750, 393)
+
+[node name="Plataforma-2" parent="." instance=ExtResource("18_nfak7")]
+z_index = 20
+position = Vector2(-2929, 571)
+
+[node name="Plataforma-2" parent="Plataforma-2" instance=ExtResource("18_nfak7")]
+z_index = 20
+position = Vector2(-334, -128)
+
+[node name="Plataforma-2" parent="Plataforma-2/Plataforma-2" instance=ExtResource("18_nfak7")]
+z_index = 20
+position = Vector2(-345, -106)
+
+[node name="Plataforma-3" parent="." instance=ExtResource("19_5f0r5")]
+position = Vector2(-1615, 671)
+
+[node name="Plataforma-4" parent="." instance=ExtResource("20_iqwrl")]
+position = Vector2(-737, 616)
 
 [connection signal="body_entered" from="Area_enojo_laura" to="." method="_on_area_enojo_laura_body_entered2"]
 [connection signal="body_exited" from="Area_enojo_laura" to="." method="_on_area_enojo_laura_body_exited2"]

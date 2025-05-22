@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1c8t78wpgo4a"]
+
+[ext_resource type="Texture2D" uid="uid://ldolttm8t17j" path="res://assets/PLATAFORMAS/Plataforma-PuestoDeDiarios/Adorno_EstructuraDelPuesto.png" id="1_jno5q"]
+[ext_resource type="Texture2D" uid="uid://bd3f71d0w320k" path="res://assets/PLATAFORMAS/Plataforma-PuestoDeDiarios/Plataforma_TechoDelPuesto.png" id="2_eeg3q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tfuxk"]
+size = Vector2(526.5, 13.875)
+
+[node name="Plataforma-4" type="StaticBody2D"]
+collision_mask = 7
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(263.25, 24.5625)
+shape = SubResource("RectangleShape2D_tfuxk")
+metadata/_edit_group_ = true
+
+[node name="AdornoEstructuraDelPuesto" type="Sprite2D" parent="."]
+position = Vector2(263.5, 184.5)
+texture = ExtResource("1_jno5q")
+metadata/_edit_group_ = true
+
+[node name="PlataformaTechoDelPuesto" type="Sprite2D" parent="."]
+position = Vector2(264.5, 27.5)
+texture = ExtResource("2_eeg3q")
+metadata/_edit_group_ = true

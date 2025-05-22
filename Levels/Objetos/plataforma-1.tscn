@@ -1,0 +1,62 @@
+[gd_scene load_steps=6 format=3 uid="uid://cgpjlc8f01his"]
+
+[ext_resource type="Texture2D" uid="uid://djebjt40khc7n" path="res://assets/PLATAFORMAS/Plataforma-Andamio/Adorno_Refuerzo1_Andamio.png" id="1_rmv8e"]
+[ext_resource type="Texture2D" uid="uid://cnsbtpqw0n7ny" path="res://assets/PLATAFORMAS/Plataforma-Andamio/Adorno_Refuerzo2_Andamio.png" id="2_uc4sj"]
+[ext_resource type="Texture2D" uid="uid://e0lvq3uha0cd" path="res://assets/PLATAFORMAS/Plataforma-Andamio/Adorno_Soporte_Andamio.png" id="3_dgorn"]
+[ext_resource type="Texture2D" uid="uid://bij817at4edu0" path="res://assets/PLATAFORMAS/Plataforma-Andamio/Plataforma_MaderaGrande_Andamio.png" id="4_6r107"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tfuxk"]
+size = Vector2(808.5, 29)
+
+[node name="Plataforma-1" type="StaticBody2D"]
+collision_mask = 7
+
+[node name="AdornoRefuerzo1Andamio" type="Sprite2D" parent="."]
+position = Vector2(360, 419)
+texture = ExtResource("1_rmv8e")
+
+[node name="AdornoRefuerzo2Andamio" type="Sprite2D" parent="."]
+position = Vector2(361, 533)
+texture = ExtResource("2_uc4sj")
+
+[node name="AdornoSoporteAndamio" type="Sprite2D" parent="."]
+position = Vector2(362, 432)
+texture = ExtResource("3_dgorn")
+
+[node name="PlataformaMaderaGrandeAndamio" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(357, 308)
+texture = ExtResource("4_6r107")
+
+[node name="AdornoRefuerzo1Andamio2" type="Sprite2D" parent="."]
+position = Vector2(360, 193)
+texture = ExtResource("1_rmv8e")
+
+[node name="AdornoRefuerzo2Andamio2" type="Sprite2D" parent="."]
+position = Vector2(359, 87)
+texture = ExtResource("2_uc4sj")
+
+[node name="AdornoSoporteAndamio2" type="Sprite2D" parent="."]
+position = Vector2(360, 180)
+texture = ExtResource("3_dgorn")
+
+[node name="AdornoRefuerzo1Andamio3" type="Sprite2D" parent="."]
+position = Vector2(760.5, 419)
+texture = ExtResource("1_rmv8e")
+
+[node name="AdornoRefuerzo2Andamio3" type="Sprite2D" parent="."]
+position = Vector2(756.5, 533)
+texture = ExtResource("2_uc4sj")
+
+[node name="AdornoSoporteAndamio3" type="Sprite2D" parent="."]
+position = Vector2(759.5, 432)
+texture = ExtResource("3_dgorn")
+
+[node name="PlataformaMaderaGrandeAndamio2" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(752.5, 308)
+texture = ExtResource("4_6r107")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(554.75, 308.5)
+shape = SubResource("RectangleShape2D_tfuxk")

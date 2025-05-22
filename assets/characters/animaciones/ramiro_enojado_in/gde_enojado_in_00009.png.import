@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cst033miowgf0"
-path="res://.godot/imported/cajon.png-1283d3b41cb8bad436b08c4a331839b7.ctex"
+uid="uid://bj6kxl7ax78hj"
+path="res://.godot/imported/gde_enojado_in_00009.png-fe40dd87f742b624c6b8598a7c806c48.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cajon.png"
-dest_files=["res://.godot/imported/cajon.png-1283d3b41cb8bad436b08c4a331839b7.ctex"]
+source_file="res://assets/characters/animaciones/ramiro_enojado_in/gde_enojado_in_00009.png"
+dest_files=["res://.godot/imported/gde_enojado_in_00009.png-fe40dd87f742b624c6b8598a7c806c48.ctex"]
 
 [params]
 

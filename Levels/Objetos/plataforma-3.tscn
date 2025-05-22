@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://dvik1r3to8hq2"]
+
+[ext_resource type="Texture2D" uid="uid://b6l1slbrjeh4l" path="res://assets/PLATAFORMAS/Plataforma-GalponColectivo/Adorno-SoportesDelanterosGalpon.png" id="1_8omos"]
+[ext_resource type="Texture2D" uid="uid://cylmie3u2nlyf" path="res://assets/PLATAFORMAS/Plataforma-GalponColectivo/Adorno-SoportesTraserosGalpon.png" id="2_fh1fv"]
+[ext_resource type="Texture2D" uid="uid://bx8lh0nfqflec" path="res://assets/PLATAFORMAS/Plataforma-GalponColectivo/Plataforma-TechoGalpon.png" id="3_wwrlh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tfuxk"]
+size = Vector2(427, 37.75)
+
+[node name="Plataforma-3" type="StaticBody2D"]
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(223.5, 24.625)
+shape = SubResource("RectangleShape2D_tfuxk")
+
+[node name="Adorno-soportesDelanterosGalpon" type="Sprite2D" parent="."]
+z_index = 10
+position = Vector2(224, 151.5)
+texture = ExtResource("1_8omos")
+
+[node name="Adorno-soportesTraserosGalpon" type="Sprite2D" parent="."]
+position = Vector2(224, 155.5)
+texture = ExtResource("2_fh1fv")
+
+[node name="Plataforma-techoGalpon" type="Sprite2D" parent="."]
+z_index = 11
+position = Vector2(224, 24.5)
+texture = ExtResource("3_wwrlh")
