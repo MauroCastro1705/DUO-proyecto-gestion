@@ -822,7 +822,7 @@ scale = Vector2(0.435, 0.435)
 sprite_frames = SubResource("SpriteFrames_w370e")
 animation = &"walk"
 autoplay = "walk"
-frame_progress = 0.110149
-speed_scale = 1.8
+frame_progress = 0.19085
+speed_scale = 1.7
 
 [connection signal="timeout" from="TimerLabel" to="." method="_on_timer_label_timeout"]

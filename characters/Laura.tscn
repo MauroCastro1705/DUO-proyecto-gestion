@@ -496,3 +496,4 @@ scale = Vector2(0.22725, 0.22725)
 sprite_frames = SubResource("SpriteFrames_urixy")
 animation = &"walk"
 autoplay = "idle"
+speed_scale = 1.5

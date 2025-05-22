@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://buaykj4mfqsby"]
+[gd_scene load_steps=23 format=3 uid="uid://buaykj4mfqsby"]
 
 [ext_resource type="Script" uid="uid://2k28c50c4nhw" path="res://Levels/niveles-de-prueba/stage_prueba_emociones.gd" id="1_3pfn6"]
 [ext_resource type="Texture2D" uid="uid://byfh070wslkxt" path="res://assets/Background/NightSky_Tile_1.png" id="2_ncoa7"]
@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://dvik1r3to8hq2" path="res://Levels/Objetos/plataforma-3.tscn" id="19_5f0r5"]
 [ext_resource type="PackedScene" uid="uid://d1c8t78wpgo4a" path="res://Levels/Objetos/plataforma-4.tscn" id="20_iqwrl"]
 [ext_resource type="PackedScene" uid="uid://cwfe1busr0b28" path="res://Levels/Objetos/poste-luz.tscn" id="21_mpaah"]
+[ext_resource type="AudioStream" uid="uid://deis2quqwnuce" path="res://assets/musica/main-theme.mp3" id="21_nfak7"]
 [ext_resource type="PackedScene" uid="uid://bf5b82fejpexj" path="res://Levels/Objetos/entel.tscn" id="22_riehi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0yrxn"]
@@ -259,6 +260,11 @@ position = Vector2(-1615, 671)
 
 [node name="Plataforma-4" parent="." instance=ExtResource("20_iqwrl")]
 position = Vector2(-755, 635)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("21_nfak7")
+volume_db = 10.0
+playback_type = 1
 
 [connection signal="body_entered" from="Area_enojo_laura" to="." method="_on_area_enojo_laura_body_entered2"]
 [connection signal="body_exited" from="Area_enojo_laura" to="." method="_on_area_enojo_laura_body_exited2"]

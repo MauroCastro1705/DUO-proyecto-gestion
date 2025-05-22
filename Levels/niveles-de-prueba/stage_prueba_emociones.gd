@@ -10,6 +10,11 @@ var zoomed_out := Vector2(0.5, 0.5) # ajustar
 var zoom_speed := 5.0
 var target_zoom := normal_zoom
 
+#para el audio
+@onready var audio = $AudioStreamPlayer2D
+var CorrectSound = preload("res://assets/musica/main-theme.mp3")
+
+
 func _ready() -> void:
 	# Referencias a los personajes
 	player1 = $Ramiro
@@ -19,16 +24,19 @@ func _ready() -> void:
 	player2.is_active = false  # Inicia desactivado
 	camera.position = active_player.global_position
 	camera.zoom = normal_zoom
-		# Activar la cámara del jugador activo
+	# Activar la cámara del jugador activo
 	#player1.get_node("Camera2D").enabled = true
 	#player2.get_node("Camera2D").enabled = false
-	
+
 func _process(delta: float) -> void:
 	##ANIMACION CAMARA ENTRE PERSONAJES
 	if active_player:
 		camera.global_position = camera.global_position.lerp(to_local(active_player.global_position), delta * 8.0)
 	camera.zoom = camera.zoom.lerp(target_zoom, delta * zoom_speed)
-	
+	#AUDIO PLAYER
+	if !audio.is_playing():
+		audio.stream = CorrectSound
+		audio.play()
 	
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("cambiar") and Global.can_swap:
