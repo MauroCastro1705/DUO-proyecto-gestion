@@ -1,4 +1,4 @@
-[gd_scene load_steps=133 format=3 uid="uid://bbs86ttvb6dhi"]
+[gd_scene load_steps=181 format=3 uid="uid://bbs86ttvb6dhi"]
 
 [ext_resource type="Script" uid="uid://m850xbhl28ts" path="res://characters/characters_code/Ramiro.gd" id="2_cfd2t"]
 [ext_resource type="Texture2D" uid="uid://ksk8pwddi2sn" path="res://_m_chars_test/chars/assets/animaciones/gde_walk/gde_walk01_00001.png" id="3_8uh63"]
@@ -125,8 +125,56 @@
 [ext_resource type="Texture2D" uid="uid://brfv0g7dfc57x" path="res://assets/characters/animaciones/ramiro_walk_enojado/gde_walk_enojado_00047.png" id="75_6evtr"]
 [ext_resource type="Texture2D" uid="uid://b5diosscgb42r" path="res://assets/characters/animaciones/ramiro_walk_enojado/gde_walk_enojado_00048.png" id="76_fpl0v"]
 [ext_resource type="Texture2D" uid="uid://bgq43kielo2uv" path="res://assets/characters/animaciones/ramiro_salto_normal/gde_salto_normal_pre.png" id="77_34v0l"]
+[ext_resource type="Texture2D" uid="uid://dwqur6bdqwerd" path="res://assets/characters/animaciones/ramiro_ilde_normal/gde_ilde_normal_00001.png" id="77_lvro6"]
 [ext_resource type="Texture2D" uid="uid://c4g31dbyejciv" path="res://assets/characters/animaciones/ramiro_salto_normal/gde_salto_normal_up.png" id="78_h6d7j"]
+[ext_resource type="Texture2D" uid="uid://cpkl6iiogbg86" path="res://assets/characters/animaciones/ramiro_ilde_normal/gde_ilde_normal_00002.png" id="78_xdn6y"]
 [ext_resource type="Texture2D" uid="uid://du4da4084tkgc" path="res://assets/characters/animaciones/ramiro_salto_normal/gde_salto_normal_apex.png" id="79_ijupv"]
+[ext_resource type="Texture2D" uid="uid://bvyhw7b4qw31i" path="res://assets/characters/animaciones/ramiro_ilde_normal/gde_ilde_normal_00003.png" id="79_mdxu6"]
+[ext_resource type="Texture2D" uid="uid://c1yj2x7mot0g6" path="res://assets/characters/animaciones/ramiro_ilde_normal/gde_ilde_normal_00004.png" id="80_q0ryk"]
+[ext_resource type="Texture2D" uid="uid://ep4yxm3rmnav" path="res://assets/characters/animaciones/ramiro_ilde_normal/gde_ilde_normal_00005.png" id="81_140w0"]
+[ext_resource type="Texture2D" uid="uid://krlmtls3hg5p" path="res://assets/characters/animaciones/ramiro_ilde_normal/gde_ilde_normal_00006.png" id="82_mogbs"]
+[ext_resource type="Texture2D" uid="uid://djrs3q3t2as65" path="res://assets/characters/animaciones/ramiro_ilde_normal/gde_ilde_normal_00007.png" id="83_jf07w"]
+[ext_resource type="Texture2D" uid="uid://cnxhxgreyu41i" path="res://assets/characters/animaciones/ramiro_ilde_normal/gde_ilde_normal_00008.png" id="84_284pn"]
+[ext_resource type="Texture2D" uid="uid://dd53qna22vknx" path="res://assets/characters/animaciones/ramiro_ilde_normal/gde_ilde_normal_00009.png" id="85_ef5h8"]
+[ext_resource type="Texture2D" uid="uid://c4gwandp32jmh" path="res://assets/characters/animaciones/ramiro_ilde_normal/gde_ilde_normal_00010.png" id="86_1y8tk"]
+[ext_resource type="Texture2D" uid="uid://c8gedutnf5pgt" path="res://assets/characters/animaciones/ramiro_ilde_normal/gde_ilde_normal_00011.png" id="87_2a10j"]
+[ext_resource type="Texture2D" uid="uid://bkpl47jrixdem" path="res://assets/characters/animaciones/ramiro_ilde_normal/gde_ilde_normal_00012.png" id="88_b3s73"]
+[ext_resource type="Texture2D" uid="uid://op8wjmsni530" path="res://assets/characters/animaciones/ramiro_ilde_normal/gde_ilde_normal_00013.png" id="89_ph8og"]
+[ext_resource type="Texture2D" uid="uid://bhqfw5tetpcc4" path="res://assets/characters/animaciones/ramiro_ilde_normal/gde_ilde_normal_00014.png" id="90_wwako"]
+[ext_resource type="Texture2D" uid="uid://cj1pshrdx3h03" path="res://assets/characters/animaciones/ramiro_ilde_normal/gde_ilde_normal_00015.png" id="91_a8oy3"]
+[ext_resource type="Texture2D" uid="uid://dwhgm2vr0g2gd" path="res://assets/characters/animaciones/ramiro_ilde_normal/gde_ilde_normal_00016.png" id="92_amy47"]
+[ext_resource type="Texture2D" uid="uid://bxlgaeliac6o6" path="res://assets/characters/animaciones/ramiro_ilde_normal/gde_ilde_normal_00017.png" id="93_ojo3n"]
+[ext_resource type="Texture2D" uid="uid://ccia5ys5nuj84" path="res://assets/characters/animaciones/ramiro_ilde_normal/gde_ilde_normal_00018.png" id="94_qonsp"]
+[ext_resource type="Texture2D" uid="uid://y10ouhhsp1yc" path="res://assets/characters/animaciones/ramiro_ilde_normal/gde_ilde_normal_00019.png" id="95_r5tng"]
+[ext_resource type="Texture2D" uid="uid://cb6kuh1iosee1" path="res://assets/characters/animaciones/ramiro_ilde_normal/gde_ilde_normal_00020.png" id="96_o2x88"]
+[ext_resource type="Texture2D" uid="uid://c3rum36gtobwi" path="res://assets/characters/animaciones/ramiro_ilde_normal/gde_ilde_normal_00021.png" id="97_4vf4l"]
+[ext_resource type="Texture2D" uid="uid://cimq3caygbqdu" path="res://assets/characters/animaciones/ramiro_ilde_normal/gde_ilde_normal_00022.png" id="98_e8o6p"]
+[ext_resource type="Texture2D" uid="uid://df3scws3hrohq" path="res://assets/characters/animaciones/ramiro_ilde_normal/gde_ilde_normal_00023.png" id="99_d8am3"]
+[ext_resource type="Texture2D" uid="uid://ctcdy872cu4gm" path="res://assets/characters/animaciones/ramiro_ilde_normal/gde_ilde_normal_00024.png" id="100_uiqf6"]
+[ext_resource type="Texture2D" uid="uid://djypdco0l36et" path="res://assets/characters/animaciones/ramiro_ilde_normal/gde_ilde_normal_00025.png" id="101_6evtr"]
+[ext_resource type="Texture2D" uid="uid://bhqsvt4rya7nn" path="res://assets/characters/animaciones/ramiro_ilde_normal/gde_ilde_normal_00026.png" id="102_fpl0v"]
+[ext_resource type="Texture2D" uid="uid://b62ktqkmvv526" path="res://assets/characters/animaciones/ramiro_ilde_normal/gde_ilde_normal_00027.png" id="103_34v0l"]
+[ext_resource type="Texture2D" uid="uid://ddbshk35j1p4r" path="res://assets/characters/animaciones/ramiro_ilde_normal/gde_ilde_normal_00028.png" id="104_h6d7j"]
+[ext_resource type="Texture2D" uid="uid://cihl3bgbmaiwv" path="res://assets/characters/animaciones/ramiro_ilde_normal/gde_ilde_normal_00029.png" id="105_ijupv"]
+[ext_resource type="Texture2D" uid="uid://ci3u5eb1xis2u" path="res://assets/characters/animaciones/ramiro_ilde_normal/gde_ilde_normal_00030.png" id="106_txu5x"]
+[ext_resource type="Texture2D" uid="uid://dftyqbnw3b1a1" path="res://assets/characters/animaciones/ramiro_ilde_normal/gde_ilde_normal_00031.png" id="107_s4kw5"]
+[ext_resource type="Texture2D" uid="uid://c1m7mutrqywnc" path="res://assets/characters/animaciones/ramiro_ilde_normal/gde_ilde_normal_00032.png" id="108_okfpm"]
+[ext_resource type="Texture2D" uid="uid://cnfx6ethu82nl" path="res://assets/characters/animaciones/ramiro_ilde_normal/gde_ilde_normal_00033.png" id="109_flknl"]
+[ext_resource type="Texture2D" uid="uid://froqtht1cdek" path="res://assets/characters/animaciones/ramiro_ilde_normal/gde_ilde_normal_00034.png" id="110_sy0a8"]
+[ext_resource type="Texture2D" uid="uid://b3c4irrfljl1e" path="res://assets/characters/animaciones/ramiro_ilde_normal/gde_ilde_normal_00035.png" id="111_t0jk3"]
+[ext_resource type="Texture2D" uid="uid://1o3f1gl3bt5" path="res://assets/characters/animaciones/ramiro_ilde_normal/gde_ilde_normal_00036.png" id="112_mkrxf"]
+[ext_resource type="Texture2D" uid="uid://8id70s5isafq" path="res://assets/characters/animaciones/ramiro_ilde_normal/gde_ilde_normal_00037.png" id="113_gtjm1"]
+[ext_resource type="Texture2D" uid="uid://pqqpxyg5tgio" path="res://assets/characters/animaciones/ramiro_ilde_normal/gde_ilde_normal_00038.png" id="114_ukate"]
+[ext_resource type="Texture2D" uid="uid://c7mniugrpg4qx" path="res://assets/characters/animaciones/ramiro_ilde_normal/gde_ilde_normal_00039.png" id="115_5drpl"]
+[ext_resource type="Texture2D" uid="uid://drtroev3biemj" path="res://assets/characters/animaciones/ramiro_ilde_normal/gde_ilde_normal_00040.png" id="116_d51f4"]
+[ext_resource type="Texture2D" uid="uid://c3wtew8wxmakt" path="res://assets/characters/animaciones/ramiro_ilde_normal/gde_ilde_normal_00041.png" id="117_vyern"]
+[ext_resource type="Texture2D" uid="uid://db03fu2qe64f6" path="res://assets/characters/animaciones/ramiro_ilde_normal/gde_ilde_normal_00042.png" id="118_ok85b"]
+[ext_resource type="Texture2D" uid="uid://c8hw43ow7uqql" path="res://assets/characters/animaciones/ramiro_ilde_normal/gde_ilde_normal_00043.png" id="119_ttjyk"]
+[ext_resource type="Texture2D" uid="uid://bd25k1igalocu" path="res://assets/characters/animaciones/ramiro_ilde_normal/gde_ilde_normal_00044.png" id="120_lleu8"]
+[ext_resource type="Texture2D" uid="uid://dvaxjc2ksllw3" path="res://assets/characters/animaciones/ramiro_ilde_normal/gde_ilde_normal_00045.png" id="121_apg3k"]
+[ext_resource type="Texture2D" uid="uid://cnswrje5ptfuo" path="res://assets/characters/animaciones/ramiro_ilde_normal/gde_ilde_normal_00046.png" id="122_wpvwg"]
+[ext_resource type="Texture2D" uid="uid://dd1gnc7kqgucf" path="res://assets/characters/animaciones/ramiro_ilde_normal/gde_ilde_normal_00047.png" id="123_2238o"]
+[ext_resource type="Texture2D" uid="uid://2dl1pcrf2s24" path="res://assets/characters/animaciones/ramiro_ilde_normal/gde_ilde_normal_00048.png" id="124_k6jee"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jfpom"]
 size = Vector2(165, 102)
@@ -378,10 +426,154 @@ animations = [{
 "name": &"enojado_walk",
 "speed": 30.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("77_lvro6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_xdn6y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_mdxu6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_q0ryk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_140w0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_mogbs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_jf07w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_284pn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_ef5h8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_1y8tk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_2a10j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_b3s73")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_ph8og")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_wwako")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_a8oy3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_amy47")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_ojo3n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_qonsp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_r5tng")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_o2x88")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_4vf4l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_e8o6p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_d8am3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_uiqf6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_6evtr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_fpl0v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_34v0l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_h6d7j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_ijupv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_txu5x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_s4kw5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_okfpm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_flknl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_sy0a8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_t0jk3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_mkrxf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_gtjm1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_ukate")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_5drpl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_d51f4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_vyern")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_ok85b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_ttjyk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_lleu8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121_apg3k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("122_wpvwg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("123_2238o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("124_k6jee")
+}],
 "loop": true,
 "name": &"idle",
-"speed": 5.0
+"speed": 30.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -619,7 +811,9 @@ one_shot = true
 position = Vector2(-4, -99)
 scale = Vector2(0.435, 0.435)
 sprite_frames = SubResource("SpriteFrames_w370e")
-animation = &"enojado_idle"
+animation = &"idle"
 autoplay = "walk"
+frame = 21
+frame_progress = 0.948603
 
 [connection signal="timeout" from="TimerLabel" to="." method="_on_timer_label_timeout"]
