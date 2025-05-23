@@ -262,8 +262,9 @@ position = Vector2(-1615, 671)
 position = Vector2(-755, 635)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-1272, 448)
 stream = ExtResource("21_nfak7")
-volume_db = 8.0
+volume_db = 4.0
 playback_type = 1
 
 [connection signal="body_entered" from="Area_enojo_laura" to="." method="_on_area_enojo_laura_body_entered2"]
