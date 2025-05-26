@@ -1,8 +1,7 @@
 extends Node2D
 
 var active_player: CharacterBody2D  # El personaje que actualmente controlas
-signal active_player_signal
-
+signal swap_characters_signal
 var player1: CharacterBody2D
 var player2: CharacterBody2D
 var is_moved: bool = false
@@ -22,6 +21,8 @@ func _ready() -> void:
 	player1 = $Ramiro
 	player2 = $Laura
 	active_player = player1
+	Global.active_player_bruno = true
+	Global.active_player_alejandra = false
 	player1.is_active = true
 	player2.is_active = false  # Inicia desactivado
 	camera.position = active_player.global_position
@@ -53,15 +54,17 @@ func swap_characters() -> void:
 		active_player = player2
 		player1.is_active = false
 		player2.is_active = true
-		active_player_signal.emit(player2)
+		Global.active_player_alejandra = true
+		Global.active_player_bruno = false
 		print("señal player 2")
 	else:
 		active_player = player1
 		player1.is_active = true
 		player2.is_active = false
-		active_player_signal.emit(player1)
+		Global.active_player_bruno = true
+		Global.active_player_alejandra = false
 		print("señal player 1")
-		
+	swap_characters_signal.emit()
 
 ####COLISIONES CON ZONAS QUE CAMBIAN EMOCIONES SEGUN JUGADOR
 

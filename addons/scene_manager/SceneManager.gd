@@ -47,12 +47,7 @@ func _set_singleton_entities() -> void:
 	var entities = _current_scene.get_tree().get_nodes_in_group(
 		SceneManagerConstants.SINGLETON_GROUP_NAME
 	)
-	for entity in entities:
-		var has_entity_name : bool = entity.has_meta(SceneManagerConstants.SINGLETON_META_NAME)
-		assert(has_entity_name,"The node was set as a singleton entity, but no entity name was provided.")
-		var entity_name = entity.get_meta(SceneManagerConstants.SINGLETON_META_NAME)
-		assert(not singleton_entities.has(entity_name),"The entity name %s is already being used more than once! Please check that your entity name is unique within the scene.")
-		singleton_entities[entity_name] = entity
+
 
 func get_entity(entity_name: String) -> Node:
 	assert(singleton_entities.has(entity_name),"Entity is not set as a singleton entity. Please define it in the editor.")

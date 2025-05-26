@@ -3,3 +3,5 @@ extends Node
 
 var can_swap:bool = true
 var lauraOnTop:bool = false
+var active_player_bruno:bool = true
+var active_player_alejandra:bool = false
