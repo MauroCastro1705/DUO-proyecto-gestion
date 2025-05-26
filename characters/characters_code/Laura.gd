@@ -25,7 +25,7 @@ var estaba_activo = false
 func _ready() -> void:
 	Global.lauraOnTop = false
 	flecha.visible = false
-
+	texto_character.visible = false
 func _physics_process(delta: float) -> void:
 	if raycast_down.is_colliding():		# Detectar si estamos sobre el personaje grande
 		var collider = raycast_down.get_collider()
@@ -50,8 +50,11 @@ func _procesar_input_movimiento() -> Vector2:
 		is_jumping = true #para animacion
 		played_apex = false
 		sprite.play("pre_salto")
-	if Input.is_action_pressed("empujar"):
-		hacer_accion()
+	if Input.is_action_just_pressed("empujar") and joint == null:
+		empujar_caja()
+	if Input.is_action_just_released("empujar"):
+		texto_character.visible = false
+		remove_joint()
 	return dir
 	
 func _handle_velocity(direction: Vector2, delta):
@@ -78,8 +81,8 @@ func _no_esta_sobre_personaje():
 		Global.lauraOnTop = false
 		big_character_velocity = Vector2.ZERO
 
-func hacer_accion():
-	Emociones.seguir_a_laura = true
+#func hacer_accion():
+#	Emociones.seguir_a_laura = true
 
 ##---------ANIMACIONEs-----------S##
 func update_animation(direction: Vector2):
@@ -117,7 +120,7 @@ func empujar_caja():
 	texto_character.visible = true
 	texto_character.text = "Empujando"
 	for body in push_area.get_overlapping_bodies():
-		if body is RigidBody2D and is_in_group("liviano"):
+		if body is RigidBody2D and body.is_in_group("liviano"):
 			current_box = body
 			create_joint_with_box(current_box)
 			break

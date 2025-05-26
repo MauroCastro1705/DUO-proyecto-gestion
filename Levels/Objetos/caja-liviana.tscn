@@ -13,6 +13,7 @@ collision_layer = 8
 collision_mask = 15
 mass = 500.0
 physics_material_override = SubResource("PhysicsMaterial_uj4g3")
+gravity_scale = 2.0
 continuous_cd = 2
 script = ExtResource("1_eull6")
 

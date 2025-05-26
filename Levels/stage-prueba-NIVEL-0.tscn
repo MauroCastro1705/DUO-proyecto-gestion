@@ -169,7 +169,7 @@ position = Vector2(2339, 505)
 [node name="Laura" parent="." instance=ExtResource("16_lkrhh")]
 modulate = Color(0.577255, 0.612528, 0.667861, 1)
 z_index = 10
-position = Vector2(-307, 650)
+position = Vector2(1351, 635)
 speed = 350.0
 jump_force = 900.0
 

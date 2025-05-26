@@ -72,7 +72,6 @@ func _seguir_a_laura():
 		print(laura)
 		var direccion_x = sign(laura.global_position.x - global_position.x)
 		velocity.x = direccion_x * speed
-		update_animation(direccion_x)
 		move_and_slide()
 		
 func _cambiar_esta_desabilitado():
