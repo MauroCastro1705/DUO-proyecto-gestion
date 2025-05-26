@@ -72,7 +72,7 @@ func _seguir_a_laura():
 		print(laura)
 		var direccion_x = sign(laura.global_position.x - global_position.x)
 		velocity.x = direccion_x * speed
-
+		update_animation(direccion_x)
 		move_and_slide()
 		
 func _cambiar_esta_desabilitado():
@@ -80,7 +80,7 @@ func _cambiar_esta_desabilitado():
 		texto_character.visible = true
 		TimerLabel.start()
 		
-###---ANIMACIONES----####
+##---------ANIMACIONEs-----------S##
 func update_animation(direction: Vector2):
 	if not is_on_floor():
 		if velocity.y < 0:
@@ -110,7 +110,7 @@ func _animacion_enojado(direction : Vector2):
 	else:
 		sprite.play("enojado_idle")
 #MAS ANIMACIONES DE HUMOR
-
+##---------ANIMACIONEs-----------S##
 
 
 
@@ -143,6 +143,7 @@ func remove_joint():
 func _on_timer_label_timeout() -> void:
 	texto_character.visible = false
 
+##---------EMCIONES-----------S##
 func check_emocion(emocion:String):
 	match emocion:
 		"normal":
@@ -159,8 +160,9 @@ func check_emocion(emocion:String):
 			Emociones.gordo_mood_rockeando = false
 			Emociones.gordo_mood_triste= false
 			Emociones.gordo_mood_bobo= false
+##---------EMCIONES-----------S##
 
-
+#---------- FLECHA SOBRE PERSONAJE-----------
 func _update_flechita():
 	if Global.active_player_bruno and not estaba_activo:
 		flecha.visible = true
@@ -174,3 +176,4 @@ func _update_flechita():
 func _on_timer_flecha_timeout() -> void:
 	print("termino el timer")
 	flecha.visible = false
+#---------- FLECHA SOBRE PERSONAJE-----------

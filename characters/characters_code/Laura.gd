@@ -76,7 +76,7 @@ func _no_esta_sobre_personaje():
 func hacer_accion():
 	Emociones.seguir_a_laura = true
 
-##ANIMACIONES##
+##---------ANIMACIONEs-----------S##
 func update_animation(direction: Vector2):
 	if not is_on_floor():
 		if velocity.y < 0:
@@ -104,9 +104,9 @@ func _animacion_normal(direction: Vector2):
 		sprite.flip_h = direction.x > 0
 	else:
 		sprite.play("idle")
-		
+##---------ANIMACIONEs-----------S##
 
-
+#---------EMOCIONES----------------------
 #·····VARIABLES EN EMOCIONES.gd···
 # Emociones.laura_mood_enojado = false
 # Emociones.laura_mood_cauto = false
@@ -135,7 +135,8 @@ func check_emocion(emocion:String):
 			Emociones.laura_mood_rockeando= false
 			Dialogic.start("timeline_test")
 			get_viewport().set_input_as_handled()
-
+#---------EMOCIONES----------------------
+#---------- FLECHA SOBRE PERSONAJE-----------
 func _update_flechita():
 	if Global.active_player_alejandra and not estaba_activo:
 		flecha.visible = true
@@ -146,7 +147,7 @@ func _update_flechita():
 		flecha_timer.stop()
 		estaba_activo = false
 
-
 func _on_timer_flecha_timeout() -> void:
 	flecha.visible = false
 	print("termino el timer")
+#---------- FLECHA SOBRE PERSONAJE-----------
