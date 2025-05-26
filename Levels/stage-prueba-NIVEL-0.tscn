@@ -1,9 +1,10 @@
-[gd_scene load_steps=29 format=3 uid="uid://csaewt7cf5cao"]
+[gd_scene load_steps=31 format=3 uid="uid://csaewt7cf5cao"]
 
 [ext_resource type="Script" uid="uid://cwf7xjxte2dvi" path="res://Levels/stage_prueba_matias.gd" id="1_1ymud"]
 [ext_resource type="Texture2D" uid="uid://begspt1dbuhio" path="res://_m_chars_test/assets/bondi_MOCKUP_1280px_escalas_mudo.png" id="2_okgsh"]
 [ext_resource type="Script" uid="uid://cyh0d64pfygbl" path="res://addons/maaacks_menus_template/base/scripts/pause_menu_controller.gd" id="2_ws3q2"]
 [ext_resource type="PackedScene" uid="uid://ckwusaxwybu4g" path="res://Levels/scenes/overlaid_menus/pause_menu.tscn" id="3_6x6h4"]
+[ext_resource type="PackedScene" uid="uid://ccslrkwy1uquh" path="res://Levels/Objetos/caja-liviana.tscn" id="13_43c8f"]
 [ext_resource type="PackedScene" uid="uid://tbbpbwsjlk7m" path="res://Levels/piso/floor.tscn" id="13_xt5e6"]
 [ext_resource type="PackedScene" uid="uid://cwfe1busr0b28" path="res://Levels/Objetos/poste-luz.tscn" id="14_43c8f"]
 [ext_resource type="PackedScene" uid="uid://cnttr3ah5mrhj" path="res://_m_chars_test/cajaSimple.tscn" id="14_ws3q2"]
@@ -22,16 +23,13 @@
 [ext_resource type="PackedScene" uid="uid://drkii2rmndvxt" path="res://_m_chars_test/assets/props_calle/cupula_a.tscn" id="26_g0a70"]
 [ext_resource type="PackedScene" uid="uid://wb0jbe71rde1" path="res://_m_chars_test/assets/props_calle/parquimetro_simple.tscn" id="27_alcho"]
 [ext_resource type="Texture2D" uid="uid://2o85iiayb163" path="res://_m_chars_test/assets/luces/teem_low.png" id="27_diyxt"]
+[ext_resource type="PackedScene" uid="uid://b1scth4hh6j74" path="res://Levels/cajas-de-emociones/eliminar-emocion.tscn" id="27_j3434"]
+[ext_resource type="PackedScene" uid="uid://cj2qtqaborpim" path="res://Levels/cajas-de-emociones/enojar-alejandra.tscn" id="27_xt5e6"]
 [ext_resource type="PackedScene" uid="uid://d2le4fuym50ka" path="res://_m_chars_test/assets/props_calle/parquimetro_doble.tscn" id="28_xt5e6"]
 [ext_resource type="PackedScene" uid="uid://cttiarxsj5vff" path="res://_m_chars_test/assets/props_calle/basura_bolsa_a.tscn" id="29_ohdn1"]
+[ext_resource type="PackedScene" uid="uid://cnq18idga5ieq" path="res://Levels/cajas-de-emociones/enojar-bruno.tscn" id="29_xt5e6"]
 [ext_resource type="PackedScene" uid="uid://cm7ggmbyk2i2o" path="res://_m_chars_test/assets/props_calle/parada_colectivo_60.tscn" id="30_43c8f"]
 [ext_resource type="PackedScene" uid="uid://blhbfdmwv86tg" path="res://_m_chars_test/assets/props_calle/farol_colgante_a.tscn" id="30_lkrhh"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0yrxn"]
-size = Vector2(225, 289)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ymud"]
-size = Vector2(228.5, 282)
 
 [node name="Stage-prueba-matias" type="Node2D"]
 script = ExtResource("1_1ymud")
@@ -168,41 +166,6 @@ scale = Vector2(0.47, 0.47)
 [node name="Node2D" parent="." instance=ExtResource("14_ws3q2")]
 position = Vector2(2339, 505)
 
-[node name="Area_enojo_laura" type="Area2D" parent="."]
-z_index = 4
-position = Vector2(2796, -298)
-collision_layer = 0
-collision_mask = 6
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area_enojo_laura"]
-position = Vector2(-2724.5, 802)
-shape = SubResource("RectangleShape2D_0yrxn")
-debug_color = Color(0.95383, 0.0552165, 0.521712, 0.42)
-
-[node name="Label" type="Label" parent="Area_enojo_laura"]
-offset_left = -2781.0
-offset_top = 703.0
-offset_right = -2504.0
-offset_bottom = 732.0
-text = "Aca laura se enoja "
-metadata/_edit_use_anchors_ = true
-
-[node name="Area_desEnojo_laura" type="Area2D" parent="."]
-position = Vector2(2796, -298)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area_desEnojo_laura"]
-position = Vector2(-664.25, 800)
-shape = SubResource("RectangleShape2D_1ymud")
-debug_color = Color(0.97039, 0, 0.45504, 0.42)
-
-[node name="Label" type="Label" parent="Area_desEnojo_laura"]
-offset_left = -764.0
-offset_top = 738.0
-offset_right = -593.0
-offset_bottom = 799.0
-text = "aca laura se des enoja
-"
-
 [node name="Laura" parent="." instance=ExtResource("16_lkrhh")]
 modulate = Color(0.577255, 0.612528, 0.667861, 1)
 z_index = 10
@@ -213,6 +176,9 @@ jump_force = 900.0
 [node name="Ramiro" parent="." instance=ExtResource("17_2w312")]
 modulate = Color(0.530745, 0.511852, 0.516617, 1)
 position = Vector2(-126, 648)
+
+[node name="Caja-liviana" parent="." instance=ExtResource("13_43c8f")]
+position = Vector2(1220, 601)
 
 [node name="BondiFrenteMotor" parent="." instance=ExtResource("19_6x6h4")]
 modulate = Color(0.874484, 0.846397, 0.825677, 1)
@@ -328,5 +294,11 @@ z_index = -10
 position = Vector2(419, 652)
 scale = Vector2(0.725, 0.725)
 
-[connection signal="body_entered" from="Area_enojo_laura" to="." method="_on_area_enojo_laura_body_entered2"]
-[connection signal="body_entered" from="Area_desEnojo_laura" to="." method="_on_area_des_enojo_laura_body_entered"]
+[node name="Enojar-alejandra" parent="." instance=ExtResource("27_xt5e6")]
+position = Vector2(-17, 465)
+
+[node name="Eliminar-emocion" parent="." instance=ExtResource("27_j3434")]
+position = Vector2(1823, 395)
+
+[node name="Enojar-bruno" parent="." instance=ExtResource("29_xt5e6")]
+position = Vector2(2053, 432)

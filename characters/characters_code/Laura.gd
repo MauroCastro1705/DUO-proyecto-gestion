@@ -8,6 +8,11 @@ extends CharacterBody2D
 @export var raycast_down: RayCast2D  # arrastrá tu RayCast2D en el editor aquí
 var gravity = Global.gravity
 var is_active: bool = false  #variable para controlar si se recibe input
+###para empujar cajas####
+@onready var push_area = $empujarCajas
+var joint: PinJoint2D = null
+var current_box: RigidBody2D = null
+@onready var texto_character = $Label_empujando
 #plataforma
 var is_on_big_character = false
 var big_character_velocity := Vector2.ZERO
@@ -106,6 +111,34 @@ func _animacion_normal(direction: Vector2):
 		sprite.play("idle")
 ##---------ANIMACIONEs-----------S##
 
+### EMPUJAR CAJAS apretando BOTON
+func empujar_caja():
+	print("empujando")
+	texto_character.visible = true
+	texto_character.text = "Empujando"
+	for body in push_area.get_overlapping_bodies():
+		if body is RigidBody2D and is_in_group("liviano"):
+			current_box = body
+			create_joint_with_box(current_box)
+			break
+
+func create_joint_with_box(box: RigidBody2D):
+	joint = PinJoint2D.new()
+	joint.node_a = get_path()  # Personaje
+	joint.node_b = box.get_path()  # Caja	
+	joint.position = global_position.lerp(box.global_position, 0.5)	
+	get_parent().add_child(joint)
+	
+func remove_joint():
+	if joint and joint.get_parent():
+		joint.queue_free()
+	joint = null
+	current_box = null
+
+
+
+
+
 #---------EMOCIONES----------------------
 #·····VARIABLES EN EMOCIONES.gd···
 # Emociones.laura_mood_enojado = false
@@ -136,6 +169,11 @@ func check_emocion(emocion:String):
 			Dialogic.start("timeline_test")
 			get_viewport().set_input_as_handled()
 #---------EMOCIONES----------------------
+
+
+
+
+
 #---------- FLECHA SOBRE PERSONAJE-----------
 func _update_flechita():
 	if Global.active_player_alejandra and not estaba_activo:

@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://b083eagby3240" path="res://assets/Background/Far_Building_Asset_2.png" id="4_lh1ow"]
 [ext_resource type="Texture2D" uid="uid://ctlg1xyrnwsdq" path="res://assets/Background/Building_Asset_3.png" id="5_4c5ie"]
 [ext_resource type="Texture2D" uid="uid://cjwy47u0h4ps8" path="res://assets/Background/Far_Building_Asset_3.png" id="5_am73i"]
-[ext_resource type="PackedScene" uid="uid://ccslrkwy1uquh" path="res://Levels/Objetos/caja_1.tscn" id="5_xh7jf"]
+[ext_resource type="PackedScene" uid="uid://ccslrkwy1uquh" path="res://Levels/Objetos/caja-liviana.tscn" id="5_xh7jf"]
 [ext_resource type="PackedScene" uid="uid://duj67f7bmlhfw" path="res://Levels/Objetos/caja_2.tscn" id="6_0frsq"]
 [ext_resource type="Texture2D" uid="uid://dtj5xmv2ousgd" path="res://assets/Background/Far_Building_Asset_4.png" id="6_bousr"]
 [ext_resource type="PackedScene" uid="uid://dd78a61wcwfb6" path="res://Levels/Objetos/boton.tscn" id="6_w1alv"]

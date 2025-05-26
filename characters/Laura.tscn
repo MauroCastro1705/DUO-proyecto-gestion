@@ -1,4 +1,4 @@
-[gd_scene load_steps=110 format=3 uid="uid://3ht2b6g4whk7"]
+[gd_scene load_steps=111 format=3 uid="uid://3ht2b6g4whk7"]
 
 [ext_resource type="Script" uid="uid://drlr805adhwjn" path="res://characters/characters_code/Laura.gd" id="1_ny0kd"]
 [ext_resource type="Texture2D" uid="uid://c52wt4l2f5kp2" path="res://assets/characters/animaciones/ch_salto_normal/ch_salto_normal_down.png" id="2_oht61"]
@@ -458,6 +458,9 @@ animations = [{
 "speed": 30.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jpjlv"]
+size = Vector2(74, 87)
+
 [node name="Laura" type="CharacterBody2D" node_paths=PackedStringArray("raycast_down") groups=["grupo-laura", "jugador"]]
 z_index = 100
 collision_layer = 4
@@ -505,5 +508,21 @@ position = Vector2(0, -104)
 
 [node name="Timer_flecha" type="Timer" parent="Flecha_UI"]
 one_shot = true
+
+[node name="Label_empujando" type="Label" parent="."]
+offset_left = -46.0
+offset_top = -125.0
+offset_right = 43.0
+offset_bottom = -96.0
+text = "empujando"
+
+[node name="empujarCajas" type="Area2D" parent="."]
+position = Vector2(0, -38)
+collision_layer = 4
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="empujarCajas"]
+position = Vector2(-1, -6.5)
+shape = SubResource("RectangleShape2D_jpjlv")
 
 [connection signal="timeout" from="Flecha_UI/Timer_flecha" to="." method="_on_timer_flecha_timeout"]
