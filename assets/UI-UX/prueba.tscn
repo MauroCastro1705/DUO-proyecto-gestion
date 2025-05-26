@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://dqe6icjrnjy72"]
+[gd_scene load_steps=7 format=3 uid="uid://dqe6icjrnjy72"]
 
 [ext_resource type="Material" uid="uid://daes63jxbwg0u" path="res://Shaders/glow.tres" id="1_rhie2"]
 [ext_resource type="Material" uid="uid://c14frg4lwc7vv" path="res://Shaders/neon-parpadea.tres" id="2_vqom8"]
+[ext_resource type="Texture2D" uid="uid://dcelpcr0cr277" path="res://assets/UI-UX/AlejandraElegida.png" id="3_xhtkk"]
+[ext_resource type="Texture2D" uid="uid://dmlexp3whbbl5" path="res://assets/UI-UX/AlejandraNoElegida.png" id="4_4l3ji"]
+[ext_resource type="Texture2D" uid="uid://caeja2472r6jg" path="res://assets/UI-UX/BrunoElegido.png" id="5_lba77"]
+[ext_resource type="Texture2D" uid="uid://cs48rxyr3vn2v" path="res://assets/UI-UX/BrunoNoElegido.png" id="6_oesn4"]
 
 [node name="Prueba" type="Control"]
 layout_mode = 3
@@ -13,21 +17,40 @@ grow_vertical = 2
 
 [node name="BoxContainer" type="BoxContainer" parent="."]
 layout_mode = 0
-offset_right = 237.0
-offset_bottom = 97.0
+offset_left = 96.0
+offset_top = -157.0
+offset_right = 333.0
+offset_bottom = -60.0
 alignment = 1
 
 [node name="ColorRect" type="ColorRect" parent="."]
 material = ExtResource("1_rhie2")
 layout_mode = 0
-offset_left = -41.0
-offset_top = 76.0
-offset_right = 410.0
-offset_bottom = 406.0
+offset_left = 264.0
+offset_top = 141.0
+offset_right = 715.0
+offset_bottom = 471.0
 
 [node name="ColorRect2" type="ColorRect" parent="."]
 material = ExtResource("2_vqom8")
-offset_left = 572.0
-offset_top = 53.0
-offset_right = 1023.0
-offset_bottom = 383.0
+layout_mode = 0
+offset_left = 532.0
+offset_top = 33.0
+offset_right = 983.0
+offset_bottom = 363.0
+
+[node name="AlejandraElegida" type="Sprite2D" parent="."]
+position = Vector2(298, 154)
+texture = ExtResource("3_xhtkk")
+
+[node name="AlejandraNoElegida" type="Sprite2D" parent="."]
+position = Vector2(289, 68)
+texture = ExtResource("4_4l3ji")
+
+[node name="BrunoElegido" type="Sprite2D" parent="."]
+position = Vector2(141, 66)
+texture = ExtResource("5_lba77")
+
+[node name="BrunoNoElegido" type="Sprite2D" parent="."]
+position = Vector2(138, 159)
+texture = ExtResource("6_oesn4")

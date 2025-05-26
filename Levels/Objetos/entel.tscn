@@ -2,11 +2,11 @@
 
 [ext_resource type="Texture2D" uid="uid://wms2wh5hjl84" path="res://Levels/Objetos/entel01.png" id="1_xjmvp"]
 
-[sub_resource type="Gradient" id="Gradient_l52bc"]
+[sub_resource type="Gradient" id="Gradient_xjmvp"]
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_o4blh"]
-gradient = SubResource("Gradient_l52bc")
+gradient = SubResource("Gradient_xjmvp")
 fill = 1
 fill_from = Vector2(0.486239, 0.513761)
 fill_to = Vector2(0.972477, 0.53211)

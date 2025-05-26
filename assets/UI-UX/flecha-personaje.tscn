@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://caa1hslf3fk12"]
+
+[ext_resource type="Material" uid="uid://ci5jbj3gggi84" path="res://Shaders/neon-outline.tres" id="1_dnnsc"]
+[ext_resource type="Texture2D" uid="uid://1ricq1n6cd2g" path="res://assets/UI-UX/FlechaPersonajeElegido.png" id="1_r4r03"]
+
+[node name="Flecha-personaje" type="Node2D"]
+
+[node name="FlechaPersonajeElegido" type="Sprite2D" parent="."]
+material = ExtResource("1_dnnsc")
+position = Vector2(-1, 1)
+texture = ExtResource("1_r4r03")

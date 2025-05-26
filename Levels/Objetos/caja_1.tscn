@@ -1,13 +1,15 @@
 [gd_scene load_steps=5 format=3 uid="uid://ccslrkwy1uquh"]
 
 [ext_resource type="Script" uid="uid://dw83lgn8fjcce" path="res://Levels/Objetos/objetos_code/caja_1.gd" id="1_uj4g3"]
-[ext_resource type="Texture2D" uid="uid://cst033miowgf0" path="res://assets/cajon.png" id="2_161ss"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_uj4g3"]
 absorbent = true
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kaosh"]
 size = Vector2(79, 76)
+
+[sub_resource type="Resource" id="Resource_uj4g3"]
+metadata/__load_path__ = "res://assets/cajon.png"
 
 [node name="Caja1" type="RigidBody2D" groups=["arrastrables"]]
 collision_layer = 8
@@ -24,4 +26,4 @@ shape = SubResource("RectangleShape2D_kaosh")
 [node name="Cajon" type="Sprite2D" parent="."]
 position = Vector2(7, -3)
 scale = Vector2(0.179688, 0.181801)
-texture = ExtResource("2_161ss")
+texture = SubResource("Resource_uj4g3")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=182 format=3 uid="uid://bbs86ttvb6dhi"]
+[gd_scene load_steps=183 format=3 uid="uid://bbs86ttvb6dhi"]
 
 [ext_resource type="Script" uid="uid://m850xbhl28ts" path="res://characters/characters_code/Ramiro.gd" id="2_cfd2t"]
 [ext_resource type="Texture2D" uid="uid://ksk8pwddi2sn" path="res://_m_chars_test/chars/assets/animaciones/gde_walk/gde_walk01_00001.png" id="3_8uh63"]
@@ -176,6 +176,7 @@
 [ext_resource type="Texture2D" uid="uid://cnswrje5ptfuo" path="res://assets/characters/animaciones/ramiro_ilde_normal/gde_ilde_normal_00046.png" id="122_wpvwg"]
 [ext_resource type="Texture2D" uid="uid://dd1gnc7kqgucf" path="res://assets/characters/animaciones/ramiro_ilde_normal/gde_ilde_normal_00047.png" id="123_2238o"]
 [ext_resource type="Texture2D" uid="uid://2dl1pcrf2s24" path="res://assets/characters/animaciones/ramiro_ilde_normal/gde_ilde_normal_00048.png" id="124_k6jee"]
+[ext_resource type="PackedScene" uid="uid://caa1hslf3fk12" path="res://assets/UI-UX/flecha-personaje.tscn" id="177_mdxu6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jfpom"]
 size = Vector2(165, 102)
@@ -824,5 +825,8 @@ animation = &"walk"
 autoplay = "walk"
 frame_progress = 0.19085
 speed_scale = 1.7
+
+[node name="Flecha-personaje" parent="." instance=ExtResource("177_mdxu6")]
+position = Vector2(-1, -215)
 
 [connection signal="timeout" from="TimerLabel" to="." method="_on_timer_label_timeout"]

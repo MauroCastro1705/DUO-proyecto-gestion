@@ -1,4 +1,4 @@
-[gd_scene load_steps=109 format=3 uid="uid://3ht2b6g4whk7"]
+[gd_scene load_steps=110 format=3 uid="uid://3ht2b6g4whk7"]
 
 [ext_resource type="Script" uid="uid://drlr805adhwjn" path="res://characters/characters_code/Laura.gd" id="1_ny0kd"]
 [ext_resource type="Texture2D" uid="uid://c52wt4l2f5kp2" path="res://assets/characters/animaciones/ch_salto_normal/ch_salto_normal_down.png" id="2_oht61"]
@@ -102,6 +102,7 @@
 [ext_resource type="Texture2D" uid="uid://clsscoek8e05m" path="res://_m_chars_test/chars/assets/animaciones/ch_walk_cool/ch_walk_cool01_00022.png" id="97_kqo0k"]
 [ext_resource type="Texture2D" uid="uid://b88g55kff0csg" path="res://_m_chars_test/chars/assets/animaciones/ch_walk_cool/ch_walk_cool01_00023.png" id="98_ontb1"]
 [ext_resource type="Texture2D" uid="uid://cft3yu8ih62va" path="res://_m_chars_test/chars/assets/animaciones/ch_walk_cool/ch_walk_cool01_00024.png" id="99_j2ov1"]
+[ext_resource type="PackedScene" uid="uid://caa1hslf3fk12" path="res://assets/UI-UX/flecha-personaje.tscn" id="103_jpjlv"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b4tiw"]
 radius = 17.0
@@ -497,3 +498,6 @@ sprite_frames = SubResource("SpriteFrames_urixy")
 animation = &"walk"
 autoplay = "idle"
 speed_scale = 1.5
+
+[node name="Flecha-personaje" parent="." instance=ExtResource("103_jpjlv")]
+position = Vector2(0, -104)

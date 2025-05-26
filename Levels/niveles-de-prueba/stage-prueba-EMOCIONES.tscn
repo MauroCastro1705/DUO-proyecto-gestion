@@ -256,10 +256,10 @@ z_index = 20
 position = Vector2(-345, -106)
 
 [node name="Plataforma-3" parent="." instance=ExtResource("19_5f0r5")]
-position = Vector2(-1615, 671)
+position = Vector2(-1660, 664)
 
 [node name="Plataforma-4" parent="." instance=ExtResource("20_iqwrl")]
-position = Vector2(-755, 635)
+position = Vector2(-741, 615)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(-1272, 448)

@@ -1,9 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://doy71iiotlgm4"]
 
-[ext_resource type="Texture2D" uid="uid://cst033miowgf0" path="res://assets/cajon.png" id="1_qb7ep"]
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2r6ou"]
 size = Vector2(79, 76)
+
+[sub_resource type="Resource" id="Resource_stra3"]
+metadata/__load_path__ = "res://assets/cajon.png"
 
 [sub_resource type="Environment" id="Environment_qb7ep"]
 background_mode = 3
@@ -24,7 +25,7 @@ shape = SubResource("RectangleShape2D_2r6ou")
 self_modulate = Color(1, 2, 0.25, 1)
 position = Vector2(4.76837e-07, -4)
 scale = Vector2(0.179688, 0.181801)
-texture = ExtResource("1_qb7ep")
+texture = SubResource("Resource_stra3")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_qb7ep")
