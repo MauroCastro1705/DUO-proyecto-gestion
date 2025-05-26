@@ -33,7 +33,7 @@ func _physics_process(delta: float) -> void:
 	if Emociones.seguir_a_laura:
 		_seguir_a_laura()
 		self.is_active = false
-		
+		Global.can_swap = false
 	if is_active :
 		direction = _procesar_input_movimiento()
 	if Global.lauraOnTop:
@@ -162,6 +162,7 @@ func check_emocion(emocion:String):
 			Emociones.gordo_mood_bobo= false
 			texto_character.visible = false #desactivamos cartel
 			Emociones.seguir_a_laura = false#desactiva el seguimiento a alejandra
+			Global.can_swap = true #revisar
 		"enojado":
 			print("emocion enojado")
 			Emociones.gordo_mood_normal = false
@@ -178,6 +179,7 @@ func check_emocion(emocion:String):
 			Emociones.gordo_mood_triste= false
 			Emociones.gordo_mood_bobo= true#ESTE
 			Emociones.seguir_a_laura = true#activa el seguimiento a alejandra
+			Global.can_swap = false
 			
 ##---------EMCIONES-----------S##
 
