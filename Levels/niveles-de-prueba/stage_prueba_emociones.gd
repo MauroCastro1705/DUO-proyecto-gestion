@@ -1,6 +1,8 @@
 extends Node2D
 
 var active_player: CharacterBody2D  # El personaje que actualmente controlas
+signal active_player_signal
+
 var player1: CharacterBody2D
 var player2: CharacterBody2D
 var is_moved: bool = false
@@ -51,10 +53,15 @@ func swap_characters() -> void:
 		active_player = player2
 		player1.is_active = false
 		player2.is_active = true
+		active_player_signal.emit(player2)
+		print("señal player 2")
 	else:
 		active_player = player1
 		player1.is_active = true
 		player2.is_active = false
+		active_player_signal.emit(player1)
+		print("señal player 1")
+		
 
 ####COLISIONES CON ZONAS QUE CAMBIAN EMOCIONES SEGUN JUGADOR
 
