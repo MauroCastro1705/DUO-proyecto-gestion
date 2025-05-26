@@ -21,8 +21,8 @@ shape = SubResource("RectangleShape2D_ij4hf")
 offset_left = -576.0
 offset_top = -23.0
 offset_right = 580.0
-offset_bottom = 24.0
-color = Color(0.381703, 0.381703, 0.381703, 1)
+offset_bottom = 95.0
+color = Color(0, 0, 0, 1)
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
 position = Vector2(17, -12)

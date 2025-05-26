@@ -1,0 +1,470 @@
+[gd_scene load_steps=37 format=3 uid="uid://csaewt7cf5cao"]
+
+[ext_resource type="Script" uid="uid://2k28c50c4nhw" path="res://Levels/stage_prueba_emociones.gd" id="1_ktq1i"]
+[ext_resource type="Texture2D" uid="uid://begspt1dbuhio" path="res://_m_chars_test/assets/bondi_MOCKUP_1280px_escalas_mudo.png" id="2_okgsh"]
+[ext_resource type="Script" uid="uid://cyh0d64pfygbl" path="res://addons/maaacks_menus_template/base/scripts/pause_menu_controller.gd" id="2_ws3q2"]
+[ext_resource type="PackedScene" uid="uid://ckwusaxwybu4g" path="res://Levels/scenes/overlaid_menus/pause_menu.tscn" id="3_6x6h4"]
+[ext_resource type="Texture2D" uid="uid://byfh070wslkxt" path="res://assets/Background/NightSky_Tile_1.png" id="4_p2qjq"]
+[ext_resource type="Texture2D" uid="uid://dnm4knecb5h5m" path="res://assets/Background/Far_Building_Asset_1.png" id="5_okgsh"]
+[ext_resource type="Texture2D" uid="uid://b083eagby3240" path="res://assets/Background/Far_Building_Asset_2.png" id="6_4our3"]
+[ext_resource type="Texture2D" uid="uid://cjwy47u0h4ps8" path="res://assets/Background/Far_Building_Asset_3.png" id="7_1hj11"]
+[ext_resource type="Texture2D" uid="uid://dtj5xmv2ousgd" path="res://assets/Background/Far_Building_Asset_4.png" id="8_de2g6"]
+[ext_resource type="Texture2D" uid="uid://bbjxiyj6t2xvn" path="res://assets/Background/Building_Asset_1.png" id="9_q2pka"]
+[ext_resource type="Texture2D" uid="uid://cieu8ekpewkvf" path="res://assets/Background/Building_Asset_2.png" id="10_1ymud"]
+[ext_resource type="Texture2D" uid="uid://ctlg1xyrnwsdq" path="res://assets/Background/Building_Asset_3.png" id="11_j3434"]
+[ext_resource type="Texture2D" uid="uid://br5hnruvrsf0j" path="res://assets/Background/Building_Asset_4.png" id="12_alcho"]
+[ext_resource type="PackedScene" uid="uid://tbbpbwsjlk7m" path="res://Levels/piso/floor.tscn" id="13_xt5e6"]
+[ext_resource type="PackedScene" uid="uid://cwfe1busr0b28" path="res://Levels/Objetos/poste-luz.tscn" id="14_43c8f"]
+[ext_resource type="PackedScene" uid="uid://cnttr3ah5mrhj" path="res://_m_chars_test/cajaSimple.tscn" id="14_ws3q2"]
+[ext_resource type="PackedScene" uid="uid://2uvrv00n0bvf" path="res://_m_chars_test/assets/props_calle/vereda_cordon.tscn" id="15_de2g6"]
+[ext_resource type="PackedScene" uid="uid://bf5b82fejpexj" path="res://Levels/Objetos/entel.tscn" id="15_ohdn1"]
+[ext_resource type="PackedScene" uid="uid://3ht2b6g4whk7" path="res://characters/Laura.tscn" id="16_lkrhh"]
+[ext_resource type="PackedScene" uid="uid://bm2tq4ierwg7s" path="res://_m_chars_test/assets/props_calle/vereda_calle.tscn" id="16_q2pka"]
+[ext_resource type="PackedScene" uid="uid://bbs86ttvb6dhi" path="res://characters/Ramiro.tscn" id="17_2w312"]
+[ext_resource type="PackedScene" uid="uid://cw6m1wnbulxw4" path="res://_m_chars_test/assets/bondi/bondi_frente_motor.tscn" id="19_6x6h4"]
+[ext_resource type="Texture2D" uid="uid://nwnypbls3y2d" path="res://_m_chars_test/assets/bondi_MOCKUP_1280px_escalas.png" id="20_p2qjq"]
+[ext_resource type="PackedScene" uid="uid://d0bqdj6o680ii" path="res://_m_chars_test/assets/props_calle/poste_segba.tscn" id="22_4our3"]
+[ext_resource type="Texture2D" uid="uid://bb1qt3bxph8w0" path="res://_m_chars_test/assets/fondos/fondo_cielo_low.png" id="23_j3434"]
+[ext_resource type="Texture2D" uid="uid://c5gx0q4kwg6mg" path="res://_m_chars_test/assets/fondos/fondo_skyline_low.png" id="25_alcho"]
+[ext_resource type="PackedScene" uid="uid://bx1d8ob4jvuin" path="res://_m_chars_test/assets/props_calle/vereda_cordon_inv.tscn" id="25_q2pka"]
+[ext_resource type="PackedScene" uid="uid://w2emyqd1hhqa" path="res://_m_chars_test/assets/props_calle/cupula_b.tscn" id="26_diyxt"]
+[ext_resource type="PackedScene" uid="uid://drkii2rmndvxt" path="res://_m_chars_test/assets/props_calle/cupula_a.tscn" id="26_g0a70"]
+[ext_resource type="PackedScene" uid="uid://wb0jbe71rde1" path="res://_m_chars_test/assets/props_calle/parquimetro_simple.tscn" id="27_alcho"]
+[ext_resource type="Texture2D" uid="uid://2o85iiayb163" path="res://_m_chars_test/assets/luces/teem_low.png" id="27_diyxt"]
+[ext_resource type="PackedScene" uid="uid://d2le4fuym50ka" path="res://_m_chars_test/assets/props_calle/parquimetro_doble.tscn" id="28_xt5e6"]
+[ext_resource type="PackedScene" uid="uid://cttiarxsj5vff" path="res://_m_chars_test/assets/props_calle/basura_bolsa_a.tscn" id="29_ohdn1"]
+[ext_resource type="PackedScene" uid="uid://cm7ggmbyk2i2o" path="res://_m_chars_test/assets/props_calle/parada_colectivo_60.tscn" id="30_43c8f"]
+[ext_resource type="PackedScene" uid="uid://blhbfdmwv86tg" path="res://_m_chars_test/assets/props_calle/farol_colgante_a.tscn" id="30_lkrhh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0yrxn"]
+size = Vector2(695.5, 289)
+
+[node name="Stage-prueba-EMOCIONES" type="Node2D"]
+script = ExtResource("1_ktq1i")
+
+[node name="BondiMockup1280PxEscalas" type="Sprite2D" parent="."]
+visible = false
+z_index = -50
+position = Vector2(640, 360)
+texture = ExtResource("2_okgsh")
+metadata/_edit_lock_ = true
+
+[node name="PauseMenuController" type="Node" parent="."]
+script = ExtResource("2_ws3q2")
+pause_menu_packed = ExtResource("3_6x6h4")
+metadata/_custom_type_script = "uid://cyh0d64pfygbl"
+
+[node name="NightSkyTile1" type="Sprite2D" parent="."]
+visible = false
+z_index = -4
+position = Vector2(-1468.75, 242)
+scale = Vector2(4.50547, 1.36481)
+texture = ExtResource("4_p2qjq")
+metadata/_edit_lock_ = true
+
+[node name="background-fondo" type="Node" parent="."]
+
+[node name="FarBuildingAsset1" type="Sprite2D" parent="background-fondo"]
+visible = false
+z_index = -1
+position = Vector2(-3725, 645)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("5_okgsh")
+
+[node name="FarBuildingAsset5" type="Sprite2D" parent="background-fondo"]
+visible = false
+z_index = -1
+position = Vector2(2094, 787)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("6_4our3")
+
+[node name="FarBuildingAsset6" type="Sprite2D" parent="background-fondo"]
+visible = false
+z_index = -1
+position = Vector2(428, 704.305)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("6_4our3")
+
+[node name="FarBuildingAsset2" type="Sprite2D" parent="background-fondo"]
+visible = false
+z_index = -1
+position = Vector2(-4053, 806)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("6_4our3")
+
+[node name="FarBuildingAsset3" type="Sprite2D" parent="background-fondo"]
+visible = false
+z_index = -1
+position = Vector2(37, 741)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("7_1hj11")
+
+[node name="FarBuildingAsset8" type="Sprite2D" parent="background-fondo"]
+visible = false
+z_index = -1
+position = Vector2(-915, 624)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("8_de2g6")
+
+[node name="FarBuildingAsset10" type="Sprite2D" parent="background-fondo"]
+visible = false
+z_index = -4
+position = Vector2(-1675, 623)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("8_de2g6")
+
+[node name="FarBuildingAsset7" type="Sprite2D" parent="background-fondo"]
+visible = false
+z_index = -1
+position = Vector2(1538, 602)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("8_de2g6")
+
+[node name="FarBuildingAsset9" type="Sprite2D" parent="background-fondo"]
+visible = false
+z_index = -1
+position = Vector2(2654, 623)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("8_de2g6")
+
+[node name="FarBuildingAsset4" type="Sprite2D" parent="background-fondo"]
+visible = false
+z_index = -1
+position = Vector2(740, 607)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("8_de2g6")
+
+[node name="background-edificios" type="Node" parent="."]
+
+[node name="BuildingAsset1" type="Sprite2D" parent="background-edificios"]
+visible = false
+z_index = -4
+position = Vector2(-2339, 558)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("9_q2pka")
+
+[node name="BuildingAsset2" type="Sprite2D" parent="background-edificios"]
+visible = false
+position = Vector2(908, 673)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("10_1ymud")
+
+[node name="BuildingAsset3" type="Sprite2D" parent="background-edificios"]
+visible = false
+position = Vector2(443, 716)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("11_j3434")
+
+[node name="BuildingAsset4" type="Sprite2D" parent="background-edificios"]
+visible = false
+position = Vector2(1207, 734)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("12_alcho")
+
+[node name="BuildingAsset11" type="Sprite2D" parent="background-edificios"]
+visible = false
+position = Vector2(-3778, 743)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("12_alcho")
+
+[node name="BuildingAsset5" type="Sprite2D" parent="background-edificios"]
+visible = false
+position = Vector2(2273, 667)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("10_1ymud")
+
+[node name="BuildingAsset9" type="Sprite2D" parent="background-edificios"]
+visible = false
+position = Vector2(-184, 687)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("10_1ymud")
+
+[node name="BuildingAsset6" type="Sprite2D" parent="background-edificios"]
+visible = false
+position = Vector2(1708, 718)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("11_j3434")
+
+[node name="BuildingAsset8" type="Sprite2D" parent="background-edificios"]
+visible = false
+position = Vector2(-1197, 732)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("11_j3434")
+
+[node name="BuildingAsset7" type="Sprite2D" parent="background-edificios"]
+visible = false
+position = Vector2(2649, 751)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("12_alcho")
+
+[node name="BuildingAsset10" type="Sprite2D" parent="background-edificios"]
+visible = false
+position = Vector2(-609, 750)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("12_alcho")
+
+[node name="pisos" type="Node" parent="."]
+
+[node name="Floor2" parent="pisos" instance=ExtResource("13_xt5e6")]
+z_index = 3
+position = Vector2(-151, 676)
+
+[node name="Floor3" parent="pisos" instance=ExtResource("13_xt5e6")]
+z_index = 3
+position = Vector2(4841, 676)
+
+[node name="Floor6" parent="pisos" instance=ExtResource("13_xt5e6")]
+z_index = 3
+position = Vector2(-367, 124)
+rotation = 1.57079
+
+[node name="Floor7" parent="pisos" instance=ExtResource("13_xt5e6")]
+z_index = 3
+position = Vector2(3688, 676)
+
+[node name="Floor9" parent="pisos" instance=ExtResource("13_xt5e6")]
+z_index = 3
+position = Vector2(2980, 676)
+
+[node name="Floor5" parent="pisos" instance=ExtResource("13_xt5e6")]
+z_index = 3
+position = Vector2(1747, 676)
+
+[node name="Floor10" parent="pisos" instance=ExtResource("13_xt5e6")]
+z_index = 3
+position = Vector2(1689, 454)
+scale = Vector2(0.355, 0.21)
+
+[node name="Floor4" parent="pisos" instance=ExtResource("13_xt5e6")]
+z_index = 3
+position = Vector2(6770, 106)
+rotation = 1.57079
+
+[node name="Floor8" parent="pisos" instance=ExtResource("13_xt5e6")]
+z_index = 3
+position = Vector2(2380, 726)
+
+[node name="VeredaCordon" parent="pisos" instance=ExtResource("15_de2g6")]
+position = Vector2(427, 653)
+
+[node name="VeredaCalle" parent="pisos" instance=ExtResource("16_q2pka")]
+position = Vector2(465, 645)
+
+[node name="Camera2D" type="Camera2D" parent="." groups=["scene_manager_entity_nodes"]]
+offset = Vector2(50, -292)
+position_smoothing_enabled = true
+position_smoothing_speed = 8.0
+metadata/entity_name = "camera"
+metadata/_edit_lock_ = true
+
+[node name="luces-y-postes" type="Node" parent="."]
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="luces-y-postes"]
+visible = false
+position = Vector2(-1397, -146)
+rotation = -0.446982
+color = Color(0.000203304, 0.859004, 0.874766, 1)
+energy = 0.69
+blend_mode = 2
+shadow_enabled = true
+height = 0.5
+max_distance = 3527.0
+
+[node name="CanvasModulate" type="CanvasModulate" parent="luces-y-postes"]
+visible = false
+position = Vector2(-206, 477)
+color = Color(0.82606, 0.82606, 0.82606, 1)
+
+[node name="Poste-luz2" parent="luces-y-postes" instance=ExtResource("14_43c8f")]
+visible = false
+position = Vector2(-3318, 720)
+
+[node name="Poste-luz7" parent="luces-y-postes" instance=ExtResource("14_43c8f")]
+visible = false
+position = Vector2(-211, 718)
+
+[node name="Poste-luz8" parent="luces-y-postes" instance=ExtResource("14_43c8f")]
+visible = false
+position = Vector2(-758, 726)
+
+[node name="Poste-luz9" parent="luces-y-postes" instance=ExtResource("14_43c8f")]
+visible = false
+position = Vector2(-2566, 720)
+
+[node name="Poste-luz10" parent="luces-y-postes" instance=ExtResource("14_43c8f")]
+visible = false
+position = Vector2(-1391, 722)
+
+[node name="Poste-luz4" parent="luces-y-postes" instance=ExtResource("14_43c8f")]
+visible = false
+position = Vector2(779, 709)
+
+[node name="Poste-luz5" parent="luces-y-postes" instance=ExtResource("14_43c8f")]
+visible = false
+position = Vector2(2313, 717)
+
+[node name="Poste-luz6" parent="luces-y-postes" instance=ExtResource("14_43c8f")]
+visible = false
+position = Vector2(1513, 713)
+
+[node name="Poste-luz3" parent="luces-y-postes" instance=ExtResource("14_43c8f")]
+visible = false
+position = Vector2(234, 715)
+
+[node name="Poste-luz" parent="luces-y-postes" instance=ExtResource("14_43c8f")]
+visible = false
+position = Vector2(-3811, 719)
+
+[node name="entel" parent="luces-y-postes" instance=ExtResource("15_ohdn1")]
+visible = false
+position = Vector2(-501, 948)
+scale = Vector2(0.47, 0.47)
+
+[node name="Node2D" parent="." instance=ExtResource("14_ws3q2")]
+position = Vector2(2339, 505)
+
+[node name="Area_enojo_laura" type="Area2D" parent="."]
+z_index = 4
+position = Vector2(2154, -371)
+collision_layer = 0
+collision_mask = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area_enojo_laura"]
+position = Vector2(-2959.75, 802)
+shape = SubResource("RectangleShape2D_0yrxn")
+
+[node name="Label" type="Label" parent="Area_enojo_laura"]
+offset_left = -3020.0
+offset_top = 703.0
+offset_right = -2743.0
+offset_bottom = 732.0
+text = "Aca laura se enoja y camina distinto"
+metadata/_edit_use_anchors_ = true
+
+[node name="Laura" parent="." instance=ExtResource("16_lkrhh")]
+modulate = Color(0.577255, 0.612528, 0.667861, 1)
+z_index = 10
+position = Vector2(75, 549)
+speed = 350.0
+jump_force = 900.0
+
+[node name="Ramiro" parent="." instance=ExtResource("17_2w312")]
+modulate = Color(0.530745, 0.511852, 0.516617, 1)
+position = Vector2(-129, 639)
+
+[node name="BondiFrenteMotor" parent="." instance=ExtResource("19_6x6h4")]
+modulate = Color(0.874484, 0.846397, 0.825677, 1)
+z_index = -2
+position = Vector2(647, 650)
+
+[node name="Parallax2D_FONDO_CIELO" type="Parallax2D" parent="."]
+z_index = -90
+scroll_scale = Vector2(0.11, 0.05)
+repeat_size = Vector2(1280, 0)
+repeat_times = 4
+
+[node name="FondoCieloLow" type="Sprite2D" parent="Parallax2D_FONDO_CIELO"]
+position = Vector2(640, 360)
+texture = ExtResource("23_j3434")
+
+[node name="BondiMockup1280PxEscalas2" type="Sprite2D" parent="Parallax2D_FONDO_CIELO"]
+visible = false
+position = Vector2(640, 360)
+texture = ExtResource("20_p2qjq")
+
+[node name="Parallax2D_FONDO_cupulas" type="Parallax2D" parent="."]
+z_index = -80
+scroll_scale = Vector2(0.2, 0.07)
+repeat_size = Vector2(1186.43, 0)
+repeat_times = 3
+
+[node name="CupulaA" parent="Parallax2D_FONDO_cupulas" instance=ExtResource("26_g0a70")]
+position = Vector2(958, 338)
+scale = Vector2(0.765, 0.765)
+
+[node name="CupulaB" parent="Parallax2D_FONDO_cupulas" instance=ExtResource("26_diyxt")]
+position = Vector2(80, 382)
+scale = Vector2(0.815, 0.815)
+
+[node name="CupulaB2" parent="Parallax2D_FONDO_cupulas" instance=ExtResource("26_diyxt")]
+position = Vector2(1108, 401)
+scale = Vector2(0.72, 0.72)
+
+[node name="Parallax2D_FONDO_neones" type="Parallax2D" parent="."]
+z_index = -75
+scroll_scale = Vector2(0.225, 0.09)
+
+[node name="TeemLow" type="Sprite2D" parent="Parallax2D_FONDO_neones"]
+position = Vector2(1487, 246)
+scale = Vector2(0.775, 0.775)
+texture = ExtResource("27_diyxt")
+
+[node name="Parallax2D_FONDO_skyline" type="Parallax2D" parent="."]
+z_index = -70
+scroll_scale = Vector2(0.25, 0.1)
+repeat_size = Vector2(1280, 0)
+repeat_times = 3
+
+[node name="FondoSkylineLow" type="Sprite2D" parent="Parallax2D_FONDO_skyline"]
+position = Vector2(640, 360)
+texture = ExtResource("25_alcho")
+
+[node name="Parallax2D_PP_vereda" type="Parallax2D" parent="."]
+z_index = 30
+scroll_scale = Vector2(1.05, 1)
+scroll_offset = Vector2(29, 1)
+repeat_size = Vector2(1600, 0)
+repeat_times = 4
+
+[node name="poste_segba" parent="Parallax2D_PP_vereda" instance=ExtResource("22_4our3")]
+position = Vector2(170, 680)
+
+[node name="ParquimetroSimple" parent="Parallax2D_PP_vereda" instance=ExtResource("27_alcho")]
+position = Vector2(1330, 658)
+scale = Vector2(0.645, 0.645)
+
+[node name="ParquimetroDoble" parent="Parallax2D_PP_vereda" instance=ExtResource("28_xt5e6")]
+position = Vector2(1608, 659)
+scale = Vector2(0.665, 0.665)
+
+[node name="BasuraBolsaA" parent="Parallax2D_PP_vereda" instance=ExtResource("29_ohdn1")]
+position = Vector2(1370, 655)
+scale = Vector2(0.74, 0.74)
+
+[node name="orden_visibilidad" type="Label" parent="."]
+offset_left = -326.0
+offset_top = 31.0
+offset_right = -173.0
+offset_bottom = 444.0
+text = "Orden Z index
+-90 FONDO_cielo
+-80 FONDO_cupulas
+-75 FONDO_neones
+-70 FONDO_skyline
+
+PERSONAJES ?
+
+30 PP_vereda
+40 PP_calle
+50 PP_primer_plano
+
+"
+
+[node name="FarolColganteA" parent="." instance=ExtResource("30_lkrhh")]
+position = Vector2(278, 372)
+scale = Vector2(0.65, 0.65)
+
+[node name="FarolColganteA2" parent="." instance=ExtResource("30_lkrhh")]
+position = Vector2(1238, 372)
+scale = Vector2(0.65, 0.65)
+
+[node name="VeredaCordon" parent="." instance=ExtResource("25_q2pka")]
+position = Vector2(1134, 653)
+
+[node name="ParadaColectivo60" parent="." instance=ExtResource("30_43c8f")]
+z_index = -10
+position = Vector2(419, 652)
+scale = Vector2(0.725, 0.725)
+
+[connection signal="body_entered" from="Area_enojo_laura" to="." method="_on_area_enojo_laura_body_entered2"]
+[connection signal="body_exited" from="Area_enojo_laura" to="." method="_on_area_enojo_laura_body_exited2"]

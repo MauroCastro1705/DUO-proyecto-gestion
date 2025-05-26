@@ -128,7 +128,6 @@ position = Vector2(-823, 149)
 unique_name_in_owner = true
 z_index = 10
 position = Vector2(-747, 171)
-launch_power = 900.0
 
 [node name="Floor2" parent="." instance=ExtResource("1_7o80q")]
 position = Vector2(-890, 645)
