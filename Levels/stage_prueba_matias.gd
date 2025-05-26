@@ -1,5 +1,6 @@
 extends Node2D
 
+
 var active_player: CharacterBody2D  # El personaje que actualmente controlas
 signal swap_characters_signal
 var player1: CharacterBody2D
@@ -73,12 +74,10 @@ func _on_area_enojo_laura_body_entered2(body: Node2D) -> void:
 			if body.name == "Ramiro": #si el body se llama Ramiro, se activa la animacion enojada"
 				body.check_emocion("enojado")
 			   
-		
 
-func _on_area_enojo_laura_body_exited2(body: Node2D) -> void:
+
+func _on_area_des_enojo_laura_body_entered(body: Node2D) -> void:
 	if body.is_in_group("jugador"):
 		print("Es personaje salio:", body)
 		if body.has_method("check_emocion"):
 			body.check_emocion("normal")
-			
-			

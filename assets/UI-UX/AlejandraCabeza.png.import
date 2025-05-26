@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cs48rxyr3vn2v"
-path="res://.godot/imported/BrunoNoElegido.png-8e3866b7945f0a93690c2df6f232fc75.ctex"
+uid="uid://cm2wr45o7bf88"
+path="res://.godot/imported/AlejandraCabeza.png-97bdf835a1d9831b247b39ff40cc55b2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/UI-UX/BrunoNoElegido.png"
-dest_files=["res://.godot/imported/BrunoNoElegido.png-8e3866b7945f0a93690c2df6f232fc75.ctex"]
+source_file="res://assets/UI-UX/AlejandraCabeza.png"
+dest_files=["res://.godot/imported/AlejandraCabeza.png-97bdf835a1d9831b247b39ff40cc55b2.ctex"]
 
 [params]
 

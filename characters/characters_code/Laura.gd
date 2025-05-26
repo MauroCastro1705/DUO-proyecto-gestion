@@ -13,9 +13,13 @@ var is_on_big_character = false
 var big_character_velocity := Vector2.ZERO
 var is_jumping := false
 var played_apex = false
+@onready var flecha = %Flecha_UI
+@onready var flecha_timer = $Flecha_UI/Timer_flecha
+var estaba_activo = false
 
 func _ready() -> void:
 	Global.lauraOnTop = false
+	flecha.visible = false
 
 func _physics_process(delta: float) -> void:
 	if raycast_down.is_colliding():		# Detectar si estamos sobre el personaje grande
@@ -28,6 +32,7 @@ func _physics_process(delta: float) -> void:
 	_handle_velocity(direction, delta)
 	update_animation(direction)
 	move_and_slide()
+	_update_flechita()
 
 func _procesar_input_movimiento() -> Vector2:
 	var dir = Vector2.ZERO
@@ -130,3 +135,18 @@ func check_emocion(emocion:String):
 			Emociones.laura_mood_rockeando= false
 			Dialogic.start("timeline_test")
 			get_viewport().set_input_as_handled()
+
+func _update_flechita():
+	if Global.active_player_alejandra and not estaba_activo:
+		flecha.visible = true
+		flecha_timer.start()
+		estaba_activo = true
+	elif not Global.active_player_alejandra:
+		flecha.visible = false
+		flecha_timer.stop()
+		estaba_activo = false
+
+
+func _on_timer_flecha_timeout() -> void:
+	flecha.visible = false
+	print("termino el timer")

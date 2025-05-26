@@ -16,10 +16,13 @@ var is_active: bool = false  #variable para controlarjugador activo
 var gravity = Global.gravity
 var is_jumping := false
 var played_apex = false
-
+@onready var flecha = %Flecha_UI
+@onready var timer_flecha = $Flecha_UI/Timer_flecha
+var estaba_activo = false
 
 func _ready() -> void:
 	texto_character.visible = false
+	flecha.visible = true
 	
 func _physics_process(delta: float) -> void:
 	var direction = Vector2.ZERO
@@ -39,7 +42,9 @@ func _physics_process(delta: float) -> void:
 	velocity.y += gravity * delta    # Aplicar gravedad al personaje
 	move_and_slide()
 	update_animation(direction)
-
+	_update_flechita()
+	
+	
 func _procesar_input_movimiento() -> Vector2:
 	var dir = Vector2.ZERO
 	if Input.is_action_pressed("derecha"):
@@ -154,3 +159,18 @@ func check_emocion(emocion:String):
 			Emociones.gordo_mood_rockeando = false
 			Emociones.gordo_mood_triste= false
 			Emociones.gordo_mood_bobo= false
+
+
+func _update_flechita():
+	if Global.active_player_bruno and not estaba_activo:
+		flecha.visible = true
+		timer_flecha.start()
+		estaba_activo = true
+	elif not Global.active_player_bruno:
+		flecha.visible = false
+		timer_flecha.stop()
+		estaba_activo = false
+
+func _on_timer_flecha_timeout() -> void:
+	print("termino el timer")
+	flecha.visible = false

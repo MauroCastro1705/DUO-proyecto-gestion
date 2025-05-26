@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://csaewt7cf5cao"]
+[gd_scene load_steps=28 format=3 uid="uid://csaewt7cf5cao"]
 
 [ext_resource type="Script" uid="uid://cwf7xjxte2dvi" path="res://Levels/stage_prueba_matias.gd" id="1_1ymud"]
 [ext_resource type="Texture2D" uid="uid://begspt1dbuhio" path="res://_m_chars_test/assets/bondi_MOCKUP_1280px_escalas_mudo.png" id="2_okgsh"]
@@ -28,10 +28,7 @@
 [ext_resource type="PackedScene" uid="uid://blhbfdmwv86tg" path="res://_m_chars_test/assets/props_calle/farol_colgante_a.tscn" id="30_lkrhh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0yrxn"]
-size = Vector2(225, 289)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ymud"]
-size = Vector2(228.5, 282)
+size = Vector2(695.5, 289)
 
 [node name="Stage-prueba-matias" type="Node2D"]
 script = ExtResource("1_1ymud")
@@ -170,49 +167,32 @@ position = Vector2(2339, 505)
 
 [node name="Area_enojo_laura" type="Area2D" parent="."]
 z_index = 4
-position = Vector2(2796, -298)
+position = Vector2(2154, -371)
 collision_layer = 0
 collision_mask = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area_enojo_laura"]
-position = Vector2(-2724.5, 802)
+position = Vector2(-2959.75, 802)
 shape = SubResource("RectangleShape2D_0yrxn")
-debug_color = Color(0.95383, 0.0552165, 0.521712, 0.42)
 
 [node name="Label" type="Label" parent="Area_enojo_laura"]
-offset_left = -2781.0
+offset_left = -3020.0
 offset_top = 703.0
-offset_right = -2504.0
+offset_right = -2743.0
 offset_bottom = 732.0
-text = "Aca laura se enoja "
+text = "Aca laura se enoja y camina distinto"
 metadata/_edit_use_anchors_ = true
-
-[node name="Area_desEnojo_laura" type="Area2D" parent="."]
-position = Vector2(2796, -298)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area_desEnojo_laura"]
-position = Vector2(-664.25, 800)
-shape = SubResource("RectangleShape2D_1ymud")
-debug_color = Color(0.97039, 0, 0.45504, 0.42)
-
-[node name="Label" type="Label" parent="Area_desEnojo_laura"]
-offset_left = -764.0
-offset_top = 738.0
-offset_right = -593.0
-offset_bottom = 799.0
-text = "aca laura se des enoja
-"
 
 [node name="Laura" parent="." instance=ExtResource("16_lkrhh")]
 modulate = Color(0.577255, 0.612528, 0.667861, 1)
 z_index = 10
-position = Vector2(-307, 650)
+position = Vector2(75, 549)
 speed = 350.0
 jump_force = 900.0
 
 [node name="Ramiro" parent="." instance=ExtResource("17_2w312")]
 modulate = Color(0.530745, 0.511852, 0.516617, 1)
-position = Vector2(-126, 648)
+position = Vector2(-129, 639)
 
 [node name="BondiFrenteMotor" parent="." instance=ExtResource("19_6x6h4")]
 modulate = Color(0.874484, 0.846397, 0.825677, 1)
@@ -329,4 +309,4 @@ position = Vector2(419, 652)
 scale = Vector2(0.725, 0.725)
 
 [connection signal="body_entered" from="Area_enojo_laura" to="." method="_on_area_enojo_laura_body_entered2"]
-[connection signal="body_entered" from="Area_desEnojo_laura" to="." method="_on_area_des_enojo_laura_body_entered"]
+[connection signal="body_exited" from="Area_enojo_laura" to="." method="_on_area_enojo_laura_body_exited2"]

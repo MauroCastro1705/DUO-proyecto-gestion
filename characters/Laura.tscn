@@ -499,5 +499,11 @@ animation = &"walk"
 autoplay = "idle"
 speed_scale = 1.5
 
-[node name="Flecha-personaje" parent="." instance=ExtResource("103_jpjlv")]
+[node name="Flecha_UI" parent="." instance=ExtResource("103_jpjlv")]
+unique_name_in_owner = true
 position = Vector2(0, -104)
+
+[node name="Timer_flecha" type="Timer" parent="Flecha_UI"]
+one_shot = true
+
+[connection signal="timeout" from="Flecha_UI/Timer_flecha" to="." method="_on_timer_flecha_timeout"]

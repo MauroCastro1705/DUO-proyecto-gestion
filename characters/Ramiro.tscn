@@ -826,7 +826,11 @@ autoplay = "walk"
 frame_progress = 0.19085
 speed_scale = 1.7
 
-[node name="Flecha-personaje" parent="." instance=ExtResource("177_mdxu6")]
+[node name="Flecha_UI" parent="." instance=ExtResource("177_mdxu6")]
+unique_name_in_owner = true
 position = Vector2(-1, -215)
 
+[node name="Timer_flecha" type="Timer" parent="Flecha_UI"]
+
 [connection signal="timeout" from="TimerLabel" to="." method="_on_timer_label_timeout"]
+[connection signal="timeout" from="Flecha_UI/Timer_flecha" to="." method="_on_timer_flecha_timeout"]
