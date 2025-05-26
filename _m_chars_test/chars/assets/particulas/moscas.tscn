@@ -43,6 +43,7 @@ turbulence_initial_displacement_max = 1.49012e-06
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 scale = Vector2(1, 0.18)
+emitting = false
 amount = 4
 texture = SubResource("GradientTexture2D_l6bsx")
 lifetime = 600.0

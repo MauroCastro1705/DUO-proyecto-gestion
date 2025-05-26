@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cttiarxsj5vff"]
+
+[ext_resource type="Texture2D" uid="uid://c4t1o2vuo6s8l" path="res://_m_chars_test/assets/atlases/atlas_a_01.png" id="1_6aruf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pygm8"]
+atlas = ExtResource("1_6aruf")
+region = Rect2(326.239, 738.771, 145.465, 108.145)
+
+[node name="BasuraBolsaA" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -77.0
+offset_top = -98.0
+offset_right = 68.0
+offset_bottom = 10.0
+texture = SubResource("AtlasTexture_pygm8")
