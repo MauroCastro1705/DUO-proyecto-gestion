@@ -17,11 +17,11 @@ func _ready() -> void:
 	# Referencias a los personajes
 	player1 = $Ramiro
 	player2 = $Laura
-	active_player = player1
-	Global.active_player_bruno = true
-	Global.active_player_alejandra = false
-	player1.is_active = true
-	player2.is_active = false  # Inicia desactivado
+	active_player = player2 #alejandra
+	Global.active_player_bruno = false
+	Global.active_player_alejandra = true
+	player1.is_active = false
+	player2.is_active = true  # Inicia desactivado
 	camera.position = active_player.global_position
 	camera.zoom = normal_zoom
 	# Activar la cámara del jugador activo
@@ -60,23 +60,3 @@ func swap_characters() -> void:
 		Global.active_player_alejandra = false
 		print("señal player 1")
 	swap_characters_signal.emit()
-
-####COLISIONES CON ZONAS QUE CAMBIAN EMOCIONES SEGUN JUGADOR
-
-func _on_area_enojo_laura_body_entered2(body: Node2D) -> void:
-	if body.is_in_group("jugador"):
-		print("Es personaje entro:", body)
-		if body.has_method("check_emocion"):
-			print("colision emocion-box")
-			if body.name == "Laura":  #si el body se llama Laura, se activa la animacion enojada
-				body.check_emocion("enojada")
-			#if body.name == "Ramiro": #si el body se llama Ramiro, se activa la animacion enojada"
-			#	body.check_emocion("enojado")
-			   
-
-
-func _on_area_des_enojo_laura_body_entered(body: Node2D) -> void:
-	if body.is_in_group("jugador"):
-		print("Es personaje salio:", body)
-		if body.has_method("check_emocion"):
-			body.check_emocion("normal")

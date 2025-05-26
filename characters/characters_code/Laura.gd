@@ -26,6 +26,7 @@ func _ready() -> void:
 	Global.lauraOnTop = false
 	flecha.visible = false
 	texto_character.visible = false
+	
 func _physics_process(delta: float) -> void:
 	if raycast_down.is_colliding():		# Detectar si estamos sobre el personaje grande
 		var collider = raycast_down.get_collider()

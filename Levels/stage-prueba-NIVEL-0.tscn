@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://csaewt7cf5cao"]
+[gd_scene load_steps=32 format=3 uid="uid://csaewt7cf5cao"]
 
 [ext_resource type="Script" uid="uid://cwf7xjxte2dvi" path="res://Levels/stage_prueba_matias.gd" id="1_1ymud"]
 [ext_resource type="Texture2D" uid="uid://begspt1dbuhio" path="res://_m_chars_test/assets/bondi_MOCKUP_1280px_escalas_mudo.png" id="2_okgsh"]
@@ -30,6 +30,7 @@
 [ext_resource type="PackedScene" uid="uid://cnq18idga5ieq" path="res://Levels/cajas-de-emociones/enojar-bruno.tscn" id="29_xt5e6"]
 [ext_resource type="PackedScene" uid="uid://cm7ggmbyk2i2o" path="res://_m_chars_test/assets/props_calle/parada_colectivo_60.tscn" id="30_43c8f"]
 [ext_resource type="PackedScene" uid="uid://blhbfdmwv86tg" path="res://_m_chars_test/assets/props_calle/farol_colgante_a.tscn" id="30_lkrhh"]
+[ext_resource type="PackedScene" uid="uid://dfolir25yfoi" path="res://Levels/cajas-de-emociones/bruno-bobo.tscn" id="31_ohdn1"]
 
 [node name="Stage-prueba-matias" type="Node2D"]
 script = ExtResource("1_1ymud")
@@ -169,13 +170,13 @@ position = Vector2(2339, 505)
 [node name="Laura" parent="." instance=ExtResource("16_lkrhh")]
 modulate = Color(0.577255, 0.612528, 0.667861, 1)
 z_index = 10
-position = Vector2(1351, 635)
+position = Vector2(-44, 654)
 speed = 350.0
 jump_force = 900.0
 
 [node name="Ramiro" parent="." instance=ExtResource("17_2w312")]
 modulate = Color(0.530745, 0.511852, 0.516617, 1)
-position = Vector2(-126, 648)
+position = Vector2(-255, 632)
 
 [node name="Caja-liviana" parent="." instance=ExtResource("13_43c8f")]
 position = Vector2(1220, 601)
@@ -295,10 +296,13 @@ position = Vector2(419, 652)
 scale = Vector2(0.725, 0.725)
 
 [node name="Enojar-alejandra" parent="." instance=ExtResource("27_xt5e6")]
-position = Vector2(-17, 465)
+position = Vector2(2485, 467)
 
 [node name="Eliminar-emocion" parent="." instance=ExtResource("27_j3434")]
-position = Vector2(1823, 395)
+position = Vector2(949, 402)
 
 [node name="Enojar-bruno" parent="." instance=ExtResource("29_xt5e6")]
-position = Vector2(2053, 432)
+position = Vector2(3293, 419)
+
+[node name="Bruno-bobo" parent="." instance=ExtResource("31_ohdn1")]
+position = Vector2(-340, 421)

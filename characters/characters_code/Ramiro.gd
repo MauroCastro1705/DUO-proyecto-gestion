@@ -29,10 +29,11 @@ func _physics_process(delta: float) -> void:
 	#SI cambio de pj esta desabilitado#
 	if Input.is_action_pressed("cambiar") and Global.can_swap == false:			
 		_cambiar_esta_desabilitado()
-
 	#MOVER PERSONAJE#
-	if Emociones.seguir_a_laura and not is_active:
+	if Emociones.seguir_a_laura:
 		_seguir_a_laura()
+		self.is_active = false
+		
 	if is_active :
 		direction = _procesar_input_movimiento()
 	if Global.lauraOnTop:
@@ -69,10 +70,13 @@ func hacer_accion():
 func _seguir_a_laura():
 		var objetivo = get_tree().get_nodes_in_group("grupo-laura")
 		var laura = objetivo[0]
-		print(laura)
 		var direccion_x = sign(laura.global_position.x - global_position.x)
 		velocity.x = direccion_x * speed
+		update_animation(velocity)
 		move_and_slide()
+		texto_character.text = "Estoy bobo y sigo a Ale"
+		texto_character.visible = true
+		
 		
 func _cambiar_esta_desabilitado():
 		texto_character.text = "No se puede cambiar de personaje ahora"
@@ -91,8 +95,12 @@ func update_animation(direction: Vector2):
 		return  # No seguir con animaciones normales
 	if Emociones.gordo_mood_normal:
 		_animacion_normal(direction)
+		texto_character.text = "Estoy normal"
+		texto_character.visible = true
 	if Emociones.gordo_mood_enojado:
 		_animacion_enojado(direction)
+		texto_character.text = "Estoy enojado"
+		texto_character.visible = true
 		
 		
 func _animacion_normal(direction : Vector2):
@@ -152,14 +160,30 @@ func check_emocion(emocion:String):
 			Emociones.gordo_mood_rockeando = false
 			Emociones.gordo_mood_triste= false
 			Emociones.gordo_mood_bobo= false
+			texto_character.visible = false #desactivamos cartel
+			Emociones.seguir_a_laura = false#desactiva el seguimiento a alejandra
 		"enojado":
-			print("emocion enojada")
+			print("emocion enojado")
 			Emociones.gordo_mood_normal = false
 			Emociones.gordo_mood_enojado= true#ESTE
 			Emociones.gordo_mood_rockeando = false
 			Emociones.gordo_mood_triste= false
 			Emociones.gordo_mood_bobo= false
+			Emociones.seguir_a_laura = false#desactiva el seguimiento a alejandra
+		"bobo":
+			print("emocion bobo")
+			Emociones.gordo_mood_normal = false
+			Emociones.gordo_mood_enojado= false
+			Emociones.gordo_mood_rockeando = false
+			Emociones.gordo_mood_triste= false
+			Emociones.gordo_mood_bobo= true#ESTE
+			Emociones.seguir_a_laura = true#activa el seguimiento a alejandra
+			
 ##---------EMCIONES-----------S##
+
+
+
+
 
 #---------- FLECHA SOBRE PERSONAJE-----------
 func _update_flechita():
