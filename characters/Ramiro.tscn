@@ -1,4 +1,4 @@
-[gd_scene load_steps=183 format=3 uid="uid://bbs86ttvb6dhi"]
+[gd_scene load_steps=184 format=3 uid="uid://bbs86ttvb6dhi"]
 
 [ext_resource type="Script" uid="uid://m850xbhl28ts" path="res://characters/characters_code/Ramiro.gd" id="2_cfd2t"]
 [ext_resource type="Texture2D" uid="uid://ksk8pwddi2sn" path="res://_m_chars_test/chars/assets/animaciones/gde_walk/gde_walk01_00001.png" id="3_8uh63"]
@@ -178,8 +178,8 @@
 [ext_resource type="Texture2D" uid="uid://2dl1pcrf2s24" path="res://assets/characters/animaciones/ramiro_ilde_normal/gde_ilde_normal_00048.png" id="124_k6jee"]
 [ext_resource type="PackedScene" uid="uid://caa1hslf3fk12" path="res://assets/UI-UX/flecha-personaje.tscn" id="177_mdxu6"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jfpom"]
-size = Vector2(165, 102)
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_mdxu6"]
+polygon = PackedVector2Array(-43, -95, -47, -117, -46, -125, -38, -132, -34, -150, -23, -153, -10, -154, 8, -164, 22, -160, 33, -151, 41, -139, 42, -124, 40, -107, 36, -96, 24, -92, 7, -62, -7, -79)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cfd2t"]
 size = Vector2(138, 121)
@@ -757,17 +757,18 @@ animations = [{
 "speed": 55.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mdxu6"]
+radius = 52.0
+height = 166.0
+
 [node name="Ramiro" type="CharacterBody2D" groups=["grupo-ramiro", "jugador"]]
 z_index = 4
 collision_layer = 2
 collision_mask = 9
 script = ExtResource("2_cfd2t")
 
-[node name="colision-general" type="CollisionShape2D" parent="."]
-position = Vector2(-2, -81)
-rotation = 1.5708
-shape = SubResource("RectangleShape2D_jfpom")
-debug_color = Color(0.81993, 0.338419, 0.571267, 0.42)
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_mdxu6")
 
 [node name="empujarCajas" type="Area2D" parent="."]
 position = Vector2(0, -38)
@@ -821,16 +822,34 @@ one_shot = true
 position = Vector2(-4, -99)
 scale = Vector2(0.435, 0.435)
 sprite_frames = SubResource("SpriteFrames_w370e")
-animation = &"walk"
+animation = &"enojado_idle"
 autoplay = "walk"
-frame_progress = 0.19085
 speed_scale = 1.7
+
+[node name="colision-general" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(0, -82)
+shape = SubResource("CapsuleShape2D_mdxu6")
+debug_color = Color(0.81993, 0.338419, 0.571267, 0.42)
 
 [node name="Flecha_UI" parent="." instance=ExtResource("177_mdxu6")]
 unique_name_in_owner = true
 position = Vector2(-1, -215)
 
 [node name="Timer_flecha" type="Timer" parent="Flecha_UI"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-48, -150, -48, -10, -20, 0, 17, 0, 48, -8, 48, -150, 38, -161, -40, -160)
+
+[node name="RayCast2D_arista_der" type="RayCast2D" parent="."]
+position = Vector2(44, -13)
+target_position = Vector2(16, 27)
+collision_mask = 9
+
+[node name="RayCast2D_arista_izq" type="RayCast2D" parent="."]
+position = Vector2(-48, -13)
+target_position = Vector2(-17, 26)
+collision_mask = 9
 
 [connection signal="timeout" from="TimerLabel" to="." method="_on_timer_label_timeout"]
 [connection signal="timeout" from="Flecha_UI/Timer_flecha" to="." method="_on_timer_flecha_timeout"]

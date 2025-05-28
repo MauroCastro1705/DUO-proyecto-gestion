@@ -1,4 +1,4 @@
-[gd_scene load_steps=111 format=3 uid="uid://3ht2b6g4whk7"]
+[gd_scene load_steps=112 format=3 uid="uid://3ht2b6g4whk7"]
 
 [ext_resource type="Script" uid="uid://drlr805adhwjn" path="res://characters/characters_code/Laura.gd" id="1_ny0kd"]
 [ext_resource type="Texture2D" uid="uid://c52wt4l2f5kp2" path="res://assets/characters/animaciones/ch_salto_normal/ch_salto_normal_down.png" id="2_oht61"]
@@ -103,6 +103,9 @@
 [ext_resource type="Texture2D" uid="uid://b88g55kff0csg" path="res://_m_chars_test/chars/assets/animaciones/ch_walk_cool/ch_walk_cool01_00023.png" id="98_ontb1"]
 [ext_resource type="Texture2D" uid="uid://cft3yu8ih62va" path="res://_m_chars_test/chars/assets/animaciones/ch_walk_cool/ch_walk_cool01_00024.png" id="99_j2ov1"]
 [ext_resource type="PackedScene" uid="uid://caa1hslf3fk12" path="res://assets/UI-UX/flecha-personaje.tscn" id="103_jpjlv"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_jpjlv"]
+polygon = PackedVector2Array(-5, -38, -5, -42, -9, -44, -10, -50, -4, -53, -1, -57, 6, -54, 7, -50, 6, -45, 3, -43, 7, -42, 5, -38, 0, -35)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b4tiw"]
 radius = 17.0
@@ -468,13 +471,16 @@ collision_mask = 29
 script = ExtResource("1_ny0kd")
 raycast_down = NodePath("RayCast2D")
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+visible = false
+occluder = SubResource("OccluderPolygon2D_jpjlv")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -43)
 shape = SubResource("CapsuleShape2D_b4tiw")
 debug_color = Color(0.740988, 0.339757, 0.808076, 0.42)
 
 [node name="DefaultLaura-light" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(-52, -78)
 scale = Vector2(0.14228, 0.14228)
 texture = SubResource("CanvasTexture_g4hnv")

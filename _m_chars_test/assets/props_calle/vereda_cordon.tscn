@@ -6,6 +6,7 @@
 polygon = PackedVector2Array(0, 0, 11, 0, 40, 0, 40, 4, 36, 5, 36, 13, 40, 13, 40, 158, 0, 158)
 
 [node name="VeredaCordon" type="StaticBody2D"]
+collision_mask = 15
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(0, 158, 0, 1, 11, 0, 40, 15, 40, 158)

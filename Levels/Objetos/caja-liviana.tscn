@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://ccslrkwy1uquh"]
+[gd_scene load_steps=5 format=3 uid="uid://ccslrkwy1uquh"]
 
 [ext_resource type="Script" uid="uid://dw83lgn8fjcce" path="res://Levels/Objetos/objetos_code/caja_1.gd" id="1_eull6"]
 
@@ -6,7 +6,10 @@
 absorbent = true
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kaosh"]
-size = Vector2(79, 76)
+size = Vector2(79, 28)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_eull6"]
+polygon = PackedVector2Array(-39, 13, -39, -13, 39, -13, 39, 13)
 
 [node name="Caja-liviana" type="RigidBody2D" groups=["arrastrables", "liviano"]]
 collision_layer = 8
@@ -14,26 +17,39 @@ collision_mask = 15
 mass = 500.0
 physics_material_override = SubResource("PhysicsMaterial_uj4g3")
 gravity_scale = 2.0
+lock_rotation = true
 continuous_cd = 2
 script = ExtResource("1_eull6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(7.5, 2)
 shape = SubResource("RectangleShape2D_kaosh")
 
 [node name="Cajon" type="Sprite2D" parent="."]
-position = Vector2(7, -3)
+visible = false
 scale = Vector2(0.179688, 0.181801)
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -32.0
-offset_top = -36.0
-offset_right = 50.0
-offset_bottom = 41.0
+visible = false
+offset_left = -40.0
+offset_top = -14.0
+offset_right = 40.0
+offset_bottom = 14.0
+color = Color(0.1406, 0.29621, 0.38, 1)
 
 [node name="Label" type="Label" parent="."]
-offset_left = -35.0
-offset_top = -66.0
-offset_right = 52.0
-offset_bottom = -37.0
+offset_left = -42.0
+offset_top = -64.0
+offset_right = 45.0
+offset_bottom = -35.0
 text = "caja-liviana"
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_eull6")
+
+[node name="Polygon2D2" type="Polygon2D" parent="."]
+color = Color(0.126942, 0.280506, 0.376127, 1)
+polygon = PackedVector2Array(20, -14, 36, -14, 38, -13, 39, -12, 39, 14, 33, 14, 29, 13, 24, 13)
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(0.112637, 0.247908, 0.318846, 1)
+polygon = PackedVector2Array(-39, 14, -39, -12, -38, -13, -36, -14, 23, -14, 25, -12, 26, -10, 26, 14, 24, 14, 17, 13, -29, 13, -30, 14)

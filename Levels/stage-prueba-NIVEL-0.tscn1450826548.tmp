@@ -1,7 +1,7 @@
-[gd_scene load_steps=32 format=3 uid="uid://csaewt7cf5cao"]
+[gd_scene load_steps=31 format=3 uid="uid://csaewt7cf5cao"]
 
 [ext_resource type="Script" uid="uid://cwf7xjxte2dvi" path="res://Levels/stage_prueba_matias.gd" id="1_1ymud"]
-[ext_resource type="Texture2D" uid="uid://dhaet1yeq1xb1" path="res://_m_chars_test/assets/bondi_MOCKUP_1920px_OJO.png" id="2_43c8f"]
+[ext_resource type="Texture2D" uid="uid://begspt1dbuhio" path="res://_m_chars_test/assets/bondi_MOCKUP_1280px_escalas_mudo.png" id="2_okgsh"]
 [ext_resource type="Script" uid="uid://cyh0d64pfygbl" path="res://addons/maaacks_menus_template/base/scripts/pause_menu_controller.gd" id="2_ws3q2"]
 [ext_resource type="PackedScene" uid="uid://ckwusaxwybu4g" path="res://Levels/scenes/overlaid_menus/pause_menu.tscn" id="3_6x6h4"]
 [ext_resource type="PackedScene" uid="uid://ccslrkwy1uquh" path="res://Levels/Objetos/caja-liviana.tscn" id="13_43c8f"]
@@ -29,22 +29,16 @@
 [ext_resource type="PackedScene" uid="uid://cnq18idga5ieq" path="res://Levels/cajas-de-emociones/enojar-bruno.tscn" id="29_xt5e6"]
 [ext_resource type="PackedScene" uid="uid://cm7ggmbyk2i2o" path="res://_m_chars_test/assets/props_calle/parada_colectivo_60.tscn" id="30_43c8f"]
 [ext_resource type="PackedScene" uid="uid://blhbfdmwv86tg" path="res://_m_chars_test/assets/props_calle/farol_colgante_a.tscn" id="30_lkrhh"]
-[ext_resource type="Texture2D" uid="uid://dbkcyn7q4y2x5" path="res://_m_chars_test/assets/atlases/medidor_luz_a.tres" id="31_lkrhh"]
 [ext_resource type="PackedScene" uid="uid://dfolir25yfoi" path="res://Levels/cajas-de-emociones/bruno-bobo.tscn" id="31_ohdn1"]
 
 [node name="Stage-prueba-matias" type="Node2D"]
 script = ExtResource("1_1ymud")
 
-[node name="CanvasModulate" type="CanvasModulate" parent="."]
+[node name="BondiMockup1280PxEscalas" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(-206, 477)
-color = Color(0.82606, 0.82606, 0.82606, 1)
-
-[node name="BondiMockup1920PxOjo" type="Sprite2D" parent="."]
-visible = false
-z_index = -85
-position = Vector2(960, 540)
-texture = ExtResource("2_43c8f")
+z_index = -50
+position = Vector2(640, 360)
+texture = ExtResource("2_okgsh")
 metadata/_edit_lock_ = true
 
 [node name="PauseMenuController" type="Node" parent="."]
@@ -73,7 +67,7 @@ position = Vector2(3688, 676)
 
 [node name="Floor9" parent="pisos" instance=ExtResource("13_xt5e6")]
 z_index = 3
-position = Vector2(2989, 676)
+position = Vector2(2980, 676)
 
 [node name="Floor5" parent="pisos" instance=ExtResource("13_xt5e6")]
 z_index = 3
@@ -91,20 +85,16 @@ rotation = 1.57079
 
 [node name="Floor8" parent="pisos" instance=ExtResource("13_xt5e6")]
 z_index = 3
-position = Vector2(2380, 732)
+position = Vector2(2380, 726)
 
 [node name="VeredaCordon" parent="pisos" instance=ExtResource("15_de2g6")]
 position = Vector2(427, 653)
-
-[node name="VeredaCordon2" parent="pisos" instance=ExtResource("25_q2pka")]
-position = Vector2(1134, 653)
 
 [node name="VeredaCalle" parent="pisos" instance=ExtResource("16_q2pka")]
 position = Vector2(465, 645)
 
 [node name="Camera2D" type="Camera2D" parent="." groups=["scene_manager_entity_nodes"]]
-offset = Vector2(80, -274.82)
-zoom = Vector2(1.5, 1.5)
+offset = Vector2(50, -292)
 position_smoothing_enabled = true
 position_smoothing_speed = 8.0
 metadata/entity_name = "camera"
@@ -122,6 +112,11 @@ blend_mode = 2
 shadow_enabled = true
 height = 0.5
 max_distance = 3527.0
+
+[node name="CanvasModulate" type="CanvasModulate" parent="luces-y-postes"]
+visible = false
+position = Vector2(-206, 477)
+color = Color(0.82606, 0.82606, 0.82606, 1)
 
 [node name="Poste-luz2" parent="luces-y-postes" instance=ExtResource("14_43c8f")]
 visible = false
@@ -171,19 +166,21 @@ scale = Vector2(0.47, 0.47)
 [node name="Laura" parent="." instance=ExtResource("16_lkrhh")]
 modulate = Color(0.577255, 0.612528, 0.667861, 1)
 z_index = 10
-position = Vector2(-49, 549)
+position = Vector2(-44, 654)
 speed = 350.0
 jump_force = 900.0
 
 [node name="Ramiro" parent="." instance=ExtResource("17_2w312")]
 modulate = Color(0.530745, 0.511852, 0.516617, 1)
-position = Vector2(-208, 617)
+position = Vector2(-255, 632)
 
 [node name="Caja-liviana" parent="." instance=ExtResource("13_43c8f")]
-position = Vector2(1832, 402)
+position = Vector2(1220, 601)
 
-[node name="Caja-liviana2" parent="." instance=ExtResource("13_43c8f")]
-position = Vector2(2190, 613)
+[node name="BondiFrenteMotor" parent="." instance=ExtResource("19_6x6h4")]
+modulate = Color(0.874484, 0.846397, 0.825677, 1)
+z_index = -2
+position = Vector2(647, 650)
 
 [node name="Parallax2D_FONDO_CIELO" type="Parallax2D" parent="."]
 z_index = -90
@@ -191,15 +188,7 @@ scroll_scale = Vector2(0.11, 0.05)
 repeat_size = Vector2(1280, 0)
 repeat_times = 4
 
-[node name="ColorRect" type="ColorRect" parent="Parallax2D_FONDO_CIELO"]
-offset_left = -5.0
-offset_top = 6.0
-offset_right = 1915.0
-offset_bottom = 1086.0
-color = Color(0.101961, 0.117647, 0.137255, 1)
-
 [node name="FondoCieloLow" type="Sprite2D" parent="Parallax2D_FONDO_CIELO"]
-visible = false
 position = Vector2(640, 360)
 texture = ExtResource("23_j3434")
 
@@ -245,18 +234,6 @@ repeat_times = 3
 position = Vector2(640, 360)
 texture = ExtResource("25_alcho")
 
-[node name="Polygon2D" type="Polygon2D" parent="Parallax2D_FONDO_skyline"]
-color = Color(0.0941176, 0.0784314, 0.0666667, 1)
-polygon = PackedVector2Array(0, 619, 1920, 608, 1920, 1105, 0, 1108)
-
-[node name="Parallax2D_FONDO_vereda" type="Parallax2D" parent="."]
-z_index = -40
-scroll_scale = Vector2(0.95, 1)
-
-[node name="BondiFrenteMotor" parent="Parallax2D_FONDO_vereda" instance=ExtResource("19_6x6h4")]
-modulate = Color(0.874484, 0.846397, 0.825677, 1)
-position = Vector2(647, 650)
-
 [node name="Parallax2D_PP_vereda" type="Parallax2D" parent="."]
 z_index = 30
 scroll_scale = Vector2(1.05, 1)
@@ -279,11 +256,6 @@ scale = Vector2(0.665, 0.665)
 position = Vector2(1370, 655)
 scale = Vector2(0.74, 0.74)
 
-[node name="cables" type="Line2D" parent="Parallax2D_PP_vereda"]
-points = PackedVector2Array(1791, 104, 1812, 125, 1820, 97, 2134, 228, 2500, 307, 2809, 326, 3032, 309, 3258, 180, 3338, 102, 3346, 123, 3371, 111)
-width = 6.0
-default_color = Color(0, 0, 0, 1)
-
 [node name="orden_visibilidad" type="Label" parent="."]
 offset_left = -326.0
 offset_top = 31.0
@@ -294,9 +266,6 @@ text = "Orden Z index
 -80 FONDO_cupulas
 -75 FONDO_neones
 -70 FONDO_skyline
--40 FONDO_vereda
--30 MID_vereda
-
 
 PERSONAJES ?
 
@@ -307,12 +276,15 @@ PERSONAJES ?
 "
 
 [node name="FarolColganteA" parent="." instance=ExtResource("30_lkrhh")]
-position = Vector2(278, 324)
+position = Vector2(278, 372)
 scale = Vector2(0.65, 0.65)
 
 [node name="FarolColganteA2" parent="." instance=ExtResource("30_lkrhh")]
-position = Vector2(1238, 324)
+position = Vector2(1238, 372)
 scale = Vector2(0.65, 0.65)
+
+[node name="VeredaCordon" parent="." instance=ExtResource("25_q2pka")]
+position = Vector2(1134, 653)
 
 [node name="ParadaColectivo60" parent="." instance=ExtResource("30_43c8f")]
 z_index = -10
@@ -320,51 +292,13 @@ position = Vector2(419, 652)
 scale = Vector2(0.725, 0.725)
 
 [node name="Enojar-alejandra" parent="." instance=ExtResource("27_xt5e6")]
-position = Vector2(-119, 816)
+position = Vector2(3050, 478)
 
 [node name="Eliminar-emocion" parent="." instance=ExtResource("27_j3434")]
 position = Vector2(902, 876)
 
 [node name="Enojar-bruno" parent="." instance=ExtResource("29_xt5e6")]
-position = Vector2(3262, 870)
+position = Vector2(3293, 419)
 
 [node name="Bruno-bobo" parent="." instance=ExtResource("31_ohdn1")]
-position = Vector2(-271, 422)
-scale = Vector2(0.989984, 0.979877)
-
-[node name="casa" type="Polygon2D" parent="."]
-z_index = -30
-position = Vector2(1340.98, 632.437)
-scale = Vector2(0.412849, 0.484118)
-color = Color(0.0681733, 0.0515147, 0.0539079, 1)
-polygon = PackedVector2Array(-1, 16, 1, -103, -10, -118, -21, -126, -6, -129, 3, -129, 8, -425, 8, -544, -22, -552, -40, -586, -70, -596, -92, -621, -62, -630, -13, -625, 6, -653, -1, -754, -23, -766, -18, -787, 1, -788, -1, -819, 81, -822, 114, -808, 121, -786, 109, -759, 138, -743, 134, -727, 649, -730, 653, -759, 698, -772, 704, -807, 845, -810, 845, -783, 891, -758, 889, -741, 1227, -740, 1238, -803, 1295, -828, 1435, -854, 1444, -783, 1589, -754, 1589, 42, -6, 59)
-metadata/_edit_lock_ = true
-
-[node name="casa2" type="Polygon2D" parent="."]
-z_index = -30
-position = Vector2(1972, 625)
-scale = Vector2(0.412849, 0.484118)
-color = Color(0.0681733, 0.0515147, 0.0539079, 1)
-polygon = PackedVector2Array(-1, 16, 1, -103, -10, -118, -21, -126, -6, -129, 3, -129, 8, -425, 8, -544, -22, -552, -40, -586, -70, -596, -92, -621, -62, -630, -13, -625, 6, -653, -1, -754, -23, -766, -18, -787, 1, -788, -1, -819, 81, -822, 114, -808, 121, -786, 109, -759, 138, -743, 134, -727, 649, -730, 653, -759, 698, -772, 704, -807, 845, -810, 845, -783, 891, -758, 889, -741, 1227, -740, 1238, -803, 1295, -828, 1435, -854, 1444, -783, 1589, -754, 1589, 42, -6, 59)
-metadata/_edit_lock_ = true
-
-[node name="tanque_diaz" type="Polygon2D" parent="."]
-z_index = -31
-position = Vector2(1816, 295)
-color = Color(0.08, 0.0608, 0.0608, 1)
-polygon = PackedVector2Array(4.93223, -13.9112, 6.23759, -119.646, 12.7645, -122.257, 61.6837, -122.257, 61.7158, -124.868, 89.7813, -124.868, 89.9503, -122.257, 125.942, -122.257, 126.332, -130.742, 127.637, -132.047, 130.9, -132.7, 133.09, -131.9, 133.869, -128.784, 131.532, -128.784, 131.532, -131.121, 129.195, -131.121, 127.637, -129.563, 127.637, -122.257, 157.661, -122.257, 159.619, -11.9531, 151.786, -12.6058, 151.134, -38.0605, 140.038, -48.5035, 28.4289, -49.1561, 15.3752, -41.3239, 15.3752, -14.5638)
-uv = PackedVector2Array(4.93223, -13.9112, 6.23759, -119.646, 12.7645, -122.257, 61.6837, -122.257, 61.7158, -124.868, 89.7813, -124.868, 89.9503, -122.257, 125.942, -122.257, 126.332, -130.742, 127.637, -132.047, 130.9, -132.7, 133.09, -131.9, 133.869, -128.784, 131.532, -128.784, 131.532, -131.121, 129.195, -131.121, 127.637, -129.563, 127.637, -122.257, 157.661, -122.257, 159.619, -11.9531, 151.786, -12.6058, 151.134, -38.0605, 140.038, -48.5035, 28.4289, -49.1561, 15.3752, -41.3239, 15.3752, -14.5638)
-metadata/_edit_lock_ = true
-
-[node name="MedidorLuzA" type="Sprite2D" parent="."]
-modulate = Color(0.550509, 0.610703, 0.532161, 1)
-position = Vector2(1959, 591)
-scale = Vector2(0.49, 0.49)
-texture = ExtResource("31_lkrhh")
-
-[node name="MedidorLuzA2" type="Sprite2D" parent="."]
-modulate = Color(0.550509, 0.610703, 0.532161, 1)
-position = Vector2(1978, 545)
-rotation = 0.0872665
-scale = Vector2(0.49, 0.49)
-texture = ExtResource("31_lkrhh")
+position = Vector2(-340, 421)

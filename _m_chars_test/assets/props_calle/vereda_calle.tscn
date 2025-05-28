@@ -6,6 +6,7 @@
 polygon = PackedVector2Array(0, 22, 332, 10, 670, 22, 670, 166, 0, 166)
 
 [node name="VeredaCalle" type="StaticBody2D"]
+collision_mask = 15
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(0, 4)

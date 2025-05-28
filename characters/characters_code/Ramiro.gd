@@ -5,10 +5,16 @@ extends CharacterBody2D
 var joint: PinJoint2D = null
 var current_box: RigidBody2D = null
 
+#raycast bobo
+@onready var raycast_detecta_arista_der: RayCast2D = $RayCast2D_arista_der # para filo de aristas
+@onready var raycast_detecta_arista_izq: RayCast2D = $RayCast2D_arista_izq
+var bobo_esta_en_arista: bool = false
+
 ##movimiento##
 @export var speed: float = 130.0 #Velocidad horizontal
 @export var speedLauraOnTop:float = 90.0 #velocidad con laura encima
 @export var jump_force: float = 350.0 #Fuerza del salto
+@export var dist_chico_enojado: float = 200.0 #distancia a que sigue a chico cuando Bobo
 @onready var sprite = $AnimatedSprite2D
 @onready var texto_character = %TextoGordo
 @onready var TimerLabel = $TimerLabel
@@ -71,7 +77,17 @@ func _seguir_a_laura():
 		var objetivo = get_tree().get_nodes_in_group("grupo-laura")
 		var laura = objetivo[0]
 		var direccion_x = sign(laura.global_position.x - global_position.x)
-		velocity.x = direccion_x * speed
+		
+		## aristas revisar
+		raycast_detecta_arista_der.force_raycast_update()
+		raycast_detecta_arista_izq.force_raycast_update()
+
+		bobo_esta_en_arista = not (raycast_detecta_arista_der.is_colliding() or raycast_detecta_arista_der.is_colliding()) and is_on_floor()
+		print("Bruno esta en arista:",bobo_esta_en_arista)
+		print("Castea a derecha: ",raycast_detecta_arista_der.get_collider())
+		print("Castea a izquierda: ",raycast_detecta_arista_izq.get_collider())
+		if abs(laura.global_position.x - self.global_position.x) > abs(dist_chico_enojado) and bobo_esta_en_arista==false: #agregue se le acerca hasta 200
+			velocity.x = direccion_x * speed
 		update_animation(velocity)
 		move_and_slide()
 		texto_character.text = "Estoy bobo y sigo a Ale"
