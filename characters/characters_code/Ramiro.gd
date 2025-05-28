@@ -8,7 +8,6 @@ var current_box: RigidBody2D = null
 #raycast bobo
 @onready var raycast_detecta_arista_der: RayCast2D = $RayCast2D_arista_der # para filo de aristas
 @onready var raycast_detecta_arista_izq: RayCast2D = $RayCast2D_arista_izq
-var bobo_esta_en_arista: bool = false
 
 ##movimiento##
 @export var speed: float = 130.0 #Velocidad horizontal
@@ -77,17 +76,23 @@ func _seguir_a_laura():
 		var objetivo = get_tree().get_nodes_in_group("grupo-laura")
 		var laura = objetivo[0]
 		var direccion_x = sign(laura.global_position.x - global_position.x)
+		var dist_a_chico: float = abs(laura.global_position.x - self.global_position.x)
+		var hay_arista_a_der: bool = not raycast_detecta_arista_der.is_colliding()
+		var hay_arista_a_izq: bool = not raycast_detecta_arista_izq.is_colliding()
 		
-		## aristas revisar
+		## aristas revisar, falta discriminar sentido para que no se trabe en ambos
 		raycast_detecta_arista_der.force_raycast_update()
 		raycast_detecta_arista_izq.force_raycast_update()
-
-		bobo_esta_en_arista = not (raycast_detecta_arista_der.is_colliding() or raycast_detecta_arista_der.is_colliding()) and is_on_floor()
-		print("Bruno esta en arista:",bobo_esta_en_arista)
-		print("Castea a derecha: ",raycast_detecta_arista_der.get_collider())
-		print("Castea a izquierda: ",raycast_detecta_arista_izq.get_collider())
-		if abs(laura.global_position.x - self.global_position.x) > abs(dist_chico_enojado) and bobo_esta_en_arista==false: #agregue se le acerca hasta 200
-			velocity.x = direccion_x * speed
+		
+		print("Bruno arista a derecha:",hay_arista_a_der)
+		print("Bruno arista a izquierda:",hay_arista_a_izq)
+		
+		if dist_a_chico > abs(dist_chico_enojado): #se le acerca hasta dist_chico_enojado
+			if (hay_arista_a_der and direccion_x==1) or (hay_arista_a_izq and direccion_x==-1):
+				velocity.x = 0
+			else:
+				velocity.x = direccion_x * speed
+		
 		update_animation(velocity)
 		move_and_slide()
 		texto_character.text = "Estoy bobo y sigo a Ale"
