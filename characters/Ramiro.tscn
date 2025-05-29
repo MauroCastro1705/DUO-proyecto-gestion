@@ -822,7 +822,7 @@ one_shot = true
 position = Vector2(-4, -99)
 scale = Vector2(0.435, 0.435)
 sprite_frames = SubResource("SpriteFrames_w370e")
-animation = &"enojado_idle"
+animation = &"bobo_walk"
 autoplay = "walk"
 speed_scale = 1.7
 

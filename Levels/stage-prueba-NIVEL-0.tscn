@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://csaewt7cf5cao"]
+[gd_scene load_steps=35 format=3 uid="uid://csaewt7cf5cao"]
 
 [ext_resource type="Script" uid="uid://cwf7xjxte2dvi" path="res://Levels/stage_prueba_matias.gd" id="1_1ymud"]
 [ext_resource type="Texture2D" uid="uid://dhaet1yeq1xb1" path="res://_m_chars_test/assets/bondi_MOCKUP_1920px_OJO.png" id="2_43c8f"]
@@ -31,6 +31,9 @@
 [ext_resource type="PackedScene" uid="uid://blhbfdmwv86tg" path="res://_m_chars_test/assets/props_calle/farol_colgante_a.tscn" id="30_lkrhh"]
 [ext_resource type="Texture2D" uid="uid://dbkcyn7q4y2x5" path="res://_m_chars_test/assets/atlases/medidor_luz_a.tres" id="31_lkrhh"]
 [ext_resource type="PackedScene" uid="uid://dfolir25yfoi" path="res://Levels/cajas-de-emociones/bruno-bobo.tscn" id="31_ohdn1"]
+[ext_resource type="Texture2D" uid="uid://cbpb11o8bmiso" path="res://_m_chars_test/assets/fondos/logo_AyB_256x.png" id="32_lkrhh"]
+[ext_resource type="PackedScene" uid="uid://k53ay6c1cltd" path="res://_m_chars_test/assets/props_calle/segba_valla.tscn" id="33_2w312"]
+[ext_resource type="PackedScene" uid="uid://grdh8m8au6ev" path="res://_m_chars_test/assets/cables_pelados/cables_pelados.tscn" id="34_g0a70"]
 
 [node name="Stage-prueba-matias" type="Node2D"]
 script = ExtResource("1_1ymud")
@@ -327,6 +330,10 @@ scale = Vector2(0.65, 0.65)
 position = Vector2(1238, 324)
 scale = Vector2(0.65, 0.65)
 
+[node name="FarolColganteA3" parent="." instance=ExtResource("30_lkrhh")]
+position = Vector2(2337, 353)
+scale = Vector2(0.65, 0.65)
+
 [node name="ParadaColectivo60" parent="." instance=ExtResource("30_43c8f")]
 z_index = -10
 position = Vector2(419, 652)
@@ -336,7 +343,7 @@ scale = Vector2(0.725, 0.725)
 position = Vector2(-119, 816)
 
 [node name="Eliminar-emocion" parent="." instance=ExtResource("27_j3434")]
-position = Vector2(902, 876)
+position = Vector2(4427, 404)
 
 [node name="Enojar-bruno" parent="." instance=ExtResource("29_xt5e6")]
 position = Vector2(3262, 870)
@@ -353,6 +360,13 @@ color = Color(0.0681733, 0.0515147, 0.0539079, 1)
 polygon = PackedVector2Array(-1, 16, 1, -103, -10, -118, -21, -126, -6, -129, 3, -129, 8, -425, 8, -544, -22, -552, -40, -586, -70, -596, -92, -621, -62, -630, -13, -625, 6, -653, -1, -754, -23, -766, -18, -787, 1, -788, -1, -819, 81, -822, 114, -808, 121, -786, 109, -759, 138, -743, 134, -727, 649, -730, 653, -759, 698, -772, 704, -807, 845, -810, 845, -783, 891, -758, 889, -741, 1227, -740, 1238, -803, 1295, -828, 1435, -854, 1444, -783, 1589, -754, 1589, 42, -6, 59)
 metadata/_edit_lock_ = true
 
+[node name="Polygon2D" type="Polygon2D" parent="casa"]
+z_index = 1
+position = Vector2(1981.4, -608.193)
+color = Color(0.05, 0.038, 0.038, 1)
+polygon = PackedVector2Array(113.67, 64.2661, 72.4927, 58.0692, 57.9595, 27.0851, 19.2043, 16.757, -0.17334, 0.232056, 19.2043, -5.96472, 31.3152, -12.1616, 469.732, -12.1616, 813.684, -16.2928, 828.217, -12.1616, 864.55, -8.0304, 864.55, 2.29773, 828.217, 8.49451, 820.95, 20.8882, 784.617, 25.0194, 779.773, 45.6755, 753.129, 56.0037, 724.063, 58.0692, 719.218, 41.5443, 450.355, 41.5443, 452.777, 56.0037, 411.6, 56.0037, 411.6, 39.4788, 120.937, 43.61, 123.359, 56.0037)
+metadata/_edit_lock_ = true
+
 [node name="casa2" type="Polygon2D" parent="."]
 z_index = -30
 position = Vector2(1972, 625)
@@ -360,6 +374,13 @@ scale = Vector2(0.412849, 0.484118)
 color = Color(0.0681733, 0.0515147, 0.0539079, 1)
 polygon = PackedVector2Array(-1, 16, 1, -103, -10, -118, -21, -126, -6, -129, 3, -129, 8, -425, 8, -544, -22, -552, -40, -586, -70, -596, -92, -621, -62, -630, -13, -625, 6, -653, -1, -754, -23, -766, -18, -787, 1, -788, -1, -819, 81, -822, 114, -808, 121, -786, 109, -759, 138, -743, 134, -727, 649, -730, 653, -759, 698, -772, 704, -807, 845, -810, 845, -783, 891, -758, 889, -741, 1227, -740, 1238, -803, 1295, -828, 1435, -854, 1444, -783, 1589, -754, 1610.76, 61.9684, -7.26611, 61.9684)
 metadata/_edit_lock_ = true
+
+[node name="casa3" type="Polygon2D" parent="."]
+z_index = -30
+position = Vector2(4482, 637)
+scale = Vector2(0.412849, 0.484118)
+color = Color(0.0681733, 0.0515147, 0.0539079, 1)
+polygon = PackedVector2Array(-1, 16, 1, -103, -10, -118, -21, -126, -6, -129, 3, -129, 8, -425, 8, -544, -22, -552, -40, -586, -70, -596, -92, -621, -62, -630, -13, -625, 6, -653, -1, -754, -23, -766, -18, -787, 1, -788, -1, -819, 81, -822, 114, -808, 121, -786, 109, -759, 138, -743, 134, -727, 649, -730, 653, -759, 698, -772, 704, -807, 845, -810, 845, -783, 891, -758, 889, -741, 1227, -740, 1238, -803, 1295, -828, 1435, -854, 1444, -783, 1589, -754, 1610.76, 61.9684, -7.26611, 61.9684)
 
 [node name="tanque_diaz" type="Polygon2D" parent="."]
 z_index = -31
@@ -381,3 +402,30 @@ position = Vector2(1978, 545)
 rotation = 0.0872665
 scale = Vector2(0.49, 0.49)
 texture = ExtResource("31_lkrhh")
+
+[node name="LogoAyB256x" type="Sprite2D" parent="."]
+modulate = Color(0.131454, 0.0748619, 0.216072, 1)
+position = Vector2(1509, 568)
+scale = Vector2(0.339844, 0.339844)
+texture = ExtResource("32_lkrhh")
+
+[node name="segba_valla" parent="." instance=ExtResource("33_2w312")]
+modulate = Color(0.493715, 0.639205, 0.539336, 1)
+position = Vector2(2471, 662)
+scale = Vector2(0.664, 0.664)
+
+[node name="segba_valla2" parent="." instance=ExtResource("33_2w312")]
+modulate = Color(0.493715, 0.639205, 0.539336, 1)
+position = Vector2(2265, 662)
+scale = Vector2(0.664, 0.664)
+
+[node name="cables_pelados" parent="." instance=ExtResource("34_g0a70")]
+z_index = -10
+position = Vector2(2321, 680)
+scale = Vector2(0.27, 0.27)
+
+[node name="cables_pelados2" parent="." instance=ExtResource("34_g0a70")]
+z_index = -10
+position = Vector2(2417, 689)
+rotation = -2.09439
+scale = Vector2(0.27, 0.27)
