@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://csaewt7cf5cao"]
+[gd_scene load_steps=38 format=3 uid="uid://csaewt7cf5cao"]
 
 [ext_resource type="Script" uid="uid://cwf7xjxte2dvi" path="res://Levels/stage_prueba_matias.gd" id="1_1ymud"]
 [ext_resource type="Texture2D" uid="uid://dhaet1yeq1xb1" path="res://_m_chars_test/assets/bondi_MOCKUP_1920px_OJO.png" id="2_43c8f"]
@@ -36,6 +36,7 @@
 [ext_resource type="PackedScene" uid="uid://k53ay6c1cltd" path="res://_m_chars_test/assets/props_calle/segba_valla.tscn" id="33_2w312"]
 [ext_resource type="PackedScene" uid="uid://grdh8m8au6ev" path="res://_m_chars_test/assets/cables_pelados/cables_pelados.tscn" id="34_g0a70"]
 [ext_resource type="PackedScene" uid="uid://7eavlp274h7s" path="res://Levels/cajas-de-emociones/zona-muerte.tscn" id="35_diyxt"]
+[ext_resource type="PackedScene" uid="uid://duj67f7bmlhfw" path="res://Levels/Objetos/caja_2.tscn" id="37_srns1"]
 
 [node name="Stage-prueba-matias" type="Node2D"]
 script = ExtResource("1_1ymud")
@@ -71,6 +72,10 @@ position = Vector2(4903, 676)
 z_index = 3
 position = Vector2(6044, 676)
 
+[node name="Floor15" parent="pisos" instance=ExtResource("13_xt5e6")]
+z_index = 3
+position = Vector2(7187, 676)
+
 [node name="Floor6" parent="pisos" instance=ExtResource("13_xt5e6")]
 z_index = 3
 position = Vector2(-367, 124)
@@ -92,6 +97,28 @@ position = Vector2(1747, 676)
 z_index = 3
 position = Vector2(1689, 454)
 scale = Vector2(0.355, 0.21)
+metadata/_edit_lock_ = true
+
+[node name="Floor14" parent="pisos" instance=ExtResource("13_xt5e6")]
+z_index = 3
+position = Vector2(5467, 545)
+scale = Vector2(0.355, 0.21)
+
+[node name="Floor19" parent="pisos" instance=ExtResource("13_xt5e6")]
+z_index = 3
+position = Vector2(6713, 492)
+scale = Vector2(0.355, 0.21)
+
+[node name="Floor18" parent="pisos" instance=ExtResource("13_xt5e6")]
+z_index = 3
+position = Vector2(6515, 598)
+rotation = -1.57079
+scale = Vector2(0.075, 0.21)
+
+[node name="Floor16" parent="pisos" instance=ExtResource("13_xt5e6")]
+z_index = 3
+position = Vector2(6255, 290)
+scale = Vector2(0.26, 0.21)
 
 [node name="Floor12" parent="pisos" instance=ExtResource("13_xt5e6")]
 z_index = 3
@@ -100,7 +127,7 @@ scale = Vector2(0.355, 0.21)
 
 [node name="Floor4" parent="pisos" instance=ExtResource("13_xt5e6")]
 z_index = 3
-position = Vector2(6770, 106)
+position = Vector2(7781, 78)
 rotation = 1.57079
 
 [node name="Floor8" parent="pisos" instance=ExtResource("13_xt5e6")]
@@ -189,16 +216,25 @@ scale = Vector2(0.47, 0.47)
 [node name="Laura" parent="." instance=ExtResource("16_lkrhh")]
 modulate = Color(0.577255, 0.612528, 0.667861, 1)
 z_index = 10
-position = Vector2(-49, 549)
+position = Vector2(-52, 543)
 speed = 350.0
 jump_force = 900.0
 
 [node name="Ramiro" parent="." instance=ExtResource("17_2w312")]
 modulate = Color(0.530745, 0.511852, 0.516617, 1)
-position = Vector2(-208, 617)
+position = Vector2(-209, 632)
 
 [node name="Caja-liviana" parent="." instance=ExtResource("13_43c8f")]
 position = Vector2(3819, 432)
+
+[node name="Caja-liviana4" parent="." instance=ExtResource("13_43c8f")]
+position = Vector2(5595, 633)
+
+[node name="Caja-liviana7" parent="." instance=ExtResource("13_43c8f")]
+position = Vector2(6238, 239)
+
+[node name="Caja-liviana5" parent="." instance=ExtResource("13_43c8f")]
+position = Vector2(5328, 506)
 
 [node name="Caja-liviana3" parent="." instance=ExtResource("13_43c8f")]
 position = Vector2(3142, 633)
@@ -210,7 +246,7 @@ position = Vector2(4121, 635)
 z_index = -90
 scroll_scale = Vector2(0.11, 0.05)
 repeat_size = Vector2(1280, 0)
-repeat_times = 6
+repeat_times = 9
 
 [node name="ColorRect" type="ColorRect" parent="Parallax2D_FONDO_CIELO"]
 offset_left = -5.0
@@ -234,7 +270,7 @@ texture = ExtResource("20_p2qjq")
 z_index = -80
 scroll_scale = Vector2(0.2, 0.07)
 repeat_size = Vector2(1186.43, 0)
-repeat_times = 3
+repeat_times = 6
 
 [node name="CupulaA" parent="Parallax2D_FONDO_cupulas" instance=ExtResource("26_g0a70")]
 position = Vector2(958, 338)
@@ -261,7 +297,7 @@ texture = ExtResource("27_diyxt")
 z_index = -70
 scroll_scale = Vector2(0.25, 0.1)
 repeat_size = Vector2(1280, 0)
-repeat_times = 7
+repeat_times = 9
 
 [node name="FondoSkylineLow" type="Sprite2D" parent="Parallax2D_FONDO_skyline"]
 position = Vector2(640, 360)
@@ -284,7 +320,7 @@ z_index = 30
 scroll_scale = Vector2(1.05, 1)
 scroll_offset = Vector2(29, 1)
 repeat_size = Vector2(1600, 0)
-repeat_times = 7
+repeat_times = 6
 
 [node name="poste_segba" parent="Parallax2D_PP_vereda" instance=ExtResource("22_4our3")]
 position = Vector2(170, 680)
@@ -307,10 +343,10 @@ width = 6.0
 default_color = Color(0, 0, 0, 1)
 
 [node name="orden_visibilidad" type="Label" parent="."]
-offset_left = -326.0
-offset_top = 31.0
-offset_right = -173.0
-offset_bottom = 444.0
+offset_left = -679.0
+offset_top = 47.0
+offset_right = -526.0
+offset_bottom = 556.0
 text = "Orden Z index
 -90 FONDO_cielo
 -80 FONDO_cupulas
@@ -318,7 +354,7 @@ text = "Orden Z index
 -70 FONDO_skyline
 -40 FONDO_vereda
 -30 MID_vereda
-
+-29 grafitti
 
 PERSONAJES ?
 
@@ -327,6 +363,41 @@ PERSONAJES ?
 50 PP_primer_plano
 
 "
+
+[node name="TUTO 1" type="Label" parent="."]
+offset_left = -282.0
+offset_top = 401.0
+offset_right = 102.0
+offset_bottom = 451.0
+text = "Ale está enojada y Bruno aún en trance del recital"
+
+[node name="TUTO 2" type="Label" parent="."]
+offset_left = 563.0
+offset_top = 336.0
+offset_right = 947.0
+offset_bottom = 386.0
+text = "¡¡Ya no hay bondi!!"
+
+[node name="TUTO 3" type="Label" parent="."]
+offset_left = 1568.0
+offset_top = 544.0
+offset_right = 1942.0
+offset_bottom = 594.0
+text = "Grafitti Bruno sigue a Ale, pero es algo temeroso"
+
+[node name="TUTO 4" type="Label" parent="."]
+offset_left = 4830.0
+offset_top = 422.0
+offset_right = 5204.0
+offset_bottom = 472.0
+text = "Grafitti Aqui ya se comportan normalmente"
+
+[node name="TUTO 5" type="Label" parent="."]
+offset_left = 5813.0
+offset_top = 517.0
+offset_right = 6187.0
+offset_bottom = 567.0
+text = "Grafitti Ale puede subirse a Bruno"
 
 [node name="FarolColganteA" parent="." instance=ExtResource("30_lkrhh")]
 position = Vector2(278, 324)
@@ -343,6 +414,16 @@ scale = Vector2(0.65, 0.65)
 [node name="FarolColganteA4" parent="." instance=ExtResource("30_lkrhh")]
 position = Vector2(5061, 353)
 scale = Vector2(0.65, 0.65)
+metadata/_edit_lock_ = true
+
+[node name="FarolColganteA5" parent="." instance=ExtResource("30_lkrhh")]
+position = Vector2(5854, 261)
+scale = Vector2(0.65, 0.65)
+metadata/_edit_lock_ = true
+
+[node name="FarolColganteA6" parent="." instance=ExtResource("30_lkrhh")]
+position = Vector2(7559, 328)
+scale = Vector2(0.65, 0.65)
 
 [node name="ParadaColectivo60" parent="." instance=ExtResource("30_43c8f")]
 z_index = -10
@@ -350,10 +431,11 @@ position = Vector2(419, 652)
 scale = Vector2(0.725, 0.725)
 
 [node name="Enojar-alejandra" parent="." instance=ExtResource("27_xt5e6")]
-position = Vector2(213, 829)
+position = Vector2(-115, 468)
+metadata/_edit_lock_ = true
 
 [node name="Eliminar-emocion" parent="." instance=ExtResource("27_j3434")]
-position = Vector2(4832, 400)
+position = Vector2(4756, 404)
 
 [node name="Enojar-bruno" parent="." instance=ExtResource("29_xt5e6")]
 position = Vector2(3262, 870)
@@ -361,6 +443,7 @@ position = Vector2(3262, 870)
 [node name="Bruno-bobo" parent="." instance=ExtResource("31_ohdn1")]
 position = Vector2(-271, 422)
 scale = Vector2(0.989984, 0.979877)
+metadata/_edit_lock_ = true
 
 [node name="casa" type="Polygon2D" parent="."]
 z_index = -30
@@ -391,6 +474,7 @@ position = Vector2(4482, 637)
 scale = Vector2(0.412849, 0.484118)
 color = Color(0.0681733, 0.0515147, 0.0539079, 1)
 polygon = PackedVector2Array(-1, 16, 1, -103, -10, -118, -21, -126, -6, -129, 3, -129, 8, -425, 8, -544, -22, -552, -40, -586, -70, -596, -92, -621, -62, -630, -13, -625, 6, -653, -1, -754, -23, -766, -18, -787, 1, -788, -1, -819, 81, -822, 114, -808, 121, -786, 109, -759, 138, -743, 134, -727, 649, -730, 653, -759, 698, -772, 704, -807, 845, -810, 845, -783, 891, -758, 889, -741, 1227, -740, 1238, -803, 1295, -828, 1435, -854, 1444, -783, 1589, -754, 1610.76, 61.9684, -7.26611, 61.9684)
+metadata/_edit_lock_ = true
 
 [node name="tanque_diaz" type="Polygon2D" parent="."]
 z_index = -31
@@ -434,9 +518,25 @@ position = Vector2(5051, 568)
 scale = Vector2(0.339844, 0.339844)
 texture = ExtResource("32_g0a70")
 
+[node name="grafitti_a_y_b4" type="Sprite2D" parent="."]
+modulate = Color(0.131454, 0.0748619, 0.216072, 1)
+z_index = -29
+position = Vector2(7552, 540)
+scale = Vector2(0.339844, 0.339844)
+texture = ExtResource("32_g0a70")
+
+[node name="grafitti_a_y_b3" type="Sprite2D" parent="."]
+modulate = Color(0.131454, 0.0748619, 0.216072, 1)
+z_index = -29
+position = Vector2(5852, 459)
+scale = Vector2(0.339844, 0.339844)
+texture = ExtResource("32_g0a70")
+
 [node name="pozo_segba" type="Node2D" parent="."]
 z_index = -28
 position = Vector2(2327, 655)
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="segba_valla" parent="pozo_segba" instance=ExtResource("33_2w312")]
 modulate = Color(0.493715, 0.639205, 0.539336, 1)
@@ -462,6 +562,8 @@ scale = Vector2(0.27, 0.27)
 [node name="pozo_segba2" type="Node2D" parent="."]
 z_index = -29
 position = Vector2(4245, 655)
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="segba_valla" parent="pozo_segba2" instance=ExtResource("33_2w312")]
 modulate = Color(0.493715, 0.639205, 0.539336, 1)
@@ -487,3 +589,10 @@ scale = Vector2(0.27, 0.27)
 [node name="Zona-muerte" parent="." instance=ExtResource("35_diyxt")]
 z_index = 50
 position = Vector2(2249, 658)
+
+[node name="Zona-muerte2" parent="." instance=ExtResource("35_diyxt")]
+z_index = 50
+position = Vector2(4155, 684)
+
+[node name="Caja2" parent="." instance=ExtResource("37_srns1")]
+position = Vector2(5545, 493)

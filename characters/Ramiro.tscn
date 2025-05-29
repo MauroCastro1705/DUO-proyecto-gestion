@@ -839,7 +839,7 @@ position = Vector2(-1, -215)
 [node name="Timer_flecha" type="Timer" parent="Flecha_UI"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(-48, -150, -48, -10, -20, 0, 17, 0, 48, -8, 48, -150, 38, -161, -40, -160)
+polygon = PackedVector2Array(-48, -150, -48, -10, -20, 0, 17, 0, 48, -10, 48, -150, 38, -161, -40, -160)
 
 [node name="RayCast2D_arista_der" type="RayCast2D" parent="."]
 position = Vector2(44, -13)
