@@ -8,7 +8,7 @@ var current_box: RigidBody2D = null
 #raycast bobo
 @onready var raycast_detecta_arista_der: RayCast2D = $RayCast2D_arista_der # para filo de aristas
 @onready var raycast_detecta_arista_izq: RayCast2D = $RayCast2D_arista_izq
-@onready var plat_hombros = %"plataforma-hombros"
+@onready var plat_hombros = $"plataforma-hombros/colision_hombros"
 
 ##movimiento##
 @export var speed: float = 130.0 #Velocidad horizontal
@@ -74,7 +74,7 @@ func hacer_accion():
 	pass
 	
 func _seguir_a_laura():
-
+		plat_hombros.disabled = true
 		var objetivo = get_tree().get_nodes_in_group("grupo-laura")
 		var laura = objetivo[0]
 		var direccion_x = sign(laura.global_position.x - global_position.x)
@@ -192,7 +192,7 @@ func check_emocion(emocion:String):
 			texto_character.visible = false #desactivamos cartel
 			Emociones.seguir_a_laura = false#desactiva el seguimiento a alejandra
 			Global.can_swap = true #revisar
-
+			plat_hombros.disabled = false
 
 
 		"enojado":
@@ -203,7 +203,7 @@ func check_emocion(emocion:String):
 			Emociones.gordo_mood_triste= false
 			Emociones.gordo_mood_bobo= false
 			Emociones.seguir_a_laura = false#desactiva el seguimiento a alejandra
-
+			plat_hombros.disabled = false
 
 
 		"bobo":

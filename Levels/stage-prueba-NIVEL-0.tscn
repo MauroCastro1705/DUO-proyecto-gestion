@@ -216,13 +216,13 @@ scale = Vector2(0.47, 0.47)
 [node name="Laura" parent="." instance=ExtResource("16_lkrhh")]
 modulate = Color(0.577255, 0.612528, 0.667861, 1)
 z_index = 10
-position = Vector2(-52, 543)
+position = Vector2(-56, 636)
 speed = 350.0
 jump_force = 900.0
 
 [node name="Ramiro" parent="." instance=ExtResource("17_2w312")]
 modulate = Color(0.530745, 0.511852, 0.516617, 1)
-position = Vector2(-209, 632)
+position = Vector2(-213, 647)
 
 [node name="Caja-liviana" parent="." instance=ExtResource("13_43c8f")]
 position = Vector2(3819, 432)
@@ -365,10 +365,10 @@ PERSONAJES ?
 "
 
 [node name="TUTO 1" type="Label" parent="."]
-offset_left = -282.0
-offset_top = 401.0
-offset_right = 102.0
-offset_bottom = 451.0
+offset_left = -184.0
+offset_top = 366.0
+offset_right = 200.0
+offset_bottom = 416.0
 text = "Ale está enojada y Bruno aún en trance del recital"
 
 [node name="TUTO 2" type="Label" parent="."]
@@ -379,10 +379,10 @@ offset_bottom = 386.0
 text = "¡¡Ya no hay bondi!!"
 
 [node name="TUTO 3" type="Label" parent="."]
-offset_left = 1568.0
-offset_top = 544.0
-offset_right = 1942.0
-offset_bottom = 594.0
+offset_left = 1403.0
+offset_top = 467.0
+offset_right = 1777.0
+offset_bottom = 517.0
 text = "Grafitti Bruno sigue a Ale, pero es algo temeroso"
 
 [node name="TUTO 4" type="Label" parent="."]
