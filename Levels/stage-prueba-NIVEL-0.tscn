@@ -340,7 +340,7 @@ position = Vector2(419, 652)
 scale = Vector2(0.725, 0.725)
 
 [node name="Enojar-alejandra" parent="." instance=ExtResource("27_xt5e6")]
-position = Vector2(216, 476)
+position = Vector2(213, 829)
 
 [node name="Eliminar-emocion" parent="." instance=ExtResource("27_j3434")]
 position = Vector2(4427, 404)
