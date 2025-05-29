@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://csaewt7cf5cao"]
+[gd_scene load_steps=36 format=3 uid="uid://csaewt7cf5cao"]
 
 [ext_resource type="Script" uid="uid://cwf7xjxte2dvi" path="res://Levels/stage_prueba_matias.gd" id="1_1ymud"]
 [ext_resource type="Texture2D" uid="uid://dhaet1yeq1xb1" path="res://_m_chars_test/assets/bondi_MOCKUP_1920px_OJO.png" id="2_43c8f"]
@@ -29,9 +29,10 @@
 [ext_resource type="PackedScene" uid="uid://cnq18idga5ieq" path="res://Levels/cajas-de-emociones/enojar-bruno.tscn" id="29_xt5e6"]
 [ext_resource type="PackedScene" uid="uid://cm7ggmbyk2i2o" path="res://_m_chars_test/assets/props_calle/parada_colectivo_60.tscn" id="30_43c8f"]
 [ext_resource type="PackedScene" uid="uid://blhbfdmwv86tg" path="res://_m_chars_test/assets/props_calle/farol_colgante_a.tscn" id="30_lkrhh"]
+[ext_resource type="Texture2D" uid="uid://di6hyblijik4q" path="res://_m_chars_test/assets/atlases/grafitti_calavera.tres" id="31_diyxt"]
 [ext_resource type="Texture2D" uid="uid://dbkcyn7q4y2x5" path="res://_m_chars_test/assets/atlases/medidor_luz_a.tres" id="31_lkrhh"]
 [ext_resource type="PackedScene" uid="uid://dfolir25yfoi" path="res://Levels/cajas-de-emociones/bruno-bobo.tscn" id="31_ohdn1"]
-[ext_resource type="Texture2D" uid="uid://cbpb11o8bmiso" path="res://_m_chars_test/assets/fondos/logo_AyB_256x.png" id="32_lkrhh"]
+[ext_resource type="Texture2D" uid="uid://bmrdqypayoumk" path="res://_m_chars_test/assets/atlases/grafitti_a_b.tres" id="32_g0a70"]
 [ext_resource type="PackedScene" uid="uid://k53ay6c1cltd" path="res://_m_chars_test/assets/props_calle/segba_valla.tscn" id="33_2w312"]
 [ext_resource type="PackedScene" uid="uid://grdh8m8au6ev" path="res://_m_chars_test/assets/cables_pelados/cables_pelados.tscn" id="34_g0a70"]
 
@@ -63,7 +64,11 @@ position = Vector2(-151, 676)
 
 [node name="Floor3" parent="pisos" instance=ExtResource("13_xt5e6")]
 z_index = 3
-position = Vector2(4907, 676)
+position = Vector2(4903, 676)
+
+[node name="Floor13" parent="pisos" instance=ExtResource("13_xt5e6")]
+z_index = 3
+position = Vector2(6044, 676)
 
 [node name="Floor6" parent="pisos" instance=ExtResource("13_xt5e6")]
 z_index = 3
@@ -278,7 +283,7 @@ z_index = 30
 scroll_scale = Vector2(1.05, 1)
 scroll_offset = Vector2(29, 1)
 repeat_size = Vector2(1600, 0)
-repeat_times = 5
+repeat_times = 7
 
 [node name="poste_segba" parent="Parallax2D_PP_vereda" instance=ExtResource("22_4our3")]
 position = Vector2(170, 680)
@@ -334,6 +339,10 @@ scale = Vector2(0.65, 0.65)
 position = Vector2(2337, 353)
 scale = Vector2(0.65, 0.65)
 
+[node name="FarolColganteA4" parent="." instance=ExtResource("30_lkrhh")]
+position = Vector2(5061, 353)
+scale = Vector2(0.65, 0.65)
+
 [node name="ParadaColectivo60" parent="." instance=ExtResource("30_43c8f")]
 z_index = -10
 position = Vector2(419, 652)
@@ -343,7 +352,7 @@ scale = Vector2(0.725, 0.725)
 position = Vector2(-119, 816)
 
 [node name="Eliminar-emocion" parent="." instance=ExtResource("27_j3434")]
-position = Vector2(4427, 404)
+position = Vector2(4832, 400)
 
 [node name="Enojar-bruno" parent="." instance=ExtResource("29_xt5e6")]
 position = Vector2(3262, 870)
@@ -390,6 +399,13 @@ polygon = PackedVector2Array(4.93223, -13.9112, 6.23759, -119.646, 12.7645, -122
 uv = PackedVector2Array(4.93223, -13.9112, 6.23759, -119.646, 12.7645, -122.257, 61.6837, -122.257, 61.7158, -124.868, 89.7813, -124.868, 89.9503, -122.257, 125.942, -122.257, 126.332, -130.742, 127.637, -132.047, 130.9, -132.7, 133.09, -131.9, 133.869, -128.784, 131.532, -128.784, 131.532, -131.121, 129.195, -131.121, 127.637, -129.563, 127.637, -122.257, 157.661, -122.257, 159.619, -11.9531, 151.786, -12.6058, 151.134, -38.0605, 140.038, -48.5035, 28.4289, -49.1561, 15.3752, -41.3239, 15.3752, -14.5638)
 metadata/_edit_lock_ = true
 
+[node name="GrafittiCalavera" type="Sprite2D" parent="."]
+modulate = Color(0.2, 0.046, 0.1307, 1)
+z_index = -29
+position = Vector2(2340, 570)
+scale = Vector2(0.795455, 0.795455)
+texture = ExtResource("31_diyxt")
+
 [node name="MedidorLuzA" type="Sprite2D" parent="."]
 modulate = Color(0.550509, 0.610703, 0.532161, 1)
 position = Vector2(1959, 591)
@@ -403,29 +419,66 @@ rotation = 0.0872665
 scale = Vector2(0.49, 0.49)
 texture = ExtResource("31_lkrhh")
 
-[node name="LogoAyB256x" type="Sprite2D" parent="."]
+[node name="grafitti_a_y_b" type="Sprite2D" parent="."]
 modulate = Color(0.131454, 0.0748619, 0.216072, 1)
+z_index = -29
 position = Vector2(1509, 568)
 scale = Vector2(0.339844, 0.339844)
-texture = ExtResource("32_lkrhh")
+texture = ExtResource("32_g0a70")
 
-[node name="segba_valla" parent="." instance=ExtResource("33_2w312")]
+[node name="grafitti_a_y_b2" type="Sprite2D" parent="."]
+modulate = Color(0.131454, 0.0748619, 0.216072, 1)
+z_index = -29
+position = Vector2(5051, 568)
+scale = Vector2(0.339844, 0.339844)
+texture = ExtResource("32_g0a70")
+
+[node name="pozo_segba" type="Node2D" parent="."]
+z_index = -28
+position = Vector2(2327, 655)
+
+[node name="segba_valla" parent="pozo_segba" instance=ExtResource("33_2w312")]
 modulate = Color(0.493715, 0.639205, 0.539336, 1)
-position = Vector2(2471, 662)
+position = Vector2(144, 7)
 scale = Vector2(0.664, 0.664)
 
-[node name="segba_valla2" parent="." instance=ExtResource("33_2w312")]
+[node name="segba_valla2" parent="pozo_segba" instance=ExtResource("33_2w312")]
 modulate = Color(0.493715, 0.639205, 0.539336, 1)
-position = Vector2(2265, 662)
+position = Vector2(-62, 7)
 scale = Vector2(0.664, 0.664)
 
-[node name="cables_pelados" parent="." instance=ExtResource("34_g0a70")]
+[node name="cables_pelados" parent="pozo_segba" instance=ExtResource("34_g0a70")]
 z_index = -10
-position = Vector2(2321, 680)
+position = Vector2(-6, 25)
 scale = Vector2(0.27, 0.27)
 
-[node name="cables_pelados2" parent="." instance=ExtResource("34_g0a70")]
+[node name="cables_pelados2" parent="pozo_segba" instance=ExtResource("34_g0a70")]
 z_index = -10
-position = Vector2(2417, 689)
+position = Vector2(90, 34)
+rotation = -2.09439
+scale = Vector2(0.27, 0.27)
+
+[node name="pozo_segba2" type="Node2D" parent="."]
+z_index = -29
+position = Vector2(4245, 655)
+
+[node name="segba_valla" parent="pozo_segba2" instance=ExtResource("33_2w312")]
+modulate = Color(0.493715, 0.639205, 0.539336, 1)
+position = Vector2(144, 7)
+scale = Vector2(0.664, 0.664)
+
+[node name="segba_valla2" parent="pozo_segba2" instance=ExtResource("33_2w312")]
+modulate = Color(0.493715, 0.639205, 0.539336, 1)
+position = Vector2(-62, 7)
+scale = Vector2(0.664, 0.664)
+
+[node name="cables_pelados" parent="pozo_segba2" instance=ExtResource("34_g0a70")]
+z_index = -10
+position = Vector2(-3, 51)
+scale = Vector2(0.27, 0.27)
+
+[node name="cables_pelados2" parent="pozo_segba2" instance=ExtResource("34_g0a70")]
+z_index = -10
+position = Vector2(82, 59)
 rotation = -2.09439
 scale = Vector2(0.27, 0.27)
