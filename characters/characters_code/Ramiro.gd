@@ -8,6 +8,7 @@ var current_box: RigidBody2D = null
 #raycast bobo
 @onready var raycast_detecta_arista_der: RayCast2D = $RayCast2D_arista_der # para filo de aristas
 @onready var raycast_detecta_arista_izq: RayCast2D = $RayCast2D_arista_izq
+@onready var plat_hombros = $"plataforma-hombros/CollisionShape2D"
 
 ##movimiento##
 @export var speed: float = 130.0 #Velocidad horizontal
@@ -28,7 +29,7 @@ var estaba_activo = false
 func _ready() -> void:
 	texto_character.visible = false
 	flecha.visible = true
-	
+	plat_hombros.disabled = false
 func _physics_process(delta: float) -> void:
 	var direction = Vector2.ZERO
 	#SI cambio de pj esta desabilitado#
@@ -184,6 +185,7 @@ func check_emocion(emocion:String):
 			texto_character.visible = false #desactivamos cartel
 			Emociones.seguir_a_laura = false#desactiva el seguimiento a alejandra
 			Global.can_swap = true #revisar
+			plat_hombros.disabled = false
 		"enojado":
 			print("emocion enojado")
 			Emociones.gordo_mood_normal = false
@@ -192,6 +194,7 @@ func check_emocion(emocion:String):
 			Emociones.gordo_mood_triste= false
 			Emociones.gordo_mood_bobo= false
 			Emociones.seguir_a_laura = false#desactiva el seguimiento a alejandra
+			plat_hombros.disabled = false
 		"bobo":
 			print("emocion bobo")
 			Emociones.gordo_mood_normal = false
@@ -201,6 +204,7 @@ func check_emocion(emocion:String):
 			Emociones.gordo_mood_bobo= true#ESTE
 			Emociones.seguir_a_laura = true#activa el seguimiento a alejandra
 			Global.can_swap = false
+			plat_hombros.disabled = true
 			
 ##---------EMCIONES-----------S##
 

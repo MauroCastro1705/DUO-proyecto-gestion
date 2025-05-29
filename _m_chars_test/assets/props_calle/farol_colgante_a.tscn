@@ -33,7 +33,7 @@ func _ready():
 	# TAU (2 * PI) represents a full circle in radians, ensuring a random starting point.
 	current_phase_offset = randf() * TAU 
 
-func _process(delta):
+func _process(_delta):
 	# Get the current time in seconds (Time.get_ticks_msec() is in milliseconds)
 	var time_in_seconds = Time.get_ticks_msec() / 1000.0
 	
