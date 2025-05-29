@@ -1,4 +1,4 @@
-[gd_scene load_steps=184 format=3 uid="uid://bbs86ttvb6dhi"]
+[gd_scene load_steps=185 format=3 uid="uid://bbs86ttvb6dhi"]
 
 [ext_resource type="Script" uid="uid://m850xbhl28ts" path="res://characters/characters_code/Ramiro.gd" id="2_cfd2t"]
 [ext_resource type="Texture2D" uid="uid://ksk8pwddi2sn" path="res://_m_chars_test/chars/assets/animaciones/gde_walk/gde_walk01_00001.png" id="3_8uh63"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dv4s2ojh2nqqh" path="res://assets/characters/animaciones/ramiro_walk_bobo/gde_walk_bobo_dummy.png" id="3_xdn6y"]
 [ext_resource type="Texture2D" uid="uid://bjbejyj8iirnl" path="res://assets/characters/animaciones/ramiro_salto_normal/gde_salto_normal_landing.png" id="4_3mpr4"]
 [ext_resource type="Texture2D" uid="uid://51yfew627mfu" path="res://assets/doted-line.png" id="4_jfpom"]
+[ext_resource type="Texture2D" uid="uid://b13gtb8o7meil" path="res://_m_chars_test/chars/assets/animaciones/gde_bobo_walk/gde_walk_bobo_00001.png" id="4_k6jee"]
 [ext_resource type="Texture2D" uid="uid://bce2j3ts008i8" path="res://_m_chars_test/chars/assets/animaciones/gde_walk/gde_walk01_00002.png" id="4_kj2mt"]
 [ext_resource type="Texture2D" uid="uid://cjk0exkyfg6r" path="res://assets/characters/animaciones/ramiro_enojado_in/gde_enojado_in_00001.png" id="5_17i8l"]
 [ext_resource type="Texture2D" uid="uid://cewkpq12s8pxq" path="res://_m_chars_test/chars/assets/animaciones/gde_walk/gde_walk01_00003.png" id="5_47fm8"]
@@ -201,11 +202,11 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_xdn6y")
+"texture": ExtResource("4_k6jee")
 }],
 "loop": true,
 "name": &"bobo_walk",
-"speed": 5.0
+"speed": 30.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -801,9 +802,9 @@ debug_color = Color(0.256769, 0.626522, 0.296495, 0.42)
 
 [node name="TextoGordo" type="Label" parent="."]
 unique_name_in_owner = true
-offset_left = -64.0
+offset_left = -123.0
 offset_top = -242.0
-offset_right = 50.0
+offset_right = -9.0
 offset_bottom = -193.0
 theme_override_font_sizes/font_size = 15
 text = "Empujando"
@@ -831,7 +832,7 @@ one_shot = true
 position = Vector2(-4, -99)
 scale = Vector2(0.435, 0.435)
 sprite_frames = SubResource("SpriteFrames_w370e")
-animation = &"bobo_idle"
+animation = &"bobo_walk"
 autoplay = "walk"
 speed_scale = 1.7
 
@@ -856,8 +857,8 @@ target_position = Vector2(16, 27)
 collision_mask = 9
 
 [node name="RayCast2D_arista_izq" type="RayCast2D" parent="."]
-position = Vector2(-48, -13)
-target_position = Vector2(-17, 26)
+position = Vector2(-47, -13)
+target_position = Vector2(-18, 27)
 collision_mask = 9
 
 [connection signal="timeout" from="TimerLabel" to="." method="_on_timer_label_timeout"]

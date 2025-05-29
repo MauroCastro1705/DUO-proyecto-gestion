@@ -39,6 +39,7 @@ overrides = {
 "box_color_custom": "Color(0, 0, 0, 0.827451)",
 "box_margin_bottom": "100.0",
 "box_size": "Vector2(500, 150)",
+"disabled": "true",
 "name_label_box_offset": "Vector2(-10, -30)",
 "name_label_custom_font_size": "40.0",
 "name_label_font": "\"res://assets/fonts/RookiePunk.ttf\"",
