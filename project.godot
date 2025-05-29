@@ -84,7 +84,7 @@ audio/channel_defaults={
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-window/size/mode=4
+window/size/mode=3
 window/stretch/mode="canvas_items"
 
 [editor_plugins]
@@ -195,6 +195,7 @@ locale/translations=PackedStringArray("res://addons/maaacks_menus_template/base/
 2d_physics/layer_5="plataforma-pj-grande"
 2d_physics/layer_6="proyectil"
 2d_physics/layer_7="zona-emociones"
+2d_physics/layer_8="desabilitar"
 
 [maaacks_menus_template]
 

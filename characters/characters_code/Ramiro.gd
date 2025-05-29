@@ -8,7 +8,7 @@ var current_box: RigidBody2D = null
 #raycast bobo
 @onready var raycast_detecta_arista_der: RayCast2D = $RayCast2D_arista_der # para filo de aristas
 @onready var raycast_detecta_arista_izq: RayCast2D = $RayCast2D_arista_izq
-@onready var plat_hombros = $"plataforma-hombros/CollisionShape2D"
+@onready var plat_hombros = %"plataforma-hombros"
 
 ##movimiento##
 @export var speed: float = 130.0 #Velocidad horizontal
@@ -29,7 +29,8 @@ var estaba_activo = false
 func _ready() -> void:
 	texto_character.visible = false
 	flecha.visible = true
-	plat_hombros.disabled = false
+
+
 func _physics_process(delta: float) -> void:
 	var direction = Vector2.ZERO
 	#SI cambio de pj esta desabilitado#
@@ -50,7 +51,6 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	update_animation(direction)
 	_update_flechita()
-	
 	
 func _procesar_input_movimiento() -> Vector2:
 	var dir = Vector2.ZERO
@@ -74,31 +74,29 @@ func hacer_accion():
 	pass
 	
 func _seguir_a_laura():
+
 		var objetivo = get_tree().get_nodes_in_group("grupo-laura")
 		var laura = objetivo[0]
 		var direccion_x = sign(laura.global_position.x - global_position.x)
 		var dist_a_chico: float = abs(laura.global_position.x - self.global_position.x)
+		raycast_detecta_arista_der.force_raycast_update()
+		raycast_detecta_arista_izq.force_raycast_update()
 		var hay_arista_a_der: bool = not raycast_detecta_arista_der.is_colliding()
 		var hay_arista_a_izq: bool = not raycast_detecta_arista_izq.is_colliding()
 		
-		## aristas revisar, falta discriminar sentido para que no se trabe en ambos
-		raycast_detecta_arista_der.force_raycast_update()
-		raycast_detecta_arista_izq.force_raycast_update()
-		
-		print("Bruno arista a derecha:",hay_arista_a_der)
-		print("Bruno arista a izquierda:",hay_arista_a_izq)
+		#print("Bruno arista a derecha:",hay_arista_a_der)
+		#print("Bruno arista a izquierda:",hay_arista_a_izq)
 		
 		if dist_a_chico > abs(dist_chico_enojado): #se le acerca hasta dist_chico_enojado
 			if (hay_arista_a_der and direccion_x==1) or (hay_arista_a_izq and direccion_x==-1):
 				velocity.x = 0
 			else:
 				velocity.x = direccion_x * speed
-		
-		update_animation(velocity)
 		move_and_slide()
 		texto_character.text = "Estoy bobo y sigo a Ale"
 		texto_character.visible = true
-		
+		var direction = Vector2(sign(velocity.x), 0)
+		update_animation(direction)
 		
 func _cambiar_esta_desabilitado():
 		texto_character.text = "No se puede cambiar de personaje ahora"
@@ -115,14 +113,16 @@ func update_animation(direction: Vector2):
 			if sprite.animation != "caida":
 				sprite.play("caida")  # Mientras cae
 		return  # No seguir con animaciones normales
-	if Emociones.gordo_mood_normal:
+	elif Emociones.gordo_mood_normal:
 		_animacion_normal(direction)
 		texto_character.text = "Estoy normal"
 		texto_character.visible = true
-	if Emociones.gordo_mood_enojado:
+	elif Emociones.gordo_mood_enojado:
 		_animacion_enojado(direction)
 		texto_character.text = "Estoy enojado"
 		texto_character.visible = true
+	elif Emociones.gordo_mood_bobo:
+		_animacion_embobado(direction)
 		
 		
 func _animacion_normal(direction : Vector2):
@@ -139,6 +139,13 @@ func _animacion_enojado(direction : Vector2):
 	else:
 		sprite.play("enojado_idle")
 #MAS ANIMACIONES DE HUMOR
+func _animacion_embobado(direction : Vector2):
+	if direction.x != 0:
+		sprite.play("bobo_walk")
+		sprite.flip_h = direction.x > 0
+	else:
+		sprite.play("bobo_walk")
+
 ##---------ANIMACIONEs-----------S##
 
 
@@ -185,7 +192,9 @@ func check_emocion(emocion:String):
 			texto_character.visible = false #desactivamos cartel
 			Emociones.seguir_a_laura = false#desactiva el seguimiento a alejandra
 			Global.can_swap = true #revisar
-			plat_hombros.disabled = false
+
+
+
 		"enojado":
 			print("emocion enojado")
 			Emociones.gordo_mood_normal = false
@@ -194,7 +203,9 @@ func check_emocion(emocion:String):
 			Emociones.gordo_mood_triste= false
 			Emociones.gordo_mood_bobo= false
 			Emociones.seguir_a_laura = false#desactiva el seguimiento a alejandra
-			plat_hombros.disabled = false
+
+
+
 		"bobo":
 			print("emocion bobo")
 			Emociones.gordo_mood_normal = false
@@ -204,8 +215,7 @@ func check_emocion(emocion:String):
 			Emociones.gordo_mood_bobo= true#ESTE
 			Emociones.seguir_a_laura = true#activa el seguimiento a alejandra
 			Global.can_swap = false
-			plat_hombros.disabled = true
-			
+
 ##---------EMCIONES-----------S##
 
 

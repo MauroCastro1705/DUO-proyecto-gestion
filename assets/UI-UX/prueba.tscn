@@ -1,25 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://dqe6icjrnjy72"]
+[gd_scene load_steps=4 format=3 uid="uid://dqe6icjrnjy72"]
 
 [ext_resource type="Script" uid="uid://12kwdtlosbe3" path="res://assets/UI-UX/prueba.gd" id="1_lba77"]
 [ext_resource type="Material" uid="uid://daes63jxbwg0u" path="res://Shaders/glow.tres" id="1_rhie2"]
 [ext_resource type="Material" uid="uid://c14frg4lwc7vv" path="res://Shaders/neon-parpadea.tres" id="2_vqom8"]
-[ext_resource type="Texture2D" uid="uid://dcelpcr0cr277" path="res://assets/UI-UX/AlejandraElegida.png" id="3_xhtkk"]
-[ext_resource type="Texture2D" uid="uid://caeja2472r6jg" path="res://assets/UI-UX/BrunoElegido.png" id="5_lba77"]
-[ext_resource type="Shader" uid="uid://d141gju63dyr4" path="res://Shaders/neon-outline.gdshader" id="6_lba77"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_lba77"]
-shader = ExtResource("6_lba77")
-shader_parameter/glow_color = Color(0.913725, 0, 1, 1)
-shader_parameter/glow_size = 4.0
-shader_parameter/glow_strength = 3.0
-shader_parameter/custom_texture = ExtResource("3_xhtkk")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_oesn4"]
-shader = ExtResource("6_lba77")
-shader_parameter/glow_color = Color(0, 1, 1, 1)
-shader_parameter/glow_size = 4.0
-shader_parameter/glow_strength = 3.0
-shader_parameter/custom_texture = ExtResource("5_lba77")
 
 [node name="Prueba" type="Control"]
 layout_mode = 3
@@ -53,13 +36,3 @@ offset_left = 505.0
 offset_top = 33.0
 offset_right = 956.0
 offset_bottom = 363.0
-
-[node name="AlejandraElegida" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_lba77")
-position = Vector2(172, 80)
-texture = ExtResource("3_xhtkk")
-
-[node name="BrunoElegido" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_oesn4")
-position = Vector2(123, 79)
-texture = ExtResource("5_lba77")

@@ -28,7 +28,7 @@ func _ready() -> void:
 	texto_character.visible = false
 	
 func _physics_process(delta: float) -> void:
-	if raycast_down.is_colliding():		# Detectar si estamos sobre el personaje grande
+	if raycast_down.is_colliding() and Emociones.gordo_mood_bobo:
 		var collider = raycast_down.get_collider()
 		_colision_sobre_ramiro(collider)
 	var direction = Vector2.ZERO
@@ -69,13 +69,14 @@ func _aplicar_gravedad( delta):
 		velocity.y += gravity * delta
 
 func _colision_sobre_ramiro(collider):
-	if collider.name == "plataforma-hombros":
-		is_on_big_character = true
-		big_character_velocity = collider.velocity
-		Global.lauraOnTop = true
-		velocity.x += big_character_velocity.x
-	else:
-		_no_esta_sobre_personaje()
+	if Emociones.gordo_mood_bobo == false:
+		if collider.name == "plataforma-hombros":
+			is_on_big_character = true
+			big_character_velocity = collider.velocity
+			Global.lauraOnTop = true
+			velocity.x += big_character_velocity.x
+		else:
+			_no_esta_sobre_personaje()
 
 func _no_esta_sobre_personaje():
 		is_on_big_character = false
