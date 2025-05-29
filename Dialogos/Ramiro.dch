@@ -12,9 +12,9 @@
 },
 &"default_portrait": "",
 &"description": "",
-&"display_name": "Ramiro",
+&"display_name": "Bruno",
 &"mirror": true,
-&"nicknames": ["Ramardo"],
+&"nicknames": ["Brunardo"],
 &"offset": Vector2(0, 0),
 &"portraits": {},
 &"scale": 1.0
