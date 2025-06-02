@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://buaykj4mfqsby"]
+[gd_scene load_steps=24 format=3 uid="uid://buaykj4mfqsby"]
 
 [ext_resource type="Script" uid="uid://2k28c50c4nhw" path="res://Levels/niveles-de-prueba/stage_prueba_emociones.gd" id="1_3pfn6"]
 [ext_resource type="Texture2D" uid="uid://byfh070wslkxt" path="res://assets/Background/NightSky_Tile_1.png" id="2_ncoa7"]
@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://d1c8t78wpgo4a" path="res://Levels/Objetos/plataforma-4.tscn" id="20_iqwrl"]
 [ext_resource type="PackedScene" uid="uid://cwfe1busr0b28" path="res://Levels/Objetos/poste-luz.tscn" id="21_mpaah"]
 [ext_resource type="AudioStream" uid="uid://deis2quqwnuce" path="res://assets/musica/main-theme.mp3" id="21_nfak7"]
+[ext_resource type="PackedScene" uid="uid://cprdx7anu7l1" path="res://assets/UI-UX/UI-final.tscn" id="22_5f0r5"]
 [ext_resource type="PackedScene" uid="uid://bf5b82fejpexj" path="res://Levels/Objetos/entel.tscn" id="22_riehi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0yrxn"]
@@ -147,11 +148,17 @@ z_index = 3
 position = Vector2(2062, 961)
 
 [node name="Camera2D" type="Camera2D" parent="." groups=["scene_manager_entity_nodes"]]
-position = Vector2(-5, 10)
+position = Vector2(-129, -998)
 offset = Vector2(50, -170)
 position_smoothing_enabled = true
 position_smoothing_speed = 8.0
 metadata/entity_name = "camera"
+
+[node name="Ui-final" parent="Camera2D" instance=ExtResource("22_5f0r5")]
+offset_left = -823.0
+offset_top = 1253.0
+offset_right = -823.0
+offset_bottom = 1253.0
 
 [node name="luces-y-postes" type="Node" parent="."]
 

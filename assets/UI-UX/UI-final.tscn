@@ -26,26 +26,29 @@ script = ExtResource("1_q1c2u")
 
 [node name="BoxContainer" type="BoxContainer" parent="."]
 layout_mode = 0
-offset_right = 387.0
-offset_bottom = 150.0
+offset_left = -165.0
+offset_top = -120.0
+offset_right = 243.0
+offset_bottom = 117.0
 
-[node name="BrunoCabejaMejor" type="Sprite2D" parent="."]
-position = Vector2(520, 405)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_8y50k")
-
-[node name="Bruno_neon" type="Sprite2D" parent="BrunoCabejaMejor"]
-z_index = -5
+[node name="Bruno_neon" type="Sprite2D" parent="BoxContainer"]
 material = SubResource("ShaderMaterial_veqf4")
-position = Vector2(-2, 2)
+position = Vector2(127.75, 118.25)
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_8y50k")
 
-[node name="AlejandraCabezaMejor" type="Sprite2D" parent="."]
-position = Vector2(728.25, 410.25)
-scale = Vector2(0.5, 0.5)
+[node name="BrunoCabejaMejor" type="Sprite2D" parent="BoxContainer"]
+position = Vector2(128.75, 117.25)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_8y50k")
+
+[node name="Alejandra_neon" type="Sprite2D" parent="BoxContainer"]
+material = SubResource("ShaderMaterial_a0grc")
+position = Vector2(198.95, 120.75)
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("4_ru35l")
 
-[node name="Alejandra_neon" type="Sprite2D" parent="AlejandraCabezaMejor"]
-z_index = -5
-material = SubResource("ShaderMaterial_a0grc")
+[node name="AlejandraCabezaMejor" type="Sprite2D" parent="BoxContainer"]
+position = Vector2(198.95, 120.75)
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("4_ru35l")

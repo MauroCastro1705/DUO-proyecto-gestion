@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://csaewt7cf5cao"]
+[gd_scene load_steps=39 format=3 uid="uid://csaewt7cf5cao"]
 
 [ext_resource type="Script" uid="uid://cwf7xjxte2dvi" path="res://Levels/stage_prueba_matias.gd" id="1_1ymud"]
 [ext_resource type="Texture2D" uid="uid://dhaet1yeq1xb1" path="res://_m_chars_test/assets/bondi_MOCKUP_1920px_OJO.png" id="2_43c8f"]
@@ -37,6 +37,7 @@
 [ext_resource type="PackedScene" uid="uid://grdh8m8au6ev" path="res://_m_chars_test/assets/cables_pelados/cables_pelados.tscn" id="34_g0a70"]
 [ext_resource type="PackedScene" uid="uid://7eavlp274h7s" path="res://Levels/cajas-de-emociones/zona-muerte.tscn" id="35_diyxt"]
 [ext_resource type="PackedScene" uid="uid://duj67f7bmlhfw" path="res://Levels/Objetos/caja_2.tscn" id="37_srns1"]
+[ext_resource type="PackedScene" uid="uid://cprdx7anu7l1" path="res://assets/UI-UX/UI-final.tscn" id="38_5udix"]
 
 [node name="Stage-prueba-matias" type="Node2D"]
 script = ExtResource("1_1ymud")
@@ -148,12 +149,18 @@ position = Vector2(1134, 653)
 position = Vector2(465, 645)
 
 [node name="Camera2D" type="Camera2D" parent="." groups=["scene_manager_entity_nodes"]]
+position = Vector2(1051, -345)
 offset = Vector2(80, -274.82)
 zoom = Vector2(1.5, 1.5)
 position_smoothing_enabled = true
 position_smoothing_speed = 8.0
 metadata/entity_name = "camera"
-metadata/_edit_lock_ = true
+
+[node name="Ui-final" parent="Camera2D" instance=ExtResource("38_5udix")]
+offset_left = -432.0
+offset_top = -560.0
+offset_right = -432.0
+offset_bottom = -560.0
 
 [node name="luces-y-postes" type="Node" parent="."]
 
