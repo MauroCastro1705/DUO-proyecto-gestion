@@ -32,6 +32,8 @@ var laura_texto_mood_ignorando:String = "estoy triste"
 var laura_mood_rockeando:bool = false
 var laura_texto_mood_rockeado:String = "estoy rockeando"
 
+var laura_mood_cauta:bool = false
+var laura_mood_cauta_texto :String = "estoy cauta"
 #EMOCIONES-COMPARTIDAS----------
 
 #FUNCIONES GENERALES

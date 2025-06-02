@@ -26,6 +26,7 @@ func _ready() -> void:
 	Global.lauraOnTop = false
 	flecha.visible = false
 	texto_character.visible = false
+	Emociones.laura_mood_cauta = true
 	
 func _physics_process(delta: float) -> void:
 	if raycast_down.is_colliding() and Emociones.gordo_mood_bobo:

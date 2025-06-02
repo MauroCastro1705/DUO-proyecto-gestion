@@ -10,6 +10,9 @@ var current_box: RigidBody2D = null
 @onready var raycast_detecta_arista_izq: RayCast2D = $RayCast2D_arista_izq
 @onready var plat_hombros = $"plataforma-hombros/colision_hombros"
 
+#emociones
+@onready var zona_cauta = $zona_cauta
+
 ##movimiento##
 @export var speed: float = 130.0 #Velocidad horizontal
 @export var speedLauraOnTop:float = 90.0 #velocidad con laura encima
@@ -29,7 +32,7 @@ var estaba_activo = false
 func _ready() -> void:
 	texto_character.visible = false
 	flecha.visible = true
-
+	zona_cauta.disable_mode = true
 
 func _physics_process(delta: float) -> void:
 	var direction = Vector2.ZERO
@@ -51,6 +54,9 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	update_animation(direction)
 	_update_flechita()
+	_ale_zona_cauta()
+	
+	
 	
 func _procesar_input_movimiento() -> Vector2:
 	var dir = Vector2.ZERO
@@ -216,6 +222,11 @@ func check_emocion(emocion:String):
 			Emociones.seguir_a_laura = true#activa el seguimiento a alejandra
 			Global.can_swap = false
 
+func _ale_zona_cauta():
+	if Emociones.laura_mood_cauta:
+		zona_cauta.disable_mode = false
+	else:
+		zona_cauta.disable_mode = true	
 ##---------EMCIONES-----------S##
 
 
