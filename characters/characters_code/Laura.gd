@@ -21,6 +21,7 @@ var played_apex = false
 @onready var flecha = %Flecha_UI
 @onready var flecha_timer = $Flecha_UI/Timer_flecha
 var estaba_activo = false
+var empujando = false #esta empujando o no el personaje
 
 func _ready() -> void:
 	Global.lauraOnTop = false
@@ -47,15 +48,21 @@ func _procesar_input_movimiento() -> Vector2:
 		dir.x += 1
 	if Input.is_action_pressed("izquierda"):
 		dir.x -= 1
-	if Input.is_action_just_pressed("salto") and is_on_floor():
+	if Input.is_action_just_pressed("salto") and is_on_floor() and not empujando: 
+		#puede saltar si esta en el piso y no esta empujando
 		velocity.y = -jump_force
 		is_jumping = true #para animacion
 		played_apex = false
 		sprite.play("pre_salto")
 	if Input.is_action_just_pressed("empujar") and joint == null:
 		empujar_caja()
+		speed = 150
+		empujando = true 
+		
 	if Input.is_action_just_released("empujar"):
 		texto_character.visible = false
+		speed = 400
+		empujando = false
 		remove_joint()
 	return dir
 	

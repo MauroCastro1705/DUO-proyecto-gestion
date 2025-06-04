@@ -156,12 +156,6 @@ position_smoothing_enabled = true
 position_smoothing_speed = 8.0
 metadata/entity_name = "camera"
 
-[node name="Ui-final" parent="Camera2D" instance=ExtResource("38_5udix")]
-offset_left = -432.0
-offset_top = -560.0
-offset_right = -432.0
-offset_bottom = -560.0
-
 [node name="luces-y-postes" type="Node" parent="."]
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="luces-y-postes"]
@@ -244,7 +238,7 @@ position = Vector2(6238, 239)
 position = Vector2(5328, 506)
 
 [node name="Caja-liviana3" parent="." instance=ExtResource("13_43c8f")]
-position = Vector2(3142, 633)
+position = Vector2(3331, 707)
 
 [node name="Caja-liviana2" parent="." instance=ExtResource("13_43c8f")]
 position = Vector2(4121, 635)
@@ -603,3 +597,12 @@ position = Vector2(4155, 684)
 
 [node name="Caja2" parent="." instance=ExtResource("37_srns1")]
 position = Vector2(5545, 493)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Ui-final" parent="CanvasLayer" instance=ExtResource("38_5udix")]
+offset_left = 204.0
+offset_top = 143.0
+offset_right = 204.0
+offset_bottom = 143.0
+scale = Vector2(1.24, 1.24)

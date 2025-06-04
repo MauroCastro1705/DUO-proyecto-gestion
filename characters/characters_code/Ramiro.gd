@@ -71,6 +71,7 @@ func _procesar_input_movimiento() -> Vector2:
 		sprite.play("pre_salto")
 	if Input.is_action_just_pressed("empujar") and joint == null:
 		empujar_caja()
+		
 	if Input.is_action_just_released("empujar"):
 		texto_character.visible = false
 		remove_joint()
