@@ -27,7 +27,7 @@ func _ready() -> void:
 	Global.lauraOnTop = false
 	flecha.visible = false
 	texto_character.visible = false
-	Emociones.laura_mood_cauta = true
+	#Emociones.laura_mood_cauta = true #para test
 	
 func _physics_process(delta: float) -> void:
 	if raycast_down.is_colliding() and Emociones.gordo_mood_bobo:
@@ -167,7 +167,7 @@ func check_emocion(emocion:String):
 			print("emocion normal")
 			Emociones.laura_mood_normal = true#ESTE
 			Emociones.laura_mood_enojado= false
-			Emociones.laura_mood_cauto = false
+			Emociones.laura_mood_cauta = false
 			Emociones.laura_mood_ignorando= false
 			Emociones.laura_mood_rockeando= false
 			Dialogic.start("timeline_test2")
@@ -176,11 +176,19 @@ func check_emocion(emocion:String):
 			print("emocion enojada")
 			Emociones.laura_mood_normal = false
 			Emociones.laura_mood_enojado= true #ESTE
-			Emociones.laura_mood_cauto = false
+			Emociones.laura_mood_cauta = false
 			Emociones.laura_mood_ignorando= false
 			Emociones.laura_mood_rockeando= false
 			Dialogic.start("timeline_test")
 			get_viewport().set_input_as_handled()
+		"cauta":
+			print("emocion enojada")
+			Emociones.laura_mood_normal = false
+			Emociones.laura_mood_enojado= false
+			Emociones.laura_mood_cauta = true #ESTE
+			Emociones.laura_mood_ignorando= false
+			Emociones.laura_mood_rockeando= false
+
 #---------EMOCIONES----------------------
 
 

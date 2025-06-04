@@ -94,7 +94,11 @@ enabled=PackedStringArray("res://addons/Todo_Manager/plugin.cfg", "res://addons/
 [file_customization]
 
 folder_colors={
-"res://assets/UI-UX/": "green"
+"res://Dialogos/": "purple",
+"res://Levels/": "orange",
+"res://Shaders/": "blue",
+"res://assets/UI-UX/": "green",
+"res://characters/": "teal"
 }
 
 [global_group]

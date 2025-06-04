@@ -7,7 +7,7 @@ extends Control
 
 var last_active = ""
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Global.active_player_bruno and last_active != "bruno":
 		_activar_bruno()
 		last_active = "bruno"

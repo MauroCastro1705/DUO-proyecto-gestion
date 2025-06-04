@@ -9,7 +9,7 @@ uniform sampler2D custom_texture;
 void fragment() {
     vec2 uv = UV;
     vec2 tex_size = vec2(textureSize(custom_texture, 0));
-    
+
     float alpha_center = texture(custom_texture, uv).a;
     vec4 base_color = texture(custom_texture, uv);
 

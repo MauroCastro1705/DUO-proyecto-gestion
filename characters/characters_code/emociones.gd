@@ -23,9 +23,6 @@ var laura_mood_normal:bool = true
 var laura_mood_enojado:bool = false
 var laura_texto_mood_enojado:String = "estoy enojado"
 
-var laura_mood_cauto:bool = false
-var laura_texto_mood_cauto: String = "estoy bobo"
-
 var laura_mood_ignorando:bool = false
 var laura_texto_mood_ignorando:String = "estoy triste"
 
