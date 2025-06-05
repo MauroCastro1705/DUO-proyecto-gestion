@@ -42,6 +42,7 @@ offset_bottom = 14.0
 color = Color(0.1406, 0.29621, 0.38, 1)
 
 [node name="Label" type="Label" parent="."]
+visible = false
 offset_left = -41.0
 offset_top = -48.0
 offset_right = 46.0

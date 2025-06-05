@@ -1,10 +1,11 @@
-[gd_scene load_steps=44 format=3 uid="uid://csaewt7cf5cao"]
+[gd_scene load_steps=45 format=3 uid="uid://csaewt7cf5cao"]
 
 [ext_resource type="Script" uid="uid://cwf7xjxte2dvi" path="res://Levels/stage_prueba_matias.gd" id="1_1ymud"]
 [ext_resource type="Texture2D" uid="uid://dhaet1yeq1xb1" path="res://_m_chars_test/assets/bondi_MOCKUP_1920px_OJO.png" id="2_43c8f"]
 [ext_resource type="Script" uid="uid://cyh0d64pfygbl" path="res://addons/maaacks_menus_template/base/scripts/pause_menu_controller.gd" id="2_ws3q2"]
 [ext_resource type="PackedScene" uid="uid://ckwusaxwybu4g" path="res://Levels/scenes/overlaid_menus/pause_menu.tscn" id="3_6x6h4"]
 [ext_resource type="PackedScene" uid="uid://ccslrkwy1uquh" path="res://Levels/Objetos/caja-liviana.tscn" id="13_43c8f"]
+[ext_resource type="Texture2D" uid="uid://cy5k4d8laluye" path="res://assets/graffitis/Prueba-Grafitti.png" id="13_smnok"]
 [ext_resource type="PackedScene" uid="uid://tbbpbwsjlk7m" path="res://Levels/piso/floor.tscn" id="13_xt5e6"]
 [ext_resource type="PackedScene" uid="uid://2uvrv00n0bvf" path="res://_m_chars_test/assets/props_calle/vereda_cordon.tscn" id="15_de2g6"]
 [ext_resource type="PackedScene" uid="uid://3ht2b6g4whk7" path="res://characters/Laura.tscn" id="16_lkrhh"]
@@ -211,6 +212,12 @@ position = Vector2(4121, 635)
 [node name="Caja2" parent="Objetos interactuables" instance=ExtResource("37_srns1")]
 position = Vector2(5545, 493)
 
+[node name="Prueba-grafitti" type="Sprite2D" parent="Objetos interactuables"]
+position = Vector2(1701, 439)
+rotation = -0.253394
+scale = Vector2(0.461055, 0.461055)
+texture = ExtResource("13_smnok")
+
 [node name="Paralaxxes" type="Node" parent="."]
 
 [node name="Parallax2D_FONDO_CIELO" type="Parallax2D" parent="Paralaxxes"]
@@ -232,7 +239,7 @@ metadata/_edit_use_anchors_ = true
 metadata/_edit_lock_ = true
 
 [node name="FondoCieloLow" type="Sprite2D" parent="Paralaxxes/Parallax2D_FONDO_CIELO"]
-position = Vector2(5607, 348)
+position = Vector2(5607, 95)
 texture = ExtResource("23_j3434")
 metadata/_edit_lock_ = true
 
@@ -240,6 +247,7 @@ metadata/_edit_lock_ = true
 visible = false
 position = Vector2(640, 360)
 texture = ExtResource("20_p2qjq")
+metadata/_edit_lock_ = true
 
 [node name="Parallax2D_FONDO_cupulas" type="Parallax2D" parent="Paralaxxes"]
 z_index = -80
@@ -268,7 +276,7 @@ limit_begin = Vector2(0, 0)
 metadata/_edit_lock_ = true
 
 [node name="TeemLow" type="Sprite2D" parent="Paralaxxes/Parallax2D_FONDO_neones"]
-position = Vector2(1487, 246)
+position = Vector2(937, 227)
 scale = Vector2(0.775, 0.775)
 texture = ExtResource("27_diyxt")
 
@@ -341,7 +349,7 @@ metadata/_edit_lock_ = true
 position = Vector2(-456, 470)
 
 [node name="Eliminar-emocion" parent="cajas_emociones" instance=ExtResource("27_j3434")]
-position = Vector2(4756, 404)
+position = Vector2(4652, 397)
 
 [node name="Enojar-bruno" parent="cajas_emociones" instance=ExtResource("29_xt5e6")]
 position = Vector2(3262, 870)
@@ -376,6 +384,7 @@ PERSONAJES ?
 metadata/_edit_use_anchors_ = true
 
 [node name="TUTO 1" type="Label" parent="textos"]
+visible = false
 offset_left = -184.0
 offset_top = 366.0
 offset_right = 200.0
@@ -384,6 +393,7 @@ text = "Ale está enojada y Bruno aún en trance del recital"
 metadata/_edit_use_anchors_ = true
 
 [node name="TUTO 2" type="Label" parent="textos"]
+visible = false
 offset_left = 563.0
 offset_top = 336.0
 offset_right = 947.0
@@ -392,6 +402,7 @@ text = "¡¡Ya no hay bondi!!"
 metadata/_edit_use_anchors_ = true
 
 [node name="TUTO 3" type="Label" parent="textos"]
+visible = false
 offset_left = 1403.0
 offset_top = 467.0
 offset_right = 1777.0
@@ -400,18 +411,30 @@ text = "Grafitti Bruno sigue a Ale, pero es algo temeroso"
 metadata/_edit_use_anchors_ = true
 
 [node name="TUTO 4" type="Label" parent="textos"]
-offset_left = 4830.0
-offset_top = 422.0
-offset_right = 5204.0
-offset_bottom = 472.0
+visible = false
+anchors_preset = -1
+anchor_left = -0.11875
+anchor_right = -0.11875
+anchor_bottom = 0.0398148
+offset_left = 4758.0
+offset_top = 448.0
+offset_right = 5132.0
+offset_bottom = 498.0
 text = "Grafitti Aqui ya se comportan normalmente"
+autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="TUTO 5" type="Label" parent="textos"]
-offset_left = 5813.0
-offset_top = 517.0
-offset_right = 6187.0
-offset_bottom = 567.0
+visible = false
+anchors_preset = -1
+anchor_left = -0.0583333
+anchor_top = -0.0148148
+anchor_right = -0.0583333
+anchor_bottom = -0.0148148
+offset_left = 5733.0
+offset_top = 512.0
+offset_right = 6107.0
+offset_bottom = 562.0
 text = "Grafitti Ale puede subirse a Bruno"
 metadata/_edit_use_anchors_ = true
 
@@ -532,7 +555,7 @@ texture = ExtResource("31_lkrhh")
 [node name="grafitti_a_y_b" type="Sprite2D" parent="grafittis"]
 modulate = Color(0.131454, 0.0748619, 0.216072, 1)
 z_index = -29
-position = Vector2(1528, 558)
+position = Vector2(1466, 525)
 scale = Vector2(0.339844, 0.339844)
 texture = ExtResource("32_g0a70")
 
@@ -628,30 +651,36 @@ scale = Vector2(1.24, 1.24)
 metadata/_edit_use_anchors_ = true
 
 [node name="CartelPublicitario" type="Sprite2D" parent="."]
-position = Vector2(4056, -324)
+position = Vector2(2803, 562)
+scale = Vector2(0.593395, 0.466585)
 texture = ExtResource("37_h4jhl")
 
 [node name="CartelDeCalles" type="Sprite2D" parent="."]
-position = Vector2(3639, -403)
+position = Vector2(1181, 521)
+scale = Vector2(0.478836, 0.478836)
 texture = ExtResource("38_smnok")
 
 [node name="Buzon" type="Sprite2D" parent="."]
-position = Vector2(3349, -386)
-scale = Vector2(3.95745, 3.95745)
+position = Vector2(1310, 582.096)
+scale = Vector2(1.74468, 1.69637)
 texture = ExtResource("39_o8il5")
 
 [node name="Citroen2Cv" type="Sprite2D" parent="."]
-position = Vector2(4599, -317)
+position = Vector2(3869, 580)
+scale = Vector2(0.586021, 0.586021)
 texture = ExtResource("40_tpt0g")
 
 [node name="Fitito" type="Sprite2D" parent="."]
-position = Vector2(4720, -662)
+position = Vector2(7364, 581)
+scale = Vector2(0.6, 0.6)
 texture = ExtResource("41_yec2q")
 
 [node name="MarquesinaSubte" type="Sprite2D" parent="."]
-position = Vector2(5588, -478)
+position = Vector2(8930, 533)
+scale = Vector2(-0.5, 0.5)
 texture = ExtResource("42_y4rxx")
 
 [node name="RenaultFuego" type="Sprite2D" parent="."]
-position = Vector2(5528, -907)
+position = Vector2(9374, 600)
+scale = Vector2(0.6, 0.6)
 texture = ExtResource("43_e1b24")
