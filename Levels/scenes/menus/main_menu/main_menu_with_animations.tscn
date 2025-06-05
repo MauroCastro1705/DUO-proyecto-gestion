@@ -363,28 +363,28 @@ options_packed_scene = ExtResource("3_s34cn")
 credits_packed_scene = ExtResource("4_5n5tg")
 
 [node name="NightSkyTile1" type="Sprite2D" parent="." index="0"]
-position = Vector2(590, 281)
+position = Vector2(960, 526)
 texture = ExtResource("5_judgq")
 
 [node name="FarBuildingAsset1" type="Sprite2D" parent="." index="1"]
-position = Vector2(620, 435)
+position = Vector2(1004.5, 661.5)
 texture = ExtResource("6_kwlq3")
 
 [node name="FarBuildingAsset4" type="Sprite2D" parent="." index="2"]
-position = Vector2(262, 397)
+position = Vector2(646.5, 623.5)
 texture = ExtResource("7_k7fhm")
 
 [node name="BuildingAsset2" type="Sprite2D" parent="." index="3"]
-position = Vector2(126, 471)
+position = Vector2(510.5, 697.5)
 texture = ExtResource("8_sfsvc")
 
 [node name="BuildingAsset3" type="Sprite2D" parent="." index="4"]
-position = Vector2(895, 483)
+position = Vector2(1279.5, 709.5)
 scale = Vector2(1.17915, 1.17915)
 texture = ExtResource("9_gg3x4")
 
 [node name="BuildingAsset4" type="Sprite2D" parent="." index="5"]
-position = Vector2(436, 516)
+position = Vector2(820.5, 742.5)
 texture = ExtResource("10_0c21y")
 
 [node name="MenuAnimationPlayer" type="AnimationPlayer" parent="." index="7"]

@@ -182,7 +182,7 @@ func check_emocion(emocion:String):
 			Dialogic.start("timeline_test")
 			get_viewport().set_input_as_handled()
 		"cauta":
-			print("emocion enojada")
+			print("emocion cauta")
 			Emociones.laura_mood_normal = false
 			Emociones.laura_mood_enojado= false
 			Emociones.laura_mood_cauta = true #ESTE
