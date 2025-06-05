@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://csaewt7cf5cao"]
+[gd_scene load_steps=51 format=3 uid="uid://csaewt7cf5cao"]
 
 [ext_resource type="Script" uid="uid://cwf7xjxte2dvi" path="res://Levels/stage_prueba_matias.gd" id="1_1ymud"]
 [ext_resource type="Texture2D" uid="uid://dhaet1yeq1xb1" path="res://_m_chars_test/assets/bondi_MOCKUP_1920px_OJO.png" id="2_43c8f"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://ccslrkwy1uquh" path="res://Levels/Objetos/caja-liviana.tscn" id="13_43c8f"]
 [ext_resource type="Texture2D" uid="uid://cy5k4d8laluye" path="res://assets/graffitis/Prueba-Grafitti.png" id="13_smnok"]
 [ext_resource type="PackedScene" uid="uid://tbbpbwsjlk7m" path="res://Levels/piso/floor.tscn" id="13_xt5e6"]
+[ext_resource type="Texture2D" uid="uid://dwtsp27jos80c" path="res://assets/graffitis/A+B-Graffiti.png" id="14_b4ldf"]
 [ext_resource type="PackedScene" uid="uid://2uvrv00n0bvf" path="res://_m_chars_test/assets/props_calle/vereda_cordon.tscn" id="15_de2g6"]
 [ext_resource type="PackedScene" uid="uid://3ht2b6g4whk7" path="res://characters/Laura.tscn" id="16_lkrhh"]
 [ext_resource type="PackedScene" uid="uid://bm2tq4ierwg7s" path="res://_m_chars_test/assets/props_calle/vereda_calle.tscn" id="16_q2pka"]
@@ -44,6 +45,11 @@
 [ext_resource type="Texture2D" uid="uid://s8vrowsnu724" path="res://assets/Foreground (SILUETAS)/Fitito.png" id="41_yec2q"]
 [ext_resource type="Texture2D" uid="uid://ddof0bfmuq5mr" path="res://assets/Foreground (SILUETAS)/MarquesinaSubte.png" id="42_y4rxx"]
 [ext_resource type="Texture2D" uid="uid://d3kf7ut5juplp" path="res://assets/Foreground (SILUETAS)/RenaultFuego.png" id="43_e1b24"]
+[ext_resource type="Texture2D" uid="uid://ddrapighvqgmb" path="res://assets/graffitis/Ale-Graffiti.png" id="46_363qt"]
+[ext_resource type="Texture2D" uid="uid://hvl8ebpg52h1" path="res://assets/graffitis/Alejandra-Graffiti.png" id="47_v71oy"]
+[ext_resource type="Texture2D" uid="uid://cni47svlb0rvv" path="res://assets/graffitis/Bondis-Graffiti.png" id="48_14k3k"]
+[ext_resource type="Texture2D" uid="uid://c80asr0ca5ts6" path="res://assets/graffitis/Salta1-Graffiti.png" id="49_5o337"]
+[ext_resource type="Texture2D" uid="uid://dfje4oeabggx" path="res://assets/graffitis/Salta2-Graffiti.png" id="50_sjp4l"]
 
 [node name="Stage-prueba-matias" type="Node2D"]
 script = ExtResource("1_1ymud")
@@ -116,7 +122,7 @@ position = Vector2(1747, 676)
 
 [node name="Floor10" parent="pisos" instance=ExtResource("13_xt5e6")]
 z_index = 3
-position = Vector2(1684, 450)
+position = Vector2(1672, 476)
 scale = Vector2(0.355, 0.21)
 
 [node name="Floor14" parent="pisos" instance=ExtResource("13_xt5e6")]
@@ -213,10 +219,16 @@ position = Vector2(4121, 635)
 position = Vector2(5545, 493)
 
 [node name="Prueba-grafitti" type="Sprite2D" parent="Objetos interactuables"]
-position = Vector2(1701, 439)
+position = Vector2(1697, 487)
 rotation = -0.253394
-scale = Vector2(0.461055, 0.461055)
+scale = Vector2(0.379101, 0.388482)
 texture = ExtResource("13_smnok")
+
+[node name="A+b-graffiti" type="Sprite2D" parent="Objetos interactuables"]
+position = Vector2(2030, 435)
+rotation = -0.570665
+scale = Vector2(0.0873313, 0.0873313)
+texture = ExtResource("14_b4ldf")
 
 [node name="Paralaxxes" type="Node" parent="."]
 
@@ -684,3 +696,32 @@ texture = ExtResource("42_y4rxx")
 position = Vector2(9374, 600)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("43_e1b24")
+
+[node name="Ale-graffiti" type="Sprite2D" parent="."]
+position = Vector2(2689, 543)
+rotation = 0.0887397
+scale = Vector2(0.071608, 0.071608)
+texture = ExtResource("46_363qt")
+
+[node name="Alejandra-graffiti" type="Sprite2D" parent="."]
+position = Vector2(2452, 315)
+rotation = 0.108903
+scale = Vector2(0.329317, 0.329317)
+texture = ExtResource("47_v71oy")
+
+[node name="Bondis-graffiti" type="Sprite2D" parent="."]
+position = Vector2(5263, 589)
+rotation = 0.583735
+scale = Vector2(0.180935, 0.180935)
+texture = ExtResource("48_14k3k")
+
+[node name="Salta1-graffiti" type="Sprite2D" parent="."]
+position = Vector2(2234, 557)
+rotation = 0.365714
+scale = Vector2(0.0904523, 0.0904523)
+texture = ExtResource("49_5o337")
+
+[node name="Salta2-graffiti" type="Sprite2D" parent="."]
+position = Vector2(5283, 452)
+scale = Vector2(0.140703, 0.140704)
+texture = ExtResource("50_sjp4l")
