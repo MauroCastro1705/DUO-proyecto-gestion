@@ -192,7 +192,7 @@ position = Vector2(-543, 642)
 [node name="Objetos interactuables" type="Node" parent="."]
 
 [node name="Caja-liviana" parent="Objetos interactuables" instance=ExtResource("13_43c8f")]
-position = Vector2(3819, 432)
+position = Vector2(3818, 434)
 
 [node name="Caja-liviana4" parent="Objetos interactuables" instance=ExtResource("13_43c8f")]
 position = Vector2(5595, 633)
@@ -555,7 +555,7 @@ texture = ExtResource("31_lkrhh")
 [node name="grafitti_a_y_b" type="Sprite2D" parent="grafittis"]
 modulate = Color(0.131454, 0.0748619, 0.216072, 1)
 z_index = -29
-position = Vector2(1466, 525)
+position = Vector2(1372, 499)
 scale = Vector2(0.339844, 0.339844)
 texture = ExtResource("32_g0a70")
 
@@ -651,7 +651,7 @@ scale = Vector2(1.24, 1.24)
 metadata/_edit_use_anchors_ = true
 
 [node name="CartelPublicitario" type="Sprite2D" parent="."]
-position = Vector2(2803, 562)
+position = Vector2(2716, 567)
 scale = Vector2(0.593395, 0.466585)
 texture = ExtResource("37_h4jhl")
 
