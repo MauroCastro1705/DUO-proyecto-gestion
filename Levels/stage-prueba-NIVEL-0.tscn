@@ -125,7 +125,7 @@ scale = Vector2(0.075, 0.21)
 
 [node name="Floor16" parent="pisos" instance=ExtResource("13_xt5e6")]
 z_index = 3
-position = Vector2(6255, 290)
+position = Vector2(6230, 284)
 scale = Vector2(0.26, 0.21)
 
 [node name="Floor12" parent="pisos" instance=ExtResource("13_xt5e6")]
@@ -258,11 +258,10 @@ repeat_times = 9
 
 [node name="ColorRect" type="ColorRect" parent="Parallax2D_FONDO_CIELO"]
 offset_left = -5.0
-offset_top = 6.0
+offset_top = -314.0
 offset_right = 1915.0
 offset_bottom = 1086.0
 color = Color(0.101961, 0.117647, 0.137255, 1)
-metadata/_edit_lock_ = true
 
 [node name="FondoCieloLow" type="Sprite2D" parent="Parallax2D_FONDO_CIELO"]
 visible = false
