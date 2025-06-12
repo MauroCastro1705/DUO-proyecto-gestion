@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://drb0obdpv17cc"]
+
+[ext_resource type="PackedScene" uid="uid://b5cd6sa8qq4vc" path="res://addons/maaacks_menus_template/base/scenes/overlaid_menu/menus/pause_menu.tscn" id="1_d6ojl"]
+[ext_resource type="Script" uid="uid://4ieefgkpqugj" path="res://addons/maaacks_menus_template/examples/scenes/overlaid_menus/pause_menu.gd" id="2_ndv45"]
+[ext_resource type="PackedScene" uid="uid://65shnbd3xtxu" path="res://addons/maaacks_menus_template/examples/scenes/overlaid_menus/mini_options_overlaid_menu.tscn" id="3_7cjdp"]
+
+[node name="PauseMenu" instance=ExtResource("1_d6ojl")]
+script = ExtResource("2_ndv45")
+options_packed_scene = ExtResource("3_7cjdp")
+main_menu_scene = "res://addons/maaacks_menus_template/examples/scenes/menus/main_menu/main_menu_with_animations.tscn"
+
+[node name="TitleLabel" parent="MenuPanelContainer/MarginContainer/BoxContainer/TitleMargin" index="0"]
+text = "Pausa"
+
+[node name="OptionsButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/MenuButtonsMargin/MenuButtons" index="2"]
+text = "Opciones"
+
+[node name="MainMenuButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/MenuButtonsMargin/MenuButtons" index="3"]
+text = "Volver al menu"
+
+[node name="ExitButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/MenuButtonsMargin/MenuButtons" index="4"]
+text = "Salir del juego"

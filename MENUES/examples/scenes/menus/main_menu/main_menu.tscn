@@ -1,0 +1,21 @@
+[gd_scene load_steps=6 format=3 uid="uid://qofp3o6axi4l"]
+
+[ext_resource type="PackedScene" uid="uid://c6k5nnpbypshi" path="res://addons/maaacks_menus_template/base/scenes/menus/main_menu/main_menu.tscn" id="1_c00lr"]
+[ext_resource type="Script" uid="uid://bdet8115mn02d" path="res://addons/maaacks_menus_template/examples/scenes/menus/main_menu/main_menu.gd" id="2_ahnvp"]
+[ext_resource type="PackedScene" uid="uid://bdvdf5v87mmrr" path="res://addons/maaacks_menus_template/examples/scenes/menus/options_menu/master_options_menu_with_tabs.tscn" id="3_tievk"]
+[ext_resource type="PackedScene" uid="uid://wjcsvhdqikyl" path="res://addons/maaacks_menus_template/examples/scenes/credits/scrollable_credits.tscn" id="4_vmn4k"]
+[ext_resource type="Texture2D" uid="uid://dhcfexjh86c0y" path="res://assets/tittle-screen.png" id="5_ahnvp"]
+
+[node name="MainMenu" instance=ExtResource("1_c00lr")]
+script = ExtResource("2_ahnvp")
+options_packed_scene = ExtResource("3_tievk")
+credits_packed_scene = ExtResource("4_vmn4k")
+
+[node name="TitleLabel" parent="MenuContainer/TitleMargin/TitleContainer" index="0"]
+text = "Ya no hay Bondis"
+
+[node name="Tittle-screen" type="Sprite2D" parent="." index="8"]
+z_index = -5
+position = Vector2(937, 559)
+scale = Vector2(0.248, 0.248)
+texture = ExtResource("5_ahnvp")

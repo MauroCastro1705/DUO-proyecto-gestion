@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0bqdj6o680ii"]
+
+[ext_resource type="Texture2D" uid="uid://c4t1o2vuo6s8l" path="res://_m_chars_test/assets/atlases/atlas_a_01.png" id="1_wwn2x"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5m7h3"]
+atlas = ExtResource("1_wwn2x")
+region = Rect2(878.325, 0, 150.58, 0)
+
+[node name="poste_segba" type="Node2D"]
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(-52, -723)
+scale = Vector2(0.78, 0.78)
+
+[node name="TextureRect" type="TextureRect" parent="Node2D"]
+offset_right = 150.0
+offset_bottom = 1024.0
+texture = SubResource("AtlasTexture_5m7h3")

@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://ecrh4ox5dkd2"]
+
+[ext_resource type="Script" uid="uid://d33o00tueifmu" path="res://characters/ui/ui_settings.gd" id="1_ryjvi"]
+
+[node name="UI_settings" type="CanvasLayer"]
+script = ExtResource("1_ryjvi")
+
+[node name="GDEsaltoFuerza" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 29.0
+text = "GRANDE Salto Fuerza"
+
+[node name="GDEsaltoFuerza_edit" type="LineEdit" parent="GDEsaltoFuerza"]
+layout_mode = 0
+offset_left = 195.0
+offset_right = 296.0
+offset_bottom = 37.0
+
+[node name="GDEsaltoFuerza_slider" type="HSlider" parent="GDEsaltoFuerza"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 46.0
+offset_right = 300.0
+offset_bottom = 62.0
+focus_mode = 0
+max_value = 1000.0
+step = 10.0
+value = 200.0

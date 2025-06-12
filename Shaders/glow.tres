@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://daes63jxbwg0u"]
+
+[ext_resource type="Shader" uid="uid://c8s46wi6xw0o6" path="res://Shaders/glow.gdshader" id="1_g6ijr"]
+
+[resource]
+shader = ExtResource("1_g6ijr")
+shader_parameter/rect_size = Vector2(0.05, 0.02)
+shader_parameter/neon_color = Color(1, 0.344876, 0.617204, 1)
+shader_parameter/glow_strength = 3.0
+shader_parameter/fall_off = 50.0
+shader_parameter/brightness = 1.0

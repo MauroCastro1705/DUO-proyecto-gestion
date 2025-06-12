@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dnw7qm4ipakbt"
+path="res://.godot/imported/YNHB Fondo ciudad.mp3-5543c7e0102314904909a0a1e1620ba4.mp3str"
+
+[deps]
+
+source_file="res://assets/musica_sonidos/YNHB Fondo ciudad.mp3"
+dest_files=["res://.godot/imported/YNHB Fondo ciudad.mp3-5543c7e0102314904909a0a1e1620ba4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

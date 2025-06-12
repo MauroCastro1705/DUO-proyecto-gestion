@@ -1,0 +1,81 @@
+[gd_scene load_steps=9 format=3 uid="uid://ccslrkwy1uquh"]
+
+[ext_resource type="Script" uid="uid://dw83lgn8fjcce" path="res://Levels/Objetos/objetos_code/caja_1.gd" id="1_eull6"]
+[ext_resource type="Texture2D" uid="uid://d2rdult7rditc" path="res://assets/inputs/keyboard_e.png" id="2_5r63m"]
+[ext_resource type="Material" uid="uid://3lmoioy8rnus" path="res://Shaders/outline_2d.tres" id="2_8iy0x"]
+[ext_resource type="FontFile" uid="uid://frg1kvfoojuw" path="res://assets/fonts/punk_rockf.ttf" id="4_8iy0x"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_uj4g3"]
+friction = 0.5
+absorbent = true
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8iy0x"]
+size = Vector2(160, 62)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_eull6"]
+polygon = PackedVector2Array(-37, 14, -37, -13, 37, -13, 37, 14)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5r63m"]
+load_path = "res://.godot/imported/caja_liviana_2.png-11a18b9f47551b8af2f9d06d2fc35085.ctex"
+
+[node name="Caja-liviana" type="RigidBody2D" groups=["arrastrables", "liviano"]]
+collision_layer = 8
+collision_mask = 15
+mass = 20.0
+physics_material_override = SubResource("PhysicsMaterial_uj4g3")
+gravity_scale = 2.0
+lock_rotation = true
+continuous_cd = 2
+script = ExtResource("1_eull6")
+
+[node name="prender_shader" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="prender_shader"]
+position = Vector2(0, -17)
+shape = SubResource("RectangleShape2D_8iy0x")
+debug_color = Color(0.731, 0.47, 0.139, 0.034)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-39, -14, 39, -14, 39, 2, 34, 14, -33, 14, -39, 1)
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_eull6")
+
+[node name="Polygon2D2" type="Polygon2D" parent="."]
+color = Color(0.126942, 0.280506, 0.376127, 1)
+polygon = PackedVector2Array(20, -14, 36, -14, 38, -13, 39, -12, 39, 14, 33, 14, 29, 13, 24, 13)
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(0.112637, 0.247908, 0.318846, 1)
+polygon = PackedVector2Array(-39, 14, -39, -12, -38, -13, -36, -14, 23, -14, 25, -12, 26, -10, 26, 14, 24, 14, 17, 13, -29, 13, -30, 14)
+
+[node name="input" type="Sprite2D" parent="."]
+position = Vector2(-1.00001, -47)
+scale = Vector2(0.40625, 0.40625)
+texture = ExtResource("2_5r63m")
+
+[node name="CajaLiviana2" type="Sprite2D" parent="."]
+visible = false
+material = ExtResource("2_8iy0x")
+position = Vector2(-1, -6)
+scale = Vector2(0.4, 0.4)
+texture = SubResource("CompressedTexture2D_5r63m")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 14.0
+offset_top = -50.0
+offset_right = 368.0
+offset_bottom = -18.0
+scale = Vector2(0.2, 0.2)
+theme_override_fonts/font = ExtResource("4_8iy0x")
+theme_override_font_sizes/font_size = 31
+text = "para interactuar"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+
+[connection signal="body_entered" from="prender_shader" to="." method="_on_prender_shader_body_entered"]
+[connection signal="body_exited" from="prender_shader" to="." method="_on_prender_shader_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

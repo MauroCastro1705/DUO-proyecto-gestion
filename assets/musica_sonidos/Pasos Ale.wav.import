@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://3ttbl1p02c5l"
+path="res://.godot/imported/Pasos Ale.wav-0daf30135420354314bbbf899f80bb1a.sample"
+
+[deps]
+
+source_file="res://assets/musica_sonidos/Pasos Ale.wav"
+dest_files=["res://.godot/imported/Pasos Ale.wav-0daf30135420354314bbbf899f80bb1a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
