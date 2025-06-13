@@ -19,14 +19,15 @@ func _activar_bruno():
 	bruno_cabeza.z_index = 52
 	bruno_neon.visible = true
 	bruno_neon.z_index = 51
-	alejandra_cabeza.z_index = 1
+	alejandra_cabeza.z_index = 40
 	alejandra_neon.visible = false
-	alejandra_neon.z_index = 0
-		
+	alejandra_neon.z_index = 39
+
+
 func _activar_alejandra():
-	bruno_cabeza.z_index = 1
+	bruno_cabeza.z_index = 40
 	bruno_neon.visible = false
-	bruno_neon.z_index = 0
+	bruno_neon.z_index = 39
 	alejandra_cabeza.z_index = 52
 	alejandra_neon.visible = true
 	alejandra_neon.z_index = 51

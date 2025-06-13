@@ -1,8 +1,7 @@
-[gd_scene load_steps=521 format=3 uid="uid://bbs86ttvb6dhi"]
+[gd_scene load_steps=520 format=3 uid="uid://bbs86ttvb6dhi"]
 
 [ext_resource type="Script" uid="uid://m850xbhl28ts" path="res://characters/characters_code/Ramiro.gd" id="2_cfd2t"]
 [ext_resource type="Texture2D" uid="uid://e78wxqaps5wx" path="res://assets/characters/animaciones/ramiro_salto_normal/gde_salto_normal_down.png" id="3_rgijm"]
-[ext_resource type="Texture2D" uid="uid://dv4s2ojh2nqqh" path="res://assets/characters/animaciones/ramiro_walk_bobo/gde_walk_bobo_dummy.png" id="3_xdn6y"]
 [ext_resource type="Texture2D" uid="uid://bjbejyj8iirnl" path="res://assets/characters/animaciones/ramiro_salto_normal/gde_salto_normal_landing.png" id="4_3mpr4"]
 [ext_resource type="Texture2D" uid="uid://51yfew627mfu" path="res://assets/doted-line.png" id="4_jfpom"]
 [ext_resource type="Texture2D" uid="uid://376rd4xhbm2c" path="res://assets/characters/animaciones/gde_walk_bobo/gde_walk_bobo_00001.png" id="4_si263"]
@@ -532,11 +531,11 @@ size = Vector2(104, 20)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_xdn6y")
+"texture": ExtResource("7_qpkc0")
 }],
 "loop": true,
 "name": &"bobo_idle",
-"speed": 5.0
+"speed": 26.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -2214,9 +2213,8 @@ one_shot = true
 position = Vector2(-4, -99)
 scale = Vector2(0.435, 0.435)
 sprite_frames = SubResource("SpriteFrames_w370e")
-animation = &"idle"
+animation = &"bobo_idle"
 autoplay = "walk"
-frame_progress = 0.560469
 speed_scale = 1.7
 
 [node name="colision-general" type="CollisionShape2D" parent="."]

@@ -1,3 +1,4 @@
+class_name CharBruno
 extends CharacterBody2D
 
 ###para empujar cajas####
@@ -15,7 +16,7 @@ var esta_empujando:bool = false
 @onready var zona_cauta = $zona_cauta
 
 ##movimiento##
-@export var speed: float = 130.0 #Velocidad horizontal
+@export var speed: float = 180.0 #Velocidad horizontal
 @export var speedLauraOnTop:float = 90.0 #velocidad con laura encima
 @export var jump_force: float = 350.0 #Fuerza del salto
 @export var dist_chico_enojado: float = 200.0 #distancia a que sigue a chico cuando Bobo
@@ -30,10 +31,21 @@ var played_apex = false
 @onready var timer_flecha = $Flecha_UI/Timer_flecha
 var estaba_activo = false
 
+#distancia de ale
+@export var dist_grande_enojado: float = 500.0 #distancia de seguridad a bruno enojado
+@export var dist_seguridad_altura: float = 200.0 # dif de altura de seguridad a bruno enojado
+var rayo_enojo: Line2D = null # rayo de peligro si ale esta cerca de bruno enojado
+const rayo_enojo_ancho: float = 1.0
+
+@onready var objetivo = get_tree().get_nodes_in_group("grupo-laura")
+@onready var ale = objetivo[0]
+
 func _ready() -> void:
 	texto_character.visible = false
 	flecha.visible = true
 	zona_cauta.disable_mode = true
+	
+
 
 func _physics_process(delta: float) -> void:
 	var direction = Vector2.ZERO
@@ -47,11 +59,13 @@ func _physics_process(delta: float) -> void:
 		Global.can_swap = false
 	if is_active :
 		direction = _procesar_input_movimiento()
-	if Global.lauraOnTop:
-		velocity.x = direction.x * speedLauraOnTop
+
+	
+	if Emociones.e_grande_quiere_birra:
+		_handle_velocity_enojado(direction, delta)
 	else:
-		velocity.x = direction.x * speed     # Aplica movimiento horizontal
-	velocity.y += gravity * delta    # Aplicar gravedad al personaje
+		_handle_velocity(direction, delta)
+		
 	move_and_slide()
 	update_animation(direction)
 	_update_flechita()
@@ -78,13 +92,65 @@ func _procesar_input_movimiento() -> Vector2:
 		remove_joint()
 	return dir
 
+func _handle_velocity(direction: Vector2, delta):
+	velocity.x = direction.x * speed # Aplica movimiento horizontal
+	velocity.y += gravity * delta# Aplicar gravedad al personaje
+
+func _handle_velocity_enojado(direction: Vector2, delta):
+	var direccion_a_ale = sign(ale.global_position.x - global_position.x) # 1 si bruno a la derecha
+	var vector_a_ale: Vector2 = (ale.global_position + Vector2(0, -60.0)) - self.global_position
+	var dist_a_ale: float = vector_a_ale.length()
+	#var altura_a_ale: float = abs(ale.global_position.y - self.global_position.y)
+	var freezar_a_bruno: bool = dist_a_ale <= dist_grande_enojado and (direccion_a_ale == sign(direction.x)) and _bruno_a_la_vista()# and altura_a_ale < dist_seguridad_altura
+		
+	if freezar_a_bruno: #and altura_a_bruno < dist_seguridad_altura:
+		velocity.x = 0 #direction.x * speed * -1 # Aplica movimiento horizontal
+		print("En el limite y yendo a Bruno")
+	else:
+		velocity.x = direction.x * speed # Aplica movimiento horizontal
+	velocity.y += gravity * delta# Aplicar gravedad al personaje
+
+func _bruno_a_la_vista() -> bool:
+	var space_state := get_world_2d().direct_space_state # Get de space state, permite queries de fisica.
+	var ray_origin :Vector2= self.global_position + Vector2(0, -70.0) # calculo en 60 altura de ojos de ale
+	var ray_target :Vector2= ale.global_position + Vector2(0, -60.0) # calculo altura pecho de bru
+	var query := PhysicsRayQueryParameters2D.create(ray_origin, ray_target) # parametros del query 
+	
+	query.exclude = [self, ale] # excluir a ambos personajes del raycast
+	query.collision_mask = 1 + 8 # fijarse que usa el value del bit, ver pop up en mask de la collision
+	
+
+	var result: Dictionary = space_state.intersect_ray(query) # ejecuta la query.
+	print ("Bruno a la vista: ", result.is_empty())
+	
+	var rayo_enojo_color = Color.GREEN if result else Color.RED
+	_update_rayo_enojo(self.global_position+Vector2(0,-140), ale.global_position+Vector2(0,-60) , rayo_enojo_color)
+	
+	return result.is_empty() # si no hay nada en el diccionario, no cruzo nada, Bruno esta a la vista
+	
+func _update_rayo_enojo(start_pos: Vector2, end_pos: Vector2, color: Color):
+	if not is_instance_valid(rayo_enojo):
+		rayo_enojo = Line2D.new()
+		rayo_enojo.width = rayo_enojo_ancho
+		add_child(rayo_enojo)
+	
+	rayo_enojo.points = [to_local(start_pos), to_local(end_pos)]
+	rayo_enojo.default_color = color
+
+func _remove_rayo_enojo() -> void: # saca linea de la escena
+	if is_instance_valid(rayo_enojo):
+		rayo_enojo.queue_free()
+		# Set our reference back to null so we know to create a new one next time.
+		rayo_enojo = null
+		
+		
 func hacer_accion():
 	pass
 	
 func _seguir_a_laura():
 		plat_hombros.disabled = true
-		var objetivo = get_tree().get_nodes_in_group("grupo-laura")
-		var laura = objetivo[0]
+		var objetivoLaura = get_tree().get_nodes_in_group("grupo-laura")
+		var laura = objetivoLaura[0]
 		var direccion_x = sign(laura.global_position.x - global_position.x)
 		var dist_a_chico: float = abs(laura.global_position.x - self.global_position.x)
 		raycast_detecta_arista_der.force_raycast_update()

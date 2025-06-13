@@ -1,8 +1,9 @@
-[gd_scene load_steps=40 format=3 uid="uid://csaewt7cf5cao"]
+[gd_scene load_steps=51 format=3 uid="uid://csaewt7cf5cao"]
 
 [ext_resource type="Script" uid="uid://cwf7xjxte2dvi" path="res://Levels/stage_prueba_matias.gd" id="1_1ymud"]
-[ext_resource type="Texture2D" uid="uid://dhaet1yeq1xb1" path="res://_m_chars_test/assets/bondi_MOCKUP_1920px_OJO.png" id="2_43c8f"]
+[ext_resource type="Script" uid="uid://cyh0d64pfygbl" path="res://addons/maaacks_menus_template/base/scripts/pause_menu_controller.gd" id="2_ws3q2"]
 [ext_resource type="PackedScene" uid="uid://cprdx7anu7l1" path="res://assets/UI-UX/UI-final.tscn" id="5_3k8ib"]
+[ext_resource type="Texture2D" uid="uid://ddof0bfmuq5mr" path="res://assets/Foreground (SILUETAS)/MarquesinaSubte.png" id="12_yec2q"]
 [ext_resource type="PackedScene" uid="uid://ccslrkwy1uquh" path="res://Levels/Objetos/caja-liviana.tscn" id="13_43c8f"]
 [ext_resource type="PackedScene" uid="uid://tbbpbwsjlk7m" path="res://Levels/piso/floor.tscn" id="13_xt5e6"]
 [ext_resource type="PackedScene" uid="uid://cwfe1busr0b28" path="res://Levels/Objetos/poste-luz.tscn" id="14_43c8f"]
@@ -14,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://cw6m1wnbulxw4" path="res://_m_chars_test/assets/bondi/bondi_frente_motor.tscn" id="19_6x6h4"]
 [ext_resource type="Texture2D" uid="uid://nwnypbls3y2d" path="res://_m_chars_test/assets/bondi_MOCKUP_1280px_escalas.png" id="20_p2qjq"]
 [ext_resource type="PackedScene" uid="uid://d0bqdj6o680ii" path="res://_m_chars_test/assets/props_calle/poste_segba.tscn" id="22_4our3"]
+[ext_resource type="Texture2D" uid="uid://fyk4im12vpxa" path="res://assets/Background/PumperNicNeonCartel.png" id="22_b4ldf"]
 [ext_resource type="Texture2D" uid="uid://bb1qt3bxph8w0" path="res://_m_chars_test/assets/fondos/fondo_cielo_low.png" id="23_j3434"]
 [ext_resource type="Texture2D" uid="uid://c5gx0q4kwg6mg" path="res://_m_chars_test/assets/fondos/fondo_skyline_low.png" id="25_alcho"]
 [ext_resource type="PackedScene" uid="uid://bx1d8ob4jvuin" path="res://_m_chars_test/assets/props_calle/vereda_cordon_inv.tscn" id="25_q2pka"]
@@ -21,6 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://drkii2rmndvxt" path="res://_m_chars_test/assets/props_calle/cupula_a.tscn" id="26_g0a70"]
 [ext_resource type="PackedScene" uid="uid://wb0jbe71rde1" path="res://_m_chars_test/assets/props_calle/parquimetro_simple.tscn" id="27_alcho"]
 [ext_resource type="Texture2D" uid="uid://2o85iiayb163" path="res://_m_chars_test/assets/luces/teem_low.png" id="27_diyxt"]
+[ext_resource type="Texture2D" uid="uid://d3kf7ut5juplp" path="res://assets/Foreground (SILUETAS)/RenaultFuego.png" id="27_h4jhl"]
 [ext_resource type="PackedScene" uid="uid://b1scth4hh6j74" path="res://Levels/cajas-de-emociones/eliminar-emocion.tscn" id="27_j3434"]
 [ext_resource type="PackedScene" uid="uid://cj2qtqaborpim" path="res://Levels/cajas-de-emociones/enojar-alejandra.tscn" id="27_xt5e6"]
 [ext_resource type="PackedScene" uid="uid://d2le4fuym50ka" path="res://_m_chars_test/assets/props_calle/parquimetro_doble.tscn" id="28_xt5e6"]
@@ -36,8 +39,16 @@
 [ext_resource type="PackedScene" uid="uid://grdh8m8au6ev" path="res://_m_chars_test/assets/cables_pelados/cables_pelados.tscn" id="34_g0a70"]
 [ext_resource type="PackedScene" uid="uid://7eavlp274h7s" path="res://Levels/cajas-de-emociones/zona-muerte.tscn" id="35_diyxt"]
 [ext_resource type="PackedScene" uid="uid://duj67f7bmlhfw" path="res://Levels/Objetos/caja_2.tscn" id="37_srns1"]
-[ext_resource type="Script" uid="uid://cyh0d64pfygbl" path="res://addons/maaacks_menus_template/base/scripts/pause_menu_controller.gd" id="38_3k8ib"]
 [ext_resource type="PackedScene" uid="uid://dejh7w0j3ll3s" path="res://Levels/cajas-de-emociones/cauta-alejandra.tscn" id="38_5udix"]
+[ext_resource type="Texture2D" uid="uid://cy5k4d8laluye" path="res://assets/graffitis/Prueba-Grafitti.png" id="38_m0sfk"]
+[ext_resource type="Texture2D" uid="uid://dfje4oeabggx" path="res://assets/graffitis/Salta2-Graffiti.png" id="39_q32us"]
+[ext_resource type="Texture2D" uid="uid://dfnb8kccccm8m" path="res://assets/PLATAFORMAS/new-sucios/Plataforma-PuestoDeDiarios/Plataforma_EstructuraDelPuesto.png" id="41_h4jhl"]
+[ext_resource type="Texture2D" uid="uid://ddrapighvqgmb" path="res://assets/graffitis/Ale-Graffiti.png" id="41_smnok"]
+[ext_resource type="Texture2D" uid="uid://cni47svlb0rvv" path="res://assets/graffitis/Bondis-Graffiti.png" id="43_o8il5"]
+[ext_resource type="Texture2D" uid="uid://djebjt40khc7n" path="res://assets/PLATAFORMAS/Plataforma-Andamio/Adorno_Refuerzo1_Andamio.png" id="46_y4rxx"]
+[ext_resource type="Texture2D" uid="uid://d3ka3ii0yrd0e" path="res://assets/Foreground (SILUETAS)/Buzón.png" id="47_y4rxx"]
+[ext_resource type="Texture2D" uid="uid://dxxsk0qwxw6h0" path="res://assets/Background/CartelFechasConcreto.png" id="49_363qt"]
+[ext_resource type="PackedScene" uid="uid://drb0obdpv17cc" path="res://MENUES/examples/scenes/overlaid_menus/pause_menu.tscn" id="49_e1b24"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5udix"]
 size = Vector2(422.5, 241.5)
@@ -45,17 +56,12 @@ size = Vector2(422.5, 241.5)
 [node name="Stage-prueba-matias" type="Node2D"]
 script = ExtResource("1_1ymud")
 
-[node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
-position = Vector2(-206, 477)
-color = Color(0.82606, 0.82606, 0.82606, 1)
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="BondiMockup1920PxOjo" type="Sprite2D" parent="."]
-visible = false
-z_index = -85
-position = Vector2(960, 540)
-texture = ExtResource("2_43c8f")
-metadata/_edit_lock_ = true
+[node name="PauseMenuController" type="Node" parent="CanvasLayer"]
+script = ExtResource("2_ws3q2")
+pause_menu_packed = ExtResource("49_e1b24")
+metadata/_custom_type_script = "uid://cyh0d64pfygbl"
 
 [node name="Camera2D" type="Camera2D" parent="." groups=["scene_manager_entity_nodes"]]
 offset = Vector2(80, -274.82)
@@ -73,7 +79,9 @@ offset_bottom = -530.0
 
 [node name="Ramiro" parent="." instance=ExtResource("17_2w312")]
 modulate = Color(0.530745, 0.511852, 0.516617, 1)
-position = Vector2(-603, 603)
+position = Vector2(-200, 588)
+dist_grande_enojado = 300.0
+dist_seguridad_altura = 550.0
 
 [node name="Marker2D2" type="Marker2D" parent="Ramiro"]
 position = Vector2(23, -211)
@@ -81,7 +89,7 @@ position = Vector2(23, -211)
 [node name="Laura" parent="." instance=ExtResource("16_lkrhh")]
 modulate = Color(0.577255, 0.612528, 0.667861, 1)
 z_index = 10
-position = Vector2(-460, 625)
+position = Vector2(-44, 540)
 speed = 350.0
 speed_empuja_fraccion = 0.57
 jump_force = 900.0
@@ -127,15 +135,24 @@ position = Vector2(9428, 676)
 
 [node name="Floor27" parent="pisos" instance=ExtResource("13_xt5e6")]
 z_index = 3
-position = Vector2(10463, 676)
+position = Vector2(10564, 676)
 
 [node name="Floor32" parent="pisos" instance=ExtResource("13_xt5e6")]
 z_index = 3
-position = Vector2(11557, 676)
+position = Vector2(11695, 676)
+
+[node name="Floor36" parent="pisos" instance=ExtResource("13_xt5e6")]
+z_index = 3
+position = Vector2(12821, 676)
 
 [node name="Floor6" parent="pisos" instance=ExtResource("13_xt5e6")]
 z_index = 3
 position = Vector2(-2152, 124)
+rotation = 1.57079
+
+[node name="Floor37" parent="pisos" instance=ExtResource("13_xt5e6")]
+z_index = 3
+position = Vector2(-451, 124)
 rotation = 1.57079
 
 [node name="Floor7" parent="pisos" instance=ExtResource("13_xt5e6")]
@@ -173,27 +190,54 @@ scale = Vector2(0.26, 0.21)
 
 [node name="Floor28" parent="pisos" instance=ExtResource("13_xt5e6")]
 z_index = 3
-position = Vector2(10274, 521)
+position = Vector2(11407, 521)
 scale = Vector2(0.26, 0.21)
 
 [node name="Floor29" parent="pisos" instance=ExtResource("13_xt5e6")]
 z_index = 3
-position = Vector2(10923, 404)
+position = Vector2(12056, 404)
 scale = Vector2(0.065, 0.21)
 
 [node name="Floor33" parent="pisos" instance=ExtResource("13_xt5e6")]
 z_index = 3
-position = Vector2(8448, 285)
+position = Vector2(8064, 385)
 scale = Vector2(0.065, 0.21)
+
+[node name="Floor35" parent="pisos" instance=ExtResource("13_xt5e6")]
+z_index = 3
+position = Vector2(8582, 273)
+scale = Vector2(0.195039, 0.21)
+
+[node name="Floor41" parent="pisos" instance=ExtResource("13_xt5e6")]
+z_index = 3
+position = Vector2(9339, 146)
+scale = Vector2(0.195039, 0.21)
+
+[node name="Floor40" parent="pisos" instance=ExtResource("13_xt5e6")]
+z_index = 3
+position = Vector2(8268, 274)
+scale = Vector2(0.195039, 0.21)
+
+[node name="Floor38" parent="pisos" instance=ExtResource("13_xt5e6")]
+z_index = 3
+position = Vector2(8380, 69)
+rotation = 1.57079
+scale = Vector2(0.275, 0.21)
+
+[node name="Floor39" parent="pisos" instance=ExtResource("13_xt5e6")]
+z_index = 3
+position = Vector2(8008, 152)
+rotation = 1.57079
+scale = Vector2(0.115, 0.21)
 
 [node name="Floor34" parent="pisos" instance=ExtResource("13_xt5e6")]
 z_index = 3
-position = Vector2(8784, 556)
+position = Vector2(8784, 532)
 scale = Vector2(0.505, 0.21)
 
 [node name="Floor26" parent="pisos" instance=ExtResource("13_xt5e6")]
 z_index = 3
-position = Vector2(9346, 392)
+position = Vector2(10479, 392)
 scale = Vector2(0.22, 0.21)
 
 [node name="Floor18" parent="pisos" instance=ExtResource("13_xt5e6")]
@@ -204,19 +248,19 @@ scale = Vector2(0.145, 0.21)
 
 [node name="Floor23" parent="pisos" instance=ExtResource("13_xt5e6")]
 z_index = 3
-position = Vector2(10592, 183)
+position = Vector2(11725, 183)
 rotation = -1.57079
 scale = Vector2(0.145, 0.21)
 
 [node name="Floor30" parent="pisos" instance=ExtResource("13_xt5e6")]
 z_index = 3
-position = Vector2(10128, 610)
+position = Vector2(11261, 610)
 rotation = -1.57079
 scale = Vector2(0.145, 0.21)
 
 [node name="Floor31" parent="pisos" instance=ExtResource("13_xt5e6")]
 z_index = 3
-position = Vector2(9475, 283)
+position = Vector2(10608, 283)
 rotation = -1.57079
 scale = Vector2(0.225, 0.21)
 
@@ -238,7 +282,7 @@ scale = Vector2(0.355, 0.21)
 
 [node name="Floor4" parent="pisos" instance=ExtResource("13_xt5e6")]
 z_index = 3
-position = Vector2(11802, 78)
+position = Vector2(13073, 78)
 rotation = 1.57079
 
 [node name="Floor8" parent="pisos" instance=ExtResource("13_xt5e6")]
@@ -257,6 +301,14 @@ position = Vector2(1134, 653)
 
 [node name="VeredaCalle" parent="pisos" instance=ExtResource("16_q2pka")]
 position = Vector2(465, 645)
+
+[node name="MarquesinaSubte" type="Sprite2D" parent="pisos"]
+modulate = Color(1, 1, 1, 0.462745)
+z_index = -31
+position = Vector2(9606, 545)
+scale = Vector2(0.448617, 0.448617)
+texture = ExtResource("12_yec2q")
+flip_h = true
 
 [node name="luces-y-postes" type="Node" parent="."]
 
@@ -328,16 +380,25 @@ position = Vector2(5595, 633)
 position = Vector2(6291, 188)
 
 [node name="Caja-liviana8" parent="cajas" instance=ExtResource("13_43c8f")]
-position = Vector2(11124, 619)
+position = Vector2(12257, 619)
 
 [node name="Caja-liviana9" parent="cajas" instance=ExtResource("13_43c8f")]
-position = Vector2(11103, 551)
+position = Vector2(12236, 551)
 
 [node name="Caja-liviana10" parent="cajas" instance=ExtResource("13_43c8f")]
-position = Vector2(9408, 350)
+position = Vector2(10541, 350)
 
 [node name="Caja-liviana11" parent="cajas" instance=ExtResource("13_43c8f")]
 position = Vector2(8861, 629)
+
+[node name="Caja-liviana12" parent="cajas" instance=ExtResource("13_43c8f")]
+position = Vector2(8984, 507)
+
+[node name="Caja-liviana13" parent="cajas" instance=ExtResource("13_43c8f")]
+position = Vector2(8518, 247)
+
+[node name="Caja-liviana14" parent="cajas" instance=ExtResource("13_43c8f")]
+position = Vector2(8256, 217)
 
 [node name="Caja-liviana5" parent="cajas" instance=ExtResource("13_43c8f")]
 position = Vector2(5328, 506)
@@ -352,34 +413,40 @@ position = Vector2(4121, 635)
 position = Vector2(5545, 493)
 
 [node name="Caja3" parent="cajas" instance=ExtResource("37_srns1")]
-position = Vector2(9380, 612)
+position = Vector2(10513, 612)
 
 [node name="Caja4" parent="cajas" instance=ExtResource("37_srns1")]
-position = Vector2(10923, 612)
+position = Vector2(12056, 612)
 
 [node name="Caja5" parent="cajas" instance=ExtResource("37_srns1")]
-position = Vector2(10923, 537)
+position = Vector2(12056, 537)
 
 [node name="Caja6" parent="cajas" instance=ExtResource("37_srns1")]
-position = Vector2(10923, 463)
+position = Vector2(12056, 463)
 
 [node name="Caja10" parent="cajas" instance=ExtResource("37_srns1")]
 position = Vector2(8530, 614)
 
+[node name="Caja13" parent="cajas" instance=ExtResource("37_srns1")]
+position = Vector2(9040, 614)
+
 [node name="Caja11" parent="cajas" instance=ExtResource("37_srns1")]
-position = Vector2(8530, 513)
+position = Vector2(8622, 489)
 
 [node name="Caja12" parent="cajas" instance=ExtResource("37_srns1")]
-position = Vector2(8530, 440)
+position = Vector2(8622, 414)
+
+[node name="Caja14" parent="cajas" instance=ExtResource("37_srns1")]
+position = Vector2(8621, 338)
 
 [node name="Caja7" parent="cajas" instance=ExtResource("37_srns1")]
-position = Vector2(10243, 462)
+position = Vector2(11376, 462)
 
 [node name="Caja8" parent="cajas" instance=ExtResource("37_srns1")]
-position = Vector2(10243, 387)
+position = Vector2(11376, 387)
 
 [node name="Caja9" parent="cajas" instance=ExtResource("37_srns1")]
-position = Vector2(10243, 313)
+position = Vector2(11376, 313)
 
 [node name="Parallaxes" type="Node" parent="."]
 
@@ -432,6 +499,12 @@ scroll_scale = Vector2(0.225, 0.09)
 position = Vector2(1487, 246)
 scale = Vector2(0.775, 0.775)
 texture = ExtResource("27_diyxt")
+
+[node name="PumperNicNeonCartel" type="Sprite2D" parent="Parallaxes/Parallax2D_FONDO_neones"]
+modulate = Color(1, 1, 1, 0.713726)
+position = Vector2(2803, 314)
+scale = Vector2(0.34, 0.34)
+texture = ExtResource("22_b4ldf")
 
 [node name="Parallax2D_FONDO_skyline" type="Parallax2D" parent="Parallaxes"]
 z_index = -70
@@ -486,10 +559,10 @@ default_color = Color(0, 0, 0, 1)
 
 [node name="orden_visibilidad" type="Label" parent="textos"]
 visible = false
-offset_left = -679.0
-offset_top = 47.0
-offset_right = -526.0
-offset_bottom = 556.0
+offset_left = -916.0
+offset_top = 31.0
+offset_right = -763.0
+offset_bottom = 540.0
 text = "Orden Z index
 -90 FONDO_cielo
 -80 FONDO_cupulas
@@ -550,6 +623,7 @@ offset_bottom = 514.0
 text = "Grafitti Brno se enoja"
 
 [node name="TUTO 7" type="Label" parent="textos"]
+visible = false
 offset_left = 7942.0
 offset_top = 381.0
 offset_right = 8316.0
@@ -561,14 +635,17 @@ text = "probar si bruno no puede saltar con caja"
 [node name="FarolColganteA" parent="faroles" instance=ExtResource("30_lkrhh")]
 position = Vector2(278, 324)
 scale = Vector2(0.65, 0.65)
+metadata/_edit_lock_ = true
 
 [node name="FarolColganteA2" parent="faroles" instance=ExtResource("30_lkrhh")]
 position = Vector2(1238, 324)
 scale = Vector2(0.65, 0.65)
+metadata/_edit_lock_ = true
 
 [node name="FarolColganteA3" parent="faroles" instance=ExtResource("30_lkrhh")]
 position = Vector2(2337, 353)
 scale = Vector2(0.65, 0.65)
+metadata/_edit_lock_ = true
 
 [node name="FarolColganteA4" parent="faroles" instance=ExtResource("30_lkrhh")]
 position = Vector2(5061, 353)
@@ -583,6 +660,14 @@ metadata/_edit_lock_ = true
 [node name="FarolColganteA6" parent="faroles" instance=ExtResource("30_lkrhh")]
 position = Vector2(7559, 328)
 scale = Vector2(0.65, 0.65)
+metadata/_edit_lock_ = true
+
+[node name="RenaultFuego" type="Sprite2D" parent="faroles"]
+modulate = Color(1, 1, 1, 0.529412)
+z_index = -30
+position = Vector2(6116, 601)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("27_h4jhl")
 
 [node name="cajas_emociones" type="Node" parent="."]
 
@@ -594,14 +679,15 @@ metadata/_edit_lock_ = true
 position = Vector2(4756, 404)
 
 [node name="Enojar-bruno" parent="cajas_emociones" instance=ExtResource("29_xt5e6")]
-position = Vector2(7291, 426)
+position = Vector2(7349, 651)
 
 [node name="Bruno-bobo" parent="cajas_emociones" instance=ExtResource("31_ohdn1")]
-position = Vector2(-646, 425)
+position = Vector2(-271, 422)
 scale = Vector2(0.989984, 0.979877)
+metadata/_edit_lock_ = true
 
 [node name="Cauta-alejandra" parent="cajas_emociones" instance=ExtResource("38_5udix")]
-position = Vector2(7603, 469)
+position = Vector2(7474, 653)
 
 [node name="graffitis" type="Node" parent="."]
 
@@ -745,6 +831,29 @@ polygon = PackedVector2Array(4.93223, -13.9112, 6.23759, -119.646, 12.7645, -122
 uv = PackedVector2Array(4.93223, -13.9112, 6.23759, -119.646, 12.7645, -122.257, 61.6837, -122.257, 61.7158, -124.868, 89.7813, -124.868, 89.9503, -122.257, 125.942, -122.257, 126.332, -130.742, 127.637, -132.047, 130.9, -132.7, 133.09, -131.9, 133.869, -128.784, 131.532, -128.784, 131.532, -131.121, 129.195, -131.121, 127.637, -129.563, 127.637, -122.257, 157.661, -122.257, 159.619, -11.9531, 151.786, -12.6058, 151.134, -38.0605, 140.038, -48.5035, 28.4289, -49.1561, 15.3752, -41.3239, 15.3752, -14.5638)
 metadata/_edit_lock_ = true
 
+[node name="Prueba-grafitti" type="Sprite2D" parent="casas_fondo"]
+modulate = Color(0.385831, 0.582285, 0.587582, 1)
+z_index = -30
+position = Vector2(1571, 560)
+scale = Vector2(0.385, 0.385)
+texture = ExtResource("38_m0sfk")
+metadata/_edit_lock_ = true
+
+[node name="Salta2-graffiti" type="Sprite2D" parent="casas_fondo"]
+modulate = Color(0.774689, 0.713639, 0.790109, 1)
+z_index = -30
+position = Vector2(2244, 543)
+rotation = -0.245512
+scale = Vector2(0.24, 0.24)
+texture = ExtResource("39_q32us")
+
+[node name="Ale-graffiti" type="Sprite2D" parent="casas_fondo"]
+modulate = Color(0.100962, 0.578096, 0.900566, 0.709804)
+position = Vector2(1878, 404)
+rotation = 0.261799
+scale = Vector2(0.303539, 0.303539)
+texture = ExtResource("41_smnok")
+
 [node name="MedidorLuzA" type="Sprite2D" parent="casas_fondo"]
 modulate = Color(0.550509, 0.610703, 0.532161, 1)
 position = Vector2(1959, 591)
@@ -756,7 +865,49 @@ modulate = Color(0.550509, 0.610703, 0.532161, 1)
 position = Vector2(1978, 545)
 rotation = 0.0872665
 scale = Vector2(0.49, 0.49)
-texture = ExtResource("31_lkrhh")
+texture = ExtResource("43_o8il5")
+
+[node name="PlataformaEstructuraDelPuesto" type="Sprite2D" parent="casas_fondo"]
+modulate = Color(0.6003, 0.70818, 0.87, 1)
+z_index = -30
+position = Vector2(3638.64, 562)
+scale = Vector2(1.03448, 1.03448)
+texture = ExtResource("41_h4jhl")
+
+[node name="Bondis-graffiti" type="Sprite2D" parent="casas_fondo/PlataformaEstructuraDelPuesto"]
+modulate = Color(0.347041, 0.78079, 0.575908, 0.807843)
+position = Vector2(-43.1501, 0.966694)
+scale = Vector2(0.165159, 0.165159)
+texture = ExtResource("43_o8il5")
+
+[node name="entel" parent="casas_fondo" instance=ExtResource("15_ohdn1")]
+position = Vector2(6146, 658)
+scale = Vector2(0.365, 0.365)
+
+[node name="AdornoRefuerzo1Andamio" type="Sprite2D" parent="casas_fondo"]
+z_index = -31
+position = Vector2(7007, 559.5)
+scale = Vector2(0.868182, 0.868182)
+texture = ExtResource("46_y4rxx")
+
+[node name="AdornoRefuerzo1Andamio2" type="Sprite2D" parent="casas_fondo"]
+z_index = -31
+position = Vector2(6671, 575.5)
+scale = Vector2(0.722727, 0.722727)
+texture = ExtResource("46_y4rxx")
+
+[node name="Buzón" type="Sprite2D" parent="casas_fondo"]
+position = Vector2(2714, 572)
+scale = Vector2(0.61, 0.61)
+texture = ExtResource("47_y4rxx")
+
+[node name="CartelFechasConcreto" type="Sprite2D" parent="casas_fondo"]
+modulate = Color(0.105512, 0.235317, 0.284, 1)
+z_index = -30
+position = Vector2(2561, 540)
+rotation = 0.0349066
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("49_363qt")
 
 [node name="ParadaColectivo60" parent="." instance=ExtResource("30_43c8f")]
 z_index = -10
@@ -771,9 +922,5 @@ collision_mask = 6
 [node name="CollisionShape2D" type="CollisionShape2D" parent="primer_dialogo"]
 position = Vector2(258.75, 9.25)
 shape = SubResource("RectangleShape2D_5udix")
-
-[node name="PauseMenuController" type="Node" parent="."]
-script = ExtResource("38_3k8ib")
-metadata/_custom_type_script = "uid://cyh0d64pfygbl"
 
 [connection signal="body_entered" from="primer_dialogo" to="." method="_on_primer_dialogo_body_entered"]

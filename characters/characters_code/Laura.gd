@@ -1,3 +1,4 @@
+class_name CharAle
 extends CharacterBody2D
 
 @export var speed: float = 400.0        # Velocidad horizontal
@@ -34,6 +35,7 @@ var empujando = false #esta empujando o no el personaje
 @onready var bruno = objetivo[0]
 
 func _ready() -> void:
+
 	Global.lauraOnTop = false
 	flecha.visible = false
 	texto_character.visible = false
@@ -95,7 +97,7 @@ func _handle_velocity_cauto(direction: Vector2, delta):
 	var direccion_a_bruno = sign(bruno.global_position.x - global_position.x) # 1 si bruno a la derecha
 	var vector_a_bruno: Vector2 = (bruno.global_position + Vector2(0, -110.0)) - self.global_position
 	var dist_a_bruno: float = vector_a_bruno.length()
-	var altura_a_bruno: float = abs(bruno.global_position.y - self.global_position.y)
+	#var altura_a_bruno: float = abs(bruno.global_position.y - self.global_position.y)
 	var freezar_a_ale: bool = dist_a_bruno <= dist_grande_enojado and (direccion_a_bruno == sign(direction.x)) and _bruno_a_la_vista()# and altura_a_bruno < dist_seguridad_altura
 		
 	if freezar_a_ale: #and altura_a_bruno < dist_seguridad_altura:
@@ -104,9 +106,7 @@ func _handle_velocity_cauto(direction: Vector2, delta):
 	else:
 		velocity.x = direction.x * speed # Aplica movimiento horizontal
 	velocity.y += gravity * delta# Aplicar gravedad al personaje
-	
-	
-	
+
 
 func _aplicar_gravedad( delta):
 	if velocity.y > 0:  # Está cayendo
@@ -136,7 +136,7 @@ func _bruno_a_la_vista() -> bool:
 	var query := PhysicsRayQueryParameters2D.create(ray_origin, ray_target) # parametros del query 
 	
 	query.exclude = [self, bruno] # excluir a ambos personajes del raycast
-	query.collision_mask = 1 | 4
+	query.collision_mask = 1 + 8 # fijarse que usa el value del bit, ver pop up en mask de la collision
 
 	var result: Dictionary = space_state.intersect_ray(query) # ejecuta la query.
 	print ("Bruno a la vista: ", result.is_empty())
@@ -146,12 +146,12 @@ func _bruno_a_la_vista() -> bool:
 	
 	return result.is_empty() # si no hay nada en el diccionario, no cruzo nada, Bruno esta a la vista
 
+
 func _update_rayo_enojo(start_pos: Vector2, end_pos: Vector2, color: Color):
 	if not is_instance_valid(rayo_enojo):
 		rayo_enojo = Line2D.new()
 		rayo_enojo.width = rayo_enojo_ancho
 		add_child(rayo_enojo)
-	
 	rayo_enojo.points = [to_local(start_pos), to_local(end_pos)]
 	rayo_enojo.default_color = color
 
@@ -162,8 +162,6 @@ func _remove_rayo_enojo() -> void: # saca linea de la escena
 		rayo_enojo = null
 	
 
-#func hacer_accion():
-#	Emociones.seguir_a_laura = true
 
 ##---------ANIMACIONEs-----------S##
 func update_animation(direction: Vector2):
