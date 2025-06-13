@@ -275,6 +275,21 @@ z_index = 3
 position = Vector2(6284, 218)
 scale = Vector2(0.17, 0.21)
 
+[node name="Floor42" parent="pisos" instance=ExtResource("13_xt5e6")]
+z_index = 3
+position = Vector2(6152, -31)
+scale = Vector2(0.17, 0.21)
+
+[node name="Floor43" parent="pisos" instance=ExtResource("13_xt5e6")]
+z_index = 3
+position = Vector2(8273, -85)
+scale = Vector2(0.17, 0.21)
+
+[node name="Floor44" parent="pisos" instance=ExtResource("13_xt5e6")]
+z_index = 3
+position = Vector2(10719, 161)
+scale = Vector2(0.17, 0.21)
+
 [node name="Floor12" parent="pisos" instance=ExtResource("13_xt5e6")]
 z_index = 3
 position = Vector2(3660, 454)
@@ -316,6 +331,7 @@ offset_top = 763.0
 offset_right = 14005.0
 offset_bottom = 1640.0
 color = Color(0.00820202, 0.00820202, 0.00820202, 1)
+metadata/_edit_lock_ = true
 
 [node name="luces-y-postes" type="Node" parent="."]
 
@@ -408,16 +424,16 @@ position = Vector2(8518, 247)
 position = Vector2(8256, 217)
 
 [node name="Caja-liviana5" parent="cajas" instance=ExtResource("13_43c8f")]
-position = Vector2(5328, 506)
+position = Vector2(5331, 523)
 
 [node name="Caja-liviana3" parent="cajas" instance=ExtResource("13_43c8f")]
-position = Vector2(3142, 633)
+position = Vector2(3198, 638)
 
 [node name="Caja-liviana2" parent="cajas" instance=ExtResource("13_43c8f")]
-position = Vector2(4121, 635)
+position = Vector2(4043, 637)
 
 [node name="Caja2" parent="cajas" instance=ExtResource("37_srns1")]
-position = Vector2(5545, 493)
+position = Vector2(5548, 500)
 
 [node name="Caja3" parent="cajas" instance=ExtResource("37_srns1")]
 position = Vector2(10513, 612)
@@ -546,15 +562,15 @@ repeat_times = 6
 position = Vector2(170, 680)
 
 [node name="ParquimetroSimple" parent="Parallaxes/Parallax2D_PP_vereda" instance=ExtResource("27_alcho")]
-position = Vector2(1330, 658)
+position = Vector2(1245, 658)
 scale = Vector2(0.645, 0.645)
 
 [node name="ParquimetroDoble" parent="Parallaxes/Parallax2D_PP_vereda" instance=ExtResource("28_xt5e6")]
-position = Vector2(1608, 659)
+position = Vector2(1662, 661)
 scale = Vector2(0.665, 0.665)
 
 [node name="BasuraBolsaA" parent="Parallaxes/Parallax2D_PP_vereda" instance=ExtResource("29_ohdn1")]
-position = Vector2(1370, 655)
+position = Vector2(1452, 650)
 scale = Vector2(0.74, 0.74)
 
 [node name="cables" type="Line2D" parent="Parallaxes/Parallax2D_PP_vereda"]
@@ -662,7 +678,18 @@ metadata/_edit_lock_ = true
 [node name="FarolColganteA5" parent="faroles" instance=ExtResource("30_lkrhh")]
 position = Vector2(5854, 261)
 scale = Vector2(0.65, 0.65)
-metadata/_edit_lock_ = true
+
+[node name="FarolColganteA7" parent="faroles" instance=ExtResource("30_lkrhh")]
+position = Vector2(6185, -16)
+scale = Vector2(0.65, 0.65)
+
+[node name="FarolColganteA8" parent="faroles" instance=ExtResource("30_lkrhh")]
+position = Vector2(8306, -70)
+scale = Vector2(0.65, 0.65)
+
+[node name="FarolColganteA9" parent="faroles" instance=ExtResource("30_lkrhh")]
+position = Vector2(10752, 176)
+scale = Vector2(0.65, 0.65)
 
 [node name="FarolColganteA6" parent="faroles" instance=ExtResource("30_lkrhh")]
 position = Vector2(7559, 328)
