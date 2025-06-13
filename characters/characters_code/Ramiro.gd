@@ -11,12 +11,13 @@ var esta_empujando:bool = false
 @onready var raycast_detecta_arista_der: RayCast2D = $RayCast2D_arista_der # para filo de aristas
 @onready var raycast_detecta_arista_izq: RayCast2D = $RayCast2D_arista_izq
 @onready var plat_hombros = $"plataforma-hombros/colision_hombros"
+var posicion_anterior: Vector2
 
 #emociones
 @onready var zona_cauta = $zona_cauta
 
 ##movimiento##
-@export var speed: float = 180.0 #Velocidad horizontal
+@export var speed: float = 100.0 #Velocidad horizontal
 @export var speedLauraOnTop:float = 90.0 #velocidad con laura encima
 @export var jump_force: float = 350.0 #Fuerza del salto
 @export var dist_chico_enojado: float = 200.0 #distancia a que sigue a chico cuando Bobo
@@ -44,6 +45,7 @@ func _ready() -> void:
 	texto_character.visible = false
 	flecha.visible = true
 	zona_cauta.disable_mode = true
+	posicion_anterior = global_position
 	
 
 
@@ -60,7 +62,6 @@ func _physics_process(delta: float) -> void:
 	if is_active :
 		direction = _procesar_input_movimiento()
 
-	
 	if Emociones.e_grande_quiere_birra:
 		_handle_velocity_enojado(direction, delta)
 	else:
@@ -86,7 +87,6 @@ func _procesar_input_movimiento() -> Vector2:
 		sprite.play("pre_salto")
 	if Input.is_action_just_pressed("empujar") and joint == null:
 		empujar_caja()
-		
 	if Input.is_action_just_released("empujar"):
 		texto_character.visible = false
 		remove_joint()
@@ -147,27 +147,34 @@ func _remove_rayo_enojo() -> void: # saca linea de la escena
 func hacer_accion():
 	pass
 	
-func _seguir_a_laura():
-		plat_hombros.disabled = true
-		var objetivoLaura = get_tree().get_nodes_in_group("grupo-laura")
-		var laura = objetivoLaura[0]
-		var direccion_x = sign(laura.global_position.x - global_position.x)
-		var dist_a_chico: float = abs(laura.global_position.x - self.global_position.x)
-		raycast_detecta_arista_der.force_raycast_update()
-		raycast_detecta_arista_izq.force_raycast_update()
-		var hay_arista_a_der: bool = not raycast_detecta_arista_der.is_colliding()
-		var hay_arista_a_izq: bool = not raycast_detecta_arista_izq.is_colliding()
-		
-		if dist_a_chico > abs(dist_chico_enojado): #se le acerca hasta dist_chico_enojado
-			if (hay_arista_a_der and direccion_x==1) or (hay_arista_a_izq and direccion_x==-1):
-				velocity.x = 0
-			else:
-				velocity.x = direccion_x * speed
-		move_and_slide()
+func _seguir_a_laura() -> Vector2:
+	plat_hombros.disabled = true
+	var objetivoLaura = get_tree().get_nodes_in_group("grupo-laura")
+	var laura = objetivoLaura[0]
+	var direccion_x = sign(laura.global_position.x - global_position.x)
+	var dist_a_chico: float = abs(laura.global_position.x - self.global_position.x)
+	raycast_detecta_arista_der.force_raycast_update()
+	raycast_detecta_arista_izq.force_raycast_update()
+	var hay_arista_a_der: bool = not raycast_detecta_arista_der.is_colliding()
+	var hay_arista_a_izq: bool = not raycast_detecta_arista_izq.is_colliding()
+	if dist_a_chico > abs(dist_chico_enojado): #se le acerca hasta dist_chico_enojado
+		if (hay_arista_a_der and direccion_x == 1) or (hay_arista_a_izq and direccion_x == -1):
+			velocity.x = 0
+		else:
+			velocity.x = direccion_x * speed
+	else:
+		velocity.x = 0  # Si ya está cerca, que no se mueva más
+	move_and_slide()
+	# Calcular cambio de posición real
+	var delta_pos = global_position - posicion_anterior
+	var direction = Vector2.ZERO
+	if abs(delta_pos.x) > 0.5:
+		direction.x = sign(delta_pos.x)
+	posicion_anterior = global_position
+	return direction
 
-		var direction = Vector2(sign(velocity.x), 0)
-		update_animation(direction)
-		
+
+
 func _cambiar_esta_desabilitado():
 		texto_character.text = "No se puede cambiar de personaje ahora"
 		texto_character.visible = true
@@ -190,7 +197,8 @@ func update_animation(direction: Vector2):
 		_animacion_enojado(direction)
 
 	elif Emociones.gordo_mood_bobo:
-		_animacion_embobado(direction)
+		var direccion_bobo = _seguir_a_laura()
+		_animacion_embobado(direccion_bobo)
 		
 	elif esta_empujando:
 		_animacion_empujar(direction)
@@ -230,12 +238,21 @@ func _animacion_empujar_enojado(direction : Vector2):
 	else:
 		sprite.play("idle")	
 
-func _animacion_embobado(direction : Vector2):
-	if direction.x != 0:
-		sprite.play("bobo_walk")
-		sprite.flip_h = direction.x > 0
+var posicion_anterior_bobo := Vector2.ZERO
+
+func _animacion_embobado(_direction: Vector2):
+	var movimiento = global_position - posicion_anterior_bobo
+	var esta_caminando = abs(movimiento.x) > 0.5  # Ajustá el umbral si hace falta
+
+	if esta_caminando:
+		if sprite.animation != "bobo_walk":
+			sprite.play("bobo_walk")
+		sprite.flip_h = movimiento.x > 0
 	else:
-		sprite.play("bobo_idle")
+		if sprite.animation != "bobo_idle":
+			sprite.play("bobo_idle")
+	
+	posicion_anterior_bobo = global_position
 
 ##---------ANIMACIONEs-----------S##
 
@@ -317,7 +334,8 @@ func _ale_zona_cauta():
 		zona_cauta.disable_mode = true	
 ##---------EMCIONES-----------S##
 
-
+enum GordoMood { NORMAL, ENOJADO, BOBO, TRISTE }
+var mood: GordoMood = GordoMood.NORMAL
 
 
 

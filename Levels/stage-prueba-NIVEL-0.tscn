@@ -72,14 +72,14 @@ metadata/entity_name = "camera"
 metadata/_edit_lock_ = true
 
 [node name="Ui-final" parent="Camera2D" instance=ExtResource("5_3k8ib")]
-offset_left = -399.0
-offset_top = -530.0
-offset_right = -399.0
-offset_bottom = -530.0
+offset_left = -408.0
+offset_top = -540.0
+offset_right = -408.0
+offset_bottom = -540.0
 
 [node name="Ramiro" parent="." instance=ExtResource("17_2w312")]
 modulate = Color(0.530745, 0.511852, 0.516617, 1)
-position = Vector2(-200, 588)
+position = Vector2(-206, 642)
 dist_grande_enojado = 300.0
 dist_seguridad_altura = 550.0
 
@@ -89,7 +89,7 @@ position = Vector2(23, -211)
 [node name="Laura" parent="." instance=ExtResource("16_lkrhh")]
 modulate = Color(0.577255, 0.612528, 0.667861, 1)
 z_index = 10
-position = Vector2(-44, 540)
+position = Vector2(-43, 641)
 speed = 350.0
 speed_empuja_fraccion = 0.57
 jump_force = 900.0
@@ -309,6 +309,13 @@ position = Vector2(9606, 545)
 scale = Vector2(0.448617, 0.448617)
 texture = ExtResource("12_yec2q")
 flip_h = true
+
+[node name="ColorRect" type="ColorRect" parent="pisos"]
+offset_left = -3304.0
+offset_top = 763.0
+offset_right = 14005.0
+offset_bottom = 1640.0
+color = Color(0.00820202, 0.00820202, 0.00820202, 1)
 
 [node name="luces-y-postes" type="Node" parent="."]
 

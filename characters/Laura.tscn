@@ -352,6 +352,9 @@ normal_texture = SubResource("CompressedTexture2D_kleer")
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_un0js"]
 polygon = PackedVector2Array(-12, 8, -8, 4, -6, 7, -1, 3, 3, 9, 12, 4, 15, 5, 10, 11, 12, 20, 4, 26, 5, 33, 4, 50, 0, 39, -6, 50, -6, 24, -7, 15, -12, 15)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jpjlv"]
+size = Vector2(74, 87)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_urixy"]
 animations = [{
 "frames": [{
@@ -1408,9 +1411,6 @@ animations = [{
 "speed": 30.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jpjlv"]
-size = Vector2(74, 87)
-
 [node name="Laura" type="CharacterBody2D" node_paths=PackedStringArray("raycast_down") groups=["grupo-laura", "jugador"]]
 z_index = 100
 collision_layer = 4
@@ -1447,14 +1447,6 @@ position = Vector2(0, -27)
 collision_mask = 16
 hit_from_inside = true
 
-[node name="LauraSprites" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.22725, 0.22725)
-sprite_frames = SubResource("SpriteFrames_urixy")
-animation = &"idle"
-autoplay = "idle"
-speed_scale = 1.5
-offset = Vector2(0, -235.835)
-
 [node name="Flecha_UI" parent="." instance=ExtResource("103_jpjlv")]
 unique_name_in_owner = true
 position = Vector2(0, -104)
@@ -1477,5 +1469,13 @@ collision_mask = 8
 [node name="CollisionShape2D" type="CollisionShape2D" parent="empujarCajas"]
 position = Vector2(-1, -6.5)
 shape = SubResource("RectangleShape2D_jpjlv")
+
+[node name="LauraSprites" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.22725, 0.22725)
+sprite_frames = SubResource("SpriteFrames_urixy")
+animation = &"idle"
+autoplay = "idle"
+speed_scale = 1.5
+offset = Vector2(0, -235.835)
 
 [connection signal="timeout" from="Flecha_UI/Timer_flecha" to="." method="_on_timer_flecha_timeout"]

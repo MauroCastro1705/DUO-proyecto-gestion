@@ -527,6 +527,10 @@ size = Vector2(104, 20)
 
 [sub_resource type="Gradient" id="Gradient_jfpom"]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mdxu6"]
+radius = 52.0
+height = 166.0
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_w370e"]
 animations = [{
 "frames": [{
@@ -2138,10 +2142,6 @@ animations = [{
 "speed": 40.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mdxu6"]
-radius = 52.0
-height = 166.0
-
 [node name="Ramiro" type="CharacterBody2D" groups=["grupo-ramiro", "jugador"]]
 z_index = 4
 collision_layer = 2
@@ -2149,6 +2149,7 @@ collision_mask = 9
 script = ExtResource("2_cfd2t")
 
 [node name="zona_cauta" type="CharacterBody2D" parent="."]
+visible = false
 collision_layer = 0
 collision_mask = 4
 
@@ -2209,14 +2210,6 @@ antialiased = true
 wait_time = 0.7
 one_shot = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-4, -99)
-scale = Vector2(0.435, 0.435)
-sprite_frames = SubResource("SpriteFrames_w370e")
-animation = &"bobo_idle"
-autoplay = "walk"
-speed_scale = 1.7
-
 [node name="colision-general" type="CollisionShape2D" parent="."]
 visible = false
 position = Vector2(0, -82)
@@ -2241,6 +2234,14 @@ collision_mask = 9
 position = Vector2(-48, -13)
 target_position = Vector2(-17, 26)
 collision_mask = 9
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-4, -99)
+scale = Vector2(0.435, 0.435)
+sprite_frames = SubResource("SpriteFrames_w370e")
+animation = &"bobo_idle"
+autoplay = "walk"
+speed_scale = 1.7
 
 [connection signal="timeout" from="TimerLabel" to="." method="_on_timer_label_timeout"]
 [connection signal="timeout" from="Flecha_UI/Timer_flecha" to="." method="_on_timer_flecha_timeout"]
