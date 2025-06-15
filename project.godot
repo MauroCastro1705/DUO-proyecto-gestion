@@ -101,6 +101,7 @@ folder_colors={
 "res://Levels/": "orange",
 "res://MENUES/": "pink",
 "res://Shaders/": "blue",
+"res://_m_chars_test/": "blue",
 "res://assets/": "red",
 "res://assets/UI-UX/": "green",
 "res://assets/characters/": "yellow",

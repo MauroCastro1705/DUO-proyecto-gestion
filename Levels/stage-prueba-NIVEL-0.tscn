@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://csaewt7cf5cao"]
+[gd_scene load_steps=52 format=3 uid="uid://csaewt7cf5cao"]
 
 [ext_resource type="Script" uid="uid://cwf7xjxte2dvi" path="res://Levels/stage_prueba_matias.gd" id="1_1ymud"]
 [ext_resource type="Script" uid="uid://cyh0d64pfygbl" path="res://addons/maaacks_menus_template/base/scripts/pause_menu_controller.gd" id="2_ws3q2"]
@@ -48,6 +48,7 @@
 [ext_resource type="Texture2D" uid="uid://djebjt40khc7n" path="res://assets/PLATAFORMAS/Plataforma-Andamio/Adorno_Refuerzo1_Andamio.png" id="46_y4rxx"]
 [ext_resource type="Texture2D" uid="uid://d3ka3ii0yrd0e" path="res://assets/Foreground (SILUETAS)/Buzón.png" id="47_y4rxx"]
 [ext_resource type="Texture2D" uid="uid://dxxsk0qwxw6h0" path="res://assets/Background/CartelFechasConcreto.png" id="49_363qt"]
+[ext_resource type="PackedScene" uid="uid://b8tqrpjede807" path="res://Levels/cajas-de-emociones/zona-victoria.tscn" id="49_b4ldf"]
 [ext_resource type="PackedScene" uid="uid://drb0obdpv17cc" path="res://MENUES/examples/scenes/overlaid_menus/pause_menu.tscn" id="49_e1b24"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5udix"]
@@ -942,6 +943,9 @@ position = Vector2(2561, 540)
 rotation = 0.0349066
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("49_363qt")
+
+[node name="Zona-victoria" parent="." instance=ExtResource("49_b4ldf")]
+position = Vector2(12639, 520)
 
 [node name="ParadaColectivo60" parent="." instance=ExtResource("30_43c8f")]
 z_index = -10

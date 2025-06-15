@@ -6,3 +6,4 @@ var lauraOnTop:bool = false
 var active_player_bruno:bool = true
 var active_player_alejandra:bool = false
 var game_over:bool = false
+var primer_nivel_win:bool = false

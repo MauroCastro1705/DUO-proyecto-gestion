@@ -37,6 +37,8 @@ func _process(delta: float) -> void:
 	#AUDIO PLAYER
 	if Global.game_over:
 		_game_over()
+	if Global.primer_nivel_win:
+		_victoria()
 
 	
 func _input(event: InputEvent) -> void:
@@ -73,7 +75,13 @@ func _game_over():
 	else:
 		push_error("No se pudo cargar la escena Game Over")
 	
-
+func _victoria():
+	var escena = load("res://Levels/escenas_utiles/pantalla_de_victoria.tscn")
+	if escena:
+		get_tree().change_scene_to_packed(escena)
+	else:
+		push_error("No se pudo cargar la escena victoria")
+		
 
 
 #DIALOGOS EN EL ESCENARIO
