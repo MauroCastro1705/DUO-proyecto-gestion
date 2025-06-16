@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://csaewt7cf5cao"]
+[gd_scene load_steps=59 format=3 uid="uid://csaewt7cf5cao"]
 
 [ext_resource type="Script" uid="uid://cwf7xjxte2dvi" path="res://Levels/stage_prueba_matias.gd" id="1_1ymud"]
 [ext_resource type="Script" uid="uid://cyh0d64pfygbl" path="res://addons/maaacks_menus_template/base/scripts/pause_menu_controller.gd" id="2_ws3q2"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://ds55u6jjah6ci" path="res://assets/Background/nubes1024seamless_02png.png" id="19_b4ldf"]
 [ext_resource type="PackedScene" uid="uid://d0bqdj6o680ii" path="res://_m_chars_test/assets/props_calle/poste_segba.tscn" id="22_4our3"]
 [ext_resource type="Texture2D" uid="uid://fyk4im12vpxa" path="res://assets/Background/PumperNicNeonCartel.png" id="22_b4ldf"]
+[ext_resource type="PackedScene" uid="uid://uf83fnf0vvha" path="res://_m_chars_test/assets/props_calle/basura_bolsa_b.tscn" id="24_5o337"]
 [ext_resource type="Texture2D" uid="uid://c5gx0q4kwg6mg" path="res://_m_chars_test/assets/fondos/fondo_skyline_low.png" id="25_alcho"]
 [ext_resource type="PackedScene" uid="uid://bx1d8ob4jvuin" path="res://_m_chars_test/assets/props_calle/vereda_cordon_inv.tscn" id="25_q2pka"]
 [ext_resource type="Texture2D" uid="uid://dlve78ltq4w26" path="res://assets/Foreground (SILUETAS)/RenaultFuego2.png" id="25_v71oy"]
@@ -47,15 +48,20 @@
 [ext_resource type="Texture2D" uid="uid://dvyus63nqfgfj" path="res://_m_chars_test/assets/props_calle/entel_espalda.tres" id="47_363qt"]
 [ext_resource type="Texture2D" uid="uid://d3ka3ii0yrd0e" path="res://assets/Foreground (SILUETAS)/Buzón.png" id="47_y4rxx"]
 [ext_resource type="PackedScene" uid="uid://br1beipiijp4q" path="res://Levels/Objetos/entel_espalda.tscn" id="48_v71oy"]
+[ext_resource type="Texture2D" uid="uid://b8p7ym1terpiw" path="res://_m_chars_test/assets/atlases/latas_basura_02.tres" id="49_6fk53"]
 [ext_resource type="Texture2D" uid="uid://dxxsk0qwxw6h0" path="res://assets/Background/CartelFechasConcreto.png" id="49_363qt"]
 [ext_resource type="Texture2D" uid="uid://ysryc1s6jgoq" path="res://_m_chars_test/assets/atlases/cupula_b.tres" id="49_b4ldf"]
 [ext_resource type="PackedScene" uid="uid://drb0obdpv17cc" path="res://MENUES/examples/scenes/overlaid_menus/pause_menu.tscn" id="49_e1b24"]
 [ext_resource type="Texture2D" uid="uid://djl7xjwf7qktq" path="res://assets/Foreground (SILUETAS)/Citroen 2cv.png" id="51_14k3k"]
 [ext_resource type="PackedScene" uid="uid://dcrajy07ndiox" path="res://Levels/assets/concreto.tscn" id="53_5o337"]
 [ext_resource type="PackedScene" uid="uid://cw67f6keja07f" path="res://_m_chars_test/assets/props_calle/cables_cruzan_calle.tscn" id="53_14k3k"]
+[ext_resource type="Texture2D" uid="uid://eq21oq0hmc0y" path="res://_m_chars_test/assets/atlases/latas_basura.tres" id="55_sjp4l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5udix"]
 size = Vector2(422.5, 241.5)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_5o337"]
+polygon = PackedVector2Array(5.69788, 0.000305176, 22.7957, -2.42981, 34.1943, -9.72021, 814.995, -12.1503, 829.244, -7.2901, 863.439, -7.2901, 863.439, 0.000305176, 829.244, 4.8606, 820.695, 17.0112, 783.649, 21.8715, 775.1, 43.7427, 746.604, 53.4633, 729.506, 51.0331, 726.656, 36.4523, 116.834, 34.0222, 105.435, 58.3235, 74.0892, 55.8933, 56.9913, 21.8715, 19.946, 14.5811)
 
 [node name="Stage-prueba-matias" type="Node2D"]
 script = ExtResource("1_1ymud")
@@ -245,7 +251,7 @@ metadata/_edit_lock_ = true
 position = Vector2(3819, 432)
 
 [node name="Caja-liviana3" parent="cajas" instance=ExtResource("13_43c8f")]
-position = Vector2(3198, 638)
+position = Vector2(3198, 637)
 
 [node name="Caja-liviana2" parent="cajas" instance=ExtResource("13_43c8f")]
 position = Vector2(4043, 637)
@@ -255,6 +261,7 @@ position = Vector2(4043, 637)
 [node name="Parallax2D_FONDO_CIELO" type="Parallax2D" parent="Parallaxes"]
 z_index = -90
 scroll_scale = Vector2(0.11, 0.02)
+scroll_offset = Vector2(-736, -18)
 repeat_size = Vector2(1024, 0)
 autoscroll = Vector2(-6, 0)
 repeat_times = 21
@@ -340,29 +347,78 @@ position = Vector2(647, 650)
 z_index = 30
 scroll_scale = Vector2(1.05, 1)
 scroll_offset = Vector2(29, 1)
-repeat_size = Vector2(1600, 0)
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
+[node name="cables" type="Line2D" parent="Parallaxes/Parallax2D_PP_vereda"]
+position = Vector2(159, 101)
+points = PackedVector2Array(-25, -34, -20, -9, -10, 28, -4, 30, 1, -2, 310, 128, 678, 209, 1052, 226, 1211, 200, 1434, 83, 1518, 2, 1526, 23, 1549, 12, 1560, -9, 1574, -36, 1573, 17, 1575, 34, 1580, 42, 1590, 39, 1596, 15, 1598, -3, 1764, 56, 1978, 92, 2228, 112, 2477, 96, 2673, 63, 2940, -2, 2938, 16, 2933, 23, 2925, 19, 2915, -35, 2903, 9, 2887, 27, 2870, 29, 2860, 22, 2851, -8)
+width = 6.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="cables2" type="Line2D" parent="Parallaxes/Parallax2D_PP_vereda"]
+position = Vector2(57, 101)
+points = PackedVector2Array(49, -125, 40, -16, 35, 13, 31, 22, 28, 26, 23, 24, 13, -6, -75, 51, -195, 125, -340, 195, -429, 216, -473, 216, -511, 213, -636, 194, -888, 143, -1185, 74, -1470, -3, -1473, 21, -1481, 19, -1493, -33, -1520, 22, -1545, 16, -1559, -3, -1532, -8, -1515, -38, -1498, -74, -1222, 40, -906, 157, -714, 191, -465, 193, -297, 155, -90, 80, 60, 1)
+width = 4.0
+default_color = Color(0, 0, 0, 1)
+
 [node name="poste_segba" parent="Parallaxes/Parallax2D_PP_vereda" instance=ExtResource("22_4our3")]
-position = Vector2(170, 680)
+position = Vector2(109, 680)
+
+[node name="poste_segba3" parent="Parallaxes/Parallax2D_PP_vereda" instance=ExtResource("22_4our3")]
+position = Vector2(1709, 680)
+
+[node name="poste_segba5" parent="Parallaxes/Parallax2D_PP_vereda" instance=ExtResource("22_4our3")]
+position = Vector2(4942, 680)
+
+[node name="poste_segba4" parent="Parallaxes/Parallax2D_PP_vereda" instance=ExtResource("22_4our3")]
+position = Vector2(3049, 680)
+
+[node name="poste_segba2" parent="Parallaxes/Parallax2D_PP_vereda" instance=ExtResource("22_4our3")]
+position = Vector2(-1454, 680)
 
 [node name="ParquimetroSimple" parent="Parallaxes/Parallax2D_PP_vereda" instance=ExtResource("27_alcho")]
-position = Vector2(1245, 658)
+position = Vector2(1220, 658)
+scale = Vector2(0.645, 0.645)
+
+[node name="ParquimetroSimple2" parent="Parallaxes/Parallax2D_PP_vereda" instance=ExtResource("27_alcho")]
+position = Vector2(-171, 658)
 scale = Vector2(0.645, 0.645)
 
 [node name="ParquimetroDoble" parent="Parallaxes/Parallax2D_PP_vereda" instance=ExtResource("28_xt5e6")]
-position = Vector2(1662, 661)
+position = Vector2(1549, 661)
+scale = Vector2(0.665, 0.665)
+
+[node name="ParquimetroDoble2" parent="Parallaxes/Parallax2D_PP_vereda" instance=ExtResource("28_xt5e6")]
+position = Vector2(2059, 661)
 scale = Vector2(0.665, 0.665)
 
 [node name="BasuraBolsaA" parent="Parallaxes/Parallax2D_PP_vereda" instance=ExtResource("29_ohdn1")]
-position = Vector2(1452, 650)
+position = Vector2(1309, 650)
 scale = Vector2(0.74, 0.74)
 
-[node name="cables" type="Line2D" parent="Parallaxes/Parallax2D_PP_vereda"]
-points = PackedVector2Array(1791, 104, 1812, 125, 1820, 97, 2134, 228, 2500, 307, 2809, 326, 3032, 309, 3258, 180, 3338, 102, 3346, 123, 3371, 111)
-width = 6.0
-default_color = Color(0, 0, 0, 1)
+[node name="BasuraBolsaA2" parent="Parallaxes/Parallax2D_PP_vereda" instance=ExtResource("29_ohdn1")]
+position = Vector2(158, 657)
+scale = Vector2(0.641954, 0.641954)
+
+[node name="BasuraBolsaA3" parent="Parallaxes/Parallax2D_PP_vereda" instance=ExtResource("29_ohdn1")]
+position = Vector2(-1525, 657)
+scale = Vector2(0.641954, 0.641954)
+
+[node name="BasuraBolsaA4" parent="Parallaxes/Parallax2D_PP_vereda" instance=ExtResource("29_ohdn1")]
+position = Vector2(-1414, 657)
+scale = Vector2(-0.532, 0.532)
+
+[node name="BasuraBolsaB" parent="Parallaxes/Parallax2D_PP_vereda" instance=ExtResource("24_5o337")]
+position = Vector2(62, 655)
+
+[node name="BasuraBolsaB2" parent="Parallaxes/Parallax2D_PP_vereda" instance=ExtResource("24_5o337")]
+position = Vector2(-1312, 656)
+
+[node name="BasuraBolsaB3" parent="Parallaxes/Parallax2D_PP_vereda" instance=ExtResource("24_5o337")]
+position = Vector2(-1606, 663)
+rotation = 0.216907
+scale = Vector2(1.21731, 1.21731)
 
 [node name="textos" type="Node" parent="."]
 
@@ -445,6 +501,10 @@ text = "probar si bruno no puede saltar con caja"
 position = Vector2(278, 324)
 scale = Vector2(0.65, 0.65)
 metadata/_edit_lock_ = true
+
+[node name="FarolColganteA7" parent="faroles" instance=ExtResource("30_lkrhh")]
+position = Vector2(-354, 313)
+scale = Vector2(0.65, 0.65)
 
 [node name="FarolColganteA2" parent="faroles" instance=ExtResource("30_lkrhh")]
 position = Vector2(1238, 324)
@@ -742,6 +802,43 @@ position = Vector2(5385, 557.634)
 scale = Vector2(0.623658, 0.623657)
 texture = ExtResource("47_363qt")
 
+[node name="LatasBasura" type="Sprite2D" parent="casas_fondo"]
+z_index = 30
+position = Vector2(-486, 641.333)
+scale = Vector2(0.733334, 0.733334)
+texture = ExtResource("55_sjp4l")
+
+[node name="LatasBasura02" type="Sprite2D" parent="casas_fondo"]
+z_index = 30
+position = Vector2(-521.091, 649)
+scale = Vector2(0.909091, 0.909091)
+texture = ExtResource("49_6fk53")
+
+[node name="LatasBasura2" type="Sprite2D" parent="casas_fondo"]
+z_index = 30
+position = Vector2(1227.18, 641.667)
+scale = Vector2(0.733334, 0.733334)
+texture = ExtResource("55_sjp4l")
+
+[node name="LatasBasura03" type="Sprite2D" parent="casas_fondo"]
+z_index = 30
+position = Vector2(1192.09, 649.333)
+scale = Vector2(0.909091, 0.909091)
+texture = ExtResource("49_6fk53")
+
+[node name="LatasBasura3" type="Sprite2D" parent="casas_fondo"]
+z_index = 30
+position = Vector2(6038, 650)
+rotation = 0.200172
+scale = Vector2(0.733334, 0.733334)
+texture = ExtResource("55_sjp4l")
+
+[node name="LatasBasura04" type="Sprite2D" parent="casas_fondo"]
+z_index = 30
+position = Vector2(6010, 657)
+scale = Vector2(0.909091, 0.909091)
+texture = ExtResource("49_6fk53")
+
 [node name="entel2" parent="casas_fondo" instance=ExtResource("48_v71oy")]
 position = Vector2(5356, 657)
 scale = Vector2(0.37, 0.37)
@@ -752,6 +849,7 @@ position = Vector2(419, 652)
 scale = Vector2(0.725, 0.725)
 
 [node name="primer_dialogo" type="Area2D" parent="."]
+visible = false
 position = Vector2(-441, 518)
 collision_layer = 0
 collision_mask = 6
@@ -1112,6 +1210,8 @@ metadata/_edit_lock_ = true
 [node name="Concreto" parent="." instance=ExtResource("53_5o337")]
 position = Vector2(-933, 656)
 scale = Vector2(0.85, 0.85)
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="casa" type="Polygon2D" parent="Concreto"]
 z_index = -30
@@ -1119,11 +1219,16 @@ position = Vector2(496.471, -8.2353)
 scale = Vector2(0.412849, 0.484118)
 color = Color(0.0681733, 0.0515147, 0.0539079, 1)
 polygon = PackedVector2Array(-1, 16, 1, -103, -10, -118, -21, -126, -6, -129, 3, -129, 8, -425, 8, -544, -22, -552, -40, -586, -70, -596, -92, -621, -62, -630, -13, -625, 6, -653, -1, -754, -23, -766, -18, -787, 1, -788, -1, -819, 81, -822, 114, -808, 121, -786, 109, -759, 138, -743, 134, -727, 649, -730, 653, -759, 698, -772, 704, -807, 845, -810, 845, -783, 891, -758, 889, -741, 1227, -740, 1238, -803, 1295, -828, 1435, -854, 1444, -783, 1589, -754, 1589, 42, -6, 59)
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="Polygon2D" type="Polygon2D" parent="Concreto/casa"]
 z_index = 1
 position = Vector2(578.477, -585.662)
 color = Color(0.05, 0.038, 0.038, 1)
 polygon = PackedVector2Array(113.67, 64.2661, 72.4927, 58.0692, 57.9595, 27.0851, 19.2043, 16.757, -0.17334, 0.232056, 19.2043, -5.96472, 31.3152, -12.1616, 469.732, -12.1616, 813.684, -16.2928, 828.217, -12.1616, 864.55, -8.0304, 864.55, 2.29773, 828.217, 8.49451, 820.95, 20.8882, 784.617, 25.0194, 779.773, 45.6755, 753.129, 56.0037, 724.063, 58.0692, 719.218, 41.5443, 450.355, 41.5443, 452.777, 56.0037, 411.6, 56.0037, 411.6, 39.4788, 120.937, 43.61, 123.359, 56.0037)
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Concreto/casa/Polygon2D"]
+occluder = SubResource("OccluderPolygon2D_5o337")
 
 [connection signal="body_entered" from="primer_dialogo" to="." method="_on_primer_dialogo_body_entered"]

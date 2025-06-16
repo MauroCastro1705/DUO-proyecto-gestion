@@ -1,10 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://cttiarxsj5vff"]
+[gd_scene load_steps=4 format=3 uid="uid://cttiarxsj5vff"]
 
 [ext_resource type="Texture2D" uid="uid://c4t1o2vuo6s8l" path="res://_m_chars_test/assets/atlases/atlas_a_01.png" id="1_6aruf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pygm8"]
 atlas = ExtResource("1_6aruf")
 region = Rect2(326.239, 738.771, 145.465, 108.145)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_6aruf"]
+polygon = PackedVector2Array(-17, -77, -22, -69, -16, -66, -20, -59, -32, -58, -43, -52, -55, -49, -61, -46, -58, -28, -63, -14, -56, 1, 56, 3, 58, -11, 46, -24, 49, -42, 33, -58, 42, -73, 24, -80, 11, -83, 5, -77)
 
 [node name="BasuraBolsaA" type="Node2D"]
 
@@ -14,3 +17,6 @@ offset_top = -98.0
 offset_right = 68.0
 offset_bottom = 10.0
 texture = SubResource("AtlasTexture_pygm8")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_6aruf")
