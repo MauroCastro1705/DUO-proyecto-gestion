@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://be0ufo8gv4gol" path="res://Levels/cajas-de-emociones/zona_victoria.gd" id="1_l5i0w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_70mhm"]
-size = Vector2(246, 225)
+size = Vector2(246, 357)
 
 [node name="Zona-victoria" type="Node2D"]
 script = ExtResource("1_l5i0w")
@@ -13,7 +13,7 @@ collision_layer = 0
 collision_mask = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(138, 11.5)
+position = Vector2(0, -173.5)
 shape = SubResource("RectangleShape2D_70mhm")
 debug_color = Color(0.099296, 0.512353, 0.083029, 0.145098)
 
