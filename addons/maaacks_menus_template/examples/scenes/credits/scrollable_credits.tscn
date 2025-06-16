@@ -6,20 +6,35 @@
 [node name="ScrollableCredits" instance=ExtResource("1_js0o2")]
 script = ExtResource("2_tcxvu")
 
-[node name="CreditsLabel" parent="." index="0"]
-text = "[center][font_size=48]Collaborators[/font_size]
+[node name="ColorRect" type="ColorRect" parent="." index="0"]
+offset_left = -57.0
+offset_top = -57.0
+offset_right = 1981.0
+offset_bottom = 1127.0
+color = Color(0.0846899, 0.0846899, 0.0846899, 1)
 
-[font_size=32]Role[/font_size]
-Person 1  
-Person 2  
-[url=]Person w/ Link[/url]  
+[node name="CreditsLabel" parent="." index="1"]
+text = "[center][font_size=48]Ya no hay Bondis[/font_size]
+Un juego de DUO para Gestion de Proyectos
 
-[font_size=48]Sourced[/font_size]
-[font_size=32]Asset Type[/font_size]
-[font_size=24]Use Case[/font_size]
-Author: [url=]Name[/url]  
-Source: [url=]Domain : webpage.html[/url]  
-License: [url=]License[/url]
+
+[font_size=32]Productor[/font_size]
+Emiliano Rodriguez 
+
+[font_size=32]Programacion[/font_size]
+Mauro Castro 
+Luca Carlos
+
+[font_size=32]Game Design[/font_size]
+Matias Guerra
+Felipe Suárez 
+
+[font_size=32]Arte[/font_size]
+Nahuel Leal
+  
+[font_size=32]Guion[/font_size]
+Emiliano Rodriguez
+
 
 [font_size=24]Godot Engine Logo[/font_size]
 Author: Andrea Calabró  

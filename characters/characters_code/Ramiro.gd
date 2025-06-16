@@ -22,7 +22,6 @@ var posicion_anterior: Vector2
 @export var jump_force: float = 350.0 #Fuerza del salto
 @export var dist_chico_enojado: float = 200.0 #distancia a que sigue a chico cuando Bobo
 @onready var sprite = $AnimatedSprite2D
-@onready var TimerLabel = $TimerLabel
 var is_active: bool = false  #variable para controlarjugador activo
 var gravity = Global.gravity
 var is_jumping := false
