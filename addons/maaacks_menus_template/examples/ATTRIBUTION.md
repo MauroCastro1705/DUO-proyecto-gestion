@@ -2,10 +2,10 @@
 [font_size=48]Ya no hay Bondis[/font_size]
 
 
-[font_size=34]Un juego para Gestion de proyectos[/font_size]
-
-[font_size=32]Profesor:[/font_size]
-
+[font_size=34]Alumnos de la Tecnicatura en desarrollo de videojuegos[/font_size]
+[font_size=32]Coordinador:[/font_size]
+Guillermo Crespi
+[font_size=32]Docente:[/font_size]
 Emanuel Berdichevsky
 
 [center]
