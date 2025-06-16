@@ -582,7 +582,7 @@ position = Vector2(647, 650)
 [node name="Parallax2D_PP_vereda" type="Parallax2D" parent="Parallaxes"]
 z_index = 30
 repeat_size = Vector2(1600, 0)
-repeat_times = 6
+repeat_times = 17
 
 [node name="poste_segba" parent="Parallaxes/Parallax2D_PP_vereda" instance=ExtResource("22_4our3")]
 position = Vector2(102, 678)
@@ -723,6 +723,18 @@ scale = Vector2(0.65, 0.65)
 
 [node name="FarolColganteA8" parent="faroles" instance=ExtResource("30_lkrhh")]
 position = Vector2(8289, -73)
+scale = Vector2(0.65, 0.65)
+
+[node name="FarolColganteA11" parent="faroles" instance=ExtResource("30_lkrhh")]
+position = Vector2(9157, 321)
+scale = Vector2(0.65, 0.65)
+
+[node name="FarolColganteA12" parent="faroles" instance=ExtResource("30_lkrhh")]
+position = Vector2(9952, 179)
+scale = Vector2(0.65, 0.65)
+
+[node name="FarolColganteA13" parent="faroles" instance=ExtResource("30_lkrhh")]
+position = Vector2(12377, 317)
 scale = Vector2(0.65, 0.65)
 
 [node name="FarolColganteA9" parent="faroles" instance=ExtResource("30_lkrhh")]
