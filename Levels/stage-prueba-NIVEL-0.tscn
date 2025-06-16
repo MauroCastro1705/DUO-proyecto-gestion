@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://csaewt7cf5cao"]
+[gd_scene load_steps=55 format=3 uid="uid://csaewt7cf5cao"]
 
 [ext_resource type="Script" uid="uid://cwf7xjxte2dvi" path="res://Levels/stage_prueba_matias.gd" id="1_1ymud"]
 [ext_resource type="Script" uid="uid://cyh0d64pfygbl" path="res://addons/maaacks_menus_template/base/scripts/pause_menu_controller.gd" id="2_ws3q2"]
@@ -55,6 +55,25 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5udix"]
 size = Vector2(422.5, 241.5)
+
+[sub_resource type="Environment" id="Environment_v71oy"]
+background_mode = 3
+background_canvas_max_layer = 1
+tonemap_mode = 4
+tonemap_white = 1.1
+ssao_enabled = true
+fog_enabled = true
+fog_light_color = Color(0.549482, 0.58415, 0.638628, 1)
+fog_light_energy = 1.42
+fog_sun_scatter = 0.24
+fog_density = 0.4311
+fog_height = 269.47
+fog_height_density = 4.2105
+volumetric_fog_enabled = true
+volumetric_fog_emission_energy = 230.05
+volumetric_fog_gi_inject = 2.25
+volumetric_fog_anisotropy = 0.48
+volumetric_fog_length = 239.16
 
 [node name="Stage-prueba-matias" type="Node2D"]
 script = ExtResource("1_1ymud")
@@ -562,20 +581,18 @@ position = Vector2(647, 650)
 
 [node name="Parallax2D_PP_vereda" type="Parallax2D" parent="Parallaxes"]
 z_index = 30
-scroll_scale = Vector2(1.05, 1)
-scroll_offset = Vector2(29, 1)
 repeat_size = Vector2(1600, 0)
 repeat_times = 6
 
 [node name="poste_segba" parent="Parallaxes/Parallax2D_PP_vereda" instance=ExtResource("22_4our3")]
-position = Vector2(170, 680)
+position = Vector2(102, 678)
 
 [node name="ParquimetroSimple" parent="Parallaxes/Parallax2D_PP_vereda" instance=ExtResource("27_alcho")]
 position = Vector2(1245, 658)
 scale = Vector2(0.645, 0.645)
 
 [node name="ParquimetroDoble" parent="Parallaxes/Parallax2D_PP_vereda" instance=ExtResource("28_xt5e6")]
-position = Vector2(1662, 661)
+position = Vector2(1852, 661)
 scale = Vector2(0.665, 0.665)
 
 [node name="BasuraBolsaA" parent="Parallaxes/Parallax2D_PP_vereda" instance=ExtResource("29_ohdn1")]
@@ -583,9 +600,15 @@ position = Vector2(1444, 653)
 scale = Vector2(0.74, 0.74)
 
 [node name="cables" type="Line2D" parent="Parallaxes/Parallax2D_PP_vereda"]
+position = Vector2(-68, -2)
 points = PackedVector2Array(1791, 104, 1812, 125, 1820, 97, 2134, 228, 2500, 307, 2809, 326, 3032, 309, 3258, 180, 3338, 102, 3346, 123, 3371, 111)
 width = 6.0
 default_color = Color(0, 0, 0, 1)
+
+[node name="ParadaColectivo60" parent="Parallaxes" instance=ExtResource("30_43c8f")]
+z_index = -10
+position = Vector2(419, 652)
+scale = Vector2(0.725, 0.725)
 
 [node name="textos" type="Node" parent="."]
 
@@ -785,6 +808,18 @@ position = Vector2(2340, 570)
 scale = Vector2(0.795455, 0.795455)
 texture = ExtResource("31_diyxt")
 
+[node name="Bondis-graffiti" type="Sprite2D" parent="graffitis"]
+position = Vector2(4584, 508)
+rotation = -0.303635
+scale = Vector2(0.165829, 0.165829)
+texture = ExtResource("43_o8il5")
+
+[node name="Prueba-grafitti" type="Sprite2D" parent="graffitis"]
+position = Vector2(4664, 514)
+rotation = 0.278778
+scale = Vector2(0.0787568, 0.0867692)
+texture = ExtResource("38_m0sfk")
+
 [node name="pozos" type="Node" parent="."]
 
 [node name="pozo_segba" type="Node2D" parent="pozos"]
@@ -983,11 +1018,6 @@ texture = ExtResource("50_14k3k")
 [node name="Zona-victoria" parent="." instance=ExtResource("49_b4ldf")]
 position = Vector2(12467, 532)
 
-[node name="ParadaColectivo60" parent="." instance=ExtResource("30_43c8f")]
-z_index = -10
-position = Vector2(419, 652)
-scale = Vector2(0.725, 0.725)
-
 [node name="primer_dialogo" type="Area2D" parent="."]
 position = Vector2(-441, 518)
 collision_layer = 0
@@ -997,16 +1027,7 @@ collision_mask = 6
 position = Vector2(326, 18)
 shape = SubResource("RectangleShape2D_5udix")
 
-[node name="Bondis-graffiti" type="Sprite2D" parent="."]
-position = Vector2(4584, 508)
-rotation = -0.303635
-scale = Vector2(0.165829, 0.165829)
-texture = ExtResource("43_o8il5")
-
-[node name="Prueba-grafitti" type="Sprite2D" parent="."]
-position = Vector2(4664, 514)
-rotation = 0.278778
-scale = Vector2(0.0787568, 0.0867692)
-texture = ExtResource("38_m0sfk")
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_v71oy")
 
 [connection signal="body_entered" from="primer_dialogo" to="." method="_on_primer_dialogo_body_entered"]

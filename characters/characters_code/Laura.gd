@@ -1,7 +1,7 @@
 class_name CharAle
 extends CharacterBody2D
 
-@export var speed: float = 400.0        # Velocidad horizontal
+@export var speed: float = 300.0     # Velocidad horizontal
 @export var speed_empuja_fraccion: float = 0.75     # Reduccion velocidad al empujar
 @export var jump_force: float = 850.0   # Fuerza del salto
 @export var max_fall_speed: float = 1000.0

@@ -1468,7 +1468,7 @@ scale = Vector2(0.22725, 0.22725)
 sprite_frames = SubResource("SpriteFrames_urixy")
 animation = &"empuja_fail"
 autoplay = "idle"
-frame_progress = 0.377865
+frame_progress = 0.095786
 speed_scale = 1.5
 offset = Vector2(0, -235.835)
 
