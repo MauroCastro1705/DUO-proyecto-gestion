@@ -36,6 +36,7 @@ directories/dch_directory={
 "Ramiro": "res://Dialogos/Ramiro.dch"
 }
 directories/dtl_directory={
+"alejandra_caja_pesada": "res://Dialogos/alejandra_caja_pesada.dtl",
 "timeline434": "res://Dialogos/timeline434.dtl",
 "timeline_test": "res://Dialogos/timeline_test.dtl",
 "timeline_test2": "res://Dialogos/timeline_test2.dtl"

@@ -173,8 +173,12 @@ func update_animation(direction: Vector2):
 			_animacion_empujar_enojado(direction)
 		else:
 			_animacion_enojado(direction)
+			
 	elif esta_empujando:
-		_animacion_empujar(direction)
+		if esta_empujando_pesado:
+			_animacion_empujar_pesado()
+		else:
+			_animacion_empujar(direction)
 
 	else:#laura estado normal
 		_animacion_normal(direction)

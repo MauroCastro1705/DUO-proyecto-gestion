@@ -136,7 +136,7 @@ max_swing_speed = 0.3
 [node name="PointLight2D_farol_titila" type="PointLight2D" parent="farol_colgante_negro"]
 position = Vector2(-2, 24)
 color = Color(0.349676, 0.719279, 0.754359, 1)
-energy = 5.0
+energy = 6.0
 shadow_enabled = true
 texture = ExtResource("1_j0kao")
 offset = Vector2(0, 304.52)

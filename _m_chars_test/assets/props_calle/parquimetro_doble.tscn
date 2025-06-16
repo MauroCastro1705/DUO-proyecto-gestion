@@ -1,10 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://d2le4fuym50ka"]
+[gd_scene load_steps=5 format=3 uid="uid://d2le4fuym50ka"]
 
 [ext_resource type="Texture2D" uid="uid://c4t1o2vuo6s8l" path="res://_m_chars_test/assets/atlases/atlas_a_01.png" id="1_4fndv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0e66j"]
 atlas = ExtResource("1_4fndv")
 region = Rect2(142.619, 585.935, 121.106, 263.251)
+
+[sub_resource type="Gradient" id="Gradient_4fndv"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4fndv"]
+gradient = SubResource("Gradient_4fndv")
+fill = 1
+fill_from = Vector2(0.505556, 0.511111)
+fill_to = Vector2(0.3, 0.355556)
 
 [node name="ParquimetroDoble" type="Node2D"]
 
@@ -14,3 +23,19 @@ offset_top = -261.0
 offset_right = 58.0
 offset_bottom = 2.0
 texture = SubResource("AtlasTexture_0e66j")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(-33, -243)
+scale = Vector2(0.96875, 0.9375)
+color = Color(0.955014, 0.769097, 0.720982, 1)
+energy = 14.43
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_4fndv")
+
+[node name="PointLight2D2" type="PointLight2D" parent="."]
+position = Vector2(27, -242)
+scale = Vector2(0.96875, 0.9375)
+color = Color(0.955014, 0.769097, 0.720982, 1)
+energy = 16.0
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_4fndv")
