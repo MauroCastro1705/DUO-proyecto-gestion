@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqe6icjrnjy72"]
+
+[ext_resource type="Script" uid="uid://12kwdtlosbe3" path="res://assets/UI-UX/prueba.gd" id="1_lba77"]
+[ext_resource type="Material" uid="uid://daes63jxbwg0u" path="res://Shaders/glow.tres" id="1_rhie2"]
+[ext_resource type="Material" uid="uid://c14frg4lwc7vv" path="res://Shaders/neon-parpadea.tres" id="2_vqom8"]
+
+[node name="Prueba" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lba77")
+
+[node name="BoxContainer" type="BoxContainer" parent="."]
+layout_mode = 0
+offset_left = 96.0
+offset_top = -157.0
+offset_right = 333.0
+offset_bottom = -60.0
+alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = ExtResource("1_rhie2")
+layout_mode = 0
+offset_left = 458.0
+offset_top = 207.0
+offset_right = 909.0
+offset_bottom = 537.0
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+material = ExtResource("2_vqom8")
+layout_mode = 0
+offset_left = 505.0
+offset_top = 33.0
+offset_right = 956.0
+offset_bottom = 363.0

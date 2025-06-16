@@ -1,0 +1,507 @@
+[gd_scene load_steps=22 format=3 uid="uid://5doimctwhx08"]
+
+[ext_resource type="PackedScene" uid="uid://c6k5nnpbypshi" path="res://addons/maaacks_menus_template/base/scenes/menus/main_menu/main_menu.tscn" id="1_4gchr"]
+[ext_resource type="Script" uid="uid://b5qy5nr1wivs4" path="res://addons/maaacks_menus_template/examples/scenes/menus/main_menu/main_menu_with_animations.gd" id="2_roicf"]
+[ext_resource type="PackedScene" uid="uid://bdvdf5v87mmrr" path="res://addons/maaacks_menus_template/examples/scenes/menus/options_menu/master_options_menu_with_tabs.tscn" id="3_c25jd"]
+[ext_resource type="PackedScene" uid="uid://wjcsvhdqikyl" path="res://addons/maaacks_menus_template/examples/scenes/credits/scrollable_credits.tscn" id="4_ibkxj"]
+[ext_resource type="Texture2D" uid="uid://dbrjbmgcpxv56" path="res://assets/titulosVG.png" id="5_roicf"]
+
+[sub_resource type="Animation" id="1"]
+resource_name = "Intro"
+length = 2.4
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(2.4),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"intro_done"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MenuContainer/TitleMargin/TitleContainer:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MenuContainer/SubTitleMargin/SubTitleContainer:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.8, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MenuContainer/MenuButtonsMargin/MenuButtonsContainer:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.6, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("FlowControlContainer:mouse_filter")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 2.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 2]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("VersionMargin/VersionContainer:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1.6, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="6"]
+resource_name = "OpenMainMenu"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MenuContainer/TitleMargin/TitleContainer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MenuContainer/SubTitleMargin/SubTitleContainer:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MenuContainer/MenuButtonsMargin/MenuButtonsContainer:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("FlowControlContainer/FlowControl/BackButton:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("FlowControlContainer:mouse_filter")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("MenuContainer:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("VersionMargin/VersionContainer:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer:lock")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="4"]
+resource_name = "OpenSubMenu"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FlowControlContainer/FlowControl/BackButton:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MenuContainer:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FlowControlContainer/FlowControl/BackButton:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MenuContainer/TitleMargin/TitleContainer:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MenuContainer/SubTitleMargin/SubTitleContainer:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MenuContainer/MenuButtonsMargin/MenuButtonsContainer:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("FlowControlContainer:mouse_filter")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("MenuContainer:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("VersionMargin/VersionContainer:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer:lock")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2kqig"]
+_data = {
+&"Intro": SubResource("1"),
+&"OpenMainMenu": SubResource("6"),
+&"OpenSubMenu": SubResource("4"),
+&"RESET": SubResource("2")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="7"]
+animation = &"Intro"
+
+[sub_resource type="AnimationNodeAnimation" id="10"]
+animation = &"OpenMainMenu"
+
+[sub_resource type="AnimationNodeAnimation" id="13"]
+animation = &"OpenSubMenu"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="11"]
+advance_condition = &"intro_done"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="14"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_j0orr"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_63dxc"]
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_vikuh"]
+states/End/position = Vector2(958, 123)
+states/Intro/node = SubResource("7")
+states/Intro/position = Vector2(259, 123)
+states/OpenMainMenu/node = SubResource("10")
+states/OpenMainMenu/position = Vector2(472, 123)
+states/OpenSubMenu/node = SubResource("13")
+states/OpenSubMenu/position = Vector2(734, 123)
+states/Start/position = Vector2(82, 123)
+transitions = ["Intro", "OpenMainMenu", SubResource("11"), "OpenMainMenu", "OpenSubMenu", SubResource("14"), "Start", "Intro", SubResource("AnimationNodeStateMachineTransition_j0orr"), "OpenSubMenu", "OpenMainMenu", SubResource("AnimationNodeStateMachineTransition_63dxc")]
+graph_offset = Vector2(-180.277, 49)
+
+[sub_resource type="Gradient" id="Gradient_roicf"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_c25jd"]
+gradient = SubResource("Gradient_roicf")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[sub_resource type="GDScript" id="GDScript_roicf"]
+script/source = "# light_oscillator.gd
+@tool
+extends Light2D
+
+@export_range(0.0, 30.0, 0.01, \"suffix:x\") var amplitude: float = 20.0 :
+	set(value):
+		amplitude = value
+		if Engine.is_editor_hint():
+			_update_energy()
+
+@export_range(0.1, 10.0, 0.01, \"suffix:s\") var period: float = 2.0 :
+	set(value):
+		period = value
+		if Engine.is_editor_hint():
+			_update_energy()
+
+@export_range(0.0, 10.0, 0.01, \"suffix:x\") var base_energy: float = 1.0 :
+	set(value):
+		base_energy = value
+		if Engine.is_editor_hint():
+			_update_energy()
+
+@export_range(0.0, 1.0, 0.01) var phase_offset: float = 0.0 :
+	set(value):
+		phase_offset = value
+		if Engine.is_editor_hint():
+			_update_energy()
+
+var _time_elapsed: float = 0.0
+
+func _ready():
+	# Initialize energy on ready to reflect initial export values
+	_update_energy()
+
+func _process(delta: float):
+	if Engine.is_editor_hint():
+		return # Don't update in editor process
+
+	_time_elapsed += delta
+	_update_energy()
+
+func _update_energy():
+	if period == 0:
+		# Avoid division by zero
+		energy = base_energy
+		return
+
+	# Calculate the sinusoidal value
+	# sin((time / period + phase_offset) * 2 * PI)
+	var sine_value = sin((_time_elapsed / period + phase_offset) * TAU) # TAU = 2 * PI
+
+	# Map sine_value (-1 to 1) to the desired energy range
+	# energy = base_energy + amplitude * sine_value
+	energy = base_energy + amplitude * sine_value
+"
+
+[node name="MainMenu" instance=ExtResource("1_4gchr")]
+script = ExtResource("2_roicf")
+game_scene_path = "uid://csaewt7cf5cao"
+options_packed_scene = ExtResource("3_c25jd")
+credits_packed_scene = ExtResource("4_ibkxj")
+
+[node name="MenuAnimationPlayer" type="AnimationPlayer" parent="." index="1"]
+libraries = {
+&"": SubResource("AnimationLibrary_2kqig")
+}
+
+[node name="MenuAnimationTree" type="AnimationTree" parent="." index="2"]
+tree_root = SubResource("AnimationNodeStateMachine_vikuh")
+anim_player = NodePath("../MenuAnimationPlayer")
+parameters/conditions/intro_done = false
+
+[node name="VersionContainer" parent="VersionMargin" index="0"]
+modulate = Color(1, 1, 1, 0)
+
+[node name="TitleMargin" parent="MenuContainer" index="0"]
+visible = false
+
+[node name="TitleContainer" parent="MenuContainer/TitleMargin" index="0"]
+modulate = Color(1, 1, 1, 0)
+
+[node name="TitleLabel" parent="MenuContainer/TitleMargin/TitleContainer" index="0"]
+text = "Ya no hay Bondis"
+
+[node name="SubTitleMargin" parent="MenuContainer" index="1"]
+visible = false
+
+[node name="SubTitleContainer" parent="MenuContainer/SubTitleMargin" index="0"]
+modulate = Color(1, 1, 1, 0)
+
+[node name="MenuButtonsContainer" parent="MenuContainer/MenuButtonsMargin" index="0"]
+modulate = Color(1, 1, 1, 0)
+
+[node name="MenuButtonsBoxContainer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer" index="0"]
+offset_left = 202.0
+offset_top = 205.0
+offset_right = 330.0
+offset_bottom = 413.0
+lock = true
+
+[node name="ContinueGameButton" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="1"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+text = "Continue"
+
+[node name="luz_central" type="PointLight2D" parent="." index="10"]
+position = Vector2(868, 316)
+color = Color(0.947745, 0.778751, 0.552733, 1)
+energy = 5.94
+texture = SubResource("GradientTexture2D_c25jd")
+texture_scale = 21.61
+
+[node name="luz_roja" type="PointLight2D" parent="." index="11"]
+position = Vector2(1628, 316)
+scale = Vector2(1.44869, 1.38955)
+color = Color(0.855028, 0.0128195, 4.81307e-07, 1)
+energy = 4.27
+texture = SubResource("GradientTexture2D_c25jd")
+texture_scale = 19.55
+script = SubResource("GDScript_roicf")
+amplitude = 10.0
+period = 2.41
+base_energy = 4.27
+
+[node name="luz_roja2" type="PointLight2D" parent="." index="12"]
+position = Vector2(-140, 861)
+color = Color(0.212919, 0.545109, 0.828598, 1)
+energy = 6.79
+texture = SubResource("GradientTexture2D_c25jd")
+texture_scale = 24.7
+script = SubResource("GDScript_roicf")
+amplitude = 0.7
+period = 0.47
+base_energy = 7.49
+phase_offset = 0.75
+
+[node name="Tittle-screen" type="Sprite2D" parent="." index="13"]
+modulate = Color(0.35897, 0.620271, 0.594747, 1)
+z_index = -5
+position = Vector2(960, 540)
+texture = ExtResource("5_roicf")
+metadata/_edit_lock_ = true
+
+[connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/ContinueGameButton" to="." method="_on_continue_game_button_pressed"]

@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=3 uid="uid://cprdx7anu7l1"]
+
+[ext_resource type="Script" uid="uid://ddh1wc0c6gaeu" path="res://assets/UI-UX/ui_final.gd" id="1_q1c2u"]
+[ext_resource type="Texture2D" uid="uid://cl17ne4b27vfr" path="res://assets/UI-UX/bruno_cabeja_mejor.png" id="2_8y50k"]
+[ext_resource type="Shader" uid="uid://d141gju63dyr4" path="res://Shaders/neon-outline.gdshader" id="2_ru35l"]
+[ext_resource type="Texture2D" uid="uid://dbe2vgnhbblh2" path="res://assets/UI-UX/alejandra_cabeza_mejor.png" id="4_ru35l"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_veqf4"]
+shader = ExtResource("2_ru35l")
+shader_parameter/glow_color = Color(0.0181878, 0.561407, 0.55971, 1)
+shader_parameter/glow_size = 25.0
+shader_parameter/glow_strength = 10.0
+shader_parameter/custom_texture = ExtResource("2_8y50k")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_a0grc"]
+shader = ExtResource("2_ru35l")
+shader_parameter/glow_color = Color(0.860484, 0.176259, 0.365812, 1)
+shader_parameter/glow_size = 25.0
+shader_parameter/glow_strength = 10.0
+shader_parameter/custom_texture = ExtResource("4_ru35l")
+
+[node name="Ui-final" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_q1c2u")
+
+[node name="BoxContainer" type="BoxContainer" parent="."]
+layout_mode = 0
+offset_left = -165.0
+offset_top = -120.0
+offset_right = 243.0
+offset_bottom = 117.0
+
+[node name="Bruno_neon" type="Sprite2D" parent="BoxContainer"]
+material = SubResource("ShaderMaterial_veqf4")
+position = Vector2(127.75, 118.25)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_8y50k")
+
+[node name="BrunoCabejaMejor" type="Sprite2D" parent="BoxContainer"]
+position = Vector2(128.75, 117.25)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_8y50k")
+
+[node name="Alejandra_neon" type="Sprite2D" parent="BoxContainer"]
+material = SubResource("ShaderMaterial_a0grc")
+position = Vector2(198.95, 120.75)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_ru35l")
+
+[node name="AlejandraCabezaMejor" type="Sprite2D" parent="BoxContainer"]
+position = Vector2(198.95, 120.75)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_ru35l")

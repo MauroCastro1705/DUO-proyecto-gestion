@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://d3x8hqee1635q"]
+
+[ext_resource type="Texture2D" uid="uid://oemb700g2kp" path="res://assets/PLATAFORMAS/Plataforma-Balcon/Adorno_FinTile_TramoDeBalcon.png" id="1_6ydwd"]
+[ext_resource type="Texture2D" uid="uid://bmestakwcjsy1" path="res://assets/PLATAFORMAS/Plataforma-Balcon/Adorno_Tile_TramoDeColumnasDeBalcon.png" id="2_c3d77"]
+[ext_resource type="Texture2D" uid="uid://qpdld21rntux" path="res://assets/PLATAFORMAS/Plataforma-Balcon/Plataforma_PisoDeBalcon.png" id="3_fvi8f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tfuxk"]
+size = Vector2(246, 33.5)
+
+[node name="Plataforma-2" type="StaticBody2D"]
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(125, 63.25)
+shape = SubResource("RectangleShape2D_tfuxk")
+
+[node name="AdornoFinTileTramoDeBalcon2" type="Sprite2D" parent="."]
+z_index = 15
+position = Vector2(17, 23)
+scale = Vector2(-1, 1)
+texture = ExtResource("1_6ydwd")
+
+[node name="AdornoFinTileTramoDeBalcon" type="Sprite2D" parent="."]
+z_index = 15
+position = Vector2(231, 23)
+texture = ExtResource("1_6ydwd")
+
+[node name="AdornoTileTramoDeColumnasDeBalcon" type="Sprite2D" parent="."]
+z_index = 15
+position = Vector2(124, 23)
+texture = ExtResource("2_c3d77")
+
+[node name="PlataformaPisoDeBalcon" type="Sprite2D" parent="."]
+z_index = 10
+position = Vector2(124, 63)
+texture = ExtResource("3_fvi8f")

@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://br1beipiijp4q"]
+
+[ext_resource type="Texture2D" uid="uid://dvyus63nqfgfj" path="res://_m_chars_test/assets/props_calle/entel_espalda.tres" id="1_ie7yv"]
+
+[sub_resource type="Gradient" id="Gradient_xjmvp"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_o4blh"]
+gradient = SubResource("Gradient_xjmvp")
+fill = 1
+fill_from = Vector2(0.486239, 0.513761)
+fill_to = Vector2(0.972477, 0.53211)
+
+[node name="entel" type="Node2D"]
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(79, -264.527)
+scale = Vector2(1.69892, 1.69892)
+texture = ExtResource("1_ie7yv")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(107, -359)
+scale = Vector2(9.6875, 8.84375)
+color = Color(0.615686, 0.8, 0.533333, 0.839216)
+energy = 2.0
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_o4blh")
+height = 150.0

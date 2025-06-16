@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=3 uid="uid://qygrfme4q1yx"]
+
+[ext_resource type="PackedScene" uid="uid://drkii2rmndvxt" path="res://_m_chars_test/assets/props_calle/cupula_a.tscn" id="1_4q81m"]
+
+[node name="ESQUINA_prlx_test" type="Node2D"]
+modulate = Color(1, 0.584694, 0.531965, 1)
+
+[node name="prlx_cupulas_o-80" type="Parallax2D" parent="."]
+z_index = -80
+scroll_scale = Vector2(0.2, 0.03)
+
+[node name="CupulaA" parent="prlx_cupulas_o-80" instance=ExtResource("1_4q81m")]
+position = Vector2(-110, 369)
+scale = Vector2(0.68, 0.68)
+
+[node name="CupulaA2" parent="prlx_cupulas_o-80" instance=ExtResource("1_4q81m")]
+position = Vector2(118, 369)
+scale = Vector2(0.68, 0.68)
+
+[node name="prlx_esquinas_o-70" type="Parallax2D" parent="."]
+z_index = -70
+scroll_scale = Vector2(0.3, 0.04)
+
+[node name="CupulaA" parent="prlx_esquinas_o-70" instance=ExtResource("1_4q81m")]
+position = Vector2(-154, 390)
+scale = Vector2(0.799999, 0.799999)
+
+[node name="CupulaA2" parent="prlx_esquinas_o-70" instance=ExtResource("1_4q81m")]
+position = Vector2(165, 390)
+scale = Vector2(0.839999, 0.839999)
+
+[node name="prlx_esquinas_o-60" type="Parallax2D" parent="."]
+z_index = -70
+scroll_scale = Vector2(0.4, 0.05)
+
+[node name="CupulaA" parent="prlx_esquinas_o-60" instance=ExtResource("1_4q81m")]
+position = Vector2(-232, 371)
+scale = Vector2(0.919999, 0.919999)
+
+[node name="CupulaA2" parent="prlx_esquinas_o-60" instance=ExtResource("1_4q81m")]
+position = Vector2(234, 371)
+
+[node name="Node2D" type="Node2D" parent="."]

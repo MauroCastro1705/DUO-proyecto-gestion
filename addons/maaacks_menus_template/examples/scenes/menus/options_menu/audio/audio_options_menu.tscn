@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dmgla7rq1g2cc"]
+
+[ext_resource type="PackedScene" uid="uid://c8vnncjwqcpab" path="res://addons/maaacks_menus_template/base/scenes/menus/options_menu/audio/audio_options_menu.tscn" id="1_ro573"]
+[ext_resource type="Script" uid="uid://b1j3xptvj7fnr" path="res://addons/maaacks_menus_template/examples/scenes/menus/options_menu/audio/audio_options_menu.gd" id="2_g4nfi"]
+[ext_resource type="PackedScene" uid="uid://dxj1gsxtlp6v0" path="res://addons/maaacks_menus_template/examples/scenes/menus/options_menu/audio/audio_input_option_control.tscn" id="3_orobk"]
+
+[node name="Audio" instance=ExtResource("1_ro573")]
+anchors_preset = -1
+anchor_left = 0.135
+anchor_top = 0.137
+anchor_right = 0.858
+anchor_bottom = 0.861
+offset_left = 966.8
+offset_top = 542.04
+offset_right = 272.64
+offset_bottom = 151.12
+scale = Vector2(2, 2)
+pivot_offset = Vector2(917.688, 418.781)
+script = ExtResource("2_g4nfi")
+
+[node name="AudioInputOptionControl" parent="VBoxContainer" index="2" instance=ExtResource("3_orobk")]
+visible = false
+layout_mode = 2
