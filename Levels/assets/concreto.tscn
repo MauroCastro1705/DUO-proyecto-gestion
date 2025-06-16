@@ -1,7 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://dcrajy07ndiox"]
+[gd_scene load_steps=10 format=3 uid="uid://dcrajy07ndiox"]
 
 [ext_resource type="Texture2D" uid="uid://7dinfdusy8ew" path="res://assets/Background/concreto_02_shad.png" id="1_ptu22"]
+[ext_resource type="Texture2D" uid="uid://dxxsk0qwxw6h0" path="res://assets/Background/CartelFechasConcreto.png" id="2_2qcf2"]
 [ext_resource type="Texture2D" uid="uid://baamvpygesxms" path="res://assets/Background/neon_concreto_01.png" id="2_56ea1"]
+[ext_resource type="Texture2D" uid="uid://bxbimkw4uxgvh" path="res://assets/Background/Poster120Segundos.png" id="3_jxfnm"]
 
 [sub_resource type="Gradient" id="Gradient_ptu22"]
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
@@ -91,6 +93,24 @@ func _handle_light_event():
 modulate = Color(0.459773, 0.603913, 0.578852, 1)
 texture = ExtResource("1_ptu22")
 offset = Vector2(0, -415)
+
+[node name="CartelFechasConcreto" type="Sprite2D" parent="concreto"]
+position = Vector2(434, -143)
+rotation = 0.0375083
+scale = Vector2(0.16, 0.16)
+texture = ExtResource("2_2qcf2")
+
+[node name="CartelFechasConcreto2" type="Sprite2D" parent="concreto"]
+position = Vector2(-320, -110)
+rotation = -0.0444844
+scale = Vector2(0.16, 0.16)
+texture = ExtResource("2_2qcf2")
+
+[node name="Poster120Segundos" type="Sprite2D" parent="concreto"]
+position = Vector2(-244, -138)
+rotation = -0.0355019
+scale = Vector2(0.221569, 0.221569)
+texture = ExtResource("3_jxfnm")
 
 [node name="luz_calle_2d" type="PointLight2D" parent="."]
 position = Vector2(535, -495)
