@@ -18,6 +18,7 @@ var is_active: bool = false  #variable para controlar si se recibe input
 @onready var push_area = $empujarCajas
 var joint: PinJoint2D = null
 var current_box: RigidBody2D = null
+var mirando_a_la_derecha := true
 
 var esta_empujando:bool = false
 var esta_empujando_pesado:bool = false
@@ -39,7 +40,6 @@ func _ready() -> void:
 	Global.lauraOnTop = false
 	flecha.visible = false
 
-	#Emociones.laura_mood_cauta = true #para test
 
 	
 func _physics_process(delta: float) -> void:
@@ -65,8 +65,10 @@ func _procesar_input_movimiento() -> Vector2:
 	var dir = Vector2.ZERO
 	if Input.is_action_pressed("derecha"):
 		dir.x += 1
+		mirando_a_la_derecha = true
 	if Input.is_action_pressed("izquierda"):
 		dir.x -= 1
+		mirando_a_la_derecha = false
 	if Input.is_action_just_pressed("salto") and is_on_floor():  #and not empujando 
 		#puede saltar si esta en el piso y no esta empujando
 		velocity.y = -jump_force
@@ -141,7 +143,6 @@ func _bruno_a_la_vista() -> bool:
 	
 	return result.is_empty() # si no hay nada en el diccionario, no cruzo nada, Bruno esta a la vista
 
-
 func _update_rayo_enojo(start_pos: Vector2, end_pos: Vector2, color: Color):
 	if not is_instance_valid(rayo_enojo):
 		rayo_enojo = Line2D.new()
@@ -155,8 +156,6 @@ func _remove_rayo_enojo() -> void: # saca linea de la escena
 		rayo_enojo.queue_free()
 		# Set our reference back to null so we know to create a new one next time.
 		rayo_enojo = null
-	
-
 
 ##---------ANIMACIONEs-----------S##
 func update_animation(direction: Vector2):
@@ -176,7 +175,7 @@ func update_animation(direction: Vector2):
 			
 	elif esta_empujando:
 		if esta_empujando_pesado:
-			_animacion_empujar_pesado()
+			_animacion_empujar_pesado(direction)
 		else:
 			_animacion_empujar(direction)
 
@@ -206,8 +205,10 @@ func _animacion_empujar(direction: Vector2):
 	else:
 		sprite.play("idle")
 
-func _animacion_empujar_pesado():
+func _animacion_empujar_pesado(direction):
+
 	sprite.play("empuja_fail")
+	Dialogos.alejandra_caja_pesada($Markerdialogo)#DIALOGO desde otro script.
 	
 func _animacion_empujar_enojado(direction: Vector2):
 	if direction.x != 0:
@@ -231,7 +232,6 @@ func empujar_caja():
 		if body is RigidBody2D and !body.is_in_group("liviano"):
 			esta_empujando = true
 			esta_empujando_pesado = true
-			_animacion_empujar_pesado()#CHEQUEAR
 			
 func create_joint_with_box(box: RigidBody2D):
 	joint = PinJoint2D.new()

@@ -89,3 +89,6 @@ func _victoria():
 func _on_primer_dialogo_body_entered(body: Node2D) -> void:
 	if body.is_in_group("jugador"):
 		Dialogos.primer_dialogo($Laura/Marker2D,$Ramiro/Marker2D2)#funciona goddd
+		
+		
+		

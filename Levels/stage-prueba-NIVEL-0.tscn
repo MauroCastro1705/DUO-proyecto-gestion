@@ -100,7 +100,7 @@ jump_force = 900.0
 dist_grande_enojado = 250.0
 dist_seguridad_altura = 240.0
 
-[node name="Marker2D" type="Marker2D" parent="Laura"]
+[node name="Marker2D2" type="Marker2D" parent="Laura"]
 position = Vector2(17, -112)
 
 [node name="pisos" type="Node" parent="."]
