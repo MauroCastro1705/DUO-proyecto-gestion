@@ -33,11 +33,15 @@ Personajes="*res://Code/personajes.gd"
 
 directories/dch_directory={
 "Laura": "res://Dialogos/Laura.dch",
-"Ramiro": "res://Dialogos/Ramiro.dch"
+"Ramiro": "res://Dialogos/Ramiro.dch",
+"colectivero": "res://Dialogos/colectivero.dch"
 }
 directories/dtl_directory={
 "alejandra_caja_pesada": "res://Dialogos/alejandra_caja_pesada.dtl",
 "bruno_no_puede_cambiar": "res://Dialogos/bruno_no_puede_cambiar.dtl",
+"cables_pelados": "res://Dialogos/cables_pelados.dtl",
+"colectivero_inicio": "res://Dialogos/colectivero_inicio.dtl",
+"inicio_ambos_pj": "res://Dialogos/inicio_ambos_pj.dtl",
 "timeline434": "res://Dialogos/timeline434.dtl",
 "timeline_test": "res://Dialogos/timeline_test.dtl",
 "timeline_test2": "res://Dialogos/timeline_test2.dtl"

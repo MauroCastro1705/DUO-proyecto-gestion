@@ -1,6 +1,16 @@
 # Attribution
 [font_size=48]Ya no hay Bondis[/font_size]
-Un juego de DUO para Gestion de Proyectos
+
+
+[font_size=34]Un juego para Gestion de proyectos[/font_size]
+
+[font_size=32]Profesor:[/font_size]
+
+Emanuel Berdichevsky
+
+[center]
+[img=700x210]res://assets/UNSO_logo.png[/img]
+[/center]
 
 
 [font_size=32]Productor[/font_size]
@@ -21,12 +31,7 @@ Nahuel Leal
 Emiliano Rodriguez
 
 
-#### Godot Engine Logo
-Author: Andrea Calabró  
-Source: [godotengine.org : press](https://godotengine.org/press/)  
-License: [CC BY 4.0 International](https://github.com/godotengine/godot/blob/master/LOGO_LICENSE.txt) 
-
-## Tools
+## Herramientas
 #### Godot
 ![Godot Engine Logo](/addons/maaacks_menus_template/examples/assets/godot_engine_logo/logo_vertical_color_dark.png)  
 Author: [Juan Linietsky, Ariel Manzur, and contributors](https://godotengine.org/contact)  
