@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bdqkmgo38xbm"]
+[gd_scene load_steps=5 format=3 uid="uid://bdqkmgo38xbm"]
 
 [ext_resource type="Script" uid="uid://c154mm3oh7r13" path="res://Levels/escenas_utiles/pantalla_muerte.gd" id="1_w5xap"]
 [ext_resource type="FontFile" uid="uid://frg1kvfoojuw" path="res://assets/fonts/punk_rockf.ttf" id="1_x41yg"]
+[ext_resource type="Texture2D" uid="uid://cappcgdgn0rh5" path="res://Levels/escenas_utiles/PantallaDeMuerte.png" id="3_baqy2"]
 [ext_resource type="PackedScene" uid="uid://csaewt7cf5cao" path="res://Levels/stage-prueba-NIVEL-0.tscn" id="3_ljp7a"]
-[ext_resource type="Texture2D" uid="uid://dbe2vgnhbblh2" path="res://assets/UI-UX/alejandra_cabeza_mejor.png" id="5_ljp7a"]
-[ext_resource type="Texture2D" uid="uid://cl17ne4b27vfr" path="res://assets/UI-UX/bruno_cabeja_mejor.png" id="6_wghmf"]
 
 [node name="PantallaMuerte" type="Node2D"]
 script = ExtResource("1_w5xap")
@@ -12,37 +11,35 @@ escena_menu_principal = ExtResource("3_ljp7a")
 escena_a_reiniciar = ExtResource("3_ljp7a")
 metadata/_edit_lock_ = true
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -53.0
-offset_top = -19.0
-offset_right = 2015.0
-offset_bottom = 1134.0
-color = Color(0.0505108, 0.0505108, 0.0505108, 1)
+[node name="PantallaDeMuerte" type="Sprite2D" parent="."]
+position = Vector2(952, 543)
+scale = Vector2(1.04815, 1.04815)
+texture = ExtResource("3_baqy2")
 metadata/_edit_lock_ = true
 
 [node name="Label" type="Label" parent="."]
-offset_left = 792.0
-offset_top = 390.0
-offset_right = 1232.0
-offset_bottom = 506.0
+offset_left = 753.0
+offset_top = 71.0
+offset_right = 1193.0
+offset_bottom = 187.0
 theme_override_fonts/font = ExtResource("1_x41yg")
 theme_override_font_sizes/font_size = 80
 text = "Perdiste"
 
 [node name="Label2" type="Label" parent="."]
-offset_left = 726.0
-offset_top = 495.0
-offset_right = 1325.0
-offset_bottom = 597.0
+offset_left = 413.0
+offset_top = 193.0
+offset_right = 1506.0
+offset_bottom = 295.0
 theme_override_fonts/font = ExtResource("1_x41yg")
 theme_override_font_sizes/font_size = 50
-text = "mensaje generico"
+text = "¡Evita los cables electrificados!"
 
 [node name="boton_reiniciar" type="Button" parent="."]
-offset_left = 826.0
-offset_top = 602.0
-offset_right = 1203.0
-offset_bottom = 692.0
+offset_left = 150.0
+offset_top = 882.0
+offset_right = 527.0
+offset_bottom = 972.0
 size_flags_horizontal = 6
 size_flags_vertical = 6
 theme_override_fonts/font = ExtResource("1_x41yg")
@@ -50,23 +47,15 @@ theme_override_font_sizes/font_size = 30
 text = "Volver a intentar"
 
 [node name="boton_main_menu" type="Button" parent="."]
-offset_left = 828.0
-offset_top = 742.0
-offset_right = 1205.0
-offset_bottom = 832.0
+offset_left = 1425.0
+offset_top = 883.0
+offset_right = 1802.0
+offset_bottom = 973.0
 size_flags_horizontal = 6
 size_flags_vertical = 6
 theme_override_fonts/font = ExtResource("1_x41yg")
 theme_override_font_sizes/font_size = 30
 text = "Ir al menu"
-
-[node name="AlejandraCabezaMejor" type="Sprite2D" parent="."]
-position = Vector2(391, 486)
-texture = ExtResource("5_ljp7a")
-
-[node name="BrunoCabejaMejor" type="Sprite2D" parent="."]
-position = Vector2(1602, 509)
-texture = ExtResource("6_wghmf")
 
 [connection signal="pressed" from="boton_reiniciar" to="." method="_on_boton_reiniciar_pressed"]
 [connection signal="pressed" from="boton_main_menu" to="." method="_on_boton_main_menu_pressed"]

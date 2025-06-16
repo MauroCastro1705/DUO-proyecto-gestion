@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://csaewt7cf5cao"]
+[gd_scene load_steps=54 format=3 uid="uid://csaewt7cf5cao"]
 
 [ext_resource type="Script" uid="uid://cwf7xjxte2dvi" path="res://Levels/stage_prueba_matias.gd" id="1_1ymud"]
 [ext_resource type="Script" uid="uid://cyh0d64pfygbl" path="res://addons/maaacks_menus_template/base/scripts/pause_menu_controller.gd" id="2_ws3q2"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bf5b82fejpexj" path="res://Levels/Objetos/entel.tscn" id="15_ohdn1"]
 [ext_resource type="PackedScene" uid="uid://3ht2b6g4whk7" path="res://characters/Laura.tscn" id="16_lkrhh"]
 [ext_resource type="PackedScene" uid="uid://bm2tq4ierwg7s" path="res://_m_chars_test/assets/props_calle/vereda_calle.tscn" id="16_q2pka"]
+[ext_resource type="Texture2D" uid="uid://dwtsp27jos80c" path="res://assets/graffitis/A+B-Graffiti.png" id="16_v71oy"]
 [ext_resource type="PackedScene" uid="uid://bbs86ttvb6dhi" path="res://characters/Ramiro.tscn" id="17_2w312"]
 [ext_resource type="PackedScene" uid="uid://cw6m1wnbulxw4" path="res://_m_chars_test/assets/bondi/bondi_frente_motor.tscn" id="19_6x6h4"]
 [ext_resource type="Texture2D" uid="uid://nwnypbls3y2d" path="res://_m_chars_test/assets/bondi_MOCKUP_1280px_escalas.png" id="20_p2qjq"]
@@ -50,6 +51,7 @@
 [ext_resource type="Texture2D" uid="uid://dxxsk0qwxw6h0" path="res://assets/Background/CartelFechasConcreto.png" id="49_363qt"]
 [ext_resource type="PackedScene" uid="uid://b8tqrpjede807" path="res://Levels/cajas-de-emociones/zona-victoria.tscn" id="49_b4ldf"]
 [ext_resource type="PackedScene" uid="uid://drb0obdpv17cc" path="res://MENUES/examples/scenes/overlaid_menus/pause_menu.tscn" id="49_e1b24"]
+[ext_resource type="Texture2D" uid="uid://bxbimkw4uxgvh" path="res://assets/Background/Poster120Segundos.png" id="50_14k3k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5udix"]
 size = Vector2(422.5, 241.5)
@@ -321,8 +323,8 @@ position = Vector2(465, 645)
 [node name="MarquesinaSubte" type="Sprite2D" parent="pisos"]
 modulate = Color(1, 1, 1, 0.462745)
 z_index = -31
-position = Vector2(9606, 545)
-scale = Vector2(0.448617, 0.448617)
+position = Vector2(12734, 483)
+scale = Vector2(0.661067, 0.661067)
 texture = ExtResource("12_yec2q")
 flip_h = true
 
@@ -404,10 +406,10 @@ position = Vector2(5595, 633)
 position = Vector2(6291, 188)
 
 [node name="Caja-liviana8" parent="cajas" instance=ExtResource("13_43c8f")]
-position = Vector2(12257, 619)
+position = Vector2(12244, 632)
 
 [node name="Caja-liviana9" parent="cajas" instance=ExtResource("13_43c8f")]
-position = Vector2(12236, 551)
+position = Vector2(12251, 559)
 
 [node name="Caja-liviana10" parent="cajas" instance=ExtResource("13_43c8f")]
 position = Vector2(10541, 350)
@@ -471,6 +473,12 @@ position = Vector2(11376, 387)
 
 [node name="Caja9" parent="cajas" instance=ExtResource("37_srns1")]
 position = Vector2(11376, 313)
+
+[node name="A+b-graffiti" type="Sprite2D" parent="cajas"]
+position = Vector2(5018, 454)
+rotation = -0.50754
+scale = Vector2(0.077961, 0.077961)
+texture = ExtResource("16_v71oy")
 
 [node name="Parallaxes" type="Node" parent="."]
 
@@ -691,7 +699,7 @@ position = Vector2(6185, -16)
 scale = Vector2(0.65, 0.65)
 
 [node name="FarolColganteA8" parent="faroles" instance=ExtResource("30_lkrhh")]
-position = Vector2(8306, -70)
+position = Vector2(8289, -73)
 scale = Vector2(0.65, 0.65)
 
 [node name="FarolColganteA9" parent="faroles" instance=ExtResource("30_lkrhh")]
@@ -706,9 +714,15 @@ metadata/_edit_lock_ = true
 [node name="RenaultFuego" type="Sprite2D" parent="faroles"]
 modulate = Color(1, 1, 1, 0.529412)
 z_index = -30
-position = Vector2(6116, 601)
+position = Vector2(5998, 604)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("27_h4jhl")
+
+[node name="CartelFechasConcreto" type="Sprite2D" parent="faroles"]
+z_index = -15
+position = Vector2(4619, 590)
+scale = Vector2(0.092, 0.0919999)
+texture = ExtResource("49_363qt")
 
 [node name="cajas_emociones" type="Node" parent="."]
 
@@ -719,7 +733,7 @@ position = Vector2(1, 473)
 position = Vector2(4756, 404)
 
 [node name="Enojar-bruno" parent="cajas_emociones" instance=ExtResource("29_xt5e6")]
-position = Vector2(7349, 651)
+position = Vector2(7329, 437)
 
 [node name="Bruno-bobo" parent="cajas_emociones" instance=ExtResource("31_ohdn1")]
 position = Vector2(-271, 422)
@@ -727,7 +741,7 @@ scale = Vector2(0.989984, 0.979877)
 metadata/_edit_lock_ = true
 
 [node name="Cauta-alejandra" parent="cajas_emociones" instance=ExtResource("38_5udix")]
-position = Vector2(7474, 653)
+position = Vector2(7458, 473)
 
 [node name="graffitis" type="Node" parent="."]
 
@@ -740,8 +754,8 @@ texture = ExtResource("32_g0a70")
 
 [node name="grafitti_a_y_b2" type="Sprite2D" parent="graffitis"]
 modulate = Color(0.131454, 0.0748619, 0.216072, 1)
-z_index = -29
-position = Vector2(5051, 568)
+z_index = -24
+position = Vector2(5013, 553)
 scale = Vector2(0.339844, 0.339844)
 texture = ExtResource("32_g0a70")
 
@@ -921,7 +935,11 @@ scale = Vector2(0.165159, 0.165159)
 texture = ExtResource("43_o8il5")
 
 [node name="entel" parent="casas_fondo" instance=ExtResource("15_ohdn1")]
-position = Vector2(6146, 658)
+position = Vector2(6205, 657)
+scale = Vector2(0.365, 0.365)
+
+[node name="entel2" parent="casas_fondo" instance=ExtResource("15_ohdn1")]
+position = Vector2(9572, 659)
 scale = Vector2(0.365, 0.365)
 
 [node name="AdornoRefuerzo1Andamio" type="Sprite2D" parent="casas_fondo"]
@@ -949,8 +967,15 @@ rotation = 0.0349066
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("49_363qt")
 
+[node name="Poster120Segundos" type="Sprite2D" parent="casas_fondo"]
+z_index = -9
+position = Vector2(4986, 486)
+rotation = -0.0314551
+scale = Vector2(0.116, 0.116)
+texture = ExtResource("50_14k3k")
+
 [node name="Zona-victoria" parent="." instance=ExtResource("49_b4ldf")]
-position = Vector2(12639, 520)
+position = Vector2(12467, 532)
 
 [node name="ParadaColectivo60" parent="." instance=ExtResource("30_43c8f")]
 z_index = -10
@@ -965,5 +990,17 @@ collision_mask = 6
 [node name="CollisionShape2D" type="CollisionShape2D" parent="primer_dialogo"]
 position = Vector2(326, 18)
 shape = SubResource("RectangleShape2D_5udix")
+
+[node name="Bondis-graffiti" type="Sprite2D" parent="."]
+position = Vector2(4584, 508)
+rotation = -0.303635
+scale = Vector2(0.165829, 0.165829)
+texture = ExtResource("43_o8il5")
+
+[node name="Prueba-grafitti" type="Sprite2D" parent="."]
+position = Vector2(4664, 514)
+rotation = 0.278778
+scale = Vector2(0.0787568, 0.0867692)
+texture = ExtResource("38_m0sfk")
 
 [connection signal="body_entered" from="primer_dialogo" to="." method="_on_primer_dialogo_body_entered"]
