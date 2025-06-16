@@ -175,7 +175,7 @@ func update_animation(direction: Vector2):
 			
 	elif esta_empujando:
 		if esta_empujando_pesado:
-			_animacion_empujar_pesado(direction)
+			_animacion_empujar_pesado()
 		else:
 			_animacion_empujar(direction)
 
@@ -205,8 +205,8 @@ func _animacion_empujar(direction: Vector2):
 	else:
 		sprite.play("idle")
 
-func _animacion_empujar_pesado(direction):
-
+func _animacion_empujar_pesado():
+	sprite.flip_h = not mirando_a_la_derecha
 	sprite.play("empuja_fail")
 	Dialogos.alejandra_caja_pesada($Markerdialogo)#DIALOGO desde otro script.
 	
