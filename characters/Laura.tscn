@@ -491,7 +491,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"empuja",
-"speed": 28.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -568,7 +568,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"empuja_enojado",
-"speed": 28.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -675,7 +675,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"empuja_fail",
-"speed": 28.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -824,7 +824,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 26.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1254,7 +1254,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"tira_caja",
-"speed": 26.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1331,7 +1331,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk",
-"speed": 30.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1408,7 +1408,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk_enojado",
-"speed": 30.0
+"speed": 20.0
 }]
 
 [node name="Laura" type="CharacterBody2D" node_paths=PackedStringArray("raycast_down") groups=["grupo-laura", "jugador"]]
@@ -1454,13 +1454,6 @@ position = Vector2(0, -104)
 [node name="Timer_flecha" type="Timer" parent="Flecha_UI"]
 one_shot = true
 
-[node name="Label_empujando" type="Label" parent="."]
-offset_left = -46.0
-offset_top = -125.0
-offset_right = 43.0
-offset_bottom = -96.0
-text = "empujando"
-
 [node name="empujarCajas" type="Area2D" parent="."]
 position = Vector2(0, -38)
 collision_layer = 4
@@ -1473,8 +1466,9 @@ shape = SubResource("RectangleShape2D_jpjlv")
 [node name="LauraSprites" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.22725, 0.22725)
 sprite_frames = SubResource("SpriteFrames_urixy")
-animation = &"idle"
+animation = &"empuja_fail"
 autoplay = "idle"
+frame_progress = 0.377865
 speed_scale = 1.5
 offset = Vector2(0, -235.835)
 

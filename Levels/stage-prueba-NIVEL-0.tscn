@@ -90,7 +90,7 @@ position = Vector2(23, -211)
 [node name="Laura" parent="." instance=ExtResource("16_lkrhh")]
 modulate = Color(0.577255, 0.612528, 0.667861, 1)
 z_index = 10
-position = Vector2(-43, 641)
+position = Vector2(-38, 649)
 speed = 350.0
 speed_empuja_fraccion = 0.57
 jump_force = 900.0
@@ -571,7 +571,7 @@ position = Vector2(1662, 661)
 scale = Vector2(0.665, 0.665)
 
 [node name="BasuraBolsaA" parent="Parallaxes/Parallax2D_PP_vereda" instance=ExtResource("29_ohdn1")]
-position = Vector2(1452, 650)
+position = Vector2(1444, 653)
 scale = Vector2(0.74, 0.74)
 
 [node name="cables" type="Line2D" parent="Parallaxes/Parallax2D_PP_vereda"]
@@ -605,6 +605,7 @@ PERSONAJES ?
 "
 
 [node name="TUTO 1" type="Label" parent="textos"]
+visible = false
 offset_left = -184.0
 offset_top = 366.0
 offset_right = 200.0
@@ -612,6 +613,7 @@ offset_bottom = 416.0
 text = "Ale está enojada y Bruno aún en trance del recital"
 
 [node name="TUTO 2" type="Label" parent="textos"]
+visible = false
 offset_left = 563.0
 offset_top = 336.0
 offset_right = 947.0
@@ -619,6 +621,7 @@ offset_bottom = 386.0
 text = "¡¡Ya no hay bondi!!"
 
 [node name="TUTO 3" type="Label" parent="textos"]
+visible = false
 offset_left = 1403.0
 offset_top = 467.0
 offset_right = 1777.0
@@ -626,6 +629,7 @@ offset_bottom = 517.0
 text = "Grafitti Bruno sigue a Ale, pero es algo temeroso"
 
 [node name="TUTO 4" type="Label" parent="textos"]
+visible = false
 offset_left = 4830.0
 offset_top = 422.0
 offset_right = 5204.0
@@ -633,6 +637,7 @@ offset_bottom = 472.0
 text = "Grafitti Aqui ya se comportan normalmente"
 
 [node name="TUTO 5" type="Label" parent="textos"]
+visible = false
 offset_left = 5813.0
 offset_top = 517.0
 offset_right = 6187.0
@@ -640,6 +645,7 @@ offset_bottom = 567.0
 text = "Grafitti Ale puede subirse a Bruno"
 
 [node name="TUTO 6" type="Label" parent="textos"]
+visible = false
 offset_left = 7686.0
 offset_top = 464.0
 offset_right = 8060.0
@@ -707,8 +713,7 @@ texture = ExtResource("27_h4jhl")
 [node name="cajas_emociones" type="Node" parent="."]
 
 [node name="Enojar-alejandra" parent="cajas_emociones" instance=ExtResource("27_xt5e6")]
-position = Vector2(-115, 468)
-metadata/_edit_lock_ = true
+position = Vector2(1, 473)
 
 [node name="Eliminar-emocion" parent="cajas_emociones" instance=ExtResource("27_j3434")]
 position = Vector2(4756, 404)
@@ -958,7 +963,7 @@ collision_layer = 0
 collision_mask = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="primer_dialogo"]
-position = Vector2(258.75, 9.25)
+position = Vector2(326, 18)
 shape = SubResource("RectangleShape2D_5udix")
 
 [connection signal="body_entered" from="primer_dialogo" to="." method="_on_primer_dialogo_body_entered"]

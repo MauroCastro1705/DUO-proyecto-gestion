@@ -18,7 +18,7 @@ var is_active: bool = false  #variable para controlar si se recibe input
 @onready var push_area = $empujarCajas
 var joint: PinJoint2D = null
 var current_box: RigidBody2D = null
-@onready var texto_character = $Label_empujando
+
 var esta_empujando:bool = false
 var esta_empujando_pesado:bool = false
 #plataforma
@@ -38,7 +38,7 @@ func _ready() -> void:
 
 	Global.lauraOnTop = false
 	flecha.visible = false
-	texto_character.visible = false
+
 	#Emociones.laura_mood_cauta = true #para test
 
 	
@@ -61,10 +61,6 @@ func _physics_process(delta: float) -> void:
 	_update_flechita()
 	
 
-#func _process(delta: float) -> void:
-	#var rayo_enojo_color = Color.GREEN #if _bruno_a_la_vista() else Color.RED
-	#_update_rayo_enojo(self.global_position+Vector2(0,-60), bruno.global_position+Vector2(0,-140) , rayo_enojo_color)
-
 func _procesar_input_movimiento() -> Vector2:
 	var dir = Vector2.ZERO
 	if Input.is_action_pressed("derecha"):
@@ -83,7 +79,6 @@ func _procesar_input_movimiento() -> Vector2:
 		empujando = true 
 		
 	if Input.is_action_just_released("empujar"):
-		texto_character.visible = false
 		speed = 400
 		empujando = false
 		remove_joint()
@@ -174,11 +169,13 @@ func update_animation(direction: Vector2):
 				sprite.play("caida")  # Mientras cae
 		return  # No seguir con animaciones normales
 	elif Emociones.laura_mood_enojado:
-		_animacion_enojado(direction)
+		if esta_empujando:
+			_animacion_empujar_enojado(direction)
+		else:
+			_animacion_enojado(direction)
 	elif esta_empujando:
 		_animacion_empujar(direction)
-	elif esta_empujando and Emociones.laura_mood_enojado:
-		_animacion_empujar_enojado(direction)
+
 	else:#laura estado normal
 		_animacion_normal(direction)
 
@@ -211,7 +208,7 @@ func _animacion_empujar_pesado():
 func _animacion_empujar_enojado(direction: Vector2):
 	if direction.x != 0:
 		sprite.play("empuja_enojado")
-		sprite.flip_h = direction.x > 0
+		#sprite.flip_h = direction.x > 0
 	else:
 		sprite.play("idle_enojado")
 ##---------ANIMACIONEs-----------S##
@@ -220,8 +217,6 @@ func _animacion_empujar_enojado(direction: Vector2):
 ### EMPUJAR CAJAS apretando BOTON
 func empujar_caja():
 	print("empujando")
-	texto_character.visible = true
-	texto_character.text = "Empujando"
 	for body in push_area.get_overlapping_bodies():
 		if body is RigidBody2D and body.is_in_group("liviano"):
 			esta_empujando_pesado = false
