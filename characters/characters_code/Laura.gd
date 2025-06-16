@@ -170,12 +170,14 @@ func update_animation(direction: Vector2):
 	elif Emociones.laura_mood_enojado:
 		if esta_empujando:
 			_animacion_empujar_enojado(direction)
+		elif esta_empujando_pesado:
+			_animacion_empujar_pesado(direction)
 		else:
 			_animacion_enojado(direction)
 			
 	elif esta_empujando:
 		if esta_empujando_pesado:
-			_animacion_empujar_pesado()
+			_animacion_empujar_pesado(direction)
 		else:
 			_animacion_empujar(direction)
 
@@ -201,18 +203,17 @@ func _animacion_normal(direction: Vector2):
 func _animacion_empujar(direction: Vector2):
 	if direction.x != 0:
 		sprite.play("empuja")
-		#sprite.flip_h = direction.x > 0
 	else:
 		sprite.play("idle")
 
-func _animacion_empujar_pesado():
-	sprite.play("empuja_fail")
+func _animacion_empujar_pesado(direction: Vector2):
+	if direction.x != 0:
+		sprite.play("empuja_fail")
 	Dialogos.alejandra_caja_pesada($Markerdialogo)#DIALOGO desde otro script.
 	
 func _animacion_empujar_enojado(direction: Vector2):
 	if direction.x != 0:
 		sprite.play("empuja_enojado")
-		#sprite.flip_h = direction.x > 0
 	else:
 		sprite.play("idle_enojado")
 ##---------ANIMACIONEs-----------S##

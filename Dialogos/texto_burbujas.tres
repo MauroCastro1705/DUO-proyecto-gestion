@@ -21,7 +21,11 @@ script = ExtResource("2_sjfo4")
 scene = ExtResource("4_hfh2j")
 overrides = {
 "behaviour_direction": "Vector2(1, -2)",
-"behaviour_distance": "100.0"
+"behaviour_distance": "100.0",
+"name_label_font": "\"res://assets/fonts/punk_rockf.ttf\"",
+"name_label_font_size": "22.0",
+"normal_font": "\"res://assets/fonts/punk_rockf.ttf\"",
+"text_size": "18.0"
 }
 
 [resource]

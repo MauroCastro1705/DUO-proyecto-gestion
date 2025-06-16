@@ -2182,18 +2182,6 @@ shape = SubResource("RectangleShape2D_1d7tw")
 one_way_collision = true
 debug_color = Color(0.256769, 0.626522, 0.296495, 0.42)
 
-[node name="TextoGordo" type="Label" parent="."]
-unique_name_in_owner = true
-offset_left = -64.0
-offset_top = -242.0
-offset_right = 50.0
-offset_bottom = -193.0
-theme_override_font_sizes/font_size = 15
-text = "Empujando"
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 2
-
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(0, -105)
 
@@ -2205,10 +2193,6 @@ gradient = SubResource("Gradient_jfpom")
 texture = ExtResource("4_jfpom")
 texture_mode = 2
 antialiased = true
-
-[node name="TimerLabel" type="Timer" parent="."]
-wait_time = 0.7
-one_shot = true
 
 [node name="colision-general" type="CollisionShape2D" parent="."]
 visible = false
@@ -2243,5 +2227,7 @@ animation = &"bobo_idle"
 autoplay = "walk"
 speed_scale = 1.7
 
-[connection signal="timeout" from="TimerLabel" to="." method="_on_timer_label_timeout"]
+[node name="markerDialogos" type="Marker2D" parent="."]
+position = Vector2(-5, -172)
+
 [connection signal="timeout" from="Flecha_UI/Timer_flecha" to="." method="_on_timer_flecha_timeout"]

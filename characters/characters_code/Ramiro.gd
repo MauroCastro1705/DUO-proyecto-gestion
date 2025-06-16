@@ -22,7 +22,6 @@ var posicion_anterior: Vector2
 @export var jump_force: float = 350.0 #Fuerza del salto
 @export var dist_chico_enojado: float = 200.0 #distancia a que sigue a chico cuando Bobo
 @onready var sprite = $AnimatedSprite2D
-@onready var texto_character = %TextoGordo
 @onready var TimerLabel = $TimerLabel
 var is_active: bool = false  #variable para controlarjugador activo
 var gravity = Global.gravity
@@ -42,7 +41,6 @@ const rayo_enojo_ancho: float = 1.0
 @onready var ale = objetivo[0]
 
 func _ready() -> void:
-	texto_character.visible = false
 	flecha.visible = true
 	zona_cauta.disable_mode = true
 	posicion_anterior = global_position
@@ -88,7 +86,6 @@ func _procesar_input_movimiento() -> Vector2:
 	if Input.is_action_just_pressed("empujar") and joint == null:
 		empujar_caja()
 	if Input.is_action_just_released("empujar"):
-		texto_character.visible = false
 		remove_joint()
 	return dir
 
@@ -173,12 +170,9 @@ func _seguir_a_laura() -> Vector2:
 	posicion_anterior = global_position
 	return direction
 
-
-
 func _cambiar_esta_desabilitado():
-		texto_character.text = "No se puede cambiar de personaje ahora"
-		texto_character.visible = true
-		TimerLabel.start()
+	Dialogos.bruno_no_puede_cambiar($markerDialogos)
+
 		
 ##---------ANIMACIONEs-----------S##
 func update_animation(direction: Vector2):
@@ -260,9 +254,7 @@ func _animacion_embobado(_direction: Vector2):
 
 ### EMPUJAR CAJAS apretando BOTON
 func empujar_caja():
-	print("empujando")
-	texto_character.visible = true
-	texto_character.text = "Empujando"
+	print("bruno empujando")
 	for body in push_area.get_overlapping_bodies():
 		esta_empujando = true
 		if body is RigidBody2D:
@@ -285,9 +277,6 @@ func remove_joint():
 	esta_empujando = false
 
 
-#timer para texto sobre el personaje
-func _on_timer_label_timeout() -> void:
-	texto_character.visible = false
 
 ##---------EMCIONES-----------S##
 func check_emocion(emocion:String):
@@ -299,7 +288,6 @@ func check_emocion(emocion:String):
 			Emociones.gordo_mood_rockeando = false
 			Emociones.gordo_mood_triste= false
 			Emociones.gordo_mood_bobo= false
-			texto_character.visible = false #desactivamos cartel
 			Emociones.seguir_a_laura = false#desactiva el seguimiento a alejandra
 			Global.can_swap = true #revisar
 			plat_hombros.disabled = false
