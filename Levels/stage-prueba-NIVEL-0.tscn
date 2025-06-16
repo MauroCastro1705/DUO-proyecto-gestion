@@ -592,7 +592,7 @@ position = Vector2(1245, 658)
 scale = Vector2(0.645, 0.645)
 
 [node name="ParquimetroDoble" parent="Parallaxes/Parallax2D_PP_vereda" instance=ExtResource("28_xt5e6")]
-position = Vector2(1852, 661)
+position = Vector2(1928, 662)
 scale = Vector2(0.665, 0.665)
 
 [node name="BasuraBolsaA" parent="Parallaxes/Parallax2D_PP_vereda" instance=ExtResource("29_ohdn1")]
