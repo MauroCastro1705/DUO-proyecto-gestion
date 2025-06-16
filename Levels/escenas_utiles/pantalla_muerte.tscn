@@ -54,7 +54,7 @@ position = Vector2(823, 597)
 scale = Vector2(0.757407, 0.757407)
 sprite_frames = SubResource("SpriteFrames_mwrrm")
 autoplay = "default"
-frame_progress = 0.832171
+frame_progress = 0.241345
 
 [node name="FocoLuz" type="Sprite2D" parent="."]
 position = Vector2(950, 645)

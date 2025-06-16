@@ -321,7 +321,7 @@ position = Vector2(1134, 653)
 position = Vector2(465, 645)
 
 [node name="MarquesinaSubte" type="Sprite2D" parent="pisos"]
-modulate = Color(1, 1, 1, 0.462745)
+modulate = Color(1, 1, 1, 0.886275)
 z_index = -31
 position = Vector2(12734, 483)
 scale = Vector2(0.661067, 0.661067)
@@ -706,6 +706,10 @@ scale = Vector2(0.65, 0.65)
 position = Vector2(10752, 176)
 scale = Vector2(0.65, 0.65)
 
+[node name="FarolColganteA10" parent="faroles" instance=ExtResource("30_lkrhh")]
+position = Vector2(11732, 261)
+scale = Vector2(0.65, 0.65)
+
 [node name="FarolColganteA6" parent="faroles" instance=ExtResource("30_lkrhh")]
 position = Vector2(7559, 328)
 scale = Vector2(0.65, 0.65)
@@ -719,6 +723,7 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("27_h4jhl")
 
 [node name="CartelFechasConcreto" type="Sprite2D" parent="faroles"]
+modulate = Color(0.393086, 0.393086, 0.393085, 1)
 z_index = -15
 position = Vector2(4619, 590)
 scale = Vector2(0.092, 0.0919999)
@@ -968,6 +973,7 @@ scale = Vector2(0.2, 0.2)
 texture = ExtResource("49_363qt")
 
 [node name="Poster120Segundos" type="Sprite2D" parent="casas_fondo"]
+modulate = Color(0.288518, 0.288518, 0.288518, 1)
 z_index = -9
 position = Vector2(4986, 486)
 rotation = -0.0314551
