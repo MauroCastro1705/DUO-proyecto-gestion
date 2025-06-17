@@ -42,6 +42,7 @@ directories/dtl_directory={
 "cables_pelados": "res://Dialogos/cables_pelados.dtl",
 "colectivero_inicio": "res://Dialogos/colectivero_inicio.dtl",
 "inicio_ambos_pj": "res://Dialogos/inicio_ambos_pj.dtl",
+"mas_cables_pelados": "res://Dialogos/mas_cables_pelados.dtl",
 "timeline434": "res://Dialogos/timeline434.dtl",
 "timeline_test": "res://Dialogos/timeline_test.dtl",
 "timeline_test2": "res://Dialogos/timeline_test2.dtl"

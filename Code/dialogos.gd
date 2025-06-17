@@ -29,3 +29,8 @@ func cables_pelados(laura, ramiro):
 	var layout = Dialogic.start("res://Dialogos/cables_pelados.dtl")
 	layout.register_character(load("res://Dialogos/Laura.dch"),laura,)
 	layout.register_character(load("res://Dialogos/Ramiro.dch"),ramiro,)
+	
+func mas_cables_pelados(laura, ramiro):
+	var layout = Dialogic.start("res://Dialogos/mas_cables_pelados.dtl")
+	layout.register_character(load("res://Dialogos/Laura.dch"),laura,)
+	layout.register_character(load("res://Dialogos/Ramiro.dch"),ramiro,)

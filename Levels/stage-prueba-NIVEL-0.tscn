@@ -875,31 +875,45 @@ z_index = -10
 position = Vector2(419, 652)
 scale = Vector2(0.725, 0.725)
 
-[node name="primer_dialogo" type="Area2D" parent="."]
-position = Vector2(-441, 518)
+[node name="DIALOGOS" type="Node2D" parent="."]
+position = Vector2(323, 524)
+
+[node name="primer_dialogo" type="Area2D" parent="DIALOGOS"]
+position = Vector2(-764, -6)
 collision_layer = 0
 collision_mask = 6
+metadata/_edit_lock_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="primer_dialogo"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DIALOGOS/primer_dialogo"]
 position = Vector2(258.75, 9.25)
 shape = SubResource("RectangleShape2D_5udix")
 
-[node name="dialogo_bondi" type="Area2D" parent="."]
-position = Vector2(323, 524)
+[node name="dialogo_bondi" type="Area2D" parent="DIALOGOS"]
 collision_layer = 0
 collision_mask = 6
+metadata/_edit_lock_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="dialogo_bondi"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DIALOGOS/dialogo_bondi"]
 position = Vector2(258.75, 9.25)
 shape = SubResource("RectangleShape2D_5udix")
 debug_color = Color(0.749425, 0.351772, 0.75804, 0.42)
 
-[node name="dialogo_cables_pelados" type="Area2D" parent="."]
-position = Vector2(323, 524)
+[node name="dialogo_cables_pelados" type="Area2D" parent="DIALOGOS"]
+collision_layer = 0
+collision_mask = 6
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DIALOGOS/dialogo_cables_pelados"]
+position = Vector2(1950, 12)
+shape = SubResource("RectangleShape2D_5udix")
+debug_color = Color(0.749425, 0.351772, 0.75804, 0.42)
+
+[node name="dialogo_mas_cables_pelados2" type="Area2D" parent="DIALOGOS"]
+position = Vector2(1874, -8)
 collision_layer = 0
 collision_mask = 6
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="dialogo_cables_pelados"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DIALOGOS/dialogo_mas_cables_pelados2"]
 position = Vector2(1950, 12)
 shape = SubResource("RectangleShape2D_5udix")
 debug_color = Color(0.749425, 0.351772, 0.75804, 0.42)
@@ -1313,7 +1327,9 @@ attenuation = 3.03143
 
 [node name="Marker2D_colectivero" type="Marker2D" parent="."]
 position = Vector2(744, 457)
+metadata/_edit_lock_ = true
 
-[connection signal="body_entered" from="primer_dialogo" to="." method="_on_primer_dialogo_body_entered"]
-[connection signal="body_entered" from="dialogo_bondi" to="." method="_on_dialogo_bondi_body_entered"]
-[connection signal="body_entered" from="dialogo_cables_pelados" to="." method="_on_dialogo_cables_pelados_body_entered"]
+[connection signal="body_entered" from="DIALOGOS/primer_dialogo" to="." method="_on_primer_dialogo_body_entered"]
+[connection signal="body_entered" from="DIALOGOS/dialogo_bondi" to="." method="_on_dialogo_bondi_body_entered"]
+[connection signal="body_entered" from="DIALOGOS/dialogo_cables_pelados" to="." method="_on_dialogo_cables_pelados_body_entered"]
+[connection signal="body_entered" from="DIALOGOS/dialogo_mas_cables_pelados2" to="." method="_on_dialogo_mas_cables_pelados_2_body_entered"]
