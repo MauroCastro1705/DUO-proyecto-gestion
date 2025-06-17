@@ -317,7 +317,7 @@ position = Vector2(3665, 676)
 
 [node name="Floor9" parent="pisos" instance=ExtResource("13_xt5e6")]
 z_index = 3
-position = Vector2(2989, 676)
+position = Vector2(2987, 676)
 
 [node name="Floor5" parent="pisos" instance=ExtResource("13_xt5e6")]
 z_index = 3
@@ -623,6 +623,7 @@ offset_bottom = 472.0
 text = "Grafitti Aqui ya se comportan normalmente"
 
 [node name="TUTO 5" type="Label" parent="textos"]
+visible = false
 offset_left = 6201.0
 offset_top = 382.0
 offset_right = 6575.0
@@ -630,6 +631,7 @@ offset_bottom = 432.0
 text = "Grafitti Ale puede subirse a Bruno"
 
 [node name="TUTO 6" type="Label" parent="textos"]
+visible = false
 offset_left = 8686.0
 offset_top = 380.0
 offset_right = 9060.0
@@ -837,7 +839,7 @@ color = Color(0.0681733, 0.0515147, 0.0539079, 1)
 polygon = PackedVector2Array(-1, 16, 1, -103, -10, -118, -21, -126, -6, -129, 3, -129, 8, -425, 8, -544, -22, -552, -40, -586, -70, -596, -92, -621, -62, -630, -13, -625, 6, -653, -1, -754, -23, -766, -18, -787, 1, -788, -1, -819, 81, -822, 114, -808, 121, -786, 109, -759, 138, -743, 134, -727, 649, -730, 653, -759, 698, -772, 704, -807, 845, -810, 845, -783, 891, -758, 889, -741, 1227, -740, 1238, -803, 1295, -828, 1435, -854, 1444, -783, 1589, -754, 1610.76, 61.9684, -7.26611, 61.9684)
 metadata/_edit_lock_ = true
 
-[node name="Tuto01" type="Sprite2D" parent="casas_fondo"]
+[node name="Tuto_switcheo" type="Sprite2D" parent="casas_fondo"]
 modulate = Color(0.45, 0.45, 0.45, 1)
 z_index = -29
 position = Vector2(5122, 511)
@@ -845,6 +847,33 @@ scale = Vector2(0.295, 0.295)
 texture = ExtResource("42_3x30m")
 region_enabled = true
 region_rect = Rect2(0, 272.223, 512, 239.777)
+
+[node name="Tuto_hombros" type="Sprite2D" parent="casas_fondo"]
+modulate = Color(0.45, 0.45, 0.45, 1)
+z_index = -29
+position = Vector2(7435, 513)
+scale = Vector2(0.295, 0.295)
+texture = ExtResource("42_3x30m")
+region_enabled = true
+region_rect = Rect2(1.05373, -0.574856, 221.669, 273.216)
+
+[node name="Tuto_hombros_02" type="Sprite2D" parent="casas_fondo"]
+modulate = Color(0.45, 0.45, 0.45, 1)
+z_index = -29
+position = Vector2(6465, 478)
+scale = Vector2(0.295, 0.295)
+texture = ExtResource("42_3x30m")
+region_enabled = true
+region_rect = Rect2(1.05373, -0.574856, 221.669, 273.216)
+
+[node name="Tuto_bruno_enojado" type="Sprite2D" parent="casas_fondo"]
+modulate = Color(0.45, 0.45, 0.45, 1)
+z_index = -29
+position = Vector2(8757, 447)
+scale = Vector2(0.345, 0.345)
+texture = ExtResource("62_p16xx")
+region_enabled = true
+region_rect = Rect2(13.0467, 225.236, 458.353, 285.624)
 
 [node name="casa3" type="Polygon2D" parent="casas_fondo"]
 z_index = -30
@@ -1493,7 +1522,7 @@ polygon = PackedVector2Array(113.67, 64.2661, 72.4927, 58.0692, 57.9595, 27.0851
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Concreto/casa/Polygon2D"]
 occluder = SubResource("OccluderPolygon2D_5o337")
 
-[node name="Tuto02" type="Sprite2D" parent="Concreto/casa"]
+[node name="Tuto_bruno_sigue_bobo" type="Sprite2D" parent="Concreto/casa"]
 modulate = Color(0.45, 0.45, 0.45, 1)
 position = Vector2(666.814, -279.465)
 scale = Vector2(1.08999, 0.929525)

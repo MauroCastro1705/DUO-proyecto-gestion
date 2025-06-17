@@ -6,9 +6,10 @@
 polygon = PackedVector2Array(40, 0, 11, 0, 0, 0, 0, 4, 4, 5, 5, 13, 0, 13, 0, 158, 40, 158)
 
 [node name="VeredaCordon" type="StaticBody2D"]
+collision_mask = 15
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(40, 158, 40, 1, 30, 0, 0, 15, 0, 158)
+polygon = PackedVector2Array(40, 158, 40, 0, 23, 0, 0, 14, 0, 158)
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
 occluder = SubResource("OccluderPolygon2D_l5ek7")
