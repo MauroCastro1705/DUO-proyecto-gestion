@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://co6m1p3si8ftu"
+path="res://.godot/imported/Electric shock.mp3-74d2fcb89bc414a07b3232fb1ab3f949.mp3str"
+
+[deps]
+
+source_file="res://assets/musica_sonidos/Electric shock.mp3"
+dest_files=["res://.godot/imported/Electric shock.mp3-74d2fcb89bc414a07b3232fb1ab3f949.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

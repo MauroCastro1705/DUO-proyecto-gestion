@@ -21,6 +21,8 @@ var posicion_anterior: Vector2
 @export var speedLauraOnTop:float = 90.0 #velocidad con laura encima
 @export var jump_force: float = 350.0 #Fuerza del salto
 @export var dist_chico_enojado: float = 200.0 #distancia a que sigue a chico cuando Bobo
+var paso_timer := 0.0 # para reiniciar cuando no se mueve mas
+var intervalo_pasos := 0.4  # Tiempo entre los pasos
 @onready var sprite = $AnimatedSprite2D
 var is_active: bool = false  #variable para controlarjugador activo
 var gravity = Global.gravity
@@ -69,6 +71,15 @@ func _physics_process(delta: float) -> void:
 	_update_flechita()
 	_ale_zona_cauta()
 	
+	if is_on_floor() and velocity.length() > 10: #sistema para el sonido de pasos
+		paso_timer -= delta
+		if paso_timer <= 0:
+			$SonidoPasos_bruno.play()
+			paso_timer = intervalo_pasos
+	else:
+		$SonidoPasos_bruno.stop()
+		paso_timer = 0 
+		
 	
 	
 func _procesar_input_movimiento() -> Vector2:

@@ -72,6 +72,7 @@ func _game_over():
 	var escena = load("res://Levels/escenas_utiles/pantalla_muerte.tscn") as PackedScene
 	if escena:
 		get_tree().change_scene_to_packed(escena)
+		
 	else:
 		push_error("No se pudo cargar la escena Game Over")
 	
@@ -88,7 +89,7 @@ func _victoria():
 
 func _on_primer_dialogo_body_entered(body: Node2D) -> void:
 	if body.is_in_group("jugador"):
-		Dialogos.primer_dialogo($Laura/Marker2D,$Ramiro/Marker2D2)#funciona goddd
+		Dialogos.primer_dialogo($Laura/Marker2D2,$Ramiro/Marker2D2)#funciona goddd
 		
 		
 		

@@ -1,4 +1,4 @@
-[gd_scene load_steps=520 format=3 uid="uid://bbs86ttvb6dhi"]
+[gd_scene load_steps=521 format=3 uid="uid://bbs86ttvb6dhi"]
 
 [ext_resource type="Script" uid="uid://m850xbhl28ts" path="res://characters/characters_code/Ramiro.gd" id="2_cfd2t"]
 [ext_resource type="Texture2D" uid="uid://e78wxqaps5wx" path="res://assets/characters/animaciones/ramiro_salto_normal/gde_salto_normal_down.png" id="3_rgijm"]
@@ -512,6 +512,7 @@
 [ext_resource type="Texture2D" uid="uid://crve2xjptd3xp" path="res://assets/characters/animaciones/gde_rockear/gde_rockear_00046.png" id="461_ahyh6"]
 [ext_resource type="Texture2D" uid="uid://md5u5mrnjy1k" path="res://assets/characters/animaciones/gde_rockear/gde_rockear_00047.png" id="462_loof1"]
 [ext_resource type="Texture2D" uid="uid://cdd3kuxbgy1op" path="res://assets/characters/animaciones/gde_rockear/gde_rockear_00048.png" id="463_k30c2"]
+[ext_resource type="AudioStream" uid="uid://bq2sho4rqtjoj" path="res://assets/musica_sonidos/Pasos Bruno.mp3" id="513_d3tos"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mdxu6"]
 radius = 410.005
@@ -2229,5 +2230,9 @@ speed_scale = 1.7
 
 [node name="markerDialogos" type="Marker2D" parent="."]
 position = Vector2(-5, -172)
+
+[node name="SonidoPasos_bruno" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("513_d3tos")
+volume_db = 4.0
 
 [connection signal="timeout" from="Flecha_UI/Timer_flecha" to="." method="_on_timer_flecha_timeout"]

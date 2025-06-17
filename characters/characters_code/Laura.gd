@@ -14,6 +14,8 @@ const rayo_enojo_ancho: float = 1.0
 @export var raycast_down: RayCast2D  # arrastrá tu RayCast2D en el editor aquí
 var gravity = Global.gravity
 var is_active: bool = false  #variable para controlar si se recibe input
+var paso_timer := 0.0 # para reiniciar cuando no se mueve mas
+var intervalo_pasos := 0.4  # Tiempo entre los pasos
 ###para empujar cajas####
 @onready var push_area = $empujarCajas
 var joint: PinJoint2D = null
@@ -59,6 +61,15 @@ func _physics_process(delta: float) -> void:
 	update_animation(direction)
 	move_and_slide()
 	_update_flechita()
+	
+	if is_on_floor() and velocity.length() > 10: #sistema para el sonido de pasos
+		paso_timer -= delta
+		if paso_timer <= 0:
+			$SonidoPasos_alejandra.play()
+			paso_timer = intervalo_pasos
+	else:
+		$SonidoPasos_alejandra.stop()
+		paso_timer = 0 
 	
 
 func _procesar_input_movimiento() -> Vector2:

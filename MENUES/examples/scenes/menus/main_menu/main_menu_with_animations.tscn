@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://5doimctwhx08"]
+[gd_scene load_steps=26 format=3 uid="uid://5doimctwhx08"]
 
 [ext_resource type="Script" uid="uid://b5qy5nr1wivs4" path="res://addons/maaacks_menus_template/examples/scenes/menus/main_menu/main_menu_with_animations.gd" id="2_roicf"]
 [ext_resource type="PackedScene" uid="uid://bdvdf5v87mmrr" path="res://addons/maaacks_menus_template/examples/scenes/menus/options_menu/master_options_menu_with_tabs.tscn" id="3_c25jd"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dbrjbmgcpxv56" path="res://assets/titulosVG.png" id="5_roicf"]
 [ext_resource type="Script" uid="uid://dmkubt2nsnsbn" path="res://addons/maaacks_menus_template/base/scenes/menus/main_menu/config_version_label.gd" id="6_fesqj"]
 [ext_resource type="Script" uid="uid://bkwlopi4qn32o" path="res://addons/maaacks_menus_template/base/scenes/menus/main_menu/config_name_label.gd" id="7_8f2rw"]
+[ext_resource type="AudioStream" uid="uid://c1liqlwljk603" path="res://assets/musica_sonidos/YNHB - Música Menú.mp3" id="9_o674r"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "Intro"
@@ -614,6 +615,10 @@ z_index = -5
 position = Vector2(960, 540)
 texture = ExtResource("5_roicf")
 metadata/_edit_lock_ = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_o674r")
+autoplay = true
 
 [connection signal="pressed" from="NewGameButton" to="." method="_on_new_game_button_pressed"]
 [connection signal="pressed" from="OptionsButton" to="." method="_on_options_button_pressed"]

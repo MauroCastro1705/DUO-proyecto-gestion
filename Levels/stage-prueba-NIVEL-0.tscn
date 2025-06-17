@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=3 uid="uid://csaewt7cf5cao"]
+[gd_scene load_steps=65 format=3 uid="uid://csaewt7cf5cao"]
 
 [ext_resource type="Script" uid="uid://cwf7xjxte2dvi" path="res://Levels/stage_prueba_matias.gd" id="1_1ymud"]
 [ext_resource type="Script" uid="uid://cyh0d64pfygbl" path="res://addons/maaacks_menus_template/base/scripts/pause_menu_controller.gd" id="2_ws3q2"]
@@ -58,6 +58,9 @@
 [ext_resource type="PackedScene" uid="uid://dcrajy07ndiox" path="res://Levels/assets/concreto.tscn" id="53_5o337"]
 [ext_resource type="PackedScene" uid="uid://cw67f6keja07f" path="res://_m_chars_test/assets/props_calle/cables_cruzan_calle.tscn" id="53_14k3k"]
 [ext_resource type="Texture2D" uid="uid://eq21oq0hmc0y" path="res://_m_chars_test/assets/atlases/latas_basura.tres" id="55_sjp4l"]
+[ext_resource type="PackedScene" uid="uid://b2dug1ygpgcea" path="res://Sonidos/sonido_ambiente_area.tscn" id="59_gya0e"]
+[ext_resource type="AudioStream" uid="uid://b13633oyy2wym" path="res://assets/musica_sonidos/Cable pelado.mp3" id="60_qnscj"]
+[ext_resource type="AudioStream" uid="uid://mgnsjclpdxdx" path="res://assets/musica_sonidos/YNHB - Música Nivel.mp3" id="62_8j737"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5udix"]
 size = Vector2(422.5, 241.5)
@@ -65,8 +68,14 @@ size = Vector2(422.5, 241.5)
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_5o337"]
 polygon = PackedVector2Array(5.69788, 0.000305176, 22.7957, -2.42981, 34.1943, -9.72021, 814.995, -12.1503, 829.244, -7.2901, 863.439, -7.2901, 863.439, 0.000305176, 829.244, 4.8606, 820.695, 17.0112, 783.649, 21.8715, 775.1, 43.7427, 746.604, 53.4633, 729.506, 51.0331, 726.656, 36.4523, 116.834, 34.0222, 105.435, 58.3235, 74.0892, 55.8933, 56.9913, 21.8715, 19.946, 14.5811)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gya0e"]
+
 [node name="Stage-prueba-matias" type="Node2D"]
 script = ExtResource("1_1ymud")
+
+[node name="musica_nivel" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("62_8j737")
+autoplay = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -91,17 +100,17 @@ offset_bottom = -540.0
 
 [node name="Ramiro" parent="." instance=ExtResource("17_2w312")]
 modulate = Color(0.530745, 0.511852, 0.516617, 1)
-position = Vector2(5610, 623)
+position = Vector2(1601, 623)
 dist_grande_enojado = 300.0
 dist_seguridad_altura = 550.0
 
 [node name="Marker2D2" type="Marker2D" parent="Ramiro"]
-position = Vector2(23, -220)
+position = Vector2(-5, -186)
 
 [node name="Laura" parent="." instance=ExtResource("16_lkrhh")]
 modulate = Color(0.577255, 0.612528, 0.667861, 1)
 z_index = 10
-position = Vector2(5822, 574)
+position = Vector2(1822, 574)
 speed = 350.0
 speed_empuja_fraccion = 0.57
 jump_force = 900.0
@@ -109,7 +118,7 @@ dist_grande_enojado = 250.0
 dist_seguridad_altura = 240.0
 
 [node name="Marker2D2" type="Marker2D" parent="Laura"]
-position = Vector2(17, -112)
+position = Vector2(8, -74)
 
 [node name="pisos" type="Node" parent="."]
 
@@ -269,7 +278,7 @@ position = Vector2(4043, 637)
 [node name="Parallax2D_FONDO_CIELO" type="Parallax2D" parent="Parallaxes"]
 z_index = -90
 scroll_scale = Vector2(0.11, 0.02)
-scroll_offset = Vector2(-736, -18)
+scroll_offset = Vector2(-734, -20)
 repeat_size = Vector2(1024, 0)
 autoscroll = Vector2(-6, 0)
 repeat_times = 21
@@ -1254,5 +1263,33 @@ polygon = PackedVector2Array(113.67, 64.2661, 72.4927, 58.0692, 57.9595, 27.0851
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Concreto/casa/Polygon2D"]
 occluder = SubResource("OccluderPolygon2D_5o337")
+
+[node name="area_sonido_ambiente" parent="." instance=ExtResource("59_gya0e")]
+position = Vector2(689, 407)
+scale = Vector2(1, 0.5)
+
+[node name="ruido_cable_pelado" type="Area2D" parent="."]
+position = Vector2(2380, 700)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ruido_cable_pelado"]
+scale = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_gya0e")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="ruido_cable_pelado"]
+stream = ExtResource("60_qnscj")
+volume_db = 8.0
+autoplay = true
+max_distance = 1205.0
+attenuation = 3.03143
+
+[node name="ruido_cable_pelado2" type="Area2D" parent="."]
+position = Vector2(4285, 700)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="ruido_cable_pelado2"]
+stream = ExtResource("60_qnscj")
+volume_db = 8.0
+autoplay = true
+max_distance = 1205.0
+attenuation = 3.03143
 
 [connection signal="body_entered" from="primer_dialogo" to="." method="_on_primer_dialogo_body_entered"]

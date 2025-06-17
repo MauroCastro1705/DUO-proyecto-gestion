@@ -1,4 +1,4 @@
-[gd_scene load_steps=342 format=3 uid="uid://3ht2b6g4whk7"]
+[gd_scene load_steps=343 format=3 uid="uid://3ht2b6g4whk7"]
 
 [ext_resource type="Script" uid="uid://drlr805adhwjn" path="res://characters/characters_code/Laura.gd" id="1_ny0kd"]
 [ext_resource type="Texture2D" uid="uid://cubucuhki620p" path="res://assets/characters/animaciones/ch_salto_completo/ch_salto_completo_00025.png" id="2_sq1v1"]
@@ -333,6 +333,7 @@
 [ext_resource type="Texture2D" uid="uid://cqhjwbhefg8tc" path="res://assets/characters/animaciones/ch_tira_caja/ch_tira_caja_00022.png" id="282_agudq"]
 [ext_resource type="Texture2D" uid="uid://bp7cjhor824sf" path="res://assets/characters/animaciones/ch_tira_caja/ch_tira_caja_00023.png" id="283_174ni"]
 [ext_resource type="Texture2D" uid="uid://cj54ry0x8cvnh" path="res://assets/characters/animaciones/ch_tira_caja/ch_tira_caja_00024.png" id="284_ut2kc"]
+[ext_resource type="AudioStream" uid="uid://ddm0hn4msy8w3" path="res://assets/musica_sonidos/Pasos Ale.mp3" id="334_b4e08"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_jpjlv"]
 polygon = PackedVector2Array(-5, -38, -5, -42, -9, -44, -10, -50, -4, -53, -1, -57, 6, -54, 7, -50, 6, -45, 3, -43, 7, -42, 5, -38, 0, -35)
@@ -1473,5 +1474,9 @@ offset = Vector2(0, -235.835)
 
 [node name="Markerdialogo" type="Marker2D" parent="."]
 position = Vector2(6, -74)
+
+[node name="SonidoPasos_alejandra" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("334_b4e08")
+volume_db = 7.5
 
 [connection signal="timeout" from="Flecha_UI/Timer_flecha" to="." method="_on_timer_flecha_timeout"]
