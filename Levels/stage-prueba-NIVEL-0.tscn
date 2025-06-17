@@ -63,7 +63,7 @@
 [ext_resource type="AudioStream" uid="uid://mgnsjclpdxdx" path="res://assets/musica_sonidos/YNHB - Música Nivel.mp3" id="62_8j737"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5udix"]
-size = Vector2(422.5, 241.5)
+size = Vector2(361.25, 241.5)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_5o337"]
 polygon = PackedVector2Array(5.69788, 0.000305176, 22.7957, -2.42981, 34.1943, -9.72021, 814.995, -12.1503, 829.244, -7.2901, 863.439, -7.2901, 863.439, 0.000305176, 829.244, 4.8606, 820.695, 17.0112, 783.649, 21.8715, 775.1, 43.7427, 746.604, 53.4633, 729.506, 51.0331, 726.656, 36.4523, 116.834, 34.0222, 105.435, 58.3235, 74.0892, 55.8933, 56.9913, 21.8715, 19.946, 14.5811)
@@ -100,7 +100,7 @@ offset_bottom = -540.0
 
 [node name="Ramiro" parent="." instance=ExtResource("17_2w312")]
 modulate = Color(0.530745, 0.511852, 0.516617, 1)
-position = Vector2(1601, 623)
+position = Vector2(-1210, 625)
 dist_grande_enojado = 300.0
 dist_seguridad_altura = 550.0
 
@@ -110,7 +110,7 @@ position = Vector2(-5, -186)
 [node name="Laura" parent="." instance=ExtResource("16_lkrhh")]
 modulate = Color(0.577255, 0.612528, 0.667861, 1)
 z_index = 10
-position = Vector2(1822, 574)
+position = Vector2(-1032, 633)
 speed = 350.0
 speed_empuja_fraccion = 0.57
 jump_force = 900.0
@@ -560,8 +560,10 @@ texture = ExtResource("25_v71oy")
 [node name="cajas_emociones" type="Node" parent="."]
 
 [node name="Enojar-alejandra" parent="cajas_emociones" instance=ExtResource("27_xt5e6")]
-position = Vector2(-56, 653)
-metadata/_edit_lock_ = true
+position = Vector2(-1001, 660)
+
+[node name="Bruno-bobo" parent="cajas_emociones" instance=ExtResource("31_ohdn1")]
+position = Vector2(-1230, 647)
 
 [node name="Eliminar-emocion" parent="cajas_emociones" instance=ExtResource("27_j3434")]
 position = Vector2(5086, 658)
@@ -569,10 +571,6 @@ metadata/_edit_lock_ = true
 
 [node name="Enojar-bruno" parent="cajas_emociones" instance=ExtResource("29_xt5e6")]
 position = Vector2(8607, 655)
-metadata/_edit_lock_ = true
-
-[node name="Bruno-bobo" parent="cajas_emociones" instance=ExtResource("31_ohdn1")]
-position = Vector2(-271, 653)
 metadata/_edit_lock_ = true
 
 [node name="Cauta-alejandra" parent="cajas_emociones" instance=ExtResource("38_5udix")]
@@ -885,7 +883,8 @@ collision_mask = 6
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DIALOGOS/primer_dialogo"]
-position = Vector2(258.75, 9.25)
+z_index = 3
+position = Vector2(-323, 19)
 shape = SubResource("RectangleShape2D_5udix")
 
 [node name="dialogo_bondi" type="Area2D" parent="DIALOGOS"]

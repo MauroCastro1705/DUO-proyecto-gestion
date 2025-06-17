@@ -87,17 +87,17 @@ func _victoria():
 
 #DIALOGOS EN EL ESCENARIO
 func _on_primer_dialogo_body_entered(body: Node2D) -> void:
-	if body.is_in_group("jugador"):
-		Dialogos.primer_dialogo($Laura/Marker2D2,$Ramiro/Marker2D2)#funciona goddd
+	if body.is_in_group("grupo-laura"):
+		Dialogos.inicio_ambos_pj($Laura/Marker2D2,$Ramiro/Marker2D2)
 		
 func _on_dialogo_bondi_body_entered(body: Node2D) -> void:
-	if body.is_in_group("jugador"):
+	if body.is_in_group("grupo-laura"):
 		Dialogos.colectivero_inicio($Laura/Marker2D2,$Ramiro/Marker2D2,$Marker2D_colectivero)
 
 func _on_dialogo_cables_pelados_body_entered(body: Node2D) -> void:
-	if body.is_in_group("jugador"):
+	if body.is_in_group("grupo-laura"):
 		Dialogos.cables_pelados($Laura/Marker2D2,$Ramiro/Marker2D2)
 
 func _on_dialogo_mas_cables_pelados_2_body_entered(body: Node2D) -> void:
-	if body.is_in_group("jugador"):
+	if body.is_in_group("grupo-laura"):
 		Dialogos.mas_cables_pelados($Laura/Marker2D2,$Ramiro/Marker2D2)
