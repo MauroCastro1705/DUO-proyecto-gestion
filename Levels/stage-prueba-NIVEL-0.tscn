@@ -884,6 +884,26 @@ collision_mask = 6
 position = Vector2(258.75, 9.25)
 shape = SubResource("RectangleShape2D_5udix")
 
+[node name="dialogo_bondi" type="Area2D" parent="."]
+position = Vector2(323, 524)
+collision_layer = 0
+collision_mask = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dialogo_bondi"]
+position = Vector2(258.75, 9.25)
+shape = SubResource("RectangleShape2D_5udix")
+debug_color = Color(0.749425, 0.351772, 0.75804, 0.42)
+
+[node name="dialogo_cables_pelados" type="Area2D" parent="."]
+position = Vector2(323, 524)
+collision_layer = 0
+collision_mask = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dialogo_cables_pelados"]
+position = Vector2(1950, 12)
+shape = SubResource("RectangleShape2D_5udix")
+debug_color = Color(0.749425, 0.351772, 0.75804, 0.42)
+
 [node name="puzzle_03" type="Node2D" parent="."]
 position = Vector2(6997, 545)
 
@@ -1291,4 +1311,9 @@ autoplay = true
 max_distance = 1205.0
 attenuation = 3.03143
 
+[node name="Marker2D_colectivero" type="Marker2D" parent="."]
+position = Vector2(744, 457)
+
 [connection signal="body_entered" from="primer_dialogo" to="." method="_on_primer_dialogo_body_entered"]
+[connection signal="body_entered" from="dialogo_bondi" to="." method="_on_dialogo_bondi_body_entered"]
+[connection signal="body_entered" from="dialogo_cables_pelados" to="." method="_on_dialogo_cables_pelados_body_entered"]
