@@ -876,7 +876,6 @@ position = Vector2(419, 652)
 scale = Vector2(0.725, 0.725)
 
 [node name="primer_dialogo" type="Area2D" parent="."]
-visible = false
 position = Vector2(-441, 518)
 collision_layer = 0
 collision_mask = 6
