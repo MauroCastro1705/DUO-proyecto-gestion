@@ -11,7 +11,7 @@ var normal_zoom := Vector2(1.5, 1.5)
 var zoomed_out := Vector2(0.5, 0.5) # ajustar
 var zoom_speed := 5.0
 var target_zoom := normal_zoom
-
+@onready var bondi_de_frente = $Parallaxes/Parallax2D_FONDO_vereda/BondiFrenteMotor
 
 func _ready() -> void:
 	# Referencias a los personajes
@@ -91,6 +91,8 @@ func _on_dialogo_bondi_body_entered(body: Node2D) -> void:
 		Dialogos.colectivero_inicio($Laura/Marker2D2,$Ramiro/Marker2D2,$Marker2D_colectivero)
 		Dialogos.colectivero_inicio_bool = true
 		
+	bondi_de_frente.apagar_bondi_anim("bondi_apagado")
+	
 func _on_dialogo_cables_pelados_body_entered(body: Node2D) -> void:
 	if body.is_in_group("grupo-laura") and !Dialogos.cables_pelados_bool:
 		Dialogos.cables_pelados($Laura/Marker2D2,$Ramiro/Marker2D2)
