@@ -234,7 +234,7 @@ offset_bottom = -540.0
 
 [node name="Ramiro" parent="." instance=ExtResource("17_2w312")]
 modulate = Color(0.530745, 0.511852, 0.516617, 1)
-position = Vector2(-1210, 625)
+position = Vector2(8583, 337)
 dist_grande_enojado = 300.0
 dist_seguridad_altura = 550.0
 
@@ -526,6 +526,12 @@ position = Vector2(4942, 663)
 [node name="poste_segba6" parent="Parallaxes/Parallax2D_PP_vereda" instance=ExtResource("22_4our3")]
 position = Vector2(6744, 627)
 
+[node name="poste_segba7" parent="Parallaxes/Parallax2D_PP_vereda" instance=ExtResource("22_4our3")]
+position = Vector2(7707, 626)
+
+[node name="poste_segba8" parent="Parallaxes/Parallax2D_PP_vereda" instance=ExtResource("22_4our3")]
+position = Vector2(9337, 618)
+
 [node name="poste_segba4" parent="Parallaxes/Parallax2D_PP_vereda" instance=ExtResource("22_4our3")]
 position = Vector2(3049, 680)
 
@@ -673,7 +679,7 @@ scale = Vector2(0.65, 0.65)
 metadata/_edit_lock_ = true
 
 [node name="FarolColganteA5" parent="faroles" instance=ExtResource("30_lkrhh")]
-position = Vector2(6434, 362)
+position = Vector2(6417, 362)
 scale = Vector2(0.65, 0.65)
 
 [node name="FarolColganteA6" parent="faroles" instance=ExtResource("30_lkrhh")]
@@ -697,7 +703,7 @@ position = Vector2(-1001, 660)
 position = Vector2(-1230, 647)
 
 [node name="Eliminar-emocion" parent="cajas_emociones" instance=ExtResource("27_j3434")]
-position = Vector2(5086, 658)
+position = Vector2(5104.38, 658)
 metadata/_edit_lock_ = true
 
 [node name="Enojar-bruno" parent="cajas_emociones" instance=ExtResource("29_xt5e6")]
@@ -735,9 +741,9 @@ scale = Vector2(0.339844, 0.339844)
 texture = ExtResource("32_g0a70")
 
 [node name="grafitti_a_y_b3" type="Sprite2D" parent="graffitis"]
-modulate = Color(0.131454, 0.0748619, 0.216072, 1)
+modulate = Color(0.0352, 0.1276, 0.22, 1)
 z_index = -29
-position = Vector2(6429, 525)
+position = Vector2(6372.5, 510.267)
 scale = Vector2(0.339844, 0.339844)
 texture = ExtResource("32_g0a70")
 
@@ -851,23 +857,23 @@ region_rect = Rect2(0, 272.223, 512, 239.777)
 [node name="Tuto_hombros" type="Sprite2D" parent="casas_fondo"]
 modulate = Color(0.45, 0.45, 0.45, 1)
 z_index = -29
-position = Vector2(7435, 513)
+position = Vector2(7572, 456)
 scale = Vector2(0.295, 0.295)
 texture = ExtResource("42_3x30m")
 region_enabled = true
 region_rect = Rect2(1.05373, -0.574856, 221.669, 273.216)
 
 [node name="Tuto_hombros_02" type="Sprite2D" parent="casas_fondo"]
-modulate = Color(0.45, 0.45, 0.45, 1)
+modulate = Color(0.41721, 0.404301, 0.450155, 1)
 z_index = -29
-position = Vector2(6465, 478)
+position = Vector2(6426.5, 476.267)
 scale = Vector2(0.295, 0.295)
 texture = ExtResource("42_3x30m")
 region_enabled = true
 region_rect = Rect2(1.05373, -0.574856, 221.669, 273.216)
 
 [node name="Tuto_bruno_enojado" type="Sprite2D" parent="casas_fondo"]
-modulate = Color(0.45, 0.45, 0.45, 1)
+modulate = Color(0.4, 0.336, 0.336, 1)
 z_index = -29
 position = Vector2(8757, 447)
 scale = Vector2(0.345, 0.345)
@@ -1112,11 +1118,6 @@ scale = Vector2(0.17, 0.21)
 [node name="Caja-liviana7" parent="puzzle_04" instance=ExtResource("13_43c8f")]
 position = Vector2(-249, -306)
 
-[node name="Floor42" parent="puzzle_04" instance=ExtResource("13_xt5e6")]
-z_index = 3
-position = Vector2(-388, -525)
-scale = Vector2(0.17, 0.21)
-
 [node name="FarolColganteA7" parent="puzzle_04" instance=ExtResource("30_lkrhh")]
 position = Vector2(-355, -510)
 scale = Vector2(0.65, 0.65)
@@ -1132,7 +1133,7 @@ position = Vector2(9287, 0)
 
 [node name="Floor33" parent="puzzle_05" instance=ExtResource("13_xt5e6")]
 z_index = 3
-position = Vector2(54, 363)
+position = Vector2(54, 389)
 scale = Vector2(0.065, 0.21)
 
 [node name="Floor35" parent="puzzle_05" instance=ExtResource("13_xt5e6")]

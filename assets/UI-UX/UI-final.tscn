@@ -38,6 +38,7 @@ scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_8y50k")
 
 [node name="BrunoCabejaMejor" type="Sprite2D" parent="BoxContainer"]
+modulate = Color(0.702009, 0.785908, 0.837758, 1)
 position = Vector2(128.75, 117.25)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_8y50k")
@@ -49,6 +50,7 @@ scale = Vector2(0.3, 0.3)
 texture = ExtResource("4_ru35l")
 
 [node name="AlejandraCabezaMejor" type="Sprite2D" parent="BoxContainer"]
+modulate = Color(0.73419, 0.810007, 0.856987, 1)
 position = Vector2(198.95, 120.75)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("4_ru35l")
