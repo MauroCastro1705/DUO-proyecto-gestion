@@ -43,10 +43,7 @@ func _chequear_estado_juego():
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("cambiar") and Global.can_swap:
 		swap_characters()
-	elif event.is_action_pressed("zoom_out"):
-		target_zoom = zoomed_out
-	elif event.is_action_released("zoom_out"):
-		target_zoom = normal_zoom
+
 
 func swap_characters() -> void:
 	if active_player == player1:

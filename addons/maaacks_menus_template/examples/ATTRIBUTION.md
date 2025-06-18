@@ -2,33 +2,38 @@
 [font_size=48]Ya no hay Bondis[/font_size]
 
 
-[font_size=34]Alumnos de la Tecnicatura en desarrollo de videojuegos[/font_size]
-[font_size=32]Coordinador:[/font_size]
-Guillermo Crespi
-[font_size=32]Docente:[/font_size]
-Emanuel Berdichevsky
+[font_size=36]Alumnos de la Tecnicatura en desarrollo de videojuegos[/font_size]
+[font_size=34]Coordinador:[/font_size]
+[font_size=30]Guillermo Crespi[/font_size]
+[font_size=34]Docente:[/font_size]
+[font_size=30]Emanuel Berdichevsky[/font_size]
 
 [center]
 [img=700x210]res://assets/UNSO_logo.png[/img]
 [/center]
 
 
-[font_size=32]Productor[/font_size]
-Emiliano Rodriguez 
+[font_size=34]Productor[/font_size]
+[font_size=30]Emiliano Rodriguez [/font_size]
 
-[font_size=32]Programacion[/font_size]
-Mauro Castro 
-Luca Carlos
 
-[font_size=32]Game Design[/font_size]
-Matias Guerra
-Felipe Suárez 
+[font_size=34]Programacion[/font_size]
+[font_size=30]Mauro Castro [/font_size]
+[font_size=30]Luca Carlos[/font_size]
 
-[font_size=32]Arte[/font_size]
-Nahuel Leal
+
+[font_size=34]Game Design[/font_size]
+[font_size=30]Matias Guerra [/font_size]
+[font_size=30]Felipe Suárez [/font_size]
+
+
+[font_size=34]Arte[/font_size]
+[font_size=30]Nahuel Leal [/font_size]
+
   
-[font_size=32]Guion[/font_size]
-Emiliano Rodriguez
+[font_size=34]Guion[/font_size]
+[font_size=30]Emiliano Rodriguez [/font_size]
+
 
 
 ## Herramientas

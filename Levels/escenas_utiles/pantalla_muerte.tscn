@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://bdqkmgo38xbm"]
+[gd_scene load_steps=14 format=3 uid="uid://bdqkmgo38xbm"]
 
 [ext_resource type="Script" uid="uid://c154mm3oh7r13" path="res://Levels/escenas_utiles/pantalla_muerte.gd" id="1_w5xap"]
 [ext_resource type="FontFile" uid="uid://frg1kvfoojuw" path="res://assets/fonts/punk_rockf.ttf" id="1_x41yg"]
+[ext_resource type="PackedScene" uid="uid://5doimctwhx08" path="res://MENUES/examples/scenes/menus/main_menu/main_menu_with_animations.tscn" id="2_o4eev"]
 [ext_resource type="Texture2D" uid="uid://c8jybyhosb3p2" path="res://Levels/escenas_utiles/assets/AlejandraElectrocutadaPose.png" id="3_j71it"]
 [ext_resource type="PackedScene" uid="uid://csaewt7cf5cao" path="res://Levels/stage-prueba-NIVEL-0.tscn" id="3_ljp7a"]
 [ext_resource type="Texture2D" uid="uid://skks02junsod" path="res://Levels/escenas_utiles/assets/Esqueleto.png" id="4_o4eev"]
@@ -37,7 +38,7 @@ animations = [{
 
 [node name="PantallaMuerte" type="Node2D"]
 script = ExtResource("1_w5xap")
-escena_menu_principal = ExtResource("3_ljp7a")
+escena_menu_principal = ExtResource("2_o4eev")
 escena_a_reiniciar = ExtResource("3_ljp7a")
 metadata/_edit_lock_ = true
 

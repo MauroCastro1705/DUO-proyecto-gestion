@@ -20,7 +20,7 @@ size_flags_horizontal = 4
 theme = ExtResource("2_7cjdp")
 script = ExtResource("2_ndv45")
 options_packed_scene = ExtResource("3_7cjdp")
-main_menu_scene = "res://addons/maaacks_menus_template/examples/scenes/menus/main_menu/main_menu_with_animations.tscn"
+main_menu_scene = "uid://5doimctwhx08"
 pauses_game = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
