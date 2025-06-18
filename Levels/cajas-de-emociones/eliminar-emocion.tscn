@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cdns3cwe3x15q" path="res://Levels/cajas-de-emociones/eliminar_emocion.gd" id="1_easfs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6gtac"]
-size = Vector2(286, 305)
+size = Vector2(382, 305)
 
 [node name="Eliminar-emocion" type="Node2D"]
 script = ExtResource("1_easfs")
