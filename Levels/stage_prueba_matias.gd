@@ -24,9 +24,7 @@ func _ready() -> void:
 	player2.is_active = true  # Inicia desactivado
 	camera.position = active_player.global_position
 	camera.zoom = normal_zoom
-	# Activar la cámara del jugador activo
-	#player1.get_node("Camera2D").enabled = true
-	#player2.get_node("Camera2D").enabled = false
+	_resetar_dialogos()
 	
 
 func _process(delta: float) -> void:
@@ -34,13 +32,14 @@ func _process(delta: float) -> void:
 	if active_player:
 		camera.global_position = camera.global_position.lerp(to_local(active_player.global_position), delta * 8.0)
 	camera.zoom = camera.zoom.lerp(target_zoom, delta * zoom_speed)
-	#AUDIO PLAYER
+	_chequear_estado_juego()
+
+func _chequear_estado_juego():
 	if Global.game_over:
 		_game_over()
 	if Global.primer_nivel_win:
 		_victoria()
-
-	
+		
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("cambiar") and Global.can_swap:
 		swap_characters()
@@ -72,7 +71,6 @@ func _game_over():
 	var escena = load("res://Levels/escenas_utiles/pantalla_muerte.tscn") as PackedScene
 	if escena:
 		get_tree().change_scene_to_packed(escena)
-		
 	else:
 		push_error("No se pudo cargar la escena Game Over")
 	
@@ -82,22 +80,32 @@ func _victoria():
 		get_tree().change_scene_to_packed(escena)
 	else:
 		push_error("No se pudo cargar la escena victoria")
-		
+
 
 
 #DIALOGOS EN EL ESCENARIO
 func _on_primer_dialogo_body_entered(body: Node2D) -> void:
-	if body.is_in_group("grupo-laura"):
+	if body.is_in_group("grupo-laura") and !Dialogos.inicio_ambos_pj_bool:
 		Dialogos.inicio_ambos_pj($Laura/Marker2D2,$Ramiro/Marker2D2)
+		Dialogos.inicio_ambos_pj_bool = true
 		
 func _on_dialogo_bondi_body_entered(body: Node2D) -> void:
-	if body.is_in_group("grupo-laura"):
+	if body.is_in_group("grupo-laura") and !Dialogos.colectivero_inicio_bool:
 		Dialogos.colectivero_inicio($Laura/Marker2D2,$Ramiro/Marker2D2,$Marker2D_colectivero)
-
+		Dialogos.colectivero_inicio_bool = true
+		
 func _on_dialogo_cables_pelados_body_entered(body: Node2D) -> void:
-	if body.is_in_group("grupo-laura"):
+	if body.is_in_group("grupo-laura") and !Dialogos.cables_pelados_bool:
 		Dialogos.cables_pelados($Laura/Marker2D2,$Ramiro/Marker2D2)
+		Dialogos.cables_pelados_bool = true
 
 func _on_dialogo_mas_cables_pelados_2_body_entered(body: Node2D) -> void:
-	if body.is_in_group("grupo-laura"):
+	if body.is_in_group("grupo-laura") and !Dialogos.mas_cables_pelados_bool:
 		Dialogos.mas_cables_pelados($Laura/Marker2D2,$Ramiro/Marker2D2)
+		Dialogos.mas_cables_pelados_bool = true
+
+func _resetar_dialogos():
+	Dialogos.inicio_ambos_pj_bool = false
+	Dialogos.colectivero_inicio_bool = false
+	Dialogos.cables_pelados_bool = false
+	Dialogos.mas_cables_pelados_bool = false
