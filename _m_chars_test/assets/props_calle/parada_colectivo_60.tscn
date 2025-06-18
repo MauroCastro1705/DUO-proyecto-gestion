@@ -1,16 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://cm7ggmbyk2i2o"]
+[gd_scene load_steps=2 format=3 uid="uid://cm7ggmbyk2i2o"]
 
-[ext_resource type="Texture2D" uid="uid://c4t1o2vuo6s8l" path="res://_m_chars_test/assets/atlases/atlas_a_01.png" id="1_uojp6"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5fdgr"]
-atlas = ExtResource("1_uojp6")
-region = Rect2(1.92723, 498.183, 135.237, 356.533)
+[ext_resource type="Texture2D" uid="uid://b5cqdj3eqfkrb" path="res://_m_chars_test/assets/atlases/parada_60.tres" id="1_uojp6"]
 
 [node name="ParadaColectivo60" type="Node2D"]
 
-[node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -96.0
-offset_top = -340.0
-offset_right = 39.0
-offset_bottom = 16.0
-texture = SubResource("AtlasTexture_5fdgr")
+[node name="Parada60" type="Sprite2D" parent="."]
+position = Vector2(-30, -162)
+texture = ExtResource("1_uojp6")

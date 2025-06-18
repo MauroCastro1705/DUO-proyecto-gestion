@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://dhqv36pswpq0e"]
+
+[ext_resource type="Texture2D" uid="uid://ww2ejq8f3dri" path="res://assets/PLATAFORMAS/new-sucios/Plataforma-GalponColectivo/Plataforma-TechoGalpon.png" id="1_triba"]
+[ext_resource type="Texture2D" uid="uid://clsdwkwh3wmfi" path="res://assets/PLATAFORMAS/new-sucios/Plataforma-GalponColectivo/Adorno-SoportesDelanterosGalpon.png" id="2_e7kky"]
+[ext_resource type="Texture2D" uid="uid://d2hymq8ttrnl1" path="res://assets/PLATAFORMAS/new-sucios/Plataforma-GalponColectivo/Adorno-SoportesTraserosGalpon.png" id="2_ecp0h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ecp0h"]
+size = Vector2(282, 24)
+
+[node name="refugio_colectivos" type="StaticBody2D"]
+collision_mask = 15
+
+[node name="ref_patas_atras" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_ecp0h")
+offset = Vector2(4.565, -75)
+
+[node name="ref_patas_delante_atras" type="Sprite2D" parent="."]
+modulate = Color(0.551547, 0.574759, 0.689098, 1)
+z_index = -5
+scale = Vector2(1, 1.7)
+texture = ExtResource("2_e7kky")
+offset = Vector2(8.805, -5.915)
+
+[node name="ref_patas_delante" type="Sprite2D" parent="."]
+modulate = Color(0.329755, 0.300395, 0.393148, 1)
+z_index = 20
+scale = Vector2(1, 1.7)
+texture = ExtResource("2_e7kky")
+offset = Vector2(-4.37, -5.815)
+
+[node name="ref_techo" type="Sprite2D" parent="."]
+modulate = Color(0.485857, 0.47259, 0.492293, 1)
+z_index = 20
+scale = Vector2(1.09, 1.522)
+texture = ExtResource("1_triba")
+offset = Vector2(1.535, -100.292)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, -159)
+shape = SubResource("RectangleShape2D_ecp0h")

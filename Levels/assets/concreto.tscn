@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://dcrajy07ndiox"]
+[gd_scene load_steps=38 format=3 uid="uid://dcrajy07ndiox"]
 
 [ext_resource type="Texture2D" uid="uid://7dinfdusy8ew" path="res://assets/Background/concreto_02_shad.png" id="1_ptu22"]
 [ext_resource type="Texture2D" uid="uid://bvysdv2apm0jb" path="res://assets/fx/luz_interior_concreto/luz_interior_cemento_00001.png" id="1_uwkpa"]
@@ -29,6 +29,7 @@
 [ext_resource type="Texture2D" uid="uid://yyt57b73ufp1" path="res://assets/fx/luz_interior_concreto/luz_interior_cemento_00022.png" id="22_348lg"]
 [ext_resource type="Texture2D" uid="uid://dd847pbwx5qv1" path="res://assets/fx/luz_interior_concreto/luz_interior_cemento_00023.png" id="23_2prjr"]
 [ext_resource type="Texture2D" uid="uid://ckv3ul5wsico3" path="res://assets/fx/luz_interior_concreto/luz_interior_cemento_00024.png" id="24_ymi76"]
+[ext_resource type="Texture2D" uid="uid://dvb42hhjrhvqv" path="res://assets/Background/tuto_01.png" id="28_ad5ei"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_05s78"]
 animations = [{
@@ -292,6 +293,15 @@ position = Vector2(-244, -138)
 rotation = -0.0355019
 scale = Vector2(0.221569, 0.221569)
 texture = ExtResource("3_jxfnm")
+
+[node name="120segs" type="Sprite2D" parent="concreto"]
+modulate = Color(0.438555, 0.384053, 0.171282, 0.72549)
+position = Vector2(191, -93)
+rotation = -0.0698132
+scale = Vector2(0.41, 0.41)
+texture = ExtResource("28_ad5ei")
+region_enabled = true
+region_rect = Rect2(261.109, 5.50355, 228.4, 249.437)
 
 [node name="luz_calle_2d" type="PointLight2D" parent="."]
 position = Vector2(535, -495)

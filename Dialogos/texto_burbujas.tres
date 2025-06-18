@@ -23,6 +23,7 @@ overrides = {
 "behaviour_direction": "Vector2(1, -2)",
 "behaviour_distance": "100.0",
 "box_corner_radius": "9.0",
+"box_modulate": "Color(0.874146, 0.8997, 0.902344, 1)",
 "box_wobble_amount": "0.6",
 "box_wobble_detail": "0.3",
 "name_label_font": "\"res://assets/fonts/punk_rockf.ttf\"",
