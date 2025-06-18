@@ -2233,6 +2233,7 @@ position = Vector2(-5, -172)
 
 [node name="SonidoPasos_bruno" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("513_d3tos")
-volume_db = 4.0
+volume_db = 3.0
+pitch_scale = 0.45
 
 [connection signal="timeout" from="Flecha_UI/Timer_flecha" to="." method="_on_timer_flecha_timeout"]

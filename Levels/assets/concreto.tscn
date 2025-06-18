@@ -1,9 +1,114 @@
-[gd_scene load_steps=10 format=3 uid="uid://dcrajy07ndiox"]
+[gd_scene load_steps=37 format=3 uid="uid://dcrajy07ndiox"]
 
 [ext_resource type="Texture2D" uid="uid://7dinfdusy8ew" path="res://assets/Background/concreto_02_shad.png" id="1_ptu22"]
+[ext_resource type="Texture2D" uid="uid://bvysdv2apm0jb" path="res://assets/fx/luz_interior_concreto/luz_interior_cemento_00001.png" id="1_uwkpa"]
 [ext_resource type="Texture2D" uid="uid://dxxsk0qwxw6h0" path="res://assets/Background/CartelFechasConcreto.png" id="2_2qcf2"]
 [ext_resource type="Texture2D" uid="uid://baamvpygesxms" path="res://assets/Background/neon_concreto_01.png" id="2_56ea1"]
+[ext_resource type="Texture2D" uid="uid://bkfq0ylu43444" path="res://assets/fx/luz_interior_concreto/luz_interior_cemento_00002.png" id="2_ad5ei"]
+[ext_resource type="Texture2D" uid="uid://dheo42kret6a7" path="res://assets/fx/luz_interior_concreto/luz_interior_cemento_00003.png" id="3_aagm6"]
 [ext_resource type="Texture2D" uid="uid://bxbimkw4uxgvh" path="res://assets/Background/Poster120Segundos.png" id="3_jxfnm"]
+[ext_resource type="Texture2D" uid="uid://bar1d16jesdnr" path="res://assets/fx/luz_interior_concreto/luz_interior_cemento_00004.png" id="4_3by0f"]
+[ext_resource type="Texture2D" uid="uid://bjnpuqdssuxxq" path="res://assets/fx/luz_interior_concreto/luz_interior_cemento_00005.png" id="5_e4a5s"]
+[ext_resource type="Texture2D" uid="uid://bwbktomhdhdl7" path="res://_m_chars_test/assets/luces/luz_puerta_concreto_01.png" id="5_jxfnm"]
+[ext_resource type="Texture2D" uid="uid://oh21sao3r1yj" path="res://assets/fx/luz_interior_concreto/luz_interior_cemento_00006.png" id="6_7o2c4"]
+[ext_resource type="Texture2D" uid="uid://lapg0eg14iek" path="res://assets/fx/luz_interior_concreto/luz_interior_cemento_00007.png" id="7_dbwio"]
+[ext_resource type="Texture2D" uid="uid://dux5gqvljk3tw" path="res://assets/fx/luz_interior_concreto/luz_interior_cemento_00008.png" id="8_awc3f"]
+[ext_resource type="Texture2D" uid="uid://cc3btmkhx7lkj" path="res://assets/fx/luz_interior_concreto/luz_interior_cemento_00009.png" id="9_eag86"]
+[ext_resource type="Texture2D" uid="uid://dh273im6xs6lx" path="res://assets/fx/luz_interior_concreto/luz_interior_cemento_00010.png" id="10_ylvov"]
+[ext_resource type="Texture2D" uid="uid://4rhbykmo7tm6" path="res://assets/fx/luz_interior_concreto/luz_interior_cemento_00011.png" id="11_e3cwa"]
+[ext_resource type="Texture2D" uid="uid://tq0l0oldmmpy" path="res://assets/fx/luz_interior_concreto/luz_interior_cemento_00012.png" id="12_85hjf"]
+[ext_resource type="Texture2D" uid="uid://cujvcckicpqef" path="res://assets/fx/luz_interior_concreto/luz_interior_cemento_00013.png" id="13_hkftw"]
+[ext_resource type="Texture2D" uid="uid://cdyh0vlbic20" path="res://assets/fx/luz_interior_concreto/luz_interior_cemento_00014.png" id="14_mruqw"]
+[ext_resource type="Texture2D" uid="uid://dtum8aqqyrp4w" path="res://assets/fx/luz_interior_concreto/luz_interior_cemento_00015.png" id="15_2pf7m"]
+[ext_resource type="Texture2D" uid="uid://ddr8uwtbh25n0" path="res://assets/fx/luz_interior_concreto/luz_interior_cemento_00016.png" id="16_y35y0"]
+[ext_resource type="Texture2D" uid="uid://bvmblbp462oou" path="res://assets/fx/luz_interior_concreto/luz_interior_cemento_00017.png" id="17_yuter"]
+[ext_resource type="Texture2D" uid="uid://bnv67r1ffwl1c" path="res://assets/fx/luz_interior_concreto/luz_interior_cemento_00018.png" id="18_w0man"]
+[ext_resource type="Texture2D" uid="uid://b2xschm8uytkn" path="res://assets/fx/luz_interior_concreto/luz_interior_cemento_00019.png" id="19_1vo75"]
+[ext_resource type="Texture2D" uid="uid://b5ipxm7pevwjf" path="res://assets/fx/luz_interior_concreto/luz_interior_cemento_00020.png" id="20_0evr7"]
+[ext_resource type="Texture2D" uid="uid://lqpdgf7l80oc" path="res://assets/fx/luz_interior_concreto/luz_interior_cemento_00021.png" id="21_pqx15"]
+[ext_resource type="Texture2D" uid="uid://yyt57b73ufp1" path="res://assets/fx/luz_interior_concreto/luz_interior_cemento_00022.png" id="22_348lg"]
+[ext_resource type="Texture2D" uid="uid://dd847pbwx5qv1" path="res://assets/fx/luz_interior_concreto/luz_interior_cemento_00023.png" id="23_2prjr"]
+[ext_resource type="Texture2D" uid="uid://ckv3ul5wsico3" path="res://assets/fx/luz_interior_concreto/luz_interior_cemento_00024.png" id="24_ymi76"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_05s78"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_uwkpa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ad5ei")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_aagm6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_3by0f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_e4a5s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_7o2c4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_dbwio")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_awc3f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_eag86")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ylvov")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_e3cwa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_85hjf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_hkftw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_mruqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_2pf7m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_y35y0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_yuter")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_w0man")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_1vo75")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_0evr7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_pqx15")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_348lg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_2prjr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_ymi76")
+}],
+"loop": true,
+"name": &"default",
+"speed": 30.0
+}]
 
 [sub_resource type="Gradient" id="Gradient_ptu22"]
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
@@ -87,7 +192,83 @@ func _handle_light_event():
 			_set_next_countdown_time(randf_range(min_time_between_glitches, max_time_between_glitches))
 "
 
+[sub_resource type="GDScript" id="GDScript_uwkpa"]
+script/source = "extends PointLight2D
+
+@export var base_light_energy: float = 1.0 # The normal energy of the light when it's on
+@export var min_time_between_glitches: float = 0.5 # Minimum time between glitches (seconds)
+@export var max_time_between_glitches: float = 3.0 # Maximum time between glitches (seconds)
+@export var min_glitch_off_duration: float = 0.05 # Minimum time the light stays off during a glitch (seconds)
+@export var max_glitch_off_duration: float = 0.3  # Maximum time the light stays off during a glitch (seconds)
+@export var glitch_chance: float = 0.8 # Probability (0.0 to 1.0) that a scheduled event is a glitch (vs. just a long \"on\" period)
+
+var current_countdown: float = 0.0 # Time until the next potential glitch/state change
+var is_off_glitching: bool = false # True if the light is currently off due to a glitch
+
+func _ready():
+	# VERY IMPORTANT: Seed the random number generator uniquely for EACH INSTANCE
+	# This ensures that when this PointLight2D (and its scene) is instantiated multiple times,
+	# each light glitches independently.
+	seed(hash(str(get_instance_id())))
+	
+	# Set the light to its base energy initially
+	energy = base_light_energy
+	
+	# Start the initial countdown to the first event
+	_set_next_countdown_time(randf_range(min_time_between_glitches, max_time_between_glitches))
+
+func _process(delta):
+	# Decrease the countdown by delta time
+	current_countdown -= delta
+	
+	# If countdown reaches zero or less, it's time for an event
+	if current_countdown <= 0:
+		_handle_light_event()
+
+func _set_next_countdown_time(time_to_wait: float):
+	# Sets the new countdown for the next event
+	current_countdown = time_to_wait
+
+func _handle_light_event():
+	if is_off_glitching:
+		# If it was off, turn it back on to base energy
+		energy = base_light_energy
+		is_off_glitching = false
+		# Schedule the next \"on\" period before a potential new glitch
+		_set_next_countdown_time(randf_range(min_time_between_glitches, max_time_between_glitches))
+	else:
+		# If it was on, decide whether to glitch or stay on
+		if randf() < glitch_chance:
+			# It's a glitch! Turn the light off
+			energy = 0.0
+			is_off_glitching = true
+			# Schedule how long it stays off
+			_set_next_countdown_time(randf_range(min_glitch_off_duration, max_glitch_off_duration))
+			
+			# Optional: Play a glitch sound or particle effect here
+			# if $SomeSoundPlayer: $SomeSoundPlayer.play()
+		else:
+			# Not a glitch this time, just stay on and schedule the next check
+			energy = base_light_energy # Ensure it's on, even if it was already on
+			_set_next_countdown_time(randf_range(min_time_between_glitches, max_time_between_glitches))
+"
+
 [node name="Concreto" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -164.0
+offset_top = -249.0
+offset_right = 94.0
+offset_bottom = -16.0
+color = Color(0.85, 0.664133, 0.5015, 1)
+
+[node name="interior_animado" type="AnimatedSprite2D" parent="."]
+visible = false
+modulate = Color(0.899258, 0.899258, 0.899258, 1)
+position = Vector2(62, -136)
+sprite_frames = SubResource("SpriteFrames_05s78")
+autoplay = "default"
+frame_progress = 0.464909
 
 [node name="concreto" type="Sprite2D" parent="."]
 modulate = Color(0.459773, 0.603913, 0.578852, 1)
@@ -134,6 +315,21 @@ texture = SubResource("GradientTexture2D_0cf4c")
 texture_scale = 8.46
 script = SubResource("GDScript_56ea1")
 base_light_energy = 6.0
+min_time_between_glitches = 0.03
+max_time_between_glitches = 0.6
+min_glitch_off_duration = 0.03
+max_glitch_off_duration = 0.08
+glitch_chance = 1.0
+
+[node name="luz_interior_concreto" type="PointLight2D" parent="."]
+position = Vector2(-29, -168)
+color = Color(0.87, 0.74472, 0.7308, 1)
+energy = 3.33
+texture = ExtResource("5_jxfnm")
+offset = Vector2(217, -34.75)
+texture_scale = 1.72
+script = SubResource("GDScript_uwkpa")
+base_light_energy = 3.33
 min_time_between_glitches = 0.03
 max_time_between_glitches = 0.6
 min_glitch_off_duration = 0.03

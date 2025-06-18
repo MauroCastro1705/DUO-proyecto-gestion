@@ -1,4 +1,4 @@
-[gd_scene load_steps=114 format=3 uid="uid://ci8bqhqtrykw4"]
+[gd_scene load_steps=115 format=3 uid="uid://ci8bqhqtrykw4"]
 
 [ext_resource type="Script" uid="uid://g8jifaod0eqw" path="res://Levels/escenas_utiles/pantalla_de_victoria.gd" id="1_e3t70"]
 [ext_resource type="PackedScene" uid="uid://5doimctwhx08" path="res://MENUES/examples/scenes/menus/main_menu/main_menu_with_animations.tscn" id="2_6xxb4"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bb1qt3bxph8w0" path="res://_m_chars_test/assets/fondos/fondo_cielo_low.png" id="3_448r8"]
 [ext_resource type="Texture2D" uid="uid://b4rskdgrsbv5c" path="res://assets/characters/animaciones/ch_rockear/ch_rockear_00001.png" id="3_qpvmj"]
 [ext_resource type="Texture2D" uid="uid://sd3uy2ve0ue4" path="res://assets/Foreground (SILUETAS)/Basura2.png" id="4_6xxb4"]
+[ext_resource type="Texture2D" uid="uid://tomogscyksl8" path="res://assets/Background/CervezasNEon.png" id="4_7e2kp"]
 [ext_resource type="Texture2D" uid="uid://cynvqyrkyhpqv" path="res://assets/characters/animaciones/ch_rockear/ch_rockear_00002.png" id="4_cnkju"]
 [ext_resource type="Texture2D" uid="uid://c5gx0q4kwg6mg" path="res://_m_chars_test/assets/fondos/fondo_skyline_low.png" id="4_pqniq"]
 [ext_resource type="Texture2D" uid="uid://d28vaecyhwlhr" path="res://assets/characters/animaciones/ch_rockear/ch_rockear_00003.png" id="5_8bsdk"]
@@ -434,6 +435,12 @@ repeat_times = 4
 position = Vector2(1105, 30.5556)
 scale = Vector2(0.84375, 1)
 texture = ExtResource("3_448r8")
+
+[node name="CervezasNEon" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.713726)
+position = Vector2(1712, 351)
+scale = Vector2(0.43, 0.43)
+texture = ExtResource("4_7e2kp")
 
 [node name="Parallax2D" type="Parallax2D" parent="."]
 scale = Vector2(1.8, 1.8)

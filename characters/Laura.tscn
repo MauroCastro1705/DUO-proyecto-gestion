@@ -1467,7 +1467,7 @@ shape = SubResource("RectangleShape2D_jpjlv")
 [node name="LauraSprites" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.22725, 0.22725)
 sprite_frames = SubResource("SpriteFrames_urixy")
-animation = &"empuja_enojado"
+animation = &"walk"
 autoplay = "idle"
 speed_scale = 1.5
 offset = Vector2(0, -235.835)
@@ -1477,6 +1477,7 @@ position = Vector2(6, -74)
 
 [node name="SonidoPasos_alejandra" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("334_b4e08")
-volume_db = 7.5
+volume_db = 5.0
+pitch_scale = 2.36
 
 [connection signal="timeout" from="Flecha_UI/Timer_flecha" to="." method="_on_timer_flecha_timeout"]
