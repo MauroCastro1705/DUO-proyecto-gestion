@@ -91,7 +91,10 @@ func _procesar_input_movimiento() -> Vector2:
 		velocity.y = -jump_force
 		is_jumping = true #para animacion
 		played_apex = false
-		sprite.play("pre_salto")
+		if Emociones.gordo_mood_enojado:
+			sprite.play("pre_salto_enojado")
+		else:
+			sprite.play("pre_salto")
 	if Input.is_action_just_pressed("empujar") and joint == null:
 		empujar_caja()
 	if Input.is_action_just_released("empujar"):
@@ -191,7 +194,13 @@ func update_animation(direction: Vector2):
 		elif velocity.y > 0 and sprite.animation != "caida":
 			sprite.play("caida")
 		return
-
+	if not is_on_floor() and Emociones.gordo_mood_enojado:
+		if velocity.y < 0 and sprite.animation != "salto_enojado":
+			sprite.play("salto_enojado")
+		elif velocity.y > 0 and sprite.animation != "caida_enojado":
+			sprite.play("caida_enojado")
+		return
+		
 	if esta_empujando:
 		if Emociones.gordo_mood_enojado:
 			_animacion_empujar_enojado(direction)
