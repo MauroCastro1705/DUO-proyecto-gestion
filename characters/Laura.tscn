@@ -1467,8 +1467,9 @@ shape = SubResource("RectangleShape2D_jpjlv")
 [node name="LauraSprites" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.22725, 0.22725)
 sprite_frames = SubResource("SpriteFrames_urixy")
-animation = &"walk"
+animation = &"caida"
 autoplay = "idle"
+frame_progress = 0.166292
 speed_scale = 1.5
 offset = Vector2(0, -235.835)
 

@@ -1,8 +1,6 @@
-[gd_scene load_steps=569 format=3 uid="uid://bbs86ttvb6dhi"]
+[gd_scene load_steps=555 format=3 uid="uid://bbs86ttvb6dhi"]
 
 [ext_resource type="Script" uid="uid://m850xbhl28ts" path="res://characters/characters_code/Ramiro.gd" id="2_cfd2t"]
-[ext_resource type="Texture2D" uid="uid://e78wxqaps5wx" path="res://assets/characters/animaciones/ramiro_salto_normal/gde_salto_normal_down.png" id="3_rgijm"]
-[ext_resource type="Texture2D" uid="uid://bjbejyj8iirnl" path="res://assets/characters/animaciones/ramiro_salto_normal/gde_salto_normal_landing.png" id="4_3mpr4"]
 [ext_resource type="Texture2D" uid="uid://51yfew627mfu" path="res://assets/doted-line.png" id="4_jfpom"]
 [ext_resource type="Texture2D" uid="uid://376rd4xhbm2c" path="res://assets/characters/animaciones/gde_walk_bobo/gde_walk_bobo_00001.png" id="4_si263"]
 [ext_resource type="Texture2D" uid="uid://cjk0exkyfg6r" path="res://assets/characters/animaciones/ramiro_enojado_in/gde_enojado_in_00001.png" id="5_17i8l"]
@@ -123,25 +121,37 @@
 [ext_resource type="Texture2D" uid="uid://rb8muv4okeqx" path="res://assets/characters/animaciones/gde_walk_bobo/gde_walk_bobo_00048.png" id="51_enf7g"]
 [ext_resource type="Texture2D" uid="uid://dn45gh10gjptq" path="res://assets/characters/animaciones/gde_idle_enojado/gde_idle_enojado_00046.png" id="51_eqfqb"]
 [ext_resource type="Texture2D" uid="uid://cllwl2mewh31p" path="res://assets/characters/animaciones/gde_idle_enojado/gde_idle_enojado_00047.png" id="52_4pn78"]
+[ext_resource type="Texture2D" uid="uid://cl0authqq3p1" path="res://assets/characters/animaciones/gde_salto_completo/gde_salto_completo_00027.png" id="52_iiept"]
+[ext_resource type="Texture2D" uid="uid://57o8vdirro8f" path="res://assets/characters/animaciones/gde_salto_completo/gde_salto_completo_00028.png" id="53_jcy60"]
 [ext_resource type="Texture2D" uid="uid://bj8dks3v7cagr" path="res://assets/characters/animaciones/gde_idle_enojado/gde_idle_enojado_00048.png" id="53_jdlo3"]
+[ext_resource type="Texture2D" uid="uid://7goi3e2oggnt" path="res://assets/characters/animaciones/gde_salto_completo/gde_salto_completo_00029.png" id="54_0d64j"]
 [ext_resource type="Texture2D" uid="uid://bf7t713uhok3q" path="res://assets/characters/animaciones/gde_empuja/gde_empuja_00001.png" id="54_njnt6"]
 [ext_resource type="Texture2D" uid="uid://ewe3y0crp0cc" path="res://assets/characters/animaciones/gde_walk_enojado/gde_walk_enojado_00001.png" id="54_v43u4"]
 [ext_resource type="Texture2D" uid="uid://dg781u70jcatd" path="res://assets/characters/animaciones/gde_walk_enojado/gde_walk_enojado_00002.png" id="55_3c2ay"]
 [ext_resource type="Texture2D" uid="uid://ckqf8tdaavl38" path="res://assets/characters/animaciones/gde_empuja/gde_empuja_00002.png" id="55_fmtff"]
+[ext_resource type="Texture2D" uid="uid://cymbteaumudbs" path="res://assets/characters/animaciones/gde_salto_completo/gde_salto_completo_00030.png" id="55_s1iwx"]
 [ext_resource type="Texture2D" uid="uid://53iaiga3f1nv" path="res://assets/characters/animaciones/gde_empuja/gde_empuja_00003.png" id="56_qnuls"]
+[ext_resource type="Texture2D" uid="uid://b34ca3o4wlitw" path="res://assets/characters/animaciones/gde_salto_completo/gde_salto_completo_00031.png" id="56_v7bpw"]
 [ext_resource type="Texture2D" uid="uid://vo3vh4l77ofl" path="res://assets/characters/animaciones/gde_walk_enojado/gde_walk_enojado_00003.png" id="56_yh8do"]
 [ext_resource type="Texture2D" uid="uid://d1gyevse68glq" path="res://assets/characters/animaciones/gde_empuja/gde_empuja_00004.png" id="57_1xode"]
+[ext_resource type="Texture2D" uid="uid://c4pln35buryrm" path="res://assets/characters/animaciones/gde_salto_completo/gde_salto_completo_00032.png" id="57_6ekjf"]
 [ext_resource type="Texture2D" uid="uid://bcexkqph0lmaf" path="res://assets/characters/animaciones/gde_walk_enojado/gde_walk_enojado_00004.png" id="57_tdhjv"]
+[ext_resource type="Texture2D" uid="uid://x6nute11nnxl" path="res://assets/characters/animaciones/gde_salto_completo/gde_salto_completo_00033.png" id="58_65hr7"]
 [ext_resource type="Texture2D" uid="uid://13dku8f83i46" path="res://assets/characters/animaciones/gde_walk_enojado/gde_walk_enojado_00005.png" id="58_qlhqf"]
 [ext_resource type="Texture2D" uid="uid://dyx6s2gv1nmeu" path="res://assets/characters/animaciones/gde_empuja/gde_empuja_00005.png" id="58_sr4or"]
 [ext_resource type="Texture2D" uid="uid://bbw68c1qkvy0l" path="res://assets/characters/animaciones/gde_walk_enojado/gde_walk_enojado_00006.png" id="59_8ewyc"]
+[ext_resource type="Texture2D" uid="uid://diraq5ia5wksn" path="res://assets/characters/animaciones/gde_salto_completo/gde_salto_completo_00034.png" id="59_an83n"]
 [ext_resource type="Texture2D" uid="uid://by1pjg40054te" path="res://assets/characters/animaciones/gde_empuja/gde_empuja_00006.png" id="59_vew03"]
+[ext_resource type="Texture2D" uid="uid://1i412xhodyv1" path="res://assets/characters/animaciones/gde_salto_completo/gde_salto_completo_00035.png" id="60_6t0no"]
 [ext_resource type="Texture2D" uid="uid://dhlgl3w0ctgoe" path="res://assets/characters/animaciones/gde_empuja/gde_empuja_00007.png" id="60_vffkg"]
 [ext_resource type="Texture2D" uid="uid://wrmad20rjp27" path="res://assets/characters/animaciones/gde_walk_enojado/gde_walk_enojado_00007.png" id="60_ytwuj"]
 [ext_resource type="Texture2D" uid="uid://drut7vebf02d4" path="res://assets/characters/animaciones/gde_empuja/gde_empuja_00008.png" id="61_78ud4"]
+[ext_resource type="Texture2D" uid="uid://ddaai5701rycr" path="res://assets/characters/animaciones/gde_salto_completo/gde_salto_completo_00036.png" id="61_m55sr"]
 [ext_resource type="Texture2D" uid="uid://cyag2yxhdfary" path="res://assets/characters/animaciones/gde_walk_enojado/gde_walk_enojado_00008.png" id="61_u4idg"]
+[ext_resource type="Texture2D" uid="uid://djjoyj1o48ejv" path="res://assets/characters/animaciones/gde_salto_completo/gde_salto_completo_00037.png" id="62_5dnr7"]
 [ext_resource type="Texture2D" uid="uid://b0wkfbrxwfuv1" path="res://assets/characters/animaciones/gde_walk_enojado/gde_walk_enojado_00009.png" id="62_6cn1j"]
 [ext_resource type="Texture2D" uid="uid://40ostr3ju6eo" path="res://assets/characters/animaciones/gde_empuja/gde_empuja_00009.png" id="62_yxid0"]
+[ext_resource type="Texture2D" uid="uid://0hku314qrhi7" path="res://assets/characters/animaciones/gde_salto_completo/gde_salto_completo_00038.png" id="63_e0ext"]
 [ext_resource type="Texture2D" uid="uid://jrn3w3ipcokc" path="res://assets/characters/animaciones/gde_walk_enojado/gde_walk_enojado_00010.png" id="63_jkscp"]
 [ext_resource type="Texture2D" uid="uid://df7plp6q0aep8" path="res://assets/characters/animaciones/gde_empuja/gde_empuja_00010.png" id="63_l2q84"]
 [ext_resource type="Texture2D" uid="uid://cp327v5x1jprn" path="res://assets/characters/animaciones/gde_walk_enojado/gde_walk_enojado_00011.png" id="64_665sy"]
@@ -171,14 +181,11 @@
 [ext_resource type="Texture2D" uid="uid://c0nukc7gmdmp" path="res://assets/characters/animaciones/gde_walk_enojado/gde_walk_enojado_00023.png" id="76_43cdb"]
 [ext_resource type="Texture2D" uid="uid://cs2npfq27q8kr" path="res://assets/characters/animaciones/gde_empuja/gde_empuja_00023.png" id="76_u5biy"]
 [ext_resource type="Texture2D" uid="uid://btpx0poxgwau6" path="res://assets/characters/animaciones/gde_walk_enojado/gde_walk_enojado_00024.png" id="77_0g1xj"]
-[ext_resource type="Texture2D" uid="uid://bgq43kielo2uv" path="res://assets/characters/animaciones/ramiro_salto_normal/gde_salto_normal_pre.png" id="77_34v0l"]
 [ext_resource type="Texture2D" uid="uid://4uhynojxvkwf" path="res://assets/characters/animaciones/gde_empuja/gde_empuja_00024.png" id="77_hip8b"]
-[ext_resource type="Texture2D" uid="uid://c4g31dbyejciv" path="res://assets/characters/animaciones/ramiro_salto_normal/gde_salto_normal_up.png" id="78_h6d7j"]
 [ext_resource type="Texture2D" uid="uid://b7rxjcy6qsfs0" path="res://assets/characters/animaciones/gde_empuja/gde_empuja_00025.png" id="78_j2tbo"]
 [ext_resource type="Texture2D" uid="uid://b7nsrt0gnnksq" path="res://assets/characters/animaciones/gde_walk_enojado/gde_walk_enojado_00025.png" id="78_w8s4k"]
 [ext_resource type="Texture2D" uid="uid://xiq2860ei0r6" path="res://assets/characters/animaciones/gde_walk_enojado/gde_walk_enojado_00026.png" id="79_3jfnx"]
 [ext_resource type="Texture2D" uid="uid://6wh53q66l5qs" path="res://assets/characters/animaciones/gde_empuja/gde_empuja_00026.png" id="79_020pk"]
-[ext_resource type="Texture2D" uid="uid://du4da4084tkgc" path="res://assets/characters/animaciones/ramiro_salto_normal/gde_salto_normal_apex.png" id="79_ijupv"]
 [ext_resource type="Texture2D" uid="uid://dtf15m037w6gm" path="res://assets/characters/animaciones/gde_empuja/gde_empuja_00027.png" id="80_e2pem"]
 [ext_resource type="Texture2D" uid="uid://bljg6vknvoi7e" path="res://assets/characters/animaciones/gde_walk_enojado/gde_walk_enojado_00027.png" id="80_eynog"]
 [ext_resource type="Texture2D" uid="uid://bunry08c33e0d" path="res://assets/characters/animaciones/gde_walk_enojado/gde_walk_enojado_00028.png" id="81_cu60l"]
@@ -472,9 +479,12 @@
 [ext_resource type="Texture2D" uid="uid://cbdtcuiiwtj6d" path="res://assets/characters/animaciones/gde_rockear/gde_rockear_00006.png" id="421_fqu70"]
 [ext_resource type="Texture2D" uid="uid://c6g2u0aghjn5l" path="res://assets/characters/animaciones/gde_rockear/gde_rockear_00007.png" id="422_0jlii"]
 [ext_resource type="Texture2D" uid="uid://q1o5b6f7k1r6" path="res://assets/characters/animaciones/gde_rockear/gde_rockear_00008.png" id="423_opvvl"]
+[ext_resource type="Texture2D" uid="uid://bak230nfp7jij" path="res://assets/characters/animaciones/gde_salto_completo/gde_salto_completo_00005.png" id="424_ibg5c"]
 [ext_resource type="Texture2D" uid="uid://boywk00v5ydqh" path="res://assets/characters/animaciones/gde_rockear/gde_rockear_00009.png" id="424_ieoj4"]
 [ext_resource type="Texture2D" uid="uid://cxwjrlcpkesp" path="res://assets/characters/animaciones/gde_rockear/gde_rockear_00010.png" id="425_lkjoy"]
+[ext_resource type="Texture2D" uid="uid://6o8hyqsackyx" path="res://assets/characters/animaciones/gde_salto_completo/gde_salto_completo_00007.png" id="425_n4wus"]
 [ext_resource type="Texture2D" uid="uid://b6qfn1gflw3bx" path="res://assets/characters/animaciones/gde_rockear/gde_rockear_00011.png" id="426_hxwi7"]
+[ext_resource type="Texture2D" uid="uid://cutr66rdxgb1w" path="res://assets/characters/animaciones/gde_salto_completo/gde_salto_completo_00009.png" id="426_pjyk2"]
 [ext_resource type="Texture2D" uid="uid://d213cqcdxlplh" path="res://assets/characters/animaciones/gde_rockear/gde_rockear_00012.png" id="427_oh2v0"]
 [ext_resource type="Texture2D" uid="uid://brylpj1fwhtl8" path="res://assets/characters/animaciones/gde_rockear/gde_rockear_00013.png" id="428_5y7yp"]
 [ext_resource type="Texture2D" uid="uid://bdatdhwd4rrag" path="res://assets/characters/animaciones/gde_rockear/gde_rockear_00014.png" id="429_l3ypy"]
@@ -512,32 +522,18 @@
 [ext_resource type="Texture2D" uid="uid://crve2xjptd3xp" path="res://assets/characters/animaciones/gde_rockear/gde_rockear_00046.png" id="461_ahyh6"]
 [ext_resource type="Texture2D" uid="uid://md5u5mrnjy1k" path="res://assets/characters/animaciones/gde_rockear/gde_rockear_00047.png" id="462_loof1"]
 [ext_resource type="Texture2D" uid="uid://cdd3kuxbgy1op" path="res://assets/characters/animaciones/gde_rockear/gde_rockear_00048.png" id="463_k30c2"]
-[ext_resource type="Texture2D" uid="uid://wm5gtsm6qlv" path="res://assets/characters/animaciones/gde_salto_enojado_completo/gde_salto_enojado_completo_00001.png" id="465_p55bp"]
-[ext_resource type="Texture2D" uid="uid://c3w2rnu4th27l" path="res://assets/characters/animaciones/gde_salto_enojado_completo/gde_salto_enojado_completo_00002.png" id="466_ybe0m"]
-[ext_resource type="Texture2D" uid="uid://dkllb4hkyqc7f" path="res://assets/characters/animaciones/gde_salto_enojado_completo/gde_salto_enojado_completo_00003.png" id="467_1rbqb"]
-[ext_resource type="Texture2D" uid="uid://b4mb6101fal01" path="res://assets/characters/animaciones/gde_salto_enojado_completo/gde_salto_enojado_completo_00004.png" id="468_6pk3u"]
 [ext_resource type="Texture2D" uid="uid://d0i7ayqji1evi" path="res://assets/characters/animaciones/gde_salto_enojado_completo/gde_salto_enojado_completo_00005.png" id="469_asxte"]
-[ext_resource type="Texture2D" uid="uid://dvtdl7pkc0ies" path="res://assets/characters/animaciones/gde_salto_enojado_completo/gde_salto_enojado_completo_00006.png" id="470_wws8b"]
 [ext_resource type="Texture2D" uid="uid://dbwyusupai6hq" path="res://assets/characters/animaciones/gde_salto_enojado_completo/gde_salto_enojado_completo_00007.png" id="471_yro84"]
-[ext_resource type="Texture2D" uid="uid://nvjtxvi7fav0" path="res://assets/characters/animaciones/gde_salto_enojado_completo/gde_salto_enojado_completo_00008.png" id="472_janax"]
 [ext_resource type="Texture2D" uid="uid://4x4f4baawx2a" path="res://assets/characters/animaciones/gde_salto_enojado_completo/gde_salto_enojado_completo_00009.png" id="473_2nkjg"]
-[ext_resource type="Texture2D" uid="uid://cveh0551hpfe8" path="res://assets/characters/animaciones/gde_salto_enojado_completo/gde_salto_enojado_completo_00010.png" id="474_j4jtp"]
-[ext_resource type="Texture2D" uid="uid://du7hs0littjg" path="res://assets/characters/animaciones/gde_salto_enojado_completo/gde_salto_enojado_completo_00011.png" id="475_balln"]
-[ext_resource type="Texture2D" uid="uid://dbca1w44ieyjh" path="res://assets/characters/animaciones/gde_salto_enojado_completo/gde_salto_enojado_completo_00012.png" id="476_rj8r2"]
-[ext_resource type="Texture2D" uid="uid://d4c8nwgfxmvm1" path="res://assets/characters/animaciones/gde_salto_enojado_completo/gde_salto_enojado_completo_00013.png" id="477_er5sc"]
-[ext_resource type="Texture2D" uid="uid://bqsal127lmh8h" path="res://assets/characters/animaciones/gde_salto_enojado_completo/gde_salto_enojado_completo_00014.png" id="478_u21wg"]
-[ext_resource type="Texture2D" uid="uid://8fv6mgxqc0fv" path="res://assets/characters/animaciones/gde_salto_enojado_completo/gde_salto_enojado_completo_00015.png" id="479_jw8pc"]
-[ext_resource type="Texture2D" uid="uid://yxgwnnwlywoh" path="res://assets/characters/animaciones/gde_salto_enojado_completo/gde_salto_enojado_completo_00016.png" id="480_iiept"]
-[ext_resource type="Texture2D" uid="uid://d2vouxvq60l7v" path="res://assets/characters/animaciones/gde_salto_enojado_completo/gde_salto_enojado_completo_00017.png" id="481_jcy60"]
-[ext_resource type="Texture2D" uid="uid://5e5c8cqsgxiq" path="res://assets/characters/animaciones/gde_salto_enojado_completo/gde_salto_enojado_completo_00018.png" id="482_0d64j"]
-[ext_resource type="Texture2D" uid="uid://dsi1g1a4nb1l8" path="res://assets/characters/animaciones/gde_salto_enojado_completo/gde_salto_enojado_completo_00019.png" id="483_s1iwx"]
+[ext_resource type="Texture2D" uid="uid://bnmteldmjm34p" path="res://assets/characters/animaciones/gde_salto_completo/gde_salto_completo_00010.png" id="475_t1pyi"]
+[ext_resource type="Texture2D" uid="uid://bhc2yvfcgd0jh" path="res://assets/characters/animaciones/gde_salto_completo/gde_salto_completo_00011.png" id="476_jcjv2"]
+[ext_resource type="Texture2D" uid="uid://daeh6fumi7mfx" path="res://assets/characters/animaciones/gde_salto_completo/gde_salto_completo_00012.png" id="477_rjypx"]
+[ext_resource type="Texture2D" uid="uid://b2ybs72k2p3pl" path="res://assets/characters/animaciones/gde_salto_completo/gde_salto_completo_00013.png" id="478_i7vd1"]
+[ext_resource type="Texture2D" uid="uid://dn63lht7hbr0f" path="res://assets/characters/animaciones/gde_salto_completo/gde_salto_completo_00014.png" id="479_2xiot"]
 [ext_resource type="Texture2D" uid="uid://bnyy15jyrh4iy" path="res://assets/characters/animaciones/gde_salto_enojado_completo/gde_salto_enojado_completo_00020.png" id="484_v7bpw"]
 [ext_resource type="Texture2D" uid="uid://2vaxetjjh4l2" path="res://assets/characters/animaciones/gde_salto_enojado_completo/gde_salto_enojado_completo_00021.png" id="485_6ekjf"]
 [ext_resource type="Texture2D" uid="uid://c84bn1mpm0ne8" path="res://assets/characters/animaciones/gde_salto_enojado_completo/gde_salto_enojado_completo_00022.png" id="486_65hr7"]
 [ext_resource type="Texture2D" uid="uid://blvo3hltripfg" path="res://assets/characters/animaciones/gde_salto_enojado_completo/gde_salto_enojado_completo_00023.png" id="487_an83n"]
-[ext_resource type="Texture2D" uid="uid://d08pcwbpvuqk6" path="res://assets/characters/animaciones/gde_salto_enojado_completo/gde_salto_enojado_completo_00024.png" id="488_6t0no"]
-[ext_resource type="Texture2D" uid="uid://cspo4dcs02b8w" path="res://assets/characters/animaciones/gde_salto_enojado_completo/gde_salto_enojado_completo_00025.png" id="489_m55sr"]
-[ext_resource type="Texture2D" uid="uid://bc34w63wet35y" path="res://assets/characters/animaciones/gde_salto_enojado_completo/gde_salto_enojado_completo_00026.png" id="490_5dnr7"]
 [ext_resource type="Texture2D" uid="uid://ck3vkwoioi6um" path="res://assets/characters/animaciones/gde_salto_enojado_completo/gde_salto_enojado_completo_00027.png" id="491_e0ext"]
 [ext_resource type="Texture2D" uid="uid://chdpqqxl6f03h" path="res://assets/characters/animaciones/gde_salto_enojado_completo/gde_salto_enojado_completo_00028.png" id="492_ibg5c"]
 [ext_resource type="Texture2D" uid="uid://7vcsjlvqy23l" path="res://assets/characters/animaciones/gde_salto_enojado_completo/gde_salto_enojado_completo_00029.png" id="493_n4wus"]
@@ -550,16 +546,6 @@
 [ext_resource type="Texture2D" uid="uid://c8qhgdwgpwm2y" path="res://assets/characters/animaciones/gde_salto_enojado_completo/gde_salto_enojado_completo_00036.png" id="500_iqd7x"]
 [ext_resource type="Texture2D" uid="uid://bbxw5umy0gwxd" path="res://assets/characters/animaciones/gde_salto_enojado_completo/gde_salto_enojado_completo_00037.png" id="501_r78wm"]
 [ext_resource type="Texture2D" uid="uid://cm478h0fdrh4s" path="res://assets/characters/animaciones/gde_salto_enojado_completo/gde_salto_enojado_completo_00038.png" id="502_1143a"]
-[ext_resource type="Texture2D" uid="uid://u0k5noxlxl1t" path="res://assets/characters/animaciones/gde_salto_enojado_completo/gde_salto_enojado_completo_00039.png" id="503_7arh6"]
-[ext_resource type="Texture2D" uid="uid://cgbea84ye2l6f" path="res://assets/characters/animaciones/gde_salto_enojado_completo/gde_salto_enojado_completo_00040.png" id="504_s815w"]
-[ext_resource type="Texture2D" uid="uid://b58jhg2bejj13" path="res://assets/characters/animaciones/gde_salto_enojado_completo/gde_salto_enojado_completo_00041.png" id="505_4q0o2"]
-[ext_resource type="Texture2D" uid="uid://rppribjt68fb" path="res://assets/characters/animaciones/gde_salto_enojado_completo/gde_salto_enojado_completo_00042.png" id="506_ipmkd"]
-[ext_resource type="Texture2D" uid="uid://dcfhdt1nf5ui3" path="res://assets/characters/animaciones/gde_salto_enojado_completo/gde_salto_enojado_completo_00043.png" id="507_avevh"]
-[ext_resource type="Texture2D" uid="uid://oywckgbjo7c8" path="res://assets/characters/animaciones/gde_salto_enojado_completo/gde_salto_enojado_completo_00044.png" id="508_codd2"]
-[ext_resource type="Texture2D" uid="uid://chrukre0sudmy" path="res://assets/characters/animaciones/gde_salto_enojado_completo/gde_salto_enojado_completo_00045.png" id="509_rlr6j"]
-[ext_resource type="Texture2D" uid="uid://dwje16ftp5j8u" path="res://assets/characters/animaciones/gde_salto_enojado_completo/gde_salto_enojado_completo_00046.png" id="510_igebs"]
-[ext_resource type="Texture2D" uid="uid://ornf4i2mxwb7" path="res://assets/characters/animaciones/gde_salto_enojado_completo/gde_salto_enojado_completo_00047.png" id="511_e7id1"]
-[ext_resource type="Texture2D" uid="uid://bdo3xn7oifpmk" path="res://assets/characters/animaciones/gde_salto_enojado_completo/gde_salto_enojado_completo_00048.png" id="512_c5omp"]
 [ext_resource type="AudioStream" uid="uid://bq2sho4rqtjoj" path="res://assets/musica_sonidos/Pasos Bruno.mp3" id="513_d3tos"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mdxu6"]
@@ -741,19 +727,118 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_rgijm")
+"texture": ExtResource("52_iiept")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_3mpr4")
-}],
-"loop": false,
-"name": &"caida",
-"speed": 5.0
+"texture": ExtResource("53_jcy60")
 }, {
-"frames": [],
+"duration": 1.0,
+"texture": ExtResource("54_0d64j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_s1iwx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_v7bpw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_6ekjf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_65hr7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_an83n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_6t0no")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_m55sr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_5dnr7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_e0ext")
+}],
+"loop": true,
+"name": &"caida",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("491_e0ext")
+}, {
+"duration": 1.0,
+"texture": ExtResource("492_ibg5c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("493_n4wus")
+}, {
+"duration": 1.0,
+"texture": ExtResource("494_pjyk2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("495_t1pyi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("496_jcjv2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("497_rjypx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("498_i7vd1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("499_2xiot")
+}, {
+"duration": 1.0,
+"texture": ExtResource("500_iqd7x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("501_r78wm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("502_1143a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("501_r78wm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("500_iqd7x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("499_2xiot")
+}, {
+"duration": 1.0,
+"texture": ExtResource("498_i7vd1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("497_rjypx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("496_jcjv2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("495_t1pyi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("494_pjyk2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("493_n4wus")
+}, {
+"duration": 1.0,
+"texture": ExtResource("492_ibg5c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("491_e0ext")
+}],
 "loop": true,
 "name": &"caida_enojado",
-"speed": 5.0
+"speed": 16.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1877,19 +1962,31 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("77_34v0l")
+"texture": ExtResource("424_ibg5c")
 }, {
 "duration": 1.0,
-"texture": ExtResource("78_h6d7j")
+"texture": ExtResource("425_n4wus")
+}, {
+"duration": 1.0,
+"texture": ExtResource("426_pjyk2")
 }],
 "loop": false,
 "name": &"pre_salto",
-"speed": 5.0
+"speed": 12.0
 }, {
-"frames": [],
-"loop": true,
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("469_asxte")
+}, {
+"duration": 1.0,
+"texture": ExtResource("471_yro84")
+}, {
+"duration": 1.0,
+"texture": ExtResource("473_2nkjg")
+}],
+"loop": false,
 "name": &"pre_salto_enojado",
-"speed": 5.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -2042,73 +2139,25 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("79_ijupv")
+"texture": ExtResource("475_t1pyi")
 }, {
 "duration": 1.0,
-"texture": ExtResource("78_h6d7j")
+"texture": ExtResource("476_jcjv2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("477_rjypx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("478_i7vd1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("479_2xiot")
 }],
-"loop": false,
+"loop": true,
 "name": &"salto",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": ExtResource("465_p55bp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("466_ybe0m")
-}, {
-"duration": 1.0,
-"texture": ExtResource("467_1rbqb")
-}, {
-"duration": 1.0,
-"texture": ExtResource("468_6pk3u")
-}, {
-"duration": 1.0,
-"texture": ExtResource("469_asxte")
-}, {
-"duration": 1.0,
-"texture": ExtResource("470_wws8b")
-}, {
-"duration": 1.0,
-"texture": ExtResource("471_yro84")
-}, {
-"duration": 1.0,
-"texture": ExtResource("472_janax")
-}, {
-"duration": 1.0,
-"texture": ExtResource("473_2nkjg")
-}, {
-"duration": 1.0,
-"texture": ExtResource("474_j4jtp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("475_balln")
-}, {
-"duration": 1.0,
-"texture": ExtResource("476_rj8r2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("477_er5sc")
-}, {
-"duration": 1.0,
-"texture": ExtResource("478_u21wg")
-}, {
-"duration": 1.0,
-"texture": ExtResource("479_jw8pc")
-}, {
-"duration": 1.0,
-"texture": ExtResource("480_iiept")
-}, {
-"duration": 1.0,
-"texture": ExtResource("481_jcy60")
-}, {
-"duration": 1.0,
-"texture": ExtResource("482_0d64j")
-}, {
-"duration": 1.0,
-"texture": ExtResource("483_s1iwx")
-}, {
 "duration": 1.0,
 "texture": ExtResource("484_v7bpw")
 }, {
@@ -2122,83 +2171,14 @@ animations = [{
 "texture": ExtResource("487_an83n")
 }, {
 "duration": 1.0,
-"texture": ExtResource("488_6t0no")
+"texture": ExtResource("486_65hr7")
 }, {
 "duration": 1.0,
-"texture": ExtResource("489_m55sr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("490_5dnr7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("491_e0ext")
-}, {
-"duration": 1.0,
-"texture": ExtResource("492_ibg5c")
-}, {
-"duration": 1.0,
-"texture": ExtResource("493_n4wus")
-}, {
-"duration": 1.0,
-"texture": ExtResource("494_pjyk2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("495_t1pyi")
-}, {
-"duration": 1.0,
-"texture": ExtResource("496_jcjv2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("497_rjypx")
-}, {
-"duration": 1.0,
-"texture": ExtResource("498_i7vd1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("499_2xiot")
-}, {
-"duration": 1.0,
-"texture": ExtResource("500_iqd7x")
-}, {
-"duration": 1.0,
-"texture": ExtResource("501_r78wm")
-}, {
-"duration": 1.0,
-"texture": ExtResource("502_1143a")
-}, {
-"duration": 1.0,
-"texture": ExtResource("503_7arh6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("504_s815w")
-}, {
-"duration": 1.0,
-"texture": ExtResource("505_4q0o2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("506_ipmkd")
-}, {
-"duration": 1.0,
-"texture": ExtResource("507_avevh")
-}, {
-"duration": 1.0,
-"texture": ExtResource("508_codd2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("509_rlr6j")
-}, {
-"duration": 1.0,
-"texture": ExtResource("510_igebs")
-}, {
-"duration": 1.0,
-"texture": ExtResource("511_e7id1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("512_c5omp")
+"texture": ExtResource("485_6ekjf")
 }],
 "loop": true,
 "name": &"salto_enojado",
-"speed": 25.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -2433,6 +2413,8 @@ scale = Vector2(0.435, 0.435)
 sprite_frames = SubResource("SpriteFrames_w370e")
 animation = &"caida_enojado"
 autoplay = "walk"
+frame = 18
+frame_progress = 0.823971
 speed_scale = 1.7
 
 [node name="markerDialogos" type="Marker2D" parent="."]
