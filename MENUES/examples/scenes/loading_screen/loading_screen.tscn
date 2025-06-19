@@ -5,3 +5,6 @@
 
 [node name="LoadingScreen" instance=ExtResource("1_f3lel")]
 script = ExtResource("2_efuc2")
+
+[node name="ProgressLabel" parent="Control/VBoxContainer" index="0"]
+text = "Cargando..."

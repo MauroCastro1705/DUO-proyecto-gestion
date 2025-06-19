@@ -14,6 +14,9 @@ _matching_extensions = Array[String]([".tres", ".material", ".res"])
 _ignore_subfolders = Array[String]([".", ".."])
 _shader_delay_timer = 0.1
 
+[node name="ProgressLabel" parent="Control/VBoxContainer" index="0"]
+text = "Cargando..."
+
 [node name="SpatialShaderTypeCaches" type="Node3D" parent="." index="2"]
 unique_name_in_owner = true
 

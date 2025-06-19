@@ -151,8 +151,7 @@ func _remove_rayo_enojo() -> void: # saca linea de la escena
 		rayo_enojo.queue_free()
 		# Set our reference back to null so we know to create a new one next time.
 		rayo_enojo = null
-		
-		
+
 func hacer_accion():
 	pass
 	
@@ -189,16 +188,16 @@ func _cambiar_esta_desabilitado():
 ##---------ANIMACIONEs-----------S##
 func update_animation(direction: Vector2):
 	if not is_on_floor():
-		if velocity.y < 0 and sprite.animation != "salto":
-			sprite.play("salto")
-		elif velocity.y > 0 and sprite.animation != "caida":
-			sprite.play("caida")
-		return
-	if not is_on_floor() and Emociones.gordo_mood_enojado:
-		if velocity.y < 0 and sprite.animation != "salto_enojado":
-			sprite.play("salto_enojado")
-		elif velocity.y > 0 and sprite.animation != "caida_enojado":
-			sprite.play("caida_enojado")
+		if Emociones.gordo_mood_enojado:
+			if velocity.y < 0 and sprite.animation != "salto_enojado":
+				sprite.play("salto_enojado")
+			elif velocity.y > 0 and sprite.animation != "caida_enojado":
+				sprite.play("caida_enojado")
+		else:
+			if velocity.y < 0 and sprite.animation != "salto":
+				sprite.play("salto")
+			elif velocity.y > 0 and sprite.animation != "caida":
+				sprite.play("caida")
 		return
 		
 	if esta_empujando:

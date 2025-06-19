@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bss8c16h6cgle"]
+[gd_scene load_steps=8 format=3 uid="uid://bss8c16h6cgle"]
 
 [ext_resource type="PackedScene" uid="uid://tbbpbwsjlk7m" path="res://Levels/piso/floor.tscn" id="1_3x6te"]
 [ext_resource type="Script" uid="uid://bbc61o8u8wl1q" path="res://Levels/niveles-de-prueba/test_cajas.gd" id="1_vq3qw"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://duj67f7bmlhfw" path="res://Levels/Objetos/caja_2.tscn" id="3_vq3qw"]
 [ext_resource type="PackedScene" uid="uid://bbs86ttvb6dhi" path="res://characters/Ramiro.tscn" id="4_jreyi"]
 [ext_resource type="PackedScene" uid="uid://3ht2b6g4whk7" path="res://characters/Laura.tscn" id="5_j6sg6"]
+[ext_resource type="PackedScene" uid="uid://cnq18idga5ieq" path="res://Levels/cajas-de-emociones/enojar-bruno.tscn" id="7_jreyi"]
 
 [node name="TestCajas" type="Node2D"]
 script = ExtResource("1_vq3qw")
@@ -14,13 +15,16 @@ script = ExtResource("1_vq3qw")
 position = Vector2(837, 941)
 
 [node name="Caja-liviana" parent="." instance=ExtResource("2_j6sg6")]
-position = Vector2(775, 856)
+position = Vector2(1030, 902)
 
 [node name="Caja2" parent="." instance=ExtResource("3_vq3qw")]
-position = Vector2(975, 853)
+position = Vector2(1198, 881)
 
 [node name="Ramiro" parent="." instance=ExtResource("4_jreyi")]
 position = Vector2(565, 882)
 
 [node name="Laura" parent="." instance=ExtResource("5_j6sg6")]
-position = Vector2(1326, 818)
+position = Vector2(352, 901)
+
+[node name="Enojar-bruno" parent="Laura" instance=ExtResource("7_jreyi")]
+position = Vector2(1079, 9)

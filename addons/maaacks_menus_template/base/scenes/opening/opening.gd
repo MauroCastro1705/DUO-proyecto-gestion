@@ -4,8 +4,8 @@ extends Control
 @export var images : Array[Texture2D]
 @export_group("Animation")
 @export var fade_in_time : float = 0.2
-@export var fade_out_time : float = 0.2
-@export var visible_time : float = 1.6
+@export var fade_out_time : float = 0.4
+@export var visible_time : float = 1.9
 @export_group("Transition")
 @export var start_delay : float = 0.5
 @export var end_delay : float = 0.5
