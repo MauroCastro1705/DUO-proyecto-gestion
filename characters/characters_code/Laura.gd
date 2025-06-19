@@ -15,7 +15,7 @@ const rayo_enojo_ancho: float = 1.0
 var gravity = Global.gravity
 var is_active: bool = false  #variable para controlar si se recibe input
 var paso_timer := 0.0 # para reiniciar cuando no se mueve mas
-var intervalo_pasos := 0.4  # Tiempo entre los pasos
+var intervalo_pasos := 0.37  # Tiempo entre los pasos
 ###para empujar cajas####
 @onready var push_area = $empujarCajas
 var joint: PinJoint2D = null

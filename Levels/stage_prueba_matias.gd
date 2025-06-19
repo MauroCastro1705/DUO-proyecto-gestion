@@ -115,8 +115,11 @@ func _resetar_dialogos():
 	Dialogos.mas_cables_pelados_bool = false
 	
 #CAMBIAR A BRUNO CUANDO PASA POR EL AREA
-func _on_cambiar_a_bruno_body_entered(body: Node2D) -> void:
+
+func _on_cambiar_emocion_bruno_automatico_body_entered(body: Node2D) -> void:
 	if body.is_in_group("jugador") and bruno_puede_cambio_automatico:
 		print("deberia cambiar")
 		swap_characters()
 		bruno_puede_cambio_automatico = false
+	if body.has_method("check_emocion"):
+		body.check_emocion("normal")
