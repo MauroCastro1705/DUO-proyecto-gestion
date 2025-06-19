@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dhqv36pswpq0e"]
+[gd_scene load_steps=6 format=3 uid="uid://dhqv36pswpq0e"]
 
 [ext_resource type="Texture2D" uid="uid://ww2ejq8f3dri" path="res://assets/PLATAFORMAS/new-sucios/Plataforma-GalponColectivo/Plataforma-TechoGalpon.png" id="1_triba"]
 [ext_resource type="Texture2D" uid="uid://clsdwkwh3wmfi" path="res://assets/PLATAFORMAS/new-sucios/Plataforma-GalponColectivo/Adorno-SoportesDelanterosGalpon.png" id="2_e7kky"]
@@ -6,6 +6,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ecp0h"]
 size = Vector2(282, 24)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ecp0h"]
+polygon = PackedVector2Array(-139, -170, 142, -170, 142, -155, -139, -155)
 
 [node name="refugio_colectivos" type="StaticBody2D"]
 collision_mask = 15
@@ -39,3 +42,6 @@ offset = Vector2(1.535, -100.292)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2, -159)
 shape = SubResource("RectangleShape2D_ecp0h")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_ecp0h")
