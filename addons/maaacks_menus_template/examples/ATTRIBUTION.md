@@ -17,7 +17,7 @@
 [font_size=30]Emiliano Rodriguez [/font_size]
 
 
-[font_size=34]Programacion[/font_size]
+[font_size=34]Programación[/font_size]
 [font_size=30]Mauro Castro [/font_size]
 [font_size=30]Luca Carlos[/font_size]
 

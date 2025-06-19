@@ -9,3 +9,4 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	elif body.is_in_group("grupo-ramiro"):
 		print("Ramiro entró")
 		emit_signal("ramiro_entra")
+		Input.action_press("cambiar")
