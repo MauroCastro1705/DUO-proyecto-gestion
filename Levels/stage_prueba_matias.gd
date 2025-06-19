@@ -25,6 +25,8 @@ func _ready() -> void:
 	camera.position = active_player.global_position
 	camera.zoom = normal_zoom
 	_resetar_dialogos()
+	$"cajas_emociones/Eliminar-emocion".connect("ramiro_entra", Callable(self, "cambiar_a_ramiro"))
+
 	
 
 func _process(delta: float) -> void:
@@ -106,3 +108,7 @@ func _resetar_dialogos():
 	Dialogos.colectivero_inicio_bool = false
 	Dialogos.cables_pelados_bool = false
 	Dialogos.mas_cables_pelados_bool = false
+	
+func cambiar_a_ramiro():#coneccion en el ready
+	swap_characters()
+	return
