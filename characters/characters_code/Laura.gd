@@ -171,29 +171,26 @@ func _remove_rayo_enojo() -> void: # saca linea de la escena
 ##---------ANIMACIONEs-----------S##
 func update_animation(direction: Vector2):
 	if not is_on_floor():
-		if velocity.y < 0:
-			if sprite.animation != "salto":
-				sprite.play("salto")  # Mientras sube
-		elif velocity.y > 0:
-			if sprite.animation != "caida":
-				sprite.play("caida")  # Mientras cae
-		return  # No seguir con animaciones normales
-	elif Emociones.laura_mood_enojado:
-		if esta_empujando:
+		if velocity.y < 0 and sprite.animation != "salto":
+			sprite.play("salto")
+		elif velocity.y > 0 and sprite.animation != "caida":
+			sprite.play("caida")
+		return
+
+	if esta_empujando:
+		if Emociones.laura_mood_enojado:
 			_animacion_empujar_enojado(direction)
 		elif esta_empujando_pesado:
 			_animacion_empujar_pesado(direction)
 		else:
-			_animacion_enojado(direction)
-			
-	elif esta_empujando:
-		if esta_empujando_pesado:
-			_animacion_empujar_pesado(direction)
-		else:
 			_animacion_empujar(direction)
+		return
 
-	else:#laura estado normal
-		_animacion_normal(direction)
+	if Emociones.laura_mood_enojado:
+			_animacion_enojado(direction)
+	else:
+			_animacion_normal(direction)
+
 
 func _animacion_enojado(direction: Vector2):
 	if direction.x != 0:
@@ -316,7 +313,6 @@ func _update_flechita():
 
 func _on_timer_flecha_timeout() -> void:
 	flecha.visible = false
-	print("termino el timer")
 #---------- FLECHA SOBRE PERSONAJE-----------
 
 #SISTEMA DE DIALOGOS

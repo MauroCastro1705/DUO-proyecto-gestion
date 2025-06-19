@@ -78,8 +78,6 @@ func _victoria():
 	else:
 		push_error("No se pudo cargar la escena victoria")
 
-
-
 #DIALOGOS EN EL ESCENARIO
 func _on_primer_dialogo_body_entered(body: Node2D) -> void:
 	if body.is_in_group("grupo-laura") and !Dialogos.inicio_ambos_pj_bool:

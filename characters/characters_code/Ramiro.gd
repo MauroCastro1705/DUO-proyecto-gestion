@@ -6,7 +6,7 @@ extends CharacterBody2D
 var joint: PinJoint2D = null
 var current_box: RigidBody2D = null
 var esta_empujando:bool = false
-
+var esta_empujando_liviano:bool = false
 #raycast bobo
 @onready var raycast_detecta_arista_der: RayCast2D = $RayCast2D_arista_der # para filo de aristas
 @onready var raycast_detecta_arista_izq: RayCast2D = $RayCast2D_arista_izq
@@ -17,7 +17,7 @@ var posicion_anterior: Vector2
 @onready var zona_cauta = $zona_cauta
 
 ##movimiento##
-@export var speed: float = 100.0 #Velocidad horizontal
+@export var speed: float = 190.0 #Velocidad horizontal
 @export var speedLauraOnTop:float = 90.0 #velocidad con laura encima
 @export var jump_force: float = 350.0 #Fuerza del salto
 @export var dist_chico_enojado: float = 200.0 #distancia a que sigue a chico cuando Bobo
@@ -46,7 +46,6 @@ func _ready() -> void:
 	zona_cauta.disable_mode = true
 	posicion_anterior = global_position
 	
-
 
 func _physics_process(delta: float) -> void:
 	var direction = Vector2.ZERO
@@ -186,29 +185,35 @@ func _cambiar_esta_desabilitado():
 		
 ##---------ANIMACIONEs-----------S##
 func update_animation(direction: Vector2):
-	if not is_on_floor():#ANIMACION SALTO
-		if velocity.y < 0:
-			if sprite.animation != "salto":
-				sprite.play("salto")  # Mientras sube
-		elif velocity.y > 0:
-			if sprite.animation != "caida":
-				sprite.play("caida")  # Mientras cae
-		return  # No seguir con animaciones normales
-	elif Emociones.gordo_mood_normal:
-		_animacion_normal(direction)
+	if not is_on_floor():
+		if velocity.y < 0 and sprite.animation != "salto":
+			sprite.play("salto")
+		elif velocity.y > 0 and sprite.animation != "caida":
+			sprite.play("caida")
+		return
 
-	elif Emociones.gordo_mood_enojado:
-		_animacion_enojado(direction)
+	if esta_empujando:
+		if Emociones.gordo_mood_enojado:
+			_animacion_empujar_enojado(direction)
+		else:
+			_animacion_empujar(direction)
+		return
+	elif esta_empujando_liviano:
+		_animacion_empujar_liviano(direction)
+		return
 
-	elif Emociones.gordo_mood_bobo:
-		var direccion_bobo = _seguir_a_laura()
-		_animacion_embobado(direccion_bobo)
-		
-	elif esta_empujando:
-		_animacion_empujar(direction)
-		
-	elif esta_empujando and Emociones.gordo_mood_enojado:
-		_animacion_empujar_enojado(direction)
+	match true:
+		Emociones.gordo_mood_normal:
+			_animacion_normal(direction)
+
+		Emociones.gordo_mood_bobo:
+			var direccion_bobo = _seguir_a_laura()
+			_animacion_embobado(direccion_bobo)
+
+		Emociones.gordo_mood_enojado:
+			_animacion_enojado(direction)
+
+
 		
 func _animacion_normal(direction : Vector2):
 	if direction.x != 0:
@@ -225,22 +230,25 @@ func _animacion_enojado(direction : Vector2):
 		sprite.play("enojado_idle")
 		
 func _animacion_enojado_in():
-	
 	sprite.play("enojado_in")
 	
 func _animacion_empujar(direction : Vector2):
 	if direction.x != 0:
 		sprite.play("empuja")
-		sprite.flip_h = direction.x > 0
 	else:
 		sprite.play("idle")
 
 func _animacion_empujar_enojado(direction : Vector2):
 	if direction.x != 0:
 		sprite.play("empuja_enojado")
-		sprite.flip_h = direction.x > 0
 	else:
-		sprite.play("idle")	
+		sprite.play("enojado_idle")
+
+func _animacion_empujar_liviano(direction : Vector2):
+	if direction.x != 0:
+		sprite.play("empuja_liviana")
+	else:
+		sprite.play("idle")
 
 var posicion_anterior_bobo := Vector2.ZERO
 
@@ -264,13 +272,20 @@ func _animacion_embobado(_direction: Vector2):
 
 ### EMPUJAR CAJAS apretando BOTON
 func empujar_caja():
-	print("bruno empujando")
 	for body in push_area.get_overlapping_bodies():
-		esta_empujando = true
-		if body is RigidBody2D:
+		if body is RigidBody2D and body.is_in_group("liviano"):
+			esta_empujando_liviano = true
+			print("esta empujando liviano")
 			current_box = body
 			create_joint_with_box(current_box)
 			break
+		else :
+			print("esta empujando normal")
+			esta_empujando = true
+			current_box = body
+			create_joint_with_box(current_box)
+			break
+			
 
 func create_joint_with_box(box: RigidBody2D):
 	joint = PinJoint2D.new()
@@ -285,6 +300,7 @@ func remove_joint():
 	joint = null
 	current_box = null
 	esta_empujando = false
+	esta_empujando_liviano = false
 
 
 
@@ -349,6 +365,5 @@ func _update_flechita():
 		estaba_activo = false
 
 func _on_timer_flecha_timeout() -> void:
-	print("termino el timer")
 	flecha.visible = false
 #---------- FLECHA SOBRE PERSONAJE-----------
