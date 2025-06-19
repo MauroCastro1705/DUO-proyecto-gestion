@@ -111,11 +111,7 @@ func _resetar_dialogos():
 	Dialogos.cables_pelados_bool = false
 	Dialogos.mas_cables_pelados_bool = false
 	
-func cambiar_a_ramiro():
-	swap_characters()
-	return
-
-
+#CAMBIAR A BRUNO CUANDO PASA POR EL AREA
 func _on_cambiar_a_bruno_body_entered(body: Node2D) -> void:
 	if body.is_in_group("jugador"):
 		print("deberia cambiar")
