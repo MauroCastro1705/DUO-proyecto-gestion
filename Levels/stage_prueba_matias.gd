@@ -25,7 +25,7 @@ func _ready() -> void:
 	camera.position = active_player.global_position
 	camera.zoom = normal_zoom
 	_resetar_dialogos()
-	$"cajas_emociones/Eliminar-emocion".connect("ramiro_entra", Callable(self, "cambiar_a_ramiro"))
+
 
 	
 
@@ -111,6 +111,12 @@ func _resetar_dialogos():
 	Dialogos.cables_pelados_bool = false
 	Dialogos.mas_cables_pelados_bool = false
 	
-func cambiar_a_ramiro():#coneccion en el ready
+func cambiar_a_ramiro():
 	swap_characters()
 	return
+
+
+func _on_cambiar_a_bruno_body_entered(body: Node2D) -> void:
+	if body.is_in_group("jugador"):
+		print("deberia cambiar")
+		swap_characters()
