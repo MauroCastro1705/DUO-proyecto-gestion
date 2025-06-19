@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0kb65e0gfggm"]
+
+[ext_resource type="Texture2D" uid="uid://bij817at4edu0" path="res://assets/PLATAFORMAS/Plataforma-Andamio/Plataforma_MaderaGrande_Andamio.png" id="1_cp63u"]
+[ext_resource type="Texture2D" uid="uid://do8tl3iy5biv" path="res://assets/PLATAFORMAS/Plataforma-Andamio/Plataforma_MaderaChica_Andamio.png" id="2_hk1w8"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_cp63u"]
+polygon = PackedVector2Array(-206, 27, -206, 0, 206, 1, 206, 27)
+
+[node name="andamio_modulo" type="Node2D"]
+
+[node name="PlataformaMaderaGrandeAndamio" type="Sprite2D" parent="."]
+texture = ExtResource("1_cp63u")
+offset = Vector2(0, 14)
+
+[node name="PlataformaMaderaChicaAndamio" type="Sprite2D" parent="."]
+position = Vector2(403, 175)
+texture = ExtResource("2_hk1w8")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_cp63u")
