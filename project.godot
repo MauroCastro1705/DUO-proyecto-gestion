@@ -37,6 +37,7 @@ directories/dch_directory={
 "colectivero": "res://Dialogos/colectivero.dch"
 }
 directories/dtl_directory={
+"ale_cuando_bruno_se_enoja": "res://Dialogos/ale_cuando_bruno_se_enoja.dtl",
 "alejandra_caja_pesada": "res://Dialogos/alejandra_caja_pesada.dtl",
 "bruno_no_puede_cambiar": "res://Dialogos/bruno_no_puede_cambiar.dtl",
 "cables_pelados": "res://Dialogos/cables_pelados.dtl",

@@ -13,8 +13,6 @@ var zoom_speed := 5.0
 var target_zoom := normal_zoom
 @onready var bondi_de_frente = $Parallaxes/Parallax2D_FONDO_vereda/BondiFrenteMotor
 
-var bruno_puede_cambio_automatico:bool = true
-
 func _ready() -> void:
 	# Referencias a los personajes
 	player1 = $Ramiro
@@ -27,8 +25,7 @@ func _ready() -> void:
 	camera.position = active_player.global_position
 	camera.zoom = normal_zoom
 	_resetar_dialogos()
-	bruno_puede_cambio_automatico = true
-
+	$"cajas_emociones/Eliminar-emocion".connect("ramiro_entra", Callable(self, "cambiar_a_ramiro"))
 
 	
 
@@ -107,19 +104,19 @@ func _on_dialogo_mas_cables_pelados_2_body_entered(body: Node2D) -> void:
 	if body.is_in_group("grupo-laura") and !Dialogos.mas_cables_pelados_bool:
 		Dialogos.mas_cables_pelados($Laura/Marker2D2,$Ramiro/Marker2D2)
 		Dialogos.mas_cables_pelados_bool = true
+		
+func _on_ale_cuando_bruno_se_enoja_body_entered(body: Node2D) -> void:
+	if body.is_in_group("grupo-ramiro") and !Dialogos.se_enojo_bruno_bool:
+		Dialogos.se_enojo_bruno($Laura/Marker2D2)
+		Dialogos.se_enojo_bruno_bool = true
 
 func _resetar_dialogos():
 	Dialogos.inicio_ambos_pj_bool = false
 	Dialogos.colectivero_inicio_bool = false
 	Dialogos.cables_pelados_bool = false
 	Dialogos.mas_cables_pelados_bool = false
+	Dialogos.se_enojo_bruno_bool = false
 	
-#CAMBIAR A BRUNO CUANDO PASA POR EL AREA
-
-func _on_cambiar_emocion_bruno_automatico_body_entered(body: Node2D) -> void:
-	if body.is_in_group("jugador") and bruno_puede_cambio_automatico:
-		print("deberia cambiar")
-		swap_characters()
-		bruno_puede_cambio_automatico = false
-	if body.has_method("check_emocion"):
-		body.check_emocion("normal")
+func cambiar_a_ramiro():#coneccion en el ready
+	swap_characters()
+	return

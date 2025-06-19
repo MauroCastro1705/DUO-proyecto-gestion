@@ -39,3 +39,8 @@ func mas_cables_pelados(laura, ramiro):
 	var layout = Dialogic.start("res://Dialogos/mas_cables_pelados.dtl")
 	layout.register_character(load("res://Dialogos/Laura.dch"),laura,)
 	layout.register_character(load("res://Dialogos/Ramiro.dch"),ramiro,)
+	
+var se_enojo_bruno_bool:bool = false
+func se_enojo_bruno(laura):
+	var layout = Dialogic.start("res://Dialogos/ale_cuando_bruno_se_enoja.dtl")
+	layout.register_character(load("res://Dialogos/Laura.dch"),laura,)

@@ -2411,10 +2411,8 @@ collision_mask = 9
 position = Vector2(-4, -99)
 scale = Vector2(0.435, 0.435)
 sprite_frames = SubResource("SpriteFrames_w370e")
-animation = &"caida_enojado"
+animation = &"bobo_walk"
 autoplay = "walk"
-frame = 18
-frame_progress = 0.823971
 speed_scale = 1.7
 
 [node name="markerDialogos" type="Marker2D" parent="."]
