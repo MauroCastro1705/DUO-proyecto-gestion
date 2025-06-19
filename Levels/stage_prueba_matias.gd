@@ -13,6 +13,8 @@ var zoom_speed := 5.0
 var target_zoom := normal_zoom
 @onready var bondi_de_frente = $Parallaxes/Parallax2D_FONDO_vereda/BondiFrenteMotor
 
+var bruno_puede_cambio_automatico:bool = true
+
 func _ready() -> void:
 	# Referencias a los personajes
 	player1 = $Ramiro
@@ -25,6 +27,7 @@ func _ready() -> void:
 	camera.position = active_player.global_position
 	camera.zoom = normal_zoom
 	_resetar_dialogos()
+	bruno_puede_cambio_automatico = true
 
 
 	
@@ -113,6 +116,7 @@ func _resetar_dialogos():
 	
 #CAMBIAR A BRUNO CUANDO PASA POR EL AREA
 func _on_cambiar_a_bruno_body_entered(body: Node2D) -> void:
-	if body.is_in_group("jugador"):
+	if body.is_in_group("jugador") and bruno_puede_cambio_automatico:
 		print("deberia cambiar")
 		swap_characters()
+		bruno_puede_cambio_automatico = false
