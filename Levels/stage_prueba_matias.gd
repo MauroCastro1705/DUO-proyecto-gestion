@@ -67,13 +67,15 @@ func swap_characters() -> void:
 	
 #CAMBIAR A PANTALLA DE GAME OVER
 func _game_over():
+	Dialogic.end_timeline()
 	var escena = load("res://Levels/escenas_utiles/pantalla_muerte.tscn") as PackedScene
 	if escena:
 		get_tree().change_scene_to_packed(escena)
 	else:
 		push_error("No se pudo cargar la escena Game Over")
-	
+
 func _victoria():
+	Dialogic.end_timeline()
 	var escena = load("res://Levels/escenas_utiles/pantalla_de_victoria.tscn")
 	if escena:
 		get_tree().change_scene_to_packed(escena)
