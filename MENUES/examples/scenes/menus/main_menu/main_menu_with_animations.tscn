@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://5doimctwhx08"]
+[gd_scene load_steps=27 format=3 uid="uid://5doimctwhx08"]
 
 [ext_resource type="Script" uid="uid://b5qy5nr1wivs4" path="res://addons/maaacks_menus_template/examples/scenes/menus/main_menu/main_menu_with_animations.gd" id="2_roicf"]
 [ext_resource type="PackedScene" uid="uid://bdvdf5v87mmrr" path="res://addons/maaacks_menus_template/examples/scenes/menus/options_menu/master_options_menu_with_tabs.tscn" id="3_c25jd"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dbrjbmgcpxv56" path="res://assets/titulosVG.png" id="5_roicf"]
 [ext_resource type="Script" uid="uid://dmkubt2nsnsbn" path="res://addons/maaacks_menus_template/base/scenes/menus/main_menu/config_version_label.gd" id="6_fesqj"]
 [ext_resource type="Script" uid="uid://bkwlopi4qn32o" path="res://addons/maaacks_menus_template/base/scenes/menus/main_menu/config_name_label.gd" id="7_8f2rw"]
+[ext_resource type="Theme" uid="uid://ba6a6m57llqt" path="res://MENUES/examples/resources/themes/yanohaybondis.tres" id="8_p7mtu"]
 [ext_resource type="AudioStream" uid="uid://c1liqlwljk603" path="res://assets/musica_sonidos/YNHB - Música Menú.mp3" id="9_o674r"]
 
 [sub_resource type="Animation" id="1"]
@@ -425,7 +426,7 @@ offset_left = -88.0
 offset_top = -26.0
 grow_horizontal = 0
 grow_vertical = 0
-text = "v0.0.0"
+text = "v0.5"
 horizontal_alignment = 2
 script = ExtResource("6_fesqj")
 
@@ -488,7 +489,8 @@ layout_mode = 2
 offset_left = 764.0
 offset_top = 821.0
 offset_right = 1140.0
-offset_bottom = 920.0
+offset_bottom = 925.0
+theme = ExtResource("8_p7mtu")
 
 [node name="OptionsButton" type="Button" parent="."]
 unique_name_in_owner = true
@@ -498,6 +500,7 @@ offset_left = 786.0
 offset_top = 942.0
 offset_right = 1112.0
 offset_bottom = 1013.0
+theme = ExtResource("8_p7mtu")
 
 [node name="CreditsButton" type="Button" parent="."]
 unique_name_in_owner = true
@@ -507,6 +510,7 @@ offset_left = 1368.0
 offset_top = 961.0
 offset_right = 1648.0
 offset_bottom = 1038.0
+theme = ExtResource("8_p7mtu")
 
 [node name="ExitButton" type="Button" parent="."]
 unique_name_in_owner = true
@@ -516,6 +520,7 @@ offset_left = 316.0
 offset_top = 974.0
 offset_right = 476.0
 offset_bottom = 1019.0
+theme = ExtResource("8_p7mtu")
 
 [node name="ContinueGameButton" type="Button" parent="."]
 unique_name_in_owner = true
@@ -526,6 +531,7 @@ offset_left = 1162.0
 offset_top = 809.0
 offset_right = 1241.0
 offset_bottom = 840.0
+theme = ExtResource("8_p7mtu")
 text = "Continue"
 
 [node name="OptionsContainer" type="MarginContainer" parent="."]
