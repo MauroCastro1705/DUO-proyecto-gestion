@@ -13,7 +13,7 @@ config_version=5
 config/name="Ya no hay Bondis"
 config/version="0.5"
 config/tags=PackedStringArray("duo", "gestion")
-run/main_scene="uid://5doimctwhx08"
+run/main_scene="uid://dj5p1dr6qr04t"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="uid://6jgithbt5svq"
 
@@ -21,14 +21,13 @@ config/icon="uid://6jgithbt5svq"
 
 Global="*res://Code/global.gd"
 SceneManager="*res://addons/scene_manager/SceneManager.tscn"
-Emociones="*res://characters/characters_code/emociones.gd"
+Emociones="res://characters/characters_code/emociones.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 Dialogos="*res://Code/dialogos.gd"
 AppConfig="*res://addons/maaacks_menus_template/base/scenes/autoloads/app_config.tscn"
 SceneLoader="*res://addons/maaacks_menus_template/base/scenes/autoloads/scene_loader.tscn"
 ProjectMusicController="*res://addons/maaacks_menus_template/base/scenes/autoloads/project_music_controller.tscn"
 ProjectUISoundController="*res://addons/maaacks_menus_template/base/scenes/autoloads/project_ui_sound_controller.tscn"
-Personajes="*res://Code/personajes.gd"
 EstadosManager="*res://scripts/core/estados_manager.gd"
 GlobalEnumIndices="*res://scripts/core/global_enum_indices.gd"
 HumoresManager="*res://scripts/core/humores_manager.gd"
@@ -117,9 +116,8 @@ folder_colors={
 "res://_m_chars_test/": "blue",
 "res://assets/": "red",
 "res://assets/UI-UX/": "green",
-"res://assets/characters/": "yellow",
+"res://assets/characters(viejo)/": "yellow",
 "res://assets/personajes/": "yellow",
-"res://characters/": "teal",
 "res://scripts/": "green"
 }
 
