@@ -21,7 +21,6 @@ config/icon="uid://6jgithbt5svq"
 
 Global="*res://Code/global.gd"
 SceneManager="*res://addons/scene_manager/SceneManager.tscn"
-Emociones="res://characters/characters_code/emociones.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 Dialogos="*res://Code/dialogos.gd"
 AppConfig="*res://addons/maaacks_menus_template/base/scenes/autoloads/app_config.tscn"
