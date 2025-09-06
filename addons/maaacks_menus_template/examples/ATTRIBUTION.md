@@ -34,6 +34,9 @@
 [font_size=34]Guion[/font_size]
 [font_size=30]Emiliano Rodriguez [/font_size]
 
+[font_size=34]Sonido[/font_size]
+[font_size=30]Tomas Maldonado [/font_size]
+
 
 
 ## Herramientas

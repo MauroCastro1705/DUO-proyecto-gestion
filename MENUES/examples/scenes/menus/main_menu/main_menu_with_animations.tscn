@@ -486,10 +486,10 @@ vertical_alignment = 1
 unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.521569)
 layout_mode = 2
-offset_left = 764.0
-offset_top = 821.0
-offset_right = 1140.0
-offset_bottom = 925.0
+offset_left = 775.0
+offset_top = 818.0
+offset_right = 1122.0
+offset_bottom = 931.0
 theme = ExtResource("8_p7mtu")
 
 [node name="OptionsButton" type="Button" parent="."]
@@ -499,15 +499,15 @@ layout_mode = 2
 offset_left = 786.0
 offset_top = 942.0
 offset_right = 1112.0
-offset_bottom = 1013.0
+offset_bottom = 1023.0
 theme = ExtResource("8_p7mtu")
 
 [node name="CreditsButton" type="Button" parent="."]
 unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.521569)
 layout_mode = 2
-offset_left = 1368.0
-offset_top = 961.0
+offset_left = 1352.0
+offset_top = 954.0
 offset_right = 1648.0
 offset_bottom = 1038.0
 theme = ExtResource("8_p7mtu")
@@ -516,10 +516,10 @@ theme = ExtResource("8_p7mtu")
 unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.521569)
 layout_mode = 2
-offset_left = 316.0
-offset_top = 974.0
-offset_right = 476.0
-offset_bottom = 1019.0
+offset_left = 310.0
+offset_top = 962.0
+offset_right = 482.0
+offset_bottom = 1031.0
 theme = ExtResource("8_p7mtu")
 
 [node name="ContinueGameButton" type="Button" parent="."]
