@@ -28,6 +28,10 @@ SceneLoader="*res://addons/maaacks_menus_template/base/scenes/autoloads/scene_lo
 ProjectMusicController="*res://addons/maaacks_menus_template/base/scenes/autoloads/project_music_controller.tscn"
 ProjectUISoundController="*res://addons/maaacks_menus_template/base/scenes/autoloads/project_ui_sound_controller.tscn"
 Personajes="*res://Code/personajes.gd"
+EstadosManager="*res://scripts/core/estados_manager.gd"
+GlobalEnumIndices="*res://scripts/core/global_enum_indices.gd"
+HumoresManager="*res://scripts/core/humores_manager.gd"
+PersonajesSwitchManager="*res://scripts/core/personajes_switch_manager.gd"
 
 [dialogic]
 

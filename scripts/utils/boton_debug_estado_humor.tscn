@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://bef53tklj6qad"]
+
+[ext_resource type="Script" uid="uid://1abmu6y16jf2" path="res://scripts/utils/boton_debug_estado_humor.gd" id="1_ppeuj"]
+
+[node name="BotonDebugEstadoHumor" type="Button"]
+text = "Cargando..."
+script = ExtResource("1_ppeuj")
+color_chico = Color(0.507544, 0.227452, 0.344037, 1)
+color_grande = Color(0.243927, 0.54227, 0.720381, 1)
+color_estado = Color(0.56956, 0.58, 0.4756, 1)
+personaje_objetivo = 1
+humor_a_aplicar = 4

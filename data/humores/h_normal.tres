@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="HumorDefinicion" load_steps=2 format=3 uid="uid://3m1v7dpqqoha"]
+
+[ext_resource type="Script" uid="uid://dpbypeui6aoy4" path="res://scripts/data_def/humor_definicion.gd" id="1_h5qnl"]
+
+[resource]
+script = ExtResource("1_h5qnl")
+humor = 2
+sufijo_animacion = "_normal"
+mecanicas_deshabilitadas = Array[String]([])
+speed_caminar_multiplicador = 1.0
+speed_empujar_multiplicador = 1.0
+fuerza_salto_multiplicador = 1.0
+prohibe_ser_activo = false
+metadata/_custom_type_script = "uid://dpbypeui6aoy4"

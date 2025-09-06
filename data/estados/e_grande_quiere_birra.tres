@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="EstadoDefinicion" load_steps=3 format=3 uid="uid://dp4ia2iqaw04x"]
+
+[ext_resource type="Script" uid="uid://cal0dk0x5je8i" path="res://scripts/data_def/estado_definicion.gd" id="1_15osj"]
+[ext_resource type="Script" uid="uid://c2lhslsnnyn6d" path="res://scripts/estados/restriccion_movimiento_distancia_entre_personajes.gd" id="2_ktydp"]
+
+[resource]
+script = ExtResource("1_15osj")
+estado = 3
+humores_forzados = {
+1: 7,
+2: 4
+}
+humores_gatillo = {}
+mecanicas_globales_deshabilitadas = Array[String](["mecanica_hombros"])
+personaje_activo_forzado = 0
+restriccion_movimiento = 1
+limite_distancia_a_grande = true
+script_de_restriccion_movimiento = ExtResource("2_ktydp")
+metadata/_custom_type_script = "uid://cal0dk0x5je8i"

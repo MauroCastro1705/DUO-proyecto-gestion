@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EstadoDefinicion" load_steps=2 format=3 uid="uid://blwuxddo6ylve"]
+
+[ext_resource type="Script" uid="uid://cal0dk0x5je8i" path="res://scripts/data_def/estado_definicion.gd" id="1_y6h0h"]
+
+[resource]
+script = ExtResource("1_y6h0h")
+estado = 1
+humores_forzados = {
+1: 2,
+2: 2
+}
+humores_gatillo = {}
+mecanicas_globales_deshabilitadas = Array[String]([])
+personaje_activo_forzado = 0
+restriccion_movimiento = 0
+limite_distancia_a_grande = false
+metadata/_custom_type_script = "uid://cal0dk0x5je8i"

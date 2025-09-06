@@ -1,12 +1,20 @@
 [gd_scene load_steps=10 format=3 uid="uid://dt1eqajov6kib"]
 
-[ext_resource type="PackedScene" uid="uid://c7us60xwkn3td" path="res://_m_chars_test/chars/character_punk_chico.tscn" id="2_qtr0o"]
-[ext_resource type="PackedScene" uid="uid://gg8j6p1mup5a" path="res://_m_chars_test/chars/character_punk_grande.tscn" id="3_csadi"]
-[ext_resource type="Script" uid="uid://d0qyiwpc1wt3i" path="res://_m_chars_test/chars/character_manager.gd" id="4_dixmh"]
 [ext_resource type="PackedScene" uid="uid://tbbpbwsjlk7m" path="res://Levels/piso/floor.tscn" id="5_csadi"]
-[ext_resource type="Script" uid="uid://dwhpiluau1rpy" path="res://_m_chars_test/camara/camera_manager.gd" id="5_qtr0o"]
 [ext_resource type="Texture2D" uid="uid://b1h1s5de6vkth" path="res://_m_chars_test/chars/assets/Char_px_finales_para_escalar_sprites.png" id="6_a6vgv"]
 [ext_resource type="PackedScene" uid="uid://bf5b82fejpexj" path="res://Levels/Objetos/entel.tscn" id="7_v1yr6"]
+
+[sub_resource type="Resource" id="Resource_wgcdg"]
+metadata/__load_path__ = "res://_m_chars_test/chars/character_punk_chico.tscn"
+
+[sub_resource type="Resource" id="Resource_nt7fc"]
+metadata/__load_path__ = "res://_m_chars_test/chars/character_punk_grande.tscn"
+
+[sub_resource type="Resource" id="Resource_ucp4j"]
+metadata/__load_path__ = "res://_m_chars_test/chars/character_manager.gd"
+
+[sub_resource type="Resource" id="Resource_a6vgv"]
+metadata/__load_path__ = "res://_m_chars_test/camara/camera_manager.gd"
 
 [sub_resource type="Gradient" id="Gradient_ucp4j"]
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
@@ -19,22 +27,22 @@ fill_to = Vector2(1, 0.5)
 
 [node name="test_nivel_simple" type="Node2D"]
 
-[node name="CharacterPunkChico" parent="." instance=ExtResource("2_qtr0o")]
+[node name="CharacterPunkChico" parent="."]
 z_index = 10
 position = Vector2(655, 442)
 
-[node name="CharacterPunkGrande" parent="." instance=ExtResource("3_csadi")]
+[node name="CharacterPunkGrande" parent="."]
 z_index = 20
 position = Vector2(792, 535)
 jump_velocity = 375.0
 
 [node name="character_manager" type="Node" parent="."]
-script = ExtResource("4_dixmh")
+script = SubResource("Resource_ucp4j")
 character_chico_path = NodePath("../CharacterPunkChico")
 character_grande_path = NodePath("../CharacterPunkGrande")
 
 [node name="Camera2DconCameraManager" type="Camera2D" parent="."]
-script = ExtResource("5_qtr0o")
+script = SubResource("Resource_a6vgv")
 character_manager_path = NodePath("../character_manager")
 vertical_follow_offset = -100.0
 playing_zoom_level = 1.4

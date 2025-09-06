@@ -1,0 +1,142 @@
+[gd_scene load_steps=7 format=3 uid="uid://dderjlaw2dgvc"]
+
+[ext_resource type="PackedScene" uid="uid://cgv8338qgwpqt" path="res://escenas/mundo/piso_bloque.tscn" id="1_aisj0"]
+[ext_resource type="PackedScene" uid="uid://cp1wustvqmsv8" path="res://escenas/personajes/personaje_punk_grande.tscn" id="2_5ngy1"]
+[ext_resource type="PackedScene" uid="uid://c3an21sb0tac4" path="res://escenas/personajes/personaje_punk_chico.tscn" id="2_7r5mu"]
+[ext_resource type="PackedScene" uid="uid://bef53tklj6qad" path="res://scripts/utils/boton_debug_estado_humor.tscn" id="3_5ngy1"]
+[ext_resource type="PackedScene" uid="uid://ddrtpgh0poa45" path="res://escenas/interactuables/caja_interactuable.tscn" id="4_taokt"]
+
+[sub_resource type="GDScript" id="GDScript_7r5mu"]
+script/source = "# nivel_de_prueba.gd
+# This script manages the initialization of the test level.
+extends Node2D
+
+# The _ready() function is called automatically when this node and all its
+# children have entered the scene tree.
+func _ready():
+	# We use 'await' to pause this function's execution without freezing the game.
+	# get_tree().process_frame is a signal that the engine emits just before
+	# rendering the first frame of gameplay.
+	# By waiting for this signal, we guarantee that all other nodes (like the
+	# characters) have finished their own _ready() functions.
+	await get_tree().process_frame
+	
+	
+	
+	
+	print(\"--- DEBUG: Testing autoloads ---\")
+	print(\"All autoloads: \", get_tree().get_meta_list())
+	print(\"GlobalEnumIndices singleton: \", Engine.has_singleton(\"GlobalEnumIndices\"))
+	
+	# Try to access it directly
+	if has_node(\"/root/GlobalEnumIndices\"):
+		print(\"Found GlobalEnumIndices via node path\")
+	else:
+		print(\"GlobalEnumIndices not found via node path\")
+		
+		
+		
+	
+	# Now that we are certain everything is initialized and registered,
+	# it is safe to set the initial game state.
+	print(\"Nivel listo. Forzando estado inicial: E_INICIO\")
+	EstadosManager.forzar_estado(GlobalEnumIndices.Estado.E_INICIO)
+"
+
+[node name="NivelPruebaLab" type="Node2D"]
+script = SubResource("GDScript_7r5mu")
+
+[node name="PisoBloque" parent="." instance=ExtResource("1_aisj0")]
+position = Vector2(1039, 505)
+scale = Vector2(2.14269, 1.86866)
+
+[node name="PisoBloque4" parent="." instance=ExtResource("1_aisj0")]
+position = Vector2(593, 541)
+scale = Vector2(2.14269, 1.86866)
+
+[node name="PisoBloque3" parent="." instance=ExtResource("1_aisj0")]
+position = Vector2(-196, 505)
+scale = Vector2(2.14269, 1.86866)
+
+[node name="PisoBloque2" parent="." instance=ExtResource("1_aisj0")]
+position = Vector2(1101, 262)
+
+[node name="PersonajePunkChico" parent="." instance=ExtResource("2_7r5mu")]
+position = Vector2(788, 424)
+jump_force = -700.0
+mult_gravity_apex = 0.337
+mult_gravity_caida = 2.657
+velocidad_umbral_caida_apex = 10.0
+distancia_seguridad_chico_cauto = 200.0
+altura_de_cuerpo = 50.0
+
+[node name="PersonajePunkGrande" parent="." instance=ExtResource("2_5ngy1")]
+position = Vector2(672, 491)
+distancia_seguridad_chico_cauto = 200.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="VBoxContainerChico" type="VBoxContainer" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BotonDebugEstadoHumor" parent="CanvasLayer/VBoxContainerChico" instance=ExtResource("3_5ngy1")]
+layout_mode = 2
+humor_a_aplicar = 2
+
+[node name="BotonDebugEstadoHumor2" parent="CanvasLayer/VBoxContainerChico" instance=ExtResource("3_5ngy1")]
+layout_mode = 2
+
+[node name="VBoxContainerGrande" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -144.0
+offset_bottom = 66.0
+grow_horizontal = 0
+
+[node name="BotonDebugEstadoHumor" parent="CanvasLayer/VBoxContainerGrande" instance=ExtResource("3_5ngy1")]
+layout_mode = 2
+personaje_objetivo = 2
+humor_a_aplicar = 2
+
+[node name="BotonDebugEstadoHumor2" parent="CanvasLayer/VBoxContainerGrande" instance=ExtResource("3_5ngy1")]
+layout_mode = 2
+personaje_objetivo = 2
+
+[node name="BotonDebugEstadoHumor3" parent="CanvasLayer/VBoxContainerGrande" instance=ExtResource("3_5ngy1")]
+layout_mode = 2
+personaje_objetivo = 2
+humor_a_aplicar = 3
+
+[node name="VBoxContainerEstados" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -48.0
+offset_right = 48.0
+offset_bottom = 66.0
+grow_horizontal = 2
+
+[node name="BotonDebugEstadoHumor" parent="CanvasLayer/VBoxContainerEstados" instance=ExtResource("3_5ngy1")]
+layout_mode = 2
+modo = 1
+estado_a_aplicar = 1
+
+[node name="BotonDebugEstadoHumor2" parent="CanvasLayer/VBoxContainerEstados" instance=ExtResource("3_5ngy1")]
+layout_mode = 2
+modo = 1
+estado_a_aplicar = 2
+
+[node name="BotonDebugEstadoHumor3" parent="CanvasLayer/VBoxContainerEstados" instance=ExtResource("3_5ngy1")]
+layout_mode = 2
+modo = 1
+estado_a_aplicar = 3
+
+[node name="CajaInteractuable" parent="." instance=ExtResource("4_taokt")]
+position = Vector2(310, 437)
+can_sleep = false
+
+[node name="CajaInteractuable2" parent="." instance=ExtResource("4_taokt")]
+position = Vector2(959, 184)
+can_sleep = false

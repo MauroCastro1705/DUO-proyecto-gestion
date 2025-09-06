@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="TransicionDefinicion" load_steps=2 format=3 uid="uid://nik4dedwod11"]
+
+[ext_resource type="Script" uid="uid://d0cdxk66qf3k6" path="res://scripts/data_def/transicion_definicion.gd" id="1_rhjf3"]
+
+[resource]
+script = ExtResource("1_rhjf3")
+desde_humor = 4
+hacia_humor = 2
+desde_personaje = 2
+hacia_personaje = 2
+notas = ""
+override_nombre_animacion = &"enojar_out"
+metadata/_custom_type_script = "uid://d0cdxk66qf3k6"

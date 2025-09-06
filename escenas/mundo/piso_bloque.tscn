@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://cgv8338qgwpqt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_taokt"]
+size = Vector2(500, 50)
+
+[node name="PisoBloque" type="StaticBody2D"]
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 25)
+shape = SubResource("RectangleShape2D_taokt")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -250.0
+offset_right = 250.0
+offset_bottom = 50.0
+grow_horizontal = 2
+color = Color(0.10748, 0.10748, 0.10748, 1)

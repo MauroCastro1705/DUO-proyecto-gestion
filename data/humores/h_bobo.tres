@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="HumorDefinicion" load_steps=3 format=3 uid="uid://c2lcocpb03nft"]
+
+[ext_resource type="Script" uid="uid://dpbypeui6aoy4" path="res://scripts/data_def/humor_definicion.gd" id="1_ktvkk"]
+[ext_resource type="Script" uid="uid://dx8iq1r0cdkgk" path="res://scripts/humores/humor_comportamiento_bobo.gd" id="2_0d3ic"]
+
+[resource]
+script = ExtResource("1_ktvkk")
+humor = 3
+sufijo_animacion = "_bobo"
+mecanicas_deshabilitadas = Array[String](["mecanica_hombros"])
+speed_caminar_multiplicador = 1.0
+speed_empujar_multiplicador = 1.0
+fuerza_salto_multiplicador = 1.0
+script_de_comportamiento = ExtResource("2_0d3ic")
+prohibe_ser_activo = false
+metadata/_custom_type_script = "uid://dpbypeui6aoy4"

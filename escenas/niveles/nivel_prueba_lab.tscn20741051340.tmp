@@ -1,0 +1,76 @@
+[gd_scene load_steps=7 format=3 uid="uid://dderjlaw2dgvc"]
+
+[ext_resource type="PackedScene" uid="uid://cp1wustvqmsv8" path="res://escenas/personajes/personaje_punk_grande.tscn" id="2_5ngy1"]
+[ext_resource type="PackedScene" uid="uid://c3an21sb0tac4" path="res://escenas/personajes/personaje_punk_chico.tscn" id="2_7r5mu"]
+[ext_resource type="PackedScene" uid="uid://bef53tklj6qad" path="res://scripts/utils/boton_debug_estado_humor.tscn" id="3_5ngy1"]
+[ext_resource type="Script" uid="uid://d0cdxk66qf3k6" path="res://scripts/data_def/transicion_definicion.gd" id="3_taokt"]
+
+[sub_resource type="GDScript" id="GDScript_7r5mu"]
+script/source = "# nivel_de_prueba.gd
+# This script manages the initialization of the test level.
+extends Node2D
+
+# The _ready() function is called automatically when this node and all its
+# children have entered the scene tree.
+func _ready():
+	# We use 'await' to pause this function's execution without freezing the game.
+	# get_tree().process_frame is a signal that the engine emits just before
+	# rendering the first frame of gameplay.
+	# By waiting for this signal, we guarantee that all other nodes (like the
+	# characters) have finished their own _ready() functions.
+	await get_tree().process_frame
+	
+	# Now that we are certain everything is initialized and registered,
+	# it is safe to set the initial game state.
+	print(\"Nivel listo. Forzando estado inicial: E_INICIO\")
+	EstadosManager.forzar_estado(GlobalEnumIndices.Estado.E_INICIO)
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_taokt"]
+size = Vector2(3195, 167)
+
+[node name="NivelPruebaLab" type="Node2D"]
+script = SubResource("GDScript_7r5mu")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-21, 148)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(590.5, 428.5)
+shape = SubResource("RectangleShape2D_taokt")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
+offset_left = -771.0
+offset_top = 348.0
+offset_right = 1947.0
+offset_bottom = 511.0
+color = Color(0.10748, 0.10748, 0.10748, 1)
+
+[node name="PersonajePunkChico" parent="." instance=ExtResource("2_7r5mu")]
+position = Vector2(788, 488)
+collision_layer = 1
+collision_mask = 1
+transicion_especial = Array[ExtResource("3_taokt")]([])
+mult_velocidad_al_empujar = 0.6
+gravity = 980.0
+
+[node name="PersonajePunkGrande" parent="." instance=ExtResource("2_5ngy1")]
+position = Vector2(672, 491)
+collision_layer = 1
+collision_mask = 1
+transicion_especial = Array[ExtResource("3_taokt")]([])
+move_speed = 300.0
+gravity = 980.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BotonDebugEstadoHumor" parent="CanvasLayer/VBoxContainer" instance=ExtResource("3_5ngy1")]
+layout_mode = 2
+
+[node name="BotonDebugEstadoHumor2" parent="CanvasLayer/VBoxContainer" instance=ExtResource("3_5ngy1")]
+layout_mode = 2
+humor_a_aplicar = 2

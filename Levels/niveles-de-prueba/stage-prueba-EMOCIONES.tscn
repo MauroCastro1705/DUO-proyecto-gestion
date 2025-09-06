@@ -14,14 +14,16 @@
 [ext_resource type="PackedScene" uid="uid://tbbpbwsjlk7m" path="res://Levels/piso/floor.tscn" id="13_ph503"]
 [ext_resource type="PackedScene" uid="uid://cgpjlc8f01his" path="res://Levels/Objetos/plataforma-1.tscn" id="17_ek2me"]
 [ext_resource type="Script" uid="uid://cyh0d64pfygbl" path="res://addons/maaacks_menus_template/base/scripts/pause_menu_controller.gd" id="17_txp1u"]
-[ext_resource type="PackedScene" uid="uid://ckwusaxwybu4g" path="res://Levels/scenes/overlaid_menus/pause_menu.tscn" id="18_eqfty"]
 [ext_resource type="PackedScene" uid="uid://d3x8hqee1635q" path="res://Levels/Objetos/plataforma-2.tscn" id="18_nfak7"]
 [ext_resource type="PackedScene" uid="uid://dvik1r3to8hq2" path="res://Levels/Objetos/plataforma-3.tscn" id="19_5f0r5"]
 [ext_resource type="PackedScene" uid="uid://d1c8t78wpgo4a" path="res://Levels/Objetos/plataforma-4.tscn" id="20_iqwrl"]
 [ext_resource type="PackedScene" uid="uid://cwfe1busr0b28" path="res://Levels/Objetos/poste-luz.tscn" id="21_mpaah"]
-[ext_resource type="AudioStream" uid="uid://deis2quqwnuce" path="res://assets/musica/main-theme.mp3" id="21_nfak7"]
+[ext_resource type="AudioStream" uid="uid://deis2quqwnuce" path="res://assets/musica_sonidos/main-theme.mp3" id="21_nfak7"]
 [ext_resource type="PackedScene" uid="uid://cprdx7anu7l1" path="res://assets/UI-UX/UI-final.tscn" id="22_5f0r5"]
 [ext_resource type="PackedScene" uid="uid://bf5b82fejpexj" path="res://Levels/Objetos/entel.tscn" id="22_riehi"]
+
+[sub_resource type="Resource" id="Resource_nfak7"]
+metadata/__load_path__ = "res://Levels/scenes/overlaid_menus/pause_menu.tscn"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0yrxn"]
 size = Vector2(695.5, 289)
@@ -31,7 +33,7 @@ script = ExtResource("1_3pfn6")
 
 [node name="PauseMenuController" type="Node" parent="."]
 script = ExtResource("17_txp1u")
-pause_menu_packed = ExtResource("18_eqfty")
+pause_menu_packed = SubResource("Resource_nfak7")
 metadata/_custom_type_script = "uid://cyh0d64pfygbl"
 
 [node name="NightSkyTile1" type="Sprite2D" parent="."]
