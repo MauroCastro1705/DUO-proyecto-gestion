@@ -1,7 +1,6 @@
-[gd_scene load_steps=555 format=3 uid="uid://bbs86ttvb6dhi"]
+[gd_scene load_steps=553 format=3 uid="uid://bbs86ttvb6dhi"]
 
 [ext_resource type="Script" uid="uid://m850xbhl28ts" path="res://characters/characters_code/Ramiro.gd" id="2_cfd2t"]
-[ext_resource type="Texture2D" uid="uid://51yfew627mfu" path="res://assets/doted-line.png" id="4_jfpom"]
 [ext_resource type="Texture2D" uid="uid://376rd4xhbm2c" path="res://assets/characters/animaciones/gde_walk_bobo/gde_walk_bobo_00001.png" id="4_si263"]
 [ext_resource type="Texture2D" uid="uid://cjk0exkyfg6r" path="res://assets/characters/animaciones/ramiro_enojado_in/gde_enojado_in_00001.png" id="5_17i8l"]
 [ext_resource type="Texture2D" uid="uid://bav7amymr2w8v" path="res://assets/characters/animaciones/gde_walk_bobo/gde_walk_bobo_00002.png" id="5_60a42"]
@@ -559,8 +558,6 @@ size = Vector2(138, 87)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1d7tw"]
 size = Vector2(104, 20)
-
-[sub_resource type="Gradient" id="Gradient_jfpom"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mdxu6"]
 radius = 52.0
@@ -2369,18 +2366,6 @@ position = Vector2(-5, -129)
 shape = SubResource("RectangleShape2D_1d7tw")
 one_way_collision = true
 debug_color = Color(0.256769, 0.626522, 0.296495, 0.42)
-
-[node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(0, -105)
-
-[node name="Trayectoria" type="Line2D" parent="Marker2D"]
-unique_name_in_owner = true
-points = PackedVector2Array(85, -79)
-width = 150.0
-gradient = SubResource("Gradient_jfpom")
-texture = ExtResource("4_jfpom")
-texture_mode = 2
-antialiased = true
 
 [node name="colision-general" type="CollisionShape2D" parent="."]
 visible = false
