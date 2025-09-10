@@ -1,14 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://dt1eqajov6kib"]
+[gd_scene load_steps=8 format=3 uid="uid://dt1eqajov6kib"]
 
 [ext_resource type="PackedScene" uid="uid://tbbpbwsjlk7m" path="res://Levels/piso/floor.tscn" id="5_csadi"]
 [ext_resource type="Texture2D" uid="uid://b1h1s5de6vkth" path="res://_m_chars_test/chars/assets/Char_px_finales_para_escalar_sprites.png" id="6_a6vgv"]
 [ext_resource type="PackedScene" uid="uid://bf5b82fejpexj" path="res://Levels/Objetos/entel.tscn" id="7_v1yr6"]
-
-[sub_resource type="Resource" id="Resource_wgcdg"]
-metadata/__load_path__ = "res://_m_chars_test/chars/character_punk_chico.tscn"
-
-[sub_resource type="Resource" id="Resource_nt7fc"]
-metadata/__load_path__ = "res://_m_chars_test/chars/character_punk_grande.tscn"
 
 [sub_resource type="Resource" id="Resource_ucp4j"]
 metadata/__load_path__ = "res://_m_chars_test/chars/character_manager.gd"
