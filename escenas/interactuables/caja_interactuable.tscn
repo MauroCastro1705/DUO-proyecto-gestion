@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bd4w0gp7jsj8p" path="res://escenas/interactuables/objeto_interactuable_base.tscn" id="1_84oaa"]
 [ext_resource type="Script" uid="uid://lwbg0uev22" path="res://scripts/interactuables/caja_interactuable.gd" id="2_nvpgp"]
-[ext_resource type="Texture2D" uid="uid://2sxnug2i23d7" path="res://icon.svg" id="3_nvpgp"]
+[ext_resource type="Texture2D" uid="uid://c0q8hixlgshx4" path="res://assets/objetos/Caja_pesada.png" id="3_nvpgp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nvpgp"]
 size = Vector2(78, 28)
@@ -17,14 +17,14 @@ lock_rotation = true
 script = ExtResource("2_nvpgp")
 caja_tipo = 0
 
-[node name="CollisionShape2D" parent="." index="0"]
+[node name="CajaPesada" type="Sprite2D" parent="." index="0"]
+position = Vector2(-0.999999, -16.5)
+scale = Vector2(0.41, 0.31)
+texture = ExtResource("3_nvpgp")
+
+[node name="CollisionShape2D" parent="." index="1"]
 position = Vector2(0, -14)
 shape = SubResource("RectangleShape2D_nvpgp")
-
-[node name="Sprite2D" type="Sprite2D" parent="." index="1"]
-position = Vector2(0, -14)
-scale = Vector2(0.609375, 0.21875)
-texture = ExtResource("3_nvpgp")
 
 [node name="AreaInteraccion" type="Area2D" parent="." index="2"]
 collision_layer = 8
