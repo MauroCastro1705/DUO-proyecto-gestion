@@ -3807,7 +3807,7 @@ rotation = -3.14159
 scale = Vector2(0.87, -0.87)
 sprite_frames = SubResource("SpriteFrames_al74v")
 animation = &"caminar_enojado"
-frame_progress = 0.469124
+frame_progress = 0.497368
 offset = Vector2(0, -3)
 
 [node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="CanvasLayer"]
@@ -3815,16 +3815,16 @@ position = Vector2(854, 685)
 scale = Vector2(-0.87, 0.87)
 sprite_frames = SubResource("SpriteFrames_al74v")
 animation = &"empujar_caja_pesada"
-frame_progress = 0.586285
+frame_progress = 0.614527
 offset = Vector2(0, -3)
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="CanvasLayer"]
 z_index = 1
 position = Vector2(508, 724)
-scale = Vector2(0.756006, 0.769873)
+scale = Vector2(-0.756, 0.77)
 sprite_frames = SubResource("SpriteFrames_u5fgx")
 animation = &"saltar_completo_normal"
-frame_progress = 0.545422
+frame_progress = 0.573665
 offset = Vector2(0, -119)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer"]
@@ -3833,7 +3833,7 @@ position = Vector2(237, 733)
 scale = Vector2(-0.757966, 0.764886)
 sprite_frames = SubResource("SpriteFrames_u5fgx")
 animation = &"caminar_normal"
-frame_progress = 0.0968299
+frame_progress = 0.125072
 offset = Vector2(0, -119)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/AnimatedSprite2D"]
@@ -3842,5 +3842,5 @@ position = Vector2(-1524.17, 53.5636)
 scale = Vector2(-1.01287, 1.02212)
 sprite_frames = SubResource("SpriteFrames_u5fgx")
 animation = &"idle_enojado"
-frame_progress = 0.0069589
+frame_progress = 0.877011
 offset = Vector2(0, -119)
