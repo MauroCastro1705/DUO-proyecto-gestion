@@ -2,7 +2,6 @@ extends Node2D
 
 
 var active_player: CharacterBody2D  # El personaje que actualmente controlas
-signal swap_characters_signal
 var player1: CharacterBody2D
 var player2: CharacterBody2D
 var is_moved: bool = false
@@ -15,6 +14,14 @@ var normal_zoom := Vector2(1.5, 1.5)
 var zoomed_out := Vector2(0.5, 0.5) # ajustar
 var zoom_speed := 5.0
 var target_zoom := normal_zoom
+# --- NUEVO: parámetros de seguimiento/transition ---
+var follow_speed := 8.0             # cuán rápido sigue al activo (más alto = más pegado)
+var switch_snap_time := 0.25        # duración del tween inicial al cambiar
+var cam_offset := Vector2(0, -16)   # pequeño offset para no centrar exacto en los pies
+
+# Referencia al singleton del autoload (AJUSTAR si tu nombre difiere)
+var _switch_mgr
+
 @onready var bondi_de_frente = $Parallaxes/Parallax2D_FONDO_vereda/BondiFrenteMotor
 
 func _ready() -> void:
@@ -22,11 +29,58 @@ func _ready() -> void:
 	player1 = $Bruno
 	player2 = $Alejandra
 	_resetar_dialogos()
+# --- NUEVO: referenciar el singleton del autoload y conectar señal ---
+	# Si tu autoload se llama 'personajes_switch_manager', usá ese nombre aquí:
+	_switch_mgr = PersonajesSwitchManager
+	_switch_mgr.personaje_activo_ha_cambiado.connect(_on_personaje_activo_cambio)
+
+	# Tomar el personaje activo inicial (si ya fue seteado por el manager)
+	active_player = _switch_mgr.get_personaje_activo()
+	if is_instance_valid(active_player):
+		# Posicionar cámara directamente al empezar (sin tween al inicio)
+		camera.global_position = active_player.global_position + cam_offset
+	else:
+		# Fallback (por si todavía no hay activo): podés elegir uno
+		active_player = player1
+		camera.global_position = active_player.global_position + cam_offset
+
+	# Asegurar zoom inicial
+	camera.zoom = normal_zoom
+	target_zoom = normal_zoom
 
 
 func _process(delta: float) -> void:
 	_chequear_estado_juego()
+	# Interpolación de zoom continua hacia target_zoom
+	camera.zoom = camera.zoom.lerp(target_zoom, min(1.0, zoom_speed * delta))
+	
+func _physics_process(delta: float) -> void:
+	# --- NUEVO: seguimiento suave continuo del personaje activo ---
+	if is_instance_valid(active_player):
+		var desired := active_player.global_position + cam_offset
+		camera.global_position = camera.global_position.lerp(desired, min(1.0, follow_speed * delta))
 
+
+func _on_personaje_activo_cambio(nuevo_personaje: Node) -> void:
+	# Callback de la señal del manager cuando cambia el activo
+	if not is_instance_valid(nuevo_personaje):
+		return
+
+	active_player = nuevo_personaje
+
+	# (Opcional) un pequeño “pop” de zoom al cambiar para hacerlo más visible:
+	target_zoom = zoomed_out
+	create_tween().tween_callback(func(): target_zoom = normal_zoom).set_delay(0.15)
+
+	# Tween de “enganche” inicial hacia el nuevo personaje (rápido) antes del follow continuo.
+	var tw := create_tween()
+	tw.set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+	tw.tween_property(camera, "global_position", active_player.global_position + cam_offset, switch_snap_time)
+
+	# Si además querés retocar el zoom en el cambio:
+	tw.parallel().tween_property(camera, "zoom", normal_zoom, switch_snap_time)
+	
+	
 func _chequear_estado_juego():
 	if Global.game_over:
 		_game_over()
