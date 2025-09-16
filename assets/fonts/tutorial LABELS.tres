@@ -1,0 +1,12 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://c5wliuvs1jo11"]
+
+[ext_resource type="FontFile" uid="uid://2leqju2pt1f7" path="res://assets/fonts/Grunge.ttf" id="1_gyo7h"]
+
+[resource]
+font = ExtResource("1_gyo7h")
+font_size = 80
+outline_size = 7
+outline_color = Color(1, 0.847059, 0, 1)
+shadow_size = 50
+shadow_color = Color(0.298039, 0, 0.298039, 0.835294)
+shadow_offset = Vector2(0, 0)
