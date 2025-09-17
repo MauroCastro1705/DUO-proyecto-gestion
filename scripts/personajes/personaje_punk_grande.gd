@@ -68,7 +68,7 @@ func _set_hombros_plataforma_activa(esta_activa: bool): # Mec Hombros on/off
 	#hombros_plataforma_collision.disabled = not esta_activa
 	#print("Grande: Plataforma de hombros " + ("activada" if esta_activa else "desactivada"))
 	# We will check if the state is actually changing to avoid log spam.
-	var is_currently_disabled = hombros_plataforma_collision.disabled
+	var _is_currently_disabled = hombros_plataforma_collision.disabled
 	var should_be_disabled = not esta_activa
 	
 	#if is_currently_disabled != should_be_disabled:

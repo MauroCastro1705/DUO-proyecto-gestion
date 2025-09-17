@@ -243,7 +243,6 @@ func _actualizar_animaciones():
 	
 	pass
 
-	
 # --- Funciones CENTRALES ---
 
 # se llma desde HumoresManager
@@ -289,7 +288,6 @@ func _actualizar_animaciones():
 		#if not ruta_parametro.is_empty():
 			#animation_tree.set(ruta_parametro, nuevo_humor_indice)
 
-
 # Temporarily replace the function in personaje_punk_base.gd
 
 #func aplicar_humor_definicion(nueva_humor_def: HumorDefinicion):
@@ -319,7 +317,6 @@ func _actualizar_animaciones():
 		#if not parametro_final.is_empty():
 			#var ruta_parametro = "parameters/%s/%s" % [state_name, parametro_final]
 			#animation_tree.set(ruta_parametro, nuevo_humor_indice)
-
 
 func aplicar_humor_definicion(nueva_humor_def: HumorDefinicion):
 	# chequear si HumorManager paso fruta
@@ -434,11 +431,7 @@ func _actualizar_todos_los_blends_de_humor(nuevo_humor_indice: int):
 	animation_tree.set("active", true)
 	#animation_tree.advance(00.0)
 		
-	
-		
-		
-	
-	
+
 
 func _get_blend_y_eje_maestro_actual(eje_blend: String = "x") -> String:
 	if not animation_tree:
@@ -793,21 +786,13 @@ func _debug_imprimir_nodos_del_animation_tree():
 	var found_nodes = []
 
 	for prop in property_list:
-		# We are looking for a very specific path structure:
-		# "parameters/some_name_maestro/blend_position"
 		var path_string = str(prop.name)
 		
 		if path_string.begins_with("parameters/") and path_string.ends_with("/blend_position"):
-			# We found a potential candidate. Let's extract the node name.
-			# Example path: "parameters/idle_maestro/blend_position"
-			# 1. Remove prefix: "idle_maestro/blend_position"
 			var trimmed_path = path_string.trim_prefix("parameters/")
-			# 2. Get the part before the last '/': "idle_maestro"
 			var node_name = trimmed_path.get_slice("/", 0)
 			
-			# Our convention is that these nodes end with "_maestro".
-			if node_name.ends_with("_maestro"):
-				# To avoid duplicates, only add it if it's not already in our list.
+			if node_name.ends_with("_maestro"):# Our convention is that these nodes end with "_maestro".
 				if not node_name in found_nodes:
 					found_nodes.append(node_name)
 					
@@ -857,8 +842,7 @@ func get_root_blendspace_nodes() -> Array[String]:
 	if not root_state_machine is AnimationNodeStateMachine:
 		return root_nodes
 	
-	# Collect all node names from transitions
-	var found_nodes: Array[String] = []
+	var found_nodes: Array[String] = []	# Collect all node names from transitions
 	
 	for i in range(root_state_machine.get_transition_count()):
 		var from_node = root_state_machine.get_transition_from(i)
@@ -892,7 +876,6 @@ func print_collision_settings():
 			print("	Child Area2D: ", child.name)
 			print("		Layer: ", child.collision_layer)
 			print("		Mask: ", child.collision_mask)
-		# You can add more checks for grandchildren if needed
 
 
 func print_collision_settings_recursive(node = self, indent = ""):
