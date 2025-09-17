@@ -47,6 +47,9 @@ func _ready() -> void:
 	# Asegurar zoom inicial
 	camera.zoom = normal_zoom
 	target_zoom = normal_zoom
+	
+	# Llama estado inicial para este nivel
+	call_deferred("_set_estado_inicial_del_nivel")
 
 
 func _process(delta: float) -> void:
@@ -60,6 +63,12 @@ func _physics_process(delta: float) -> void:
 		var desired := active_player.global_position + cam_offset
 		camera.global_position = camera.global_position.lerp(desired, min(1.0, follow_speed * delta))
 
+func _set_estado_inicial_del_nivel():
+	var estados = get_node("/root/EstadosManager")
+	if estados:
+		estados.forzar_estado(GlobalEnumIndices.Estado.E_CHICO_ENOJO_INICIAL)
+	else:
+		push_error("EstadosManager no encontrado")
 
 func _on_personaje_activo_cambio(nuevo_personaje: Node) -> void:
 	# Callback de la señal del manager cuando cambia el activo
