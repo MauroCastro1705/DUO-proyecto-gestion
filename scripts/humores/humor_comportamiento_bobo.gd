@@ -2,11 +2,11 @@
 class_name HumorComportamientoBobo
 extends HumorComportamientoBase
 
+@warning_ignore("unused_parameter")
 func process_physics_mechanic(personaje: PersonajePunkBase, delta: float):
 	
 	### DEBUG IA ###
-	#print("BOBO AI running for:", personaje.name)
-	
+
 	# Find Chico
 	# Get Chico node from HumoresManager's personajes_dicc
 	var chico = HumoresManager.personajes_dicc.get(GlobalEnumIndices.Personaje.CHICO, null)
@@ -29,7 +29,8 @@ func process_physics_mechanic(personaje: PersonajePunkBase, delta: float):
 			personaje.velocity.x = 0
 		else:
 			personaje.velocity.x = direccion_x * personaje.move_speed_cuando_bobo
-			print("BOBO AI sets velocity.x to:", personaje.velocity.x, "dist_a_chico:", dist_a_chico)
+			if Engine.get_physics_frames() % 120 == 0:
+				print("BOBO AI sets velocity.x to:", personaje.velocity.x, "dist_a_chico:", dist_a_chico)
 	else:
 		personaje.velocity.x = 0
 	
@@ -40,9 +41,3 @@ func process_physics_mechanic(personaje: PersonajePunkBase, delta: float):
 	elif personaje.velocity.x > 0:
 		if personaje.sprite_visual:
 			personaje.sprite_visual.flip_h = true   # hacia der
-	
-	### DEBUG IA ###
-	#print("BOBO AI sets velocity.x to:", personaje.velocity.x, "dist_a_chico:", dist_a_chico)
-	#print("Edge right:", hay_arista_a_der, "Edge left:", hay_arista_a_izq, "direccion_x:", direccion_x)
-	#print("BOBO AI sets velocity.x to:", personaje.velocity.x)
-	

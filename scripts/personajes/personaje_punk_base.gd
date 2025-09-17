@@ -189,6 +189,7 @@ func _procesar_input_jugador(delta: float):
 func _get_el_otro_personaje() -> Node2D:
 	# get el otro personaje de HumoresManager
 	var personajes = HumoresManager.personajes_dicc
+	@warning_ignore("shadowed_variable")
 	for personaje_tipo in personajes:
 		if personaje_tipo != self.personaje_tipo:  # que no sea el mismo tipo
 			return personajes[personaje_tipo]
@@ -758,6 +759,7 @@ func puede_moverse_hacia_otro_personaje(otro_personaje: Node2D, input_dir_x: flo
 	#return true
 
 
+@warning_ignore("shadowed_variable_base_class")
 func tiene_linea_de_vista_a_objetivo(objetivo: Node2D, collision_mask: int = -1) -> bool:
 	var space_state = get_world_2d().direct_space_state
 	var ray_origin = global_position + Vector2(0, -altura_de_ojos)
