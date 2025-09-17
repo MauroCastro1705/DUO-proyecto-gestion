@@ -47,7 +47,7 @@ func _actualizar_rayo_debug(personaje: Node2D, start_pos: Vector2, end_pos: Vect
 		rayo_debug = Line2D.new()
 		rayo_debug.width = 2.0
 		personaje.add_child(rayo_debug)
-		_set_rayo_debug_reference(personaje, rayo_debug)
+		_set_rayo_debug_reference(rayo_debug)
 	
 	rayo_debug.points = [personaje.to_local(start_pos), personaje.to_local(end_pos)]
 	rayo_debug.default_color = color
@@ -58,7 +58,7 @@ func _obtener_rayo_debug(personaje: Node2D) -> Line2D:
 	var rayo_debug = personaje.get_node_or_null("RayoDebug")
 	return rayo_debug
 
-func _set_rayo_debug_reference(personaje: Node2D, rayo: Line2D):
+func _set_rayo_debug_reference(rayo: Line2D):
 	# nombre
 	if rayo:
 		rayo.name = "RayoDebug"

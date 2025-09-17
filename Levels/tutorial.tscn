@@ -1,7 +1,8 @@
-[gd_scene load_steps=807 format=3 uid="uid://240c8q3p5amg"]
+[gd_scene load_steps=809 format=3 uid="uid://240c8q3p5amg"]
 
 [ext_resource type="Texture2D" uid="uid://c6sec2qpokcbt" path="res://assets/personajes/gde_caminar_bobo/gde_caminar_bobo_00001.png" id="1_0o15n"]
 [ext_resource type="LabelSettings" uid="uid://c5wliuvs1jo11" path="res://assets/fonts/tutorial LABELS.tres" id="1_6dlyv"]
+[ext_resource type="Script" uid="uid://b05mx2qjfdb51" path="res://Levels/tutorial.gd" id="1_n6142"]
 [ext_resource type="Texture2D" uid="uid://f20ry1d7s0sd" path="res://assets/inputs/keyboard_arrow_left_outline.png" id="2_5njg3"]
 [ext_resource type="Texture2D" uid="uid://dtrtvsfdcsr6j" path="res://assets/personajes/gde_caminar_bobo/gde_caminar_bobo_00002.png" id="2_6dlyv"]
 [ext_resource type="Texture2D" uid="uid://uihmon2rdscd" path="res://assets/inputs/keyboard_a_outline.png" id="2_srsk8"]
@@ -804,6 +805,7 @@
 [ext_resource type="Texture2D" uid="uid://clvdkmej1uc2f" path="res://assets/personajes/ch_saltar_normal/ch_saltar_normal_00066.png" id="791_25vwv"]
 [ext_resource type="Texture2D" uid="uid://cc0mp7pw2n0ye" path="res://assets/personajes/ch_saltar_normal/ch_saltar_normal_00067.png" id="792_j4fqm"]
 [ext_resource type="Texture2D" uid="uid://d0wrtu8pmwvm6" path="res://assets/personajes/ch_saltar_normal/ch_saltar_normal_00068.png" id="793_p0km6"]
+[ext_resource type="Texture2D" uid="uid://c0q8hixlgshx4" path="res://assets/objetos/Caja_pesada.png" id="806_vrta3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_al74v"]
 animations = [{
@@ -3691,6 +3693,7 @@ animations = [{
 }]
 
 [node name="Tutorial" type="Node2D"]
+script = ExtResource("1_n6142")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -3811,6 +3814,7 @@ frame_progress = 0.497368
 offset = Vector2(0, -3)
 
 [node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="CanvasLayer"]
+z_index = 1
 position = Vector2(854, 685)
 scale = Vector2(-0.87, 0.87)
 sprite_frames = SubResource("SpriteFrames_al74v")
@@ -3827,6 +3831,20 @@ animation = &"saltar_completo_normal"
 frame_progress = 0.573665
 offset = Vector2(0, -119)
 
+[node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="CanvasLayer"]
+z_index = 1
+position = Vector2(1392.27, 773.97)
+scale = Vector2(0.767721, 0.781805)
+sprite_frames = SubResource("SpriteFrames_u5fgx")
+animation = &"idle_enojado"
+frame_progress = 0.877011
+offset = Vector2(0, -119)
+
+[node name="CajaPesada" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(971, 753)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("806_vrta3")
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer"]
 z_index = 1
 position = Vector2(237, 733)
@@ -3834,13 +3852,4 @@ scale = Vector2(-0.757966, 0.764886)
 sprite_frames = SubResource("SpriteFrames_u5fgx")
 animation = &"caminar_normal"
 frame_progress = 0.125072
-offset = Vector2(0, -119)
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/AnimatedSprite2D"]
-z_index = 1
-position = Vector2(-1524.17, 53.5636)
-scale = Vector2(-1.01287, 1.02212)
-sprite_frames = SubResource("SpriteFrames_u5fgx")
-animation = &"idle_enojado"
-frame_progress = 0.877011
 offset = Vector2(0, -119)
