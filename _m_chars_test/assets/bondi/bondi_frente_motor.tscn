@@ -1,75 +1,52 @@
-[gd_scene load_steps=78 format=3 uid="uid://cw6m1wnbulxw4"]
+[gd_scene load_steps=54 format=3 uid="uid://cw6m1wnbulxw4"]
 
+[ext_resource type="PackedScene" uid="uid://c5nt14tw6kg7t" path="res://assets/particulas/humo_color.tscn" id="1_5qnpv"]
 [ext_resource type="Texture2D" uid="uid://dehiytrgmoeeh" path="res://_m_chars_test/assets/bondi/bondi_motor/bondi_apagado_00001.png" id="1_qqbj5"]
 [ext_resource type="Texture2D" uid="uid://cuy6lvlobofiq" path="res://_m_chars_test/assets/bondi/bondi_frente_motor/bondi_frente_motor_00001.png" id="1_utk0r"]
-[ext_resource type="Texture2D" uid="uid://x3k6eaj724nj" path="res://assets/fx/humo_anim/humo_00001.png" id="1_v0kuh"]
 [ext_resource type="Texture2D" uid="uid://cvx3evf5puyp5" path="res://_m_chars_test/assets/bondi/bondi_motor/bondi_apagado_00002.png" id="2_5qnpv"]
 [ext_resource type="Texture2D" uid="uid://7dmryma8e6wk" path="res://_m_chars_test/assets/bondi/bondi_frente_motor/bondi_frente_motor_00002.png" id="2_55xw2"]
-[ext_resource type="Texture2D" uid="uid://dnlcfoie5acqq" path="res://assets/fx/humo_anim/humo_00002.png" id="2_e1ryi"]
 [ext_resource type="Texture2D" uid="uid://bxldtw56v3dec" path="res://_m_chars_test/assets/bondi/bondi_motor/bondi_apagado_00003.png" id="3_ea0sk"]
-[ext_resource type="Texture2D" uid="uid://dk27qs3e50pf6" path="res://assets/fx/humo_anim/humo_00003.png" id="3_sicd8"]
 [ext_resource type="Texture2D" uid="uid://3s6a4s0qig2b" path="res://_m_chars_test/assets/bondi/bondi_frente_motor/bondi_frente_motor_00003.png" id="3_ur78t"]
 [ext_resource type="Texture2D" uid="uid://cimbea1lawxed" path="res://_m_chars_test/assets/bondi/bondi_frente_motor/bondi_frente_motor_00004.png" id="4_bjqi0"]
-[ext_resource type="Texture2D" uid="uid://chh326c6aiwpq" path="res://assets/fx/humo_anim/humo_00004.png" id="4_cae2x"]
 [ext_resource type="Texture2D" uid="uid://dx2dl2kkninpo" path="res://_m_chars_test/assets/bondi/bondi_motor/bondi_apagado_00004.png" id="4_q4k5t"]
 [ext_resource type="Texture2D" uid="uid://co04vchgenk2b" path="res://_m_chars_test/assets/bondi/bondi_frente_motor/bondi_frente_motor_00005.png" id="5_fa7st"]
-[ext_resource type="Texture2D" uid="uid://dm3ssyekeykau" path="res://assets/fx/humo_anim/humo_00005.png" id="5_j2mfa"]
 [ext_resource type="Texture2D" uid="uid://diwwlneoo57n3" path="res://_m_chars_test/assets/bondi/bondi_motor/bondi_apagado_00005.png" id="5_tlk2m"]
 [ext_resource type="Texture2D" uid="uid://dxtofs1ec5ml5" path="res://_m_chars_test/assets/bondi/bondi_motor/bondi_apagado_00006.png" id="6_4wxa0"]
-[ext_resource type="Texture2D" uid="uid://4f6xqclqpjoc" path="res://assets/fx/humo_anim/humo_00006.png" id="6_6u4pb"]
 [ext_resource type="Texture2D" uid="uid://0btog8nukdma" path="res://_m_chars_test/assets/bondi/bondi_frente_motor/bondi_frente_motor_00006.png" id="6_i6j0n"]
 [ext_resource type="Texture2D" uid="uid://7rdmupsco2db" path="res://_m_chars_test/assets/bondi/bondi_frente_motor/bondi_frente_motor_00007.png" id="7_1tdrj"]
-[ext_resource type="Texture2D" uid="uid://dkvi34hllyrfc" path="res://assets/fx/humo_anim/humo_00007.png" id="7_wuyct"]
 [ext_resource type="Texture2D" uid="uid://c8jynbfi6s0ct" path="res://_m_chars_test/assets/bondi/bondi_motor/bondi_apagado_00007.png" id="7_y4l06"]
 [ext_resource type="Texture2D" uid="uid://di3v1x656rep4" path="res://_m_chars_test/assets/bondi/bondi_motor/bondi_apagado_00008.png" id="8_88qr5"]
 [ext_resource type="Texture2D" uid="uid://vnncs4l3qnq2" path="res://_m_chars_test/assets/bondi/bondi_frente_motor/bondi_frente_motor_00008.png" id="8_d0ccr"]
-[ext_resource type="Texture2D" uid="uid://ks8m3v84bjg6" path="res://assets/fx/humo_anim/humo_00008.png" id="8_sson2"]
-[ext_resource type="Texture2D" uid="uid://dx86u0lgwo0rj" path="res://assets/fx/humo_anim/humo_00009.png" id="9_0bbqv"]
 [ext_resource type="Texture2D" uid="uid://cjjuo1ltva7qj" path="res://_m_chars_test/assets/bondi/bondi_motor/bondi_apagado_00009.png" id="9_0d37k"]
 [ext_resource type="Texture2D" uid="uid://88t1sy4igve5" path="res://_m_chars_test/assets/bondi/bondi_frente_motor/bondi_frente_motor_00009.png" id="9_82fx3"]
 [ext_resource type="Texture2D" uid="uid://bugyumvs4ifyx" path="res://_m_chars_test/assets/bondi/bondi_frente_motor/bondi_frente_motor_00010.png" id="10_5jmjo"]
 [ext_resource type="Texture2D" uid="uid://bk64iy10yovek" path="res://_m_chars_test/assets/bondi/bondi_motor/bondi_apagado_00010.png" id="10_617jj"]
-[ext_resource type="Texture2D" uid="uid://bvgesb6bsyuvr" path="res://assets/fx/humo_anim/humo_00010.png" id="10_pv7dq"]
 [ext_resource type="Texture2D" uid="uid://ddvdaft576uva" path="res://_m_chars_test/assets/bondi/bondi_motor/bondi_apagado_00011.png" id="11_1jc4m"]
 [ext_resource type="Texture2D" uid="uid://qlldxmfxm58p" path="res://_m_chars_test/assets/bondi/bondi_frente_motor/bondi_frente_motor_00011.png" id="11_gt4f4"]
-[ext_resource type="Texture2D" uid="uid://b85o16f01y5t8" path="res://assets/fx/humo_anim/humo_00011.png" id="11_uo24r"]
 [ext_resource type="Texture2D" uid="uid://ie74n2vir3gd" path="res://_m_chars_test/assets/bondi/bondi_motor/bondi_apagado_00012.png" id="12_6mlql"]
 [ext_resource type="Texture2D" uid="uid://biq8oi5in5vel" path="res://_m_chars_test/assets/bondi/bondi_frente_motor/bondi_frente_motor_00012.png" id="12_8axpa"]
-[ext_resource type="Texture2D" uid="uid://1cut8fffcpvx" path="res://assets/fx/humo_anim/humo_00012.png" id="12_kmc0h"]
-[ext_resource type="Texture2D" uid="uid://ddnhwhb1uedgd" path="res://assets/fx/humo_anim/humo_00013.png" id="13_j4cb4"]
 [ext_resource type="Texture2D" uid="uid://ctuwchn7jdpdt" path="res://_m_chars_test/assets/bondi/bondi_motor/bondi_apagado_00013.png" id="13_jvfhp"]
 [ext_resource type="Texture2D" uid="uid://deo8ievlrvhli" path="res://_m_chars_test/assets/bondi/bondi_frente_motor/bondi_frente_motor_00013.png" id="13_pk4c1"]
 [ext_resource type="Texture2D" uid="uid://dcdgc6pyxpv21" path="res://_m_chars_test/assets/bondi/bondi_motor/bondi_apagado_00014.png" id="14_hb0le"]
 [ext_resource type="Texture2D" uid="uid://bdjysm6xrbcrg" path="res://_m_chars_test/assets/bondi/bondi_frente_motor/bondi_frente_motor_00014.png" id="14_vju0l"]
-[ext_resource type="Texture2D" uid="uid://dw0p3v8n1vjpy" path="res://assets/fx/humo_anim/humo_00014.png" id="14_wdtm3"]
 [ext_resource type="Texture2D" uid="uid://o2ebix7rmlus" path="res://_m_chars_test/assets/bondi/bondi_frente_motor/bondi_frente_motor_00015.png" id="15_7u3fg"]
 [ext_resource type="Texture2D" uid="uid://chm4evjvqk7cm" path="res://_m_chars_test/assets/bondi/bondi_motor/bondi_apagado_00015.png" id="15_8bpbj"]
-[ext_resource type="Texture2D" uid="uid://dok6qcvbusc46" path="res://assets/fx/humo_anim/humo_00015.png" id="15_w3pg5"]
-[ext_resource type="Texture2D" uid="uid://52eibr1t54rx" path="res://assets/fx/humo_anim/humo_00016.png" id="16_2ngbb"]
 [ext_resource type="Texture2D" uid="uid://cqoboeidttyl4" path="res://_m_chars_test/assets/bondi/bondi_frente_motor/bondi_frente_motor_00016.png" id="16_osoci"]
 [ext_resource type="Texture2D" uid="uid://d1ngwo6h51np6" path="res://_m_chars_test/assets/bondi/bondi_motor/bondi_apagado_00016.png" id="16_wkyyn"]
 [ext_resource type="Texture2D" uid="uid://c4c5ankys0tyy" path="res://_m_chars_test/assets/bondi/bondi_frente_motor/bondi_frente_motor_00017.png" id="17_3apft"]
-[ext_resource type="Texture2D" uid="uid://byqqpfklqtv7b" path="res://assets/fx/humo_anim/humo_00017.png" id="17_3ke68"]
 [ext_resource type="Texture2D" uid="uid://qcnyk4nt4ylp" path="res://_m_chars_test/assets/bondi/bondi_motor/bondi_apagado_00017.png" id="17_i5shg"]
 [ext_resource type="Texture2D" uid="uid://djno61cmxhiil" path="res://_m_chars_test/assets/bondi/bondi_frente_motor/bondi_frente_motor_00018.png" id="18_iuucc"]
 [ext_resource type="Texture2D" uid="uid://c6gowsvflecoy" path="res://_m_chars_test/assets/bondi/bondi_motor/bondi_apagado_00018.png" id="18_khgl5"]
-[ext_resource type="Texture2D" uid="uid://mj1l1copa746" path="res://assets/fx/humo_anim/humo_00018.png" id="18_xql1r"]
-[ext_resource type="Texture2D" uid="uid://dnjvpy540b2g1" path="res://assets/fx/humo_anim/humo_00019.png" id="19_57045"]
 [ext_resource type="Texture2D" uid="uid://xcuxuq3mld4x" path="res://_m_chars_test/assets/bondi/bondi_frente_motor/bondi_frente_motor_00019.png" id="19_hf60g"]
 [ext_resource type="Texture2D" uid="uid://cm3jgsuww7rtc" path="res://_m_chars_test/assets/bondi/bondi_motor/bondi_apagado_00019.png" id="19_ks5cn"]
 [ext_resource type="Texture2D" uid="uid://c2by4f3m30j5l" path="res://_m_chars_test/assets/bondi/bondi_frente_motor/bondi_frente_motor_00020.png" id="20_4heuj"]
 [ext_resource type="Texture2D" uid="uid://bec61awdvc322" path="res://_m_chars_test/assets/bondi/bondi_motor/bondi_apagado_00020.png" id="20_st23s"]
-[ext_resource type="Texture2D" uid="uid://ctyiq5xdm0mdr" path="res://assets/fx/humo_anim/humo_00020.png" id="20_xadoy"]
 [ext_resource type="Texture2D" uid="uid://bkiuvysg5lnnx" path="res://_m_chars_test/assets/bondi/bondi_frente_motor/bondi_frente_motor_00021.png" id="21_apkj2"]
 [ext_resource type="Texture2D" uid="uid://dlx0s6o8wdfn" path="res://_m_chars_test/assets/bondi/bondi_motor/bondi_apagado_00021.png" id="21_fhibk"]
-[ext_resource type="Texture2D" uid="uid://lf4hx6pynih0" path="res://assets/fx/humo_anim/humo_00021.png" id="21_qbdah"]
 [ext_resource type="Texture2D" uid="uid://dhcvm1e5fvlon" path="res://_m_chars_test/assets/bondi/bondi_motor/bondi_apagado_00022.png" id="22_3emug"]
-[ext_resource type="Texture2D" uid="uid://dow1sa6cvi1rf" path="res://assets/fx/humo_anim/humo_00022.png" id="22_ran1p"]
 [ext_resource type="Texture2D" uid="uid://d3chu045qgftk" path="res://_m_chars_test/assets/bondi/bondi_frente_motor/bondi_frente_motor_00022.png" id="22_v1u2x"]
 [ext_resource type="Texture2D" uid="uid://br80ubapyn583" path="res://_m_chars_test/assets/bondi/bondi_frente_motor/bondi_frente_motor_00023.png" id="23_dm2at"]
-[ext_resource type="Texture2D" uid="uid://priyturdagro" path="res://assets/fx/humo_anim/humo_00023.png" id="23_i8526"]
 [ext_resource type="Texture2D" uid="uid://bewla6v8me2mf" path="res://_m_chars_test/assets/bondi/bondi_motor/bondi_apagado_00023.png" id="23_qd1ic"]
-[ext_resource type="Texture2D" uid="uid://oyy0myci8lbk" path="res://assets/fx/humo_anim/humo_00024.png" id="24_fsxch"]
 [ext_resource type="Texture2D" uid="uid://b2clbv8feuhof" path="res://_m_chars_test/assets/bondi/bondi_motor/bondi_apagado_00024.png" id="24_nyruv"]
 [ext_resource type="Texture2D" uid="uid://bd2t7h0cumw37" path="res://_m_chars_test/assets/bondi/bondi_frente_motor/bondi_frente_motor_00024.png" id="24_vbaj0"]
 
@@ -88,86 +65,6 @@ func apagar_bondi_anim(animation_name: String):
 	else:
 		push_error(name, \": no hay animsprite de bondi\")
 "
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_0iw8q"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_v0kuh")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_e1ryi")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_sicd8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_cae2x")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_j2mfa")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_6u4pb")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_wuyct")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_sson2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_0bbqv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_pv7dq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_uo24r")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_kmc0h")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_j4cb4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("14_wdtm3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_w3pg5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("16_2ngbb")
-}, {
-"duration": 1.0,
-"texture": ExtResource("17_3ke68")
-}, {
-"duration": 1.0,
-"texture": ExtResource("18_xql1r")
-}, {
-"duration": 1.0,
-"texture": ExtResource("19_57045")
-}, {
-"duration": 1.0,
-"texture": ExtResource("20_xadoy")
-}, {
-"duration": 1.0,
-"texture": ExtResource("21_qbdah")
-}, {
-"duration": 1.0,
-"texture": ExtResource("22_ran1p")
-}, {
-"duration": 1.0,
-"texture": ExtResource("23_i8526")
-}, {
-"duration": 1.0,
-"texture": ExtResource("24_fsxch")
-}],
-"loop": true,
-"name": &"default",
-"speed": 13.0
-}]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qqbj5"]
 animations = [{
@@ -338,14 +235,12 @@ fill_to = Vector2(0.995726, 0.512821)
 [node name="BondiFrenteMotor" type="Node2D"]
 script = SubResource("GDScript_qqbj5")
 
-[node name="humo_animado2" type="AnimatedSprite2D" parent="."]
+[node name="HumoColor" parent="." instance=ExtResource("1_5qnpv")]
 modulate = Color(0.4623, 0.69, 0.69, 0.160784)
-light_mask = 0
+z_index = -9
 position = Vector2(207, -32)
-scale = Vector2(0.693, -0.358)
-sprite_frames = SubResource("SpriteFrames_0iw8q")
-autoplay = "default"
-frame_progress = 0.140625
+rotation = 1.5708
+scale = Vector2(0.423, 0.95)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.736, 0.736)

@@ -335,6 +335,7 @@ glitch_chance = 1.0
 position = Vector2(-29, -168)
 color = Color(0.87, 0.74472, 0.7308, 1)
 energy = 3.33
+shadow_enabled = true
 texture = ExtResource("5_jxfnm")
 offset = Vector2(217, -34.75)
 texture_scale = 1.72

@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://c5nt14tw6kg7t"]
+
+[ext_resource type="Texture2D" uid="uid://x3k6eaj724nj" path="res://assets/fx/humo_anim/humo_00001.png" id="1_tiydk"]
+
+[sub_resource type="Gradient" id="Gradient_ckymr"]
+colors = PackedColorArray(0.494854, 0.494855, 0.494854, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_luskq"]
+gradient = SubResource("Gradient_ckymr")
+
+[sub_resource type="Curve" id="Curve_myj4j"]
+_limits = [0.2, 1.5, 0.0, 1.0]
+_data = [Vector2(0.00510204, 0.225292), 0.0, 0.0, 0, 0, Vector2(1, 1.5), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_6jw76"]
+curve = SubResource("Curve_myj4j")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_jvwpo"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(20, 150, 1)
+spread = 25.0
+initial_velocity_min = 5.0
+initial_velocity_max = 20.0
+angular_velocity_min = 4.99998
+angular_velocity_max = 30.0
+scale_curve = SubResource("CurveTexture_6jw76")
+color_ramp = SubResource("GradientTexture1D_luskq")
+turbulence_enabled = true
+turbulence_noise_strength = 5.0
+turbulence_noise_scale = 8.091
+turbulence_noise_speed_random = 0.75
+turbulence_influence_min = 0.3
+turbulence_influence_max = 1.0
+
+[node name="HumoColor" type="GPUParticles2D"]
+amount = 10
+texture = ExtResource("1_tiydk")
+lifetime = 2.55
+preprocess = 5.0
+randomness = 0.34
+process_material = SubResource("ParticleProcessMaterial_jvwpo")
