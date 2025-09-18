@@ -264,6 +264,7 @@ offset_bottom = -16.0
 color = Color(0.85, 0.664133, 0.5015, 1)
 
 [node name="interior_animado" type="AnimatedSprite2D" parent="."]
+process_mode = 4
 visible = false
 modulate = Color(0.899258, 0.899258, 0.899258, 1)
 position = Vector2(62, -136)
@@ -334,13 +335,11 @@ glitch_chance = 1.0
 [node name="luz_interior_concreto" type="PointLight2D" parent="."]
 position = Vector2(-29, -168)
 color = Color(0.87, 0.74472, 0.7308, 1)
-energy = 3.33
 shadow_enabled = true
 texture = ExtResource("5_jxfnm")
 offset = Vector2(217, -34.75)
 texture_scale = 1.72
 script = SubResource("GDScript_uwkpa")
-base_light_energy = 3.33
 min_time_between_glitches = 0.03
 max_time_between_glitches = 0.6
 min_glitch_off_duration = 0.03

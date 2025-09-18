@@ -1521,6 +1521,7 @@ transitions = ["idle_maestro", "caminar_maestro", SubResource("AnimationNodeStat
 graph_offset = Vector2(107, 113)
 
 [node name="PersonajePunkBase" type="CharacterBody2D" node_paths=PackedStringArray("animation_player", "sprite_visual", "animation_tree", "interaccion_detector", "indicador_personaje_activo", "raycast_detecta_arista_der", "raycast_detecta_arista_izq", "raycast_objetos_izq", "raycast_objetos_der")]
+modulate = Color(0.530745, 0.511852, 0.516617, 1)
 collision_layer = 0
 collision_mask = 9
 script = ExtResource("1_uaj63")
