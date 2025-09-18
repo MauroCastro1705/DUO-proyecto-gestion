@@ -1,4 +1,4 @@
-[gd_scene load_steps=275 format=3 uid="uid://c3an21sb0tac4"]
+[gd_scene load_steps=276 format=3 uid="uid://c3an21sb0tac4"]
 
 [ext_resource type="PackedScene" uid="uid://o7des5n7pmg8" path="res://escenas/personajes/personaje_punk_base.tscn" id="1_qp1fq"]
 [ext_resource type="Texture2D" uid="uid://drrsdmde44f82" path="res://assets/personajes/ch_caminar_enojado/ch_caminar_enojado_00001.png" id="2_11tsi"]
@@ -1401,6 +1401,9 @@ animations = [{
 "speed": 28.0
 }]
 
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_rn36i"]
+polygon = PackedVector2Array(-12, -58, -14, -62, -16, -68, -14, -79, -9, -73, -5, -80, 1, -77, 6, -81, 9, -72, 10, -66, 7, -63, 6, -58, 5, -46, 5, -34, 5, -26, 4, -16, -2, -28, -6, -12, -8, -34, -11, -40, -6, -48, -7, -56)
+
 [node name="PersonajePunkChico" node_paths=PackedStringArray("hombros_detector_raycast") instance=ExtResource("1_qp1fq")]
 collision_layer = 2
 collision_mask = 25
@@ -1422,7 +1425,7 @@ shape = SubResource("CapsuleShape2D_8vtb2")
 [node name="AnimatedSprite2D" parent="." index="5"]
 scale = Vector2(0.495, 0.495)
 sprite_frames = SubResource("SpriteFrames_6hmo3")
-animation = &"saltar_aterrizaje_normal"
+animation = &"idle_normal"
 offset = Vector2(0, -119)
 
 [node name="AnimationTree" parent="." index="7"]
@@ -1431,3 +1434,6 @@ parameters/saltar_inicio_maestro/blend_position = 0
 
 [node name="HombrosDetector" parent="." index="8"]
 target_position = Vector2(0, 10)
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="." index="14"]
+occluder = SubResource("OccluderPolygon2D_rn36i")

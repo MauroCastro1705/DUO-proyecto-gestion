@@ -1,4 +1,4 @@
-[gd_scene load_steps=533 format=3 uid="uid://cp1wustvqmsv8"]
+[gd_scene load_steps=534 format=3 uid="uid://cp1wustvqmsv8"]
 
 [ext_resource type="PackedScene" uid="uid://o7des5n7pmg8" path="res://escenas/personajes/personaje_punk_base.tscn" id="1_680bq"]
 [ext_resource type="Script" uid="uid://bw40k063jfemv" path="res://scripts/personajes/personaje_punk_grande.gd" id="2_3dwor"]
@@ -2302,6 +2302,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fxp1u"]
 size = Vector2(92, 25.75)
 
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_xdnrh"]
+polygon = PackedVector2Array(-53, -152, -46, -161, -39, -180, -12, -177, 8, -177, 26, -171, 32, -142, 33, -117, 29, -94, 29, -69, 24, -50, 28, -35, 25, -5, -42, -10, -32, -29, -34, -69, -39, -98, -49, -131)
+
 [node name="PersonajePunkGrande" node_paths=PackedStringArray("hombros_plataforma_collision") instance=ExtResource("1_680bq")]
 collision_layer = 4
 script = ExtResource("2_3dwor")
@@ -2348,3 +2351,6 @@ debug_color = Color(0.782479, 0.321012, 0.746395, 0.42)
 parameters/idle_maestro/blend_position = 0.00833333
 parameters/saltar_inicio_maestro/blend_position = 0
 parameters/saltar_maestro/blend_position = 0
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="." index="15"]
+occluder = SubResource("OccluderPolygon2D_xdnrh")
