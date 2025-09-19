@@ -340,6 +340,7 @@ texture = ExtResource("5_jxfnm")
 offset = Vector2(217, -34.75)
 texture_scale = 1.72
 script = SubResource("GDScript_uwkpa")
+base_light_energy = 1.6
 min_time_between_glitches = 0.03
 max_time_between_glitches = 0.6
 min_glitch_off_duration = 0.03
