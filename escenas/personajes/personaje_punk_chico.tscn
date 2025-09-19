@@ -1425,7 +1425,7 @@ shape = SubResource("CapsuleShape2D_8vtb2")
 [node name="AnimatedSprite2D" parent="." index="5"]
 scale = Vector2(0.495, 0.495)
 sprite_frames = SubResource("SpriteFrames_6hmo3")
-animation = &"empujar_caja_pesada"
+animation = &"caminar_enojado"
 offset = Vector2(0, -119)
 
 [node name="AnimationTree" parent="." index="7"]

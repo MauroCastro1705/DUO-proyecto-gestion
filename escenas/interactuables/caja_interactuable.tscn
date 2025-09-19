@@ -11,14 +11,19 @@ size = Vector2(94, 32)
 collision_layer = 8
 collision_mask = 31
 lock_rotation = true
+angular_damp_mode = 1
+angular_damp = 100.0
 script = ExtResource("2_nvpgp")
 caja_tipo = 0
 sprite_liviana = NodePath("Sprite2D")
 sprite_pesada = NodePath("Sprite2DAlt")
 collision_polygon_liviana = NodePath("CollisionPolygon2D")
 collision_polygon_pesada = NodePath("CollisionPolygon2DAlt")
+color_modulate_on = Color(0.78, 0.30095, 0.2574, 0.156863)
+color_modulate_off = Color(0.78, 0.30095, 0.2574, 0)
 
 [node name="Sprite2DAlt" type="Sprite2D" parent="." index="1"]
+visible = false
 position = Vector2(0, -35)
 scale = Vector2(0.728571, 0.714286)
 texture = ExtResource("3_nvpgp")
@@ -30,7 +35,14 @@ collision_mask = 6
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaInteraccion" index="0"]
 position = Vector2(0, -16)
 shape = SubResource("RectangleShape2D_ew0hq")
-debug_color = Color(0.925026, 0.220347, 0.416662, 0.42)
+debug_color = Color(0.58384, 0.3772, 0.82, 0.027451)
+
+[node name="CollisionPolygon2D" parent="." index="3"]
+modulate = Color(1, 1, 1, 0.105882)
+self_modulate = Color(0.78, 0.30095, 0.2574, 0.156863)
 
 [node name="CollisionPolygon2DAlt" type="CollisionPolygon2D" parent="." index="4"]
+modulate = Color(1, 1, 1, 0.105882)
+self_modulate = Color(0.78, 0.30095, 0.2574, 0)
 polygon = PackedVector2Array(-36, -70, 36, -70, 36, -14, 32, 0, -29, 0, -36, -18)
+disabled = true

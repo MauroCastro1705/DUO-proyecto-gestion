@@ -683,7 +683,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("53_oiid8")
 }],
-"loop": false,
+"loop": true,
 "name": &"caminar_bobo",
 "speed": 26.0
 }, {
@@ -2334,8 +2334,7 @@ shape = SubResource("CapsuleShape2D_3dwor")
 position = Vector2(-4, -99)
 scale = Vector2(0.87, 0.87)
 sprite_frames = SubResource("SpriteFrames_3dwor")
-frame = 47
-frame_progress = 1.0
+animation = &"idle_bobo"
 offset = Vector2(0, -3)
 
 [node name="HombrosPlataforma" type="StaticBody2D" parent="." index="6"]

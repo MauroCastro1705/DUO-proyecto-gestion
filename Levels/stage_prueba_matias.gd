@@ -49,7 +49,9 @@ func _ready() -> void:
 	target_zoom = normal_zoom
 	
 	# Llama estado inicial para este nivel
-	call_deferred("_set_estado_inicial_del_nivel")
+	#call_deferred("_set_estado_inicial_del_nivel")
+	
+	#recordar CAMBIE COLLISION MASKS de A yB
 
 
 func _process(delta: float) -> void:
