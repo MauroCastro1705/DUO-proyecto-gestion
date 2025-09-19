@@ -1,13 +1,15 @@
 [gd_scene load_steps=3 format=3 uid="uid://bd4w0gp7jsj8p"]
 
 [ext_resource type="Script" uid="uid://rbygrh3qbapr" path="res://scripts/interactuables/objeto_interactuable_base.gd" id="1_bmhwu"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_l6jnu"]
-size = Vector2(78, 20)
+[ext_resource type="Texture2D" uid="uid://csd1v7tr3if4f" path="res://assets/objetos/caja_pesada_2.png" id="2_l6jnu"]
 
 [node name="ObjetoInteractuableBase" type="RigidBody2D"]
 script = ExtResource("1_bmhwu")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -10)
-shape = SubResource("RectangleShape2D_l6jnu")
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -14)
+scale = Vector2(0.391667, 0.285714)
+texture = ExtResource("2_l6jnu")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-39, -28, 39, -28, 39, -14, 35, 0, -35, 0, -39, -16)

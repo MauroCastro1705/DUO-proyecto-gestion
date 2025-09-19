@@ -1,30 +1,27 @@
-[gd_scene load_steps=6 format=3 uid="uid://ddrtpgh0poa45"]
+[gd_scene load_steps=5 format=3 uid="uid://ddrtpgh0poa45"]
 
 [ext_resource type="PackedScene" uid="uid://bd4w0gp7jsj8p" path="res://escenas/interactuables/objeto_interactuable_base.tscn" id="1_84oaa"]
 [ext_resource type="Script" uid="uid://lwbg0uev22" path="res://scripts/interactuables/caja_interactuable.gd" id="2_nvpgp"]
-[ext_resource type="Texture2D" uid="uid://c0q8hixlgshx4" path="res://assets/objetos/Caja_pesada.png" id="3_nvpgp"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_nvpgp"]
-size = Vector2(78, 28)
+[ext_resource type="Texture2D" uid="uid://beiyhpkaui448" path="res://assets/objetos/caja_liviana_2.png" id="3_nvpgp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ew0hq"]
-size = Vector2(88, 32)
+size = Vector2(94, 32)
 
-[node name="CajaInteractuable" instance=ExtResource("1_84oaa")]
+[node name="CajaInteractuable" node_paths=PackedStringArray("sprite_liviana", "sprite_pesada", "collision_polygon_liviana", "collision_polygon_pesada") instance=ExtResource("1_84oaa")]
 collision_layer = 8
 collision_mask = 31
 lock_rotation = true
 script = ExtResource("2_nvpgp")
 caja_tipo = 0
+sprite_liviana = NodePath("Sprite2D")
+sprite_pesada = NodePath("Sprite2DAlt")
+collision_polygon_liviana = NodePath("CollisionPolygon2D")
+collision_polygon_pesada = NodePath("CollisionPolygon2DAlt")
 
-[node name="CajaPesada" type="Sprite2D" parent="." index="0"]
-position = Vector2(-0.999999, -16.5)
-scale = Vector2(0.41, 0.31)
+[node name="Sprite2DAlt" type="Sprite2D" parent="." index="1"]
+position = Vector2(0, -35)
+scale = Vector2(0.728571, 0.714286)
 texture = ExtResource("3_nvpgp")
-
-[node name="CollisionShape2D" parent="." index="1"]
-position = Vector2(0, -14)
-shape = SubResource("RectangleShape2D_nvpgp")
 
 [node name="AreaInteraccion" type="Area2D" parent="." index="2"]
 collision_layer = 8
@@ -34,3 +31,6 @@ collision_mask = 6
 position = Vector2(0, -16)
 shape = SubResource("RectangleShape2D_ew0hq")
 debug_color = Color(0.925026, 0.220347, 0.416662, 0.42)
+
+[node name="CollisionPolygon2DAlt" type="CollisionPolygon2D" parent="." index="4"]
+polygon = PackedVector2Array(-36, -70, 36, -70, 36, -14, 32, 0, -29, 0, -36, -18)
