@@ -1,6 +1,6 @@
 # caja_interactuable.gd - v1.0 
 # liviana o pesada
-
+@tool
 class_name CajaInteractuable
 extends ObjetoInteractuableBase
 
