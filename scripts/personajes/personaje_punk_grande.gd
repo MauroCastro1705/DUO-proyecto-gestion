@@ -6,7 +6,8 @@ extends PersonajePunkBase
 var objeto_cargado_en_hombros: Node2D = null
 var ultimo_movimiento_delta: Vector2 = Vector2.ZERO
 @export var hombros_plataforma_collision: CollisionShape2D # vincular a colision de hombros
-# arreglar: personaje pubbk grandeasdasd
+
+
 func _ready():
 	super._ready() # primero la parent ready function, o sea de punk_base
 	_set_hombros_plataforma_activa(false)

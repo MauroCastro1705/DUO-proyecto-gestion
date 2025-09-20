@@ -2335,7 +2335,7 @@ shape = SubResource("CapsuleShape2D_3dwor")
 position = Vector2(-4, -99)
 scale = Vector2(0.87, 0.87)
 sprite_frames = SubResource("SpriteFrames_3dwor")
-frame_progress = 0.281103
+frame_progress = 0.759388
 offset = Vector2(0, -3)
 
 [node name="HombrosPlataforma" type="StaticBody2D" parent="." index="6"]
@@ -2350,6 +2350,7 @@ debug_color = Color(0.782479, 0.321012, 0.746395, 0.42)
 
 [node name="AnimationTree" parent="." index="8"]
 parameters/idle_maestro/blend_position = 0.00833333
+parameters/saltar_aterrizaje_maestro/blend_position = 1.99914
 parameters/saltar_inicio_maestro/blend_position = 0
 parameters/saltar_maestro/blend_position = 0
 
