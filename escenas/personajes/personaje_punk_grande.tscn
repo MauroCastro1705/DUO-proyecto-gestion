@@ -1,4 +1,4 @@
-[gd_scene load_steps=534 format=3 uid="uid://cp1wustvqmsv8"]
+[gd_scene load_steps=535 format=3 uid="uid://cp1wustvqmsv8"]
 
 [ext_resource type="PackedScene" uid="uid://o7des5n7pmg8" path="res://escenas/personajes/personaje_punk_base.tscn" id="1_680bq"]
 [ext_resource type="Script" uid="uid://bw40k063jfemv" path="res://scripts/personajes/personaje_punk_grande.gd" id="2_3dwor"]
@@ -12,143 +12,144 @@
 [ext_resource type="Resource" uid="uid://nik4dedwod11" path="res://data/transiciones/gde_enojado_normal.tres" id="5_bri5b"]
 [ext_resource type="Texture2D" uid="uid://cspr42fp438sq" path="res://assets/personajes/gde_caminar_normal/gde_caminar_normal_00003.png" id="5_ulp68"]
 [ext_resource type="Texture2D" uid="uid://bmhhdc7m3brkm" path="res://assets/personajes/gde_caminar_normal/gde_caminar_normal_00004.png" id="6_4y13w"]
+[ext_resource type="Texture2D" uid="uid://cv7jjraqnbcwu" path="res://assets/personajes/gde_caminar_bobo_ok/gde_caminar_bobo_ok_00001.png" id="6_78iwa"]
 [ext_resource type="Texture2D" uid="uid://dx3egpyk4osfp" path="res://assets/personajes/gde_caminar_enojado/gde_caminar_enojado_00004.png" id="6_u1jwv"]
-[ext_resource type="Texture2D" uid="uid://c6sec2qpokcbt" path="res://assets/personajes/gde_caminar_bobo/gde_caminar_bobo_00001.png" id="6_xdnrh"]
-[ext_resource type="Texture2D" uid="uid://dtrtvsfdcsr6j" path="res://assets/personajes/gde_caminar_bobo/gde_caminar_bobo_00002.png" id="7_78iwa"]
 [ext_resource type="Texture2D" uid="uid://dtkiybqnhww3t" path="res://assets/personajes/gde_caminar_enojado/gde_caminar_enojado_00005.png" id="7_kv6l2"]
 [ext_resource type="Texture2D" uid="uid://b41w17peahw0g" path="res://assets/personajes/gde_caminar_normal/gde_caminar_normal_00005.png" id="7_q6ovx"]
+[ext_resource type="Texture2D" uid="uid://dof76tx3qilxk" path="res://assets/personajes/gde_caminar_bobo_ok/gde_caminar_bobo_ok_00002.png" id="7_wg73t"]
 [ext_resource type="Texture2D" uid="uid://dd5wxvhbd42rc" path="res://assets/personajes/gde_caminar_enojado/gde_caminar_enojado_00006.png" id="8_7repj"]
+[ext_resource type="Texture2D" uid="uid://cjuf5w7dc64mj" path="res://assets/personajes/gde_caminar_bobo_ok/gde_caminar_bobo_ok_00003.png" id="8_d2f6m"]
 [ext_resource type="Texture2D" uid="uid://dchtxpf2i487c" path="res://assets/personajes/gde_caminar_normal/gde_caminar_normal_00006.png" id="8_tjl5e"]
-[ext_resource type="Texture2D" uid="uid://b3mgb8fk8y02" path="res://assets/personajes/gde_caminar_bobo/gde_caminar_bobo_00003.png" id="8_wg73t"]
 [ext_resource type="Texture2D" uid="uid://3se2o6u3lu3a" path="res://assets/personajes/gde_caminar_normal/gde_caminar_normal_00007.png" id="9_1r4fe"]
-[ext_resource type="Texture2D" uid="uid://cgmeb1d1m5psi" path="res://assets/personajes/gde_caminar_bobo/gde_caminar_bobo_00004.png" id="9_d2f6m"]
+[ext_resource type="Texture2D" uid="uid://c4o0x6o138x3g" path="res://assets/personajes/gde_caminar_bobo_ok/gde_caminar_bobo_ok_00004.png" id="9_q2vyp"]
 [ext_resource type="Texture2D" uid="uid://b1iyyx1i8okfd" path="res://assets/personajes/gde_caminar_enojado/gde_caminar_enojado_00007.png" id="9_qlbii"]
 [ext_resource type="Texture2D" uid="uid://ct35mkot6qb7q" path="res://assets/personajes/gde_caminar_enojado/gde_caminar_enojado_00008.png" id="10_essuh"]
-[ext_resource type="Texture2D" uid="uid://6a02215rmnyb" path="res://assets/personajes/gde_caminar_bobo/gde_caminar_bobo_00005.png" id="10_q2vyp"]
 [ext_resource type="Texture2D" uid="uid://gsiogw3h2xva" path="res://assets/personajes/gde_caminar_normal/gde_caminar_normal_00008.png" id="10_sqsph"]
+[ext_resource type="Texture2D" uid="uid://c2k064l5rxql2" path="res://assets/personajes/gde_caminar_bobo_ok/gde_caminar_bobo_ok_00005.png" id="10_tstfn"]
 [ext_resource type="Texture2D" uid="uid://fej4ixc81mkv" path="res://assets/personajes/gde_caminar_enojado/gde_caminar_enojado_00009.png" id="11_0cvgb"]
 [ext_resource type="Texture2D" uid="uid://d0w46tk2obtuv" path="res://assets/personajes/gde_caminar_normal/gde_caminar_normal_00009.png" id="11_gdq16"]
-[ext_resource type="Texture2D" uid="uid://dqlfoa3i4m0os" path="res://assets/personajes/gde_caminar_bobo/gde_caminar_bobo_00006.png" id="11_tstfn"]
+[ext_resource type="Texture2D" uid="uid://discdiq7pgjtx" path="res://assets/personajes/gde_caminar_bobo_ok/gde_caminar_bobo_ok_00006.png" id="11_tg61f"]
 [ext_resource type="Texture2D" uid="uid://dinu0pnn5o1a1" path="res://assets/personajes/gde_caminar_enojado/gde_caminar_enojado_00010.png" id="12_5julw"]
 [ext_resource type="Texture2D" uid="uid://c5pdv2plwi60b" path="res://assets/personajes/gde_caminar_normal/gde_caminar_normal_00010.png" id="12_hwyhk"]
-[ext_resource type="Texture2D" uid="uid://qwd6j8n6i1c3" path="res://assets/personajes/gde_caminar_bobo/gde_caminar_bobo_00007.png" id="12_tg61f"]
+[ext_resource type="Texture2D" uid="uid://dq1xybqgv4jup" path="res://assets/personajes/gde_caminar_bobo_ok/gde_caminar_bobo_ok_00007.png" id="12_px3ly"]
 [ext_resource type="Texture2D" uid="uid://b87vkwoyrx7jr" path="res://assets/personajes/gde_caminar_enojado/gde_caminar_enojado_00011.png" id="13_0677y"]
 [ext_resource type="Texture2D" uid="uid://bumttgbmj7rnn" path="res://assets/personajes/gde_caminar_normal/gde_caminar_normal_00011.png" id="13_d1axi"]
-[ext_resource type="Texture2D" uid="uid://r33dld8i1xeg" path="res://assets/personajes/gde_caminar_bobo/gde_caminar_bobo_00008.png" id="13_px3ly"]
+[ext_resource type="Texture2D" uid="uid://dorvv3im5nl61" path="res://assets/personajes/gde_caminar_bobo_ok/gde_caminar_bobo_ok_00008.png" id="13_eh4wm"]
 [ext_resource type="Texture2D" uid="uid://bc003l61ncsbo" path="res://assets/personajes/gde_caminar_normal/gde_caminar_normal_00012.png" id="14_b0klo"]
 [ext_resource type="Texture2D" uid="uid://crvapv1ywsjiy" path="res://assets/personajes/gde_caminar_enojado/gde_caminar_enojado_00012.png" id="14_dh5e4"]
-[ext_resource type="Texture2D" uid="uid://d4f1h1krqgkdo" path="res://assets/personajes/gde_caminar_bobo/gde_caminar_bobo_00009.png" id="14_eh4wm"]
+[ext_resource type="Texture2D" uid="uid://raos0uy2s35j" path="res://assets/personajes/gde_caminar_bobo_ok/gde_caminar_bobo_ok_00009.png" id="14_rfdwl"]
 [ext_resource type="Texture2D" uid="uid://5yjkqauuliwv" path="res://assets/personajes/gde_caminar_normal/gde_caminar_normal_00013.png" id="15_4rqup"]
 [ext_resource type="Texture2D" uid="uid://qjbbwhi78dsf" path="res://assets/personajes/gde_caminar_enojado/gde_caminar_enojado_00013.png" id="15_8xglg"]
-[ext_resource type="Texture2D" uid="uid://cgm2hbbiu646e" path="res://assets/personajes/gde_caminar_bobo/gde_caminar_bobo_00010.png" id="15_rfdwl"]
+[ext_resource type="Texture2D" uid="uid://c7de2gryxaevh" path="res://assets/personajes/gde_caminar_bobo_ok/gde_caminar_bobo_ok_00010.png" id="15_u4co1"]
+[ext_resource type="Texture2D" uid="uid://dhed2cbk4yk74" path="res://assets/personajes/gde_caminar_bobo_ok/gde_caminar_bobo_ok_00011.png" id="16_8bi72"]
 [ext_resource type="Texture2D" uid="uid://5hd0ltm2t4b5" path="res://assets/personajes/gde_caminar_normal/gde_caminar_normal_00014.png" id="16_64vch"]
 [ext_resource type="Texture2D" uid="uid://ss6gxccdx7qm" path="res://assets/personajes/gde_caminar_enojado/gde_caminar_enojado_00014.png" id="16_iub4g"]
-[ext_resource type="Texture2D" uid="uid://dd2l05khcal0r" path="res://assets/personajes/gde_caminar_bobo/gde_caminar_bobo_00011.png" id="16_u4co1"]
 [ext_resource type="Texture2D" uid="uid://bswjaxbr4wle0" path="res://assets/personajes/gde_caminar_normal/gde_caminar_normal_00015.png" id="17_0l3nd"]
-[ext_resource type="Texture2D" uid="uid://cghoo328xd663" path="res://assets/personajes/gde_caminar_bobo/gde_caminar_bobo_00012.png" id="17_8bi72"]
+[ext_resource type="Texture2D" uid="uid://dmgnvsa70d2yg" path="res://assets/personajes/gde_caminar_bobo_ok/gde_caminar_bobo_ok_00012.png" id="17_sbbo2"]
 [ext_resource type="Texture2D" uid="uid://bbr3ortk2mi6b" path="res://assets/personajes/gde_caminar_enojado/gde_caminar_enojado_00015.png" id="17_y6an5"]
+[ext_resource type="Texture2D" uid="uid://dbe81mbmfjnov" path="res://assets/personajes/gde_caminar_bobo_ok/gde_caminar_bobo_ok_00013.png" id="18_5prqf"]
 [ext_resource type="Texture2D" uid="uid://cv456xgau04lo" path="res://assets/personajes/gde_caminar_enojado/gde_caminar_enojado_00016.png" id="18_8srs8"]
 [ext_resource type="Texture2D" uid="uid://dfkdmx4cnthpl" path="res://assets/personajes/gde_caminar_normal/gde_caminar_normal_00016.png" id="18_38be7"]
-[ext_resource type="Texture2D" uid="uid://dfwgxddri14ih" path="res://assets/personajes/gde_caminar_bobo/gde_caminar_bobo_00013.png" id="18_sbbo2"]
-[ext_resource type="Texture2D" uid="uid://c1yxvdt1giilg" path="res://assets/personajes/gde_caminar_bobo/gde_caminar_bobo_00014.png" id="19_5prqf"]
 [ext_resource type="Texture2D" uid="uid://csvl6inm4c61w" path="res://assets/personajes/gde_caminar_normal/gde_caminar_normal_00017.png" id="19_m05bw"]
+[ext_resource type="Texture2D" uid="uid://cgee883ps7b8m" path="res://assets/personajes/gde_caminar_bobo_ok/gde_caminar_bobo_ok_00014.png" id="19_ridno"]
 [ext_resource type="Texture2D" uid="uid://dt2cp5y7btqvr" path="res://assets/personajes/gde_caminar_enojado/gde_caminar_enojado_00017.png" id="19_ssby1"]
 [ext_resource type="Texture2D" uid="uid://dsxfa1idw7q48" path="res://assets/personajes/gde_caminar_normal/gde_caminar_normal_00018.png" id="20_8i5sp"]
 [ext_resource type="Texture2D" uid="uid://bpb8hon150mlx" path="res://assets/personajes/gde_caminar_enojado/gde_caminar_enojado_00018.png" id="20_bjsfo"]
-[ext_resource type="Texture2D" uid="uid://c7qn24hc3ocf6" path="res://assets/personajes/gde_caminar_bobo/gde_caminar_bobo_00015.png" id="20_ridno"]
+[ext_resource type="Texture2D" uid="uid://h5eu1g0pb6gr" path="res://assets/personajes/gde_caminar_bobo_ok/gde_caminar_bobo_ok_00015.png" id="20_pn4f6"]
+[ext_resource type="Texture2D" uid="uid://d345vh52mpxop" path="res://assets/personajes/gde_caminar_bobo_ok/gde_caminar_bobo_ok_00016.png" id="21_bgtyi"]
 [ext_resource type="Texture2D" uid="uid://b8gtslv48gyqs" path="res://assets/personajes/gde_caminar_normal/gde_caminar_normal_00019.png" id="21_ihbrv"]
-[ext_resource type="Texture2D" uid="uid://du5nc7q5yiwfe" path="res://assets/personajes/gde_caminar_bobo/gde_caminar_bobo_00016.png" id="21_pn4f6"]
 [ext_resource type="Texture2D" uid="uid://c83kitgqs0uj" path="res://assets/personajes/gde_caminar_enojado/gde_caminar_enojado_00019.png" id="21_qf86r"]
-[ext_resource type="Texture2D" uid="uid://dkriwtn0sxxme" path="res://assets/personajes/gde_caminar_bobo/gde_caminar_bobo_00017.png" id="22_bgtyi"]
 [ext_resource type="Texture2D" uid="uid://cvf173bavp0no" path="res://assets/personajes/gde_caminar_enojado/gde_caminar_enojado_00020.png" id="22_lwi80"]
+[ext_resource type="Texture2D" uid="uid://56jqu1yc7ren" path="res://assets/personajes/gde_caminar_bobo_ok/gde_caminar_bobo_ok_00017.png" id="22_rhee7"]
 [ext_resource type="Texture2D" uid="uid://dffg8cn4xed6h" path="res://assets/personajes/gde_caminar_normal/gde_caminar_normal_00020.png" id="22_u1ihe"]
 [ext_resource type="Texture2D" uid="uid://ch1dijfw7wpek" path="res://assets/personajes/gde_caminar_normal/gde_caminar_normal_00021.png" id="23_01ohj"]
 [ext_resource type="Texture2D" uid="uid://b5x13csi8nvdu" path="res://assets/personajes/gde_caminar_enojado/gde_caminar_enojado_00021.png" id="23_n3ki0"]
-[ext_resource type="Texture2D" uid="uid://vwjj6wwpex34" path="res://assets/personajes/gde_caminar_bobo/gde_caminar_bobo_00018.png" id="23_rhee7"]
+[ext_resource type="Texture2D" uid="uid://ccy48rkrn30im" path="res://assets/personajes/gde_caminar_bobo_ok/gde_caminar_bobo_ok_00018.png" id="23_y6gh8"]
+[ext_resource type="Texture2D" uid="uid://ck5nflq60gnb8" path="res://assets/personajes/gde_caminar_bobo_ok/gde_caminar_bobo_ok_00019.png" id="24_jlwrm"]
 [ext_resource type="Texture2D" uid="uid://38133rrqhpog" path="res://assets/personajes/gde_caminar_normal/gde_caminar_normal_00022.png" id="24_r17vi"]
 [ext_resource type="Texture2D" uid="uid://dvodu2voru7hk" path="res://assets/personajes/gde_caminar_enojado/gde_caminar_enojado_00022.png" id="24_rv13c"]
-[ext_resource type="Texture2D" uid="uid://f50jktrvno8g" path="res://assets/personajes/gde_caminar_bobo/gde_caminar_bobo_00019.png" id="24_y6gh8"]
 [ext_resource type="Texture2D" uid="uid://d3sodjru1ko8" path="res://assets/personajes/gde_caminar_enojado/gde_caminar_enojado_00023.png" id="25_8ar1s"]
 [ext_resource type="Texture2D" uid="uid://bvu2gxuhf8pch" path="res://assets/personajes/gde_caminar_normal/gde_caminar_normal_00023.png" id="25_8r73x"]
-[ext_resource type="Texture2D" uid="uid://c4nqnispx0fpl" path="res://assets/personajes/gde_caminar_bobo/gde_caminar_bobo_00020.png" id="25_jlwrm"]
+[ext_resource type="Texture2D" uid="uid://bdprmrkwdutnf" path="res://assets/personajes/gde_caminar_bobo_ok/gde_caminar_bobo_ok_00020.png" id="25_n8t1j"]
+[ext_resource type="Texture2D" uid="uid://bise0g6ftdhb3" path="res://assets/personajes/gde_caminar_bobo_ok/gde_caminar_bobo_ok_00021.png" id="26_81o0m"]
 [ext_resource type="Texture2D" uid="uid://jsog1ueg1sjo" path="res://assets/personajes/gde_caminar_normal/gde_caminar_normal_00024.png" id="26_bnpb7"]
-[ext_resource type="Texture2D" uid="uid://w2rk7loh423k" path="res://assets/personajes/gde_caminar_bobo/gde_caminar_bobo_00021.png" id="26_n8t1j"]
 [ext_resource type="Texture2D" uid="uid://d1rvwdxoq3di6" path="res://assets/personajes/gde_caminar_enojado/gde_caminar_enojado_00024.png" id="26_wp45u"]
 [ext_resource type="Texture2D" uid="uid://bwlrb8pptnnxo" path="res://assets/personajes/gde_caminar_enojado/gde_caminar_enojado_00025.png" id="27_68blt"]
-[ext_resource type="Texture2D" uid="uid://bq8ltsh11sbr8" path="res://assets/personajes/gde_caminar_bobo/gde_caminar_bobo_00022.png" id="27_81o0m"]
+[ext_resource type="Texture2D" uid="uid://defcy1ras8dio" path="res://assets/personajes/gde_caminar_bobo_ok/gde_caminar_bobo_ok_00022.png" id="27_q146e"]
 [ext_resource type="Texture2D" uid="uid://b5if8hxy5pa2n" path="res://assets/personajes/gde_caminar_normal/gde_caminar_normal_00025.png" id="27_qya0w"]
 [ext_resource type="Texture2D" uid="uid://kmgbi700xh7" path="res://assets/personajes/gde_caminar_normal/gde_caminar_normal_00026.png" id="28_3cs4u"]
-[ext_resource type="Texture2D" uid="uid://dr4uxkwbt73uu" path="res://assets/personajes/gde_caminar_bobo/gde_caminar_bobo_00023.png" id="28_q146e"]
 [ext_resource type="Texture2D" uid="uid://5x37ltejsuex" path="res://assets/personajes/gde_caminar_enojado/gde_caminar_enojado_00026.png" id="28_voqok"]
+[ext_resource type="Texture2D" uid="uid://dfpj1p2xyu8eb" path="res://assets/personajes/gde_caminar_bobo_ok/gde_caminar_bobo_ok_00023.png" id="28_xtwj2"]
+[ext_resource type="Texture2D" uid="uid://cycm0bwtvaibf" path="res://assets/personajes/gde_caminar_bobo_ok/gde_caminar_bobo_ok_00024.png" id="29_l370o"]
 [ext_resource type="Texture2D" uid="uid://dxsc4qcbmm61e" path="res://assets/personajes/gde_caminar_enojado/gde_caminar_enojado_00027.png" id="29_phaie"]
 [ext_resource type="Texture2D" uid="uid://dpbbfg0c8gbp2" path="res://assets/personajes/gde_caminar_normal/gde_caminar_normal_00027.png" id="29_v3er6"]
-[ext_resource type="Texture2D" uid="uid://cj76f62b03gha" path="res://assets/personajes/gde_caminar_bobo/gde_caminar_bobo_00024.png" id="29_xtwj2"]
-[ext_resource type="Texture2D" uid="uid://qpnk6hm1t8ib" path="res://assets/personajes/gde_caminar_bobo/gde_caminar_bobo_00025.png" id="30_l370o"]
+[ext_resource type="Texture2D" uid="uid://b2p4xj7nkgrjh" path="res://assets/personajes/gde_caminar_bobo_ok/gde_caminar_bobo_ok_00025.png" id="30_fvip7"]
 [ext_resource type="Texture2D" uid="uid://b2ukumgadsd2p" path="res://assets/personajes/gde_caminar_normal/gde_caminar_normal_00028.png" id="30_lhk8f"]
 [ext_resource type="Texture2D" uid="uid://dobjd586wpvf1" path="res://assets/personajes/gde_caminar_enojado/gde_caminar_enojado_00028.png" id="30_qkf5b"]
 [ext_resource type="Texture2D" uid="uid://dof46s0u0bffa" path="res://assets/personajes/gde_caminar_enojado/gde_caminar_enojado_00029.png" id="31_7luyj"]
-[ext_resource type="Texture2D" uid="uid://b0l2yeavus83t" path="res://assets/personajes/gde_caminar_bobo/gde_caminar_bobo_00026.png" id="31_fvip7"]
+[ext_resource type="Texture2D" uid="uid://du5l820fp8v2p" path="res://assets/personajes/gde_caminar_bobo_ok/gde_caminar_bobo_ok_00026.png" id="31_iwpby"]
 [ext_resource type="Texture2D" uid="uid://cqxrxh7c2pysa" path="res://assets/personajes/gde_caminar_normal/gde_caminar_normal_00029.png" id="31_otssv"]
-[ext_resource type="Texture2D" uid="uid://dbe7kwojvpgrp" path="res://assets/personajes/gde_caminar_bobo/gde_caminar_bobo_00027.png" id="32_iwpby"]
+[ext_resource type="Texture2D" uid="uid://c1ero15afli12" path="res://assets/personajes/gde_caminar_bobo_ok/gde_caminar_bobo_ok_00027.png" id="32_73lg4"]
 [ext_resource type="Texture2D" uid="uid://cvbtqcjfalccs" path="res://assets/personajes/gde_caminar_enojado/gde_caminar_enojado_00030.png" id="32_nc4h2"]
 [ext_resource type="Texture2D" uid="uid://b2b0va5dpmqi3" path="res://assets/personajes/gde_caminar_normal/gde_caminar_normal_00030.png" id="32_okodm"]
 [ext_resource type="Texture2D" uid="uid://dukifhiwgeoh4" path="res://assets/personajes/gde_caminar_enojado/gde_caminar_enojado_00031.png" id="33_6hu2x"]
-[ext_resource type="Texture2D" uid="uid://dw13vdnv3g3bv" path="res://assets/personajes/gde_caminar_bobo/gde_caminar_bobo_00028.png" id="33_73lg4"]
 [ext_resource type="Texture2D" uid="uid://btgt32xyq44ni" path="res://assets/personajes/gde_caminar_normal/gde_caminar_normal_00031.png" id="33_mypge"]
+[ext_resource type="Texture2D" uid="uid://swy7h655wau" path="res://assets/personajes/gde_caminar_bobo_ok/gde_caminar_bobo_ok_00028.png" id="33_veo0u"]
+[ext_resource type="Texture2D" uid="uid://dl3aa0bcqy55a" path="res://assets/personajes/gde_caminar_bobo_ok/gde_caminar_bobo_ok_00029.png" id="34_gc22h"]
 [ext_resource type="Texture2D" uid="uid://beuoqmp023poq" path="res://assets/personajes/gde_caminar_normal/gde_caminar_normal_00032.png" id="34_mjoqy"]
 [ext_resource type="Texture2D" uid="uid://2oeib3llae10" path="res://assets/personajes/gde_caminar_enojado/gde_caminar_enojado_00032.png" id="34_rehlw"]
-[ext_resource type="Texture2D" uid="uid://bu12rsuycpqxb" path="res://assets/personajes/gde_caminar_bobo/gde_caminar_bobo_00029.png" id="34_veo0u"]
 [ext_resource type="Texture2D" uid="uid://dvtm768ulgab3" path="res://assets/personajes/gde_caminar_normal/gde_caminar_normal_00033.png" id="35_at2ac"]
-[ext_resource type="Texture2D" uid="uid://b4egctn7gojse" path="res://assets/personajes/gde_caminar_bobo/gde_caminar_bobo_00030.png" id="35_gc22h"]
 [ext_resource type="Texture2D" uid="uid://c7w6onkf2g5c8" path="res://assets/personajes/gde_caminar_enojado/gde_caminar_enojado_00033.png" id="35_jpuur"]
+[ext_resource type="Texture2D" uid="uid://4q870skletiy" path="res://assets/personajes/gde_caminar_bobo_ok/gde_caminar_bobo_ok_00030.png" id="35_jqu5s"]
 [ext_resource type="Texture2D" uid="uid://cjqr8vpshbrku" path="res://assets/personajes/gde_caminar_enojado/gde_caminar_enojado_00034.png" id="36_fxp1u"]
-[ext_resource type="Texture2D" uid="uid://dmka7rmrji38o" path="res://assets/personajes/gde_caminar_bobo/gde_caminar_bobo_00031.png" id="36_jqu5s"]
 [ext_resource type="Texture2D" uid="uid://b5ha5ystd86yj" path="res://assets/personajes/gde_caminar_normal/gde_caminar_normal_00034.png" id="36_mvjbd"]
+[ext_resource type="Texture2D" uid="uid://bmol5831fud47" path="res://assets/personajes/gde_caminar_bobo_ok/gde_caminar_bobo_ok_00031.png" id="36_shtie"]
 [ext_resource type="Texture2D" uid="uid://3h3qkfkx8bq4" path="res://assets/personajes/gde_caminar_enojado/gde_caminar_enojado_00035.png" id="37_3dwor"]
 [ext_resource type="Texture2D" uid="uid://bk472aiu7m80i" path="res://assets/personajes/gde_caminar_normal/gde_caminar_normal_00035.png" id="37_ard3y"]
-[ext_resource type="Texture2D" uid="uid://ewsc25xa70ii" path="res://assets/personajes/gde_caminar_bobo/gde_caminar_bobo_00032.png" id="37_shtie"]
+[ext_resource type="Texture2D" uid="uid://drgbqbfql4nwl" path="res://assets/personajes/gde_caminar_bobo_ok/gde_caminar_bobo_ok_00032.png" id="37_c5ybn"]
 [ext_resource type="Texture2D" uid="uid://btdhgxcacv3wf" path="res://assets/personajes/gde_caminar_enojado/gde_caminar_enojado_00036.png" id="38_2uqvb"]
 [ext_resource type="Texture2D" uid="uid://1amx1mvinfhi" path="res://assets/personajes/gde_caminar_normal/gde_caminar_normal_00036.png" id="38_86thl"]
-[ext_resource type="Texture2D" uid="uid://8tcrg3tmvkri" path="res://assets/personajes/gde_caminar_bobo/gde_caminar_bobo_00033.png" id="38_c5ybn"]
+[ext_resource type="Texture2D" uid="uid://b1oyuc4yfcchs" path="res://assets/personajes/gde_caminar_bobo_ok/gde_caminar_bobo_ok_00033.png" id="38_qw6ey"]
+[ext_resource type="Texture2D" uid="uid://b1q06b47mio50" path="res://assets/personajes/gde_caminar_bobo_ok/gde_caminar_bobo_ok_00034.png" id="39_13fjs"]
 [ext_resource type="Texture2D" uid="uid://5g83kws7tcl4" path="res://assets/personajes/gde_caminar_normal/gde_caminar_normal_00037.png" id="39_dbxl5"]
 [ext_resource type="Texture2D" uid="uid://dutgdjrm8fca6" path="res://assets/personajes/gde_caminar_enojado/gde_caminar_enojado_00037.png" id="39_pa0ot"]
-[ext_resource type="Texture2D" uid="uid://s26nnfeccx0r" path="res://assets/personajes/gde_caminar_bobo/gde_caminar_bobo_00034.png" id="39_qw6ey"]
 [ext_resource type="Texture2D" uid="uid://c8igsnlvue4fa" path="res://assets/personajes/gde_caminar_normal/gde_caminar_normal_00038.png" id="40_4blwa"]
-[ext_resource type="Texture2D" uid="uid://bsrtrm5hck2rn" path="res://assets/personajes/gde_caminar_bobo/gde_caminar_bobo_00035.png" id="40_13fjs"]
+[ext_resource type="Texture2D" uid="uid://cu6q8oftw2ti7" path="res://assets/personajes/gde_caminar_bobo_ok/gde_caminar_bobo_ok_00035.png" id="40_u4aqe"]
 [ext_resource type="Texture2D" uid="uid://dql860c2h35pm" path="res://assets/personajes/gde_caminar_enojado/gde_caminar_enojado_00038.png" id="40_u5p0h"]
+[ext_resource type="Texture2D" uid="uid://btksma8f8oy1l" path="res://assets/personajes/gde_caminar_bobo_ok/gde_caminar_bobo_ok_00036.png" id="41_1nthc"]
 [ext_resource type="Texture2D" uid="uid://ovdopetdyiys" path="res://assets/personajes/gde_caminar_enojado/gde_caminar_enojado_00039.png" id="41_e7nag"]
 [ext_resource type="Texture2D" uid="uid://dee2tfbl522f8" path="res://assets/personajes/gde_caminar_normal/gde_caminar_normal_00039.png" id="41_g3m2p"]
-[ext_resource type="Texture2D" uid="uid://bvfm2n6qh2f77" path="res://assets/personajes/gde_caminar_bobo/gde_caminar_bobo_00036.png" id="41_u4aqe"]
-[ext_resource type="Texture2D" uid="uid://c4w48ph8gmwij" path="res://assets/personajes/gde_caminar_bobo/gde_caminar_bobo_00037.png" id="42_1nthc"]
 [ext_resource type="Texture2D" uid="uid://dqsyyneq43e6p" path="res://assets/personajes/gde_caminar_normal/gde_caminar_normal_00040.png" id="42_64d88"]
+[ext_resource type="Texture2D" uid="uid://c0qtmjovg0lnu" path="res://assets/personajes/gde_caminar_bobo_ok/gde_caminar_bobo_ok_00037.png" id="42_e6yii"]
 [ext_resource type="Texture2D" uid="uid://gxqmgdvar4t1" path="res://assets/personajes/gde_caminar_enojado/gde_caminar_enojado_00040.png" id="42_ivg16"]
 [ext_resource type="Texture2D" uid="uid://dr6utka5wk222" path="res://assets/personajes/gde_caminar_normal/gde_caminar_normal_00041.png" id="43_cajen"]
-[ext_resource type="Texture2D" uid="uid://3tdpimrmsmyv" path="res://assets/personajes/gde_caminar_bobo/gde_caminar_bobo_00038.png" id="43_e6yii"]
+[ext_resource type="Texture2D" uid="uid://c0kxb5274es58" path="res://assets/personajes/gde_caminar_bobo_ok/gde_caminar_bobo_ok_00038.png" id="43_rcnxr"]
 [ext_resource type="Texture2D" uid="uid://dlaj108cwny1t" path="res://assets/personajes/gde_caminar_enojado/gde_caminar_enojado_00041.png" id="43_tahx7"]
+[ext_resource type="Texture2D" uid="uid://b8xkme5rnia5a" path="res://assets/personajes/gde_caminar_bobo_ok/gde_caminar_bobo_ok_00039.png" id="44_bxxi0"]
 [ext_resource type="Texture2D" uid="uid://co1s6a122ht6m" path="res://assets/personajes/gde_caminar_normal/gde_caminar_normal_00042.png" id="44_f2fcv"]
 [ext_resource type="Texture2D" uid="uid://dphpc68n0rejk" path="res://assets/personajes/gde_caminar_enojado/gde_caminar_enojado_00042.png" id="44_gi8gu"]
-[ext_resource type="Texture2D" uid="uid://nypsles2v1io" path="res://assets/personajes/gde_caminar_bobo/gde_caminar_bobo_00039.png" id="44_rcnxr"]
-[ext_resource type="Texture2D" uid="uid://cp2cf7ax4tmxq" path="res://assets/personajes/gde_caminar_bobo/gde_caminar_bobo_00040.png" id="45_bxxi0"]
+[ext_resource type="Texture2D" uid="uid://dwol5vpwpg5bh" path="res://assets/personajes/gde_caminar_bobo_ok/gde_caminar_bobo_ok_00040.png" id="45_j74nj"]
 [ext_resource type="Texture2D" uid="uid://ds4ymqqoee88j" path="res://assets/personajes/gde_caminar_normal/gde_caminar_normal_00043.png" id="45_nenbc"]
 [ext_resource type="Texture2D" uid="uid://cs7vp85s0oto6" path="res://assets/personajes/gde_caminar_enojado/gde_caminar_enojado_00043.png" id="45_oy141"]
 [ext_resource type="Texture2D" uid="uid://c6kg4p4fivst5" path="res://assets/personajes/gde_caminar_normal/gde_caminar_normal_00044.png" id="46_1ueki"]
-[ext_resource type="Texture2D" uid="uid://cejftesg042jn" path="res://assets/personajes/gde_caminar_bobo/gde_caminar_bobo_00041.png" id="46_j74nj"]
+[ext_resource type="Texture2D" uid="uid://bk3k26n76qnrp" path="res://assets/personajes/gde_caminar_bobo_ok/gde_caminar_bobo_ok_00041.png" id="46_e51bv"]
 [ext_resource type="Texture2D" uid="uid://bdf1o21r0kt7b" path="res://assets/personajes/gde_caminar_enojado/gde_caminar_enojado_00044.png" id="46_npb1p"]
 [ext_resource type="Texture2D" uid="uid://c8hjv8fhjiv4i" path="res://assets/personajes/gde_caminar_enojado/gde_caminar_enojado_00045.png" id="47_02lhc"]
-[ext_resource type="Texture2D" uid="uid://y13gngojbytv" path="res://assets/personajes/gde_caminar_bobo/gde_caminar_bobo_00042.png" id="47_e51bv"]
+[ext_resource type="Texture2D" uid="uid://bfknc1084jp3a" path="res://assets/personajes/gde_caminar_bobo_ok/gde_caminar_bobo_ok_00042.png" id="47_bhvp8"]
 [ext_resource type="Texture2D" uid="uid://btceplcxa3sgi" path="res://assets/personajes/gde_caminar_normal/gde_caminar_normal_00045.png" id="47_sl805"]
-[ext_resource type="Texture2D" uid="uid://c5jc15l787wsy" path="res://assets/personajes/gde_caminar_bobo/gde_caminar_bobo_00043.png" id="48_bhvp8"]
 [ext_resource type="Texture2D" uid="uid://cd8bu2uiyerkf" path="res://assets/personajes/gde_caminar_enojado/gde_caminar_enojado_00046.png" id="48_dla1o"]
 [ext_resource type="Texture2D" uid="uid://wmx4ed8vydfq" path="res://assets/personajes/gde_caminar_normal/gde_caminar_normal_00046.png" id="48_dtrn4"]
+[ext_resource type="Texture2D" uid="uid://cxuqjo5hc4fmg" path="res://assets/personajes/gde_caminar_bobo_ok/gde_caminar_bobo_ok_00043.png" id="48_shukk"]
 [ext_resource type="Texture2D" uid="uid://kr8p8m3jmgfn" path="res://assets/personajes/gde_caminar_enojado/gde_caminar_enojado_00047.png" id="49_5iai5"]
+[ext_resource type="Texture2D" uid="uid://dccnrlc6nsemy" path="res://assets/personajes/gde_caminar_bobo_ok/gde_caminar_bobo_ok_00044.png" id="49_liwtv"]
 [ext_resource type="Texture2D" uid="uid://cuf6jf4dkp4w0" path="res://assets/personajes/gde_caminar_normal/gde_caminar_normal_00047.png" id="49_saems"]
-[ext_resource type="Texture2D" uid="uid://cydtqjbms7cvh" path="res://assets/personajes/gde_caminar_bobo/gde_caminar_bobo_00044.png" id="49_shukk"]
+[ext_resource type="Texture2D" uid="uid://emby4ttmnek6" path="res://assets/personajes/gde_caminar_bobo_ok/gde_caminar_bobo_ok_00045.png" id="50_ak2ok"]
 [ext_resource type="Texture2D" uid="uid://dyipsc81orwqw" path="res://assets/personajes/gde_caminar_normal/gde_caminar_normal_00048.png" id="50_are2f"]
-[ext_resource type="Texture2D" uid="uid://bv6mvsfva73st" path="res://assets/personajes/gde_caminar_bobo/gde_caminar_bobo_00045.png" id="50_liwtv"]
 [ext_resource type="Texture2D" uid="uid://db4dkdmocpvxa" path="res://assets/personajes/gde_caminar_enojado/gde_caminar_enojado_00048.png" id="50_q4kix"]
-[ext_resource type="Texture2D" uid="uid://bqp1akmm7v0sg" path="res://assets/personajes/gde_caminar_bobo/gde_caminar_bobo_00046.png" id="51_ak2ok"]
+[ext_resource type="Texture2D" uid="uid://bjph6etey1e8a" path="res://assets/personajes/gde_caminar_bobo_ok/gde_caminar_bobo_ok_00046.png" id="51_rcjtn"]
+[ext_resource type="Texture2D" uid="uid://cqtr8ibese0ye" path="res://assets/personajes/gde_caminar_bobo_ok/gde_caminar_bobo_ok_00047.png" id="52_oiid8"]
 [ext_resource type="Texture2D" uid="uid://bpoorky48ith8" path="res://assets/personajes/gde_caminar_bobo/gde_caminar_bobo_00047.png" id="52_rcjtn"]
-[ext_resource type="Texture2D" uid="uid://c138dl7hlilo6" path="res://assets/personajes/gde_caminar_bobo/gde_caminar_bobo_00048.png" id="53_oiid8"]
+[ext_resource type="Texture2D" uid="uid://dbq8ah2ncvapd" path="res://assets/personajes/gde_caminar_bobo_ok/gde_caminar_bobo_ok_00048.png" id="53_lxxjn"]
 [ext_resource type="Texture2D" uid="uid://cgxipimo31353" path="res://assets/personajes/gde_idle_enojado/gde_idle_enojado_00001.png" id="99_p2ljw"]
 [ext_resource type="Texture2D" uid="uid://c662ha382t5cd" path="res://assets/personajes/gde_empujar_caja_liviana/gde_empujar_caja_liviana_00001.png" id="99_umii5"]
 [ext_resource type="Texture2D" uid="uid://cbrasub5jfkf5" path="res://assets/personajes/gde_empujar_caja_liviana/gde_empujar_caja_liviana_00002.png" id="100_76ryy"]
@@ -540,148 +541,148 @@ height = 164.0
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("6_xdnrh")
+"texture": ExtResource("6_78iwa")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_78iwa")
+"texture": ExtResource("7_wg73t")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_wg73t")
+"texture": ExtResource("8_d2f6m")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_d2f6m")
+"texture": ExtResource("9_q2vyp")
 }, {
 "duration": 1.0,
-"texture": ExtResource("10_q2vyp")
+"texture": ExtResource("10_tstfn")
 }, {
 "duration": 1.0,
-"texture": ExtResource("11_tstfn")
+"texture": ExtResource("11_tg61f")
 }, {
 "duration": 1.0,
-"texture": ExtResource("12_tg61f")
+"texture": ExtResource("12_px3ly")
 }, {
 "duration": 1.0,
-"texture": ExtResource("13_px3ly")
+"texture": ExtResource("13_eh4wm")
 }, {
 "duration": 1.0,
-"texture": ExtResource("14_eh4wm")
+"texture": ExtResource("14_rfdwl")
 }, {
 "duration": 1.0,
-"texture": ExtResource("15_rfdwl")
+"texture": ExtResource("15_u4co1")
 }, {
 "duration": 1.0,
-"texture": ExtResource("16_u4co1")
+"texture": ExtResource("16_8bi72")
 }, {
 "duration": 1.0,
-"texture": ExtResource("17_8bi72")
+"texture": ExtResource("17_sbbo2")
 }, {
 "duration": 1.0,
-"texture": ExtResource("18_sbbo2")
+"texture": ExtResource("18_5prqf")
 }, {
 "duration": 1.0,
-"texture": ExtResource("19_5prqf")
+"texture": ExtResource("19_ridno")
 }, {
 "duration": 1.0,
-"texture": ExtResource("20_ridno")
+"texture": ExtResource("20_pn4f6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("21_pn4f6")
+"texture": ExtResource("21_bgtyi")
 }, {
 "duration": 1.0,
-"texture": ExtResource("22_bgtyi")
+"texture": ExtResource("22_rhee7")
 }, {
 "duration": 1.0,
-"texture": ExtResource("23_rhee7")
+"texture": ExtResource("23_y6gh8")
 }, {
 "duration": 1.0,
-"texture": ExtResource("24_y6gh8")
+"texture": ExtResource("24_jlwrm")
 }, {
 "duration": 1.0,
-"texture": ExtResource("25_jlwrm")
+"texture": ExtResource("25_n8t1j")
 }, {
 "duration": 1.0,
-"texture": ExtResource("26_n8t1j")
+"texture": ExtResource("26_81o0m")
 }, {
 "duration": 1.0,
-"texture": ExtResource("27_81o0m")
+"texture": ExtResource("27_q146e")
 }, {
 "duration": 1.0,
-"texture": ExtResource("28_q146e")
+"texture": ExtResource("28_xtwj2")
 }, {
 "duration": 1.0,
-"texture": ExtResource("29_xtwj2")
+"texture": ExtResource("29_l370o")
 }, {
 "duration": 1.0,
-"texture": ExtResource("30_l370o")
+"texture": ExtResource("30_fvip7")
 }, {
 "duration": 1.0,
-"texture": ExtResource("31_fvip7")
+"texture": ExtResource("31_iwpby")
 }, {
 "duration": 1.0,
-"texture": ExtResource("32_iwpby")
+"texture": ExtResource("32_73lg4")
 }, {
 "duration": 1.0,
-"texture": ExtResource("33_73lg4")
+"texture": ExtResource("33_veo0u")
 }, {
 "duration": 1.0,
-"texture": ExtResource("34_veo0u")
+"texture": ExtResource("34_gc22h")
 }, {
 "duration": 1.0,
-"texture": ExtResource("35_gc22h")
+"texture": ExtResource("35_jqu5s")
 }, {
 "duration": 1.0,
-"texture": ExtResource("36_jqu5s")
+"texture": ExtResource("36_shtie")
 }, {
 "duration": 1.0,
-"texture": ExtResource("37_shtie")
+"texture": ExtResource("37_c5ybn")
 }, {
 "duration": 1.0,
-"texture": ExtResource("38_c5ybn")
+"texture": ExtResource("38_qw6ey")
 }, {
 "duration": 1.0,
-"texture": ExtResource("39_qw6ey")
+"texture": ExtResource("39_13fjs")
 }, {
 "duration": 1.0,
-"texture": ExtResource("40_13fjs")
+"texture": ExtResource("40_u4aqe")
 }, {
 "duration": 1.0,
-"texture": ExtResource("41_u4aqe")
+"texture": ExtResource("41_1nthc")
 }, {
 "duration": 1.0,
-"texture": ExtResource("42_1nthc")
+"texture": ExtResource("42_e6yii")
 }, {
 "duration": 1.0,
-"texture": ExtResource("43_e6yii")
+"texture": ExtResource("43_rcnxr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("44_rcnxr")
+"texture": ExtResource("44_bxxi0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("45_bxxi0")
+"texture": ExtResource("45_j74nj")
 }, {
 "duration": 1.0,
-"texture": ExtResource("46_j74nj")
+"texture": ExtResource("46_e51bv")
 }, {
 "duration": 1.0,
-"texture": ExtResource("47_e51bv")
+"texture": ExtResource("47_bhvp8")
 }, {
 "duration": 1.0,
-"texture": ExtResource("48_bhvp8")
+"texture": ExtResource("48_shukk")
 }, {
 "duration": 1.0,
-"texture": ExtResource("49_shukk")
+"texture": ExtResource("49_liwtv")
 }, {
 "duration": 1.0,
-"texture": ExtResource("50_liwtv")
+"texture": ExtResource("50_ak2ok")
 }, {
 "duration": 1.0,
-"texture": ExtResource("51_ak2ok")
+"texture": ExtResource("51_rcjtn")
 }, {
 "duration": 1.0,
-"texture": ExtResource("52_rcjtn")
+"texture": ExtResource("52_oiid8")
 }, {
 "duration": 1.0,
-"texture": ExtResource("53_oiid8")
+"texture": ExtResource("53_lxxjn")
 }],
 "loop": true,
 "name": &"caminar_bobo",
@@ -2334,7 +2335,7 @@ shape = SubResource("CapsuleShape2D_3dwor")
 position = Vector2(-4, -99)
 scale = Vector2(0.87, 0.87)
 sprite_frames = SubResource("SpriteFrames_3dwor")
-animation = &"idle_bobo"
+frame_progress = 0.281103
 offset = Vector2(0, -3)
 
 [node name="HombrosPlataforma" type="StaticBody2D" parent="." index="6"]
