@@ -486,40 +486,40 @@ vertical_alignment = 1
 unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.521569)
 layout_mode = 2
-offset_left = 775.0
-offset_top = 818.0
-offset_right = 1122.0
-offset_bottom = 931.0
+offset_left = 555.0
+offset_top = 586.0
+offset_right = 803.0
+offset_bottom = 659.0
 theme = ExtResource("8_p7mtu")
 
 [node name="OptionsButton" type="Button" parent="."]
 unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.521569)
 layout_mode = 2
-offset_left = 786.0
-offset_top = 942.0
-offset_right = 1112.0
-offset_bottom = 1023.0
+offset_left = 565.0
+offset_top = 661.0
+offset_right = 795.0
+offset_bottom = 742.0
 theme = ExtResource("8_p7mtu")
 
 [node name="CreditsButton" type="Button" parent="."]
 unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.521569)
 layout_mode = 2
-offset_left = 1352.0
-offset_top = 954.0
-offset_right = 1648.0
-offset_bottom = 1038.0
+offset_left = 970.0
+offset_top = 669.0
+offset_right = 1198.0
+offset_bottom = 753.0
 theme = ExtResource("8_p7mtu")
 
 [node name="ExitButton" type="Button" parent="."]
 unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.521569)
 layout_mode = 2
-offset_left = 310.0
-offset_top = 962.0
-offset_right = 482.0
-offset_bottom = 1031.0
+offset_left = 177.0
+offset_top = 678.0
+offset_right = 349.0
+offset_bottom = 747.0
 theme = ExtResource("8_p7mtu")
 
 [node name="ContinueGameButton" type="Button" parent="."]
@@ -546,9 +546,12 @@ mouse_filter = 2
 
 [node name="CreditsContainer" type="MarginContainer" parent="."]
 unique_name_in_owner = true
-layout_mode = 0
+layout_mode = 1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
 theme_override_constants/margin_left = 16
 theme_override_constants/margin_top = 32
@@ -564,10 +567,12 @@ theme_override_constants/margin_left = 16
 theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 16
+metadata/_edit_lock_ = true
 
 [node name="FlowControl" type="Control" parent="FlowControlContainer"]
 layout_mode = 2
 mouse_filter = 2
+metadata/_edit_lock_ = true
 
 [node name="BackButton" type="Button" parent="FlowControlContainer/FlowControl"]
 unique_name_in_owner = true
@@ -618,7 +623,8 @@ metadata/_edit_lock_ = true
 [node name="Tittle-screen" type="Sprite2D" parent="."]
 modulate = Color(0.35897, 0.620271, 0.594747, 1)
 z_index = -5
-position = Vector2(960, 540)
+position = Vector2(686.222, 386)
+scale = Vector2(0.714815, 0.714815)
 texture = ExtResource("5_roicf")
 metadata/_edit_lock_ = true
 

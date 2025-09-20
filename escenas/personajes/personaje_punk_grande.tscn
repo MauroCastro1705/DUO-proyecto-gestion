@@ -2354,5 +2354,8 @@ parameters/saltar_aterrizaje_maestro/blend_position = 1.99914
 parameters/saltar_inicio_maestro/blend_position = 0
 parameters/saltar_maestro/blend_position = 0
 
+[node name="HumorDebugLabel" parent="." index="10"]
+visible = false
+
 [node name="LightOccluder2D" type="LightOccluder2D" parent="." index="15"]
 occluder = SubResource("OccluderPolygon2D_xdnrh")
