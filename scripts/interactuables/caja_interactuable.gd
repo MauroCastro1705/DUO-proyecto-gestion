@@ -102,6 +102,8 @@ func comenzar_empujar(personaje: PersonajePunkBase, direccion: float) -> bool:
 	if caja_tipo == CajaTipo.PESADA and personaje.personaje_tipo == GlobalEnumIndices.Personaje.CHICO:
 		if personaje.animation_player and personaje.animation_player.has_animation("empujar_caja_pesada"):
 			personaje.animation_player.play("empujar_caja_pesada")
+			# Flag de fail animation
+			personaje.esta_en_animacion_fail = true
 		return false  # no empujar
 	
 	esta_siendo_empujada = true

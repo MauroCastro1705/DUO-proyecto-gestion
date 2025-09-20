@@ -30,6 +30,7 @@ var esta_sobre_hombros_de: PersonajePunkBase = null
 var interaccion_potencial: ObjetoInteractuableBase = null
 var interaccion_activa: ObjetoInteractuableBase = null
 var esta_empujando: bool = false
+var esta_en_animacion_fail: bool = false
 var pin_joint_empujar: PinJoint2D = null
 
 
@@ -563,7 +564,14 @@ func _finalizar_empujar():
 		interaccion_activa.finalizar_empujar(self)
 	esta_empujando = false
 	interaccion_activa = null
-	# NEW: Remove the joint when done
+	
+	# Stop fail animation if it's playing
+	if esta_en_animacion_fail:
+		esta_en_animacion_fail = false
+		if animation_player and animation_player.is_playing():
+			animation_player.stop()
+	
+	# Remove the joint when done
 	if pin_joint_empujar and pin_joint_empujar.is_inside_tree():
 		pin_joint_empujar.queue_free()
 		pin_joint_empujar = null
