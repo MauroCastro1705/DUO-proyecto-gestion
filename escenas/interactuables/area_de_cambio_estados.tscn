@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://byubfyj5aj32f"]
+
+[ext_resource type="Script" uid="uid://cullujmmvhmvh" path="res://scripts/interactuables/area_de_cambio_de_estados.gd" id="1_0les4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sfr3i"]
+size = Vector2(178, 306)
+
+[node name="AreaDeCambio_ESTADO" type="Area2D"]
+collision_layer = 0
+collision_mask = 6
+script = ExtResource("1_0les4")
+personaje_disparador = 0
+personaje_objetivo = 1
+humor_a_aplicar = 4
+reset_estado_al_cambiar_humor = true
+switch_personaje_al_cambiar = false
+consumible = false
+esperar_ambos_personajes = false
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(89, -153)
+shape = SubResource("RectangleShape2D_sfr3i")
+debug_color = Color(0.39414, 0.564038, 0.112823, 0.027451)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

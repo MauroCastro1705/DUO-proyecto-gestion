@@ -64,3 +64,8 @@ func forzar_personaje_activo(tipo: GlobalEnumIndices.Personaje):
 		if personajes[i].personaje_tipo == tipo:
 			_switch_a_personaje_por_index(i)
 			break
+
+func switch_personaje():
+	if personajes.size() > 1 and EstadosManager.mecanica_global_habilitada(GlobalEnumIndices.MECANICA_CAMBIO_PERSONAJE):
+		var next_index = (index_personaje_actual + 1) % personajes.size()
+		_switch_a_personaje_por_index(next_index)
