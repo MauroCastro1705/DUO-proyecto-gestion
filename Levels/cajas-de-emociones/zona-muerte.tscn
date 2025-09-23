@@ -5,7 +5,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_70mhm"]
 size = Vector2(246, 114)
 
-[node name="Zona-muerte" type="Node2D"]
+[node name="Zona-muerte" type="Node2D" groups=["activable"]]
 script = ExtResource("1_70mhm")
 
 [node name="Area2D" type="Area2D" parent="."]

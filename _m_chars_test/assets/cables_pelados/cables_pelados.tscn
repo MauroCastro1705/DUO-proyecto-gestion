@@ -88,7 +88,7 @@ func _handle_light_event():
 			_set_next_countdown_time(randf_range(min_time_between_glitches, max_time_between_glitches))
 "
 
-[node name="cables_pelados" type="Node2D"]
+[node name="cables_pelados" type="Node2D" groups=["activable"]]
 
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false

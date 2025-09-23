@@ -38,7 +38,7 @@ turbulence_noise_speed_random = 0.75
 turbulence_influence_min = 0.3
 turbulence_influence_max = 1.0
 
-[node name="HumoColor" type="GPUParticles2D"]
+[node name="HumoColor" type="GPUParticles2D" groups=["activable"]]
 amount = 10
 texture = ExtResource("1_tiydk")
 lifetime = 2.08

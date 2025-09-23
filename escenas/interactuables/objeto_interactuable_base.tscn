@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://rbygrh3qbapr" path="res://scripts/interactuables/objeto_interactuable_base.gd" id="1_bmhwu"]
 [ext_resource type="Texture2D" uid="uid://csd1v7tr3if4f" path="res://assets/objetos/caja_pesada_2.png" id="2_l6jnu"]
 
-[node name="ObjetoInteractuableBase" type="RigidBody2D"]
+[node name="ObjetoInteractuableBase" type="RigidBody2D" groups=["activable"]]
 script = ExtResource("1_bmhwu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

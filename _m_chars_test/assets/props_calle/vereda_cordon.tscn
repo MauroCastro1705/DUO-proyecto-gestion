@@ -5,7 +5,7 @@
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_l5ek7"]
 polygon = PackedVector2Array(0, 0, 5, 0, 40, 9, 40, 13, 40, 158, 0, 158)
 
-[node name="VeredaCordon" type="StaticBody2D"]
+[node name="VeredaCordon" type="StaticBody2D" groups=["activable"]]
 collision_mask = 15
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]

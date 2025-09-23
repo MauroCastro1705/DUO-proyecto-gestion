@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b5cqdj3eqfkrb" path="res://_m_chars_test/assets/atlases/parada_60.tres" id="1_uojp6"]
 
-[node name="ParadaColectivo60" type="Node2D"]
+[node name="ParadaColectivo60" type="Node2D" groups=["activable"]]
 
 [node name="Parada60" type="Sprite2D" parent="."]
 position = Vector2(-30, -162)
