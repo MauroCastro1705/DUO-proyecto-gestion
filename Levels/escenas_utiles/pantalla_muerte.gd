@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 @export var escena_menu_principal: PackedScene
 @export var escena_a_reiniciar : PackedScene
 

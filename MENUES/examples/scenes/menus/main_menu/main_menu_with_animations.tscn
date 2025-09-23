@@ -440,11 +440,11 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="TitleMargin" type="MarginContainer" parent="MenuContainer"]
-visible = false
 layout_mode = 2
 theme_override_constants/margin_top = 24
 
 [node name="TitleContainer" type="Control" parent="MenuContainer/TitleMargin"]
+visible = false
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 mouse_filter = 2
@@ -486,40 +486,40 @@ vertical_alignment = 1
 unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.521569)
 layout_mode = 2
-offset_left = 555.0
-offset_top = 586.0
-offset_right = 803.0
-offset_bottom = 659.0
+offset_left = 822.0
+offset_top = 843.0
+offset_right = 1070.0
+offset_bottom = 916.0
 theme = ExtResource("8_p7mtu")
 
 [node name="OptionsButton" type="Button" parent="."]
 unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.521569)
 layout_mode = 2
-offset_left = 565.0
-offset_top = 661.0
-offset_right = 795.0
-offset_bottom = 742.0
+offset_left = 850.0
+offset_top = 941.0
+offset_right = 1080.0
+offset_bottom = 1022.0
 theme = ExtResource("8_p7mtu")
 
 [node name="CreditsButton" type="Button" parent="."]
 unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.521569)
 layout_mode = 2
-offset_left = 970.0
-offset_top = 669.0
-offset_right = 1198.0
-offset_bottom = 753.0
+offset_left = 1395.0
+offset_top = 959.0
+offset_right = 1623.0
+offset_bottom = 1043.0
 theme = ExtResource("8_p7mtu")
 
 [node name="ExitButton" type="Button" parent="."]
 unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.521569)
 layout_mode = 2
-offset_left = 177.0
-offset_top = 678.0
-offset_right = 349.0
-offset_bottom = 747.0
+offset_left = 296.0
+offset_top = 958.0
+offset_right = 468.0
+offset_bottom = 1027.0
 theme = ExtResource("8_p7mtu")
 
 [node name="ContinueGameButton" type="Button" parent="."]
@@ -527,10 +527,10 @@ unique_name_in_owner = true
 visible = false
 modulate = Color(1, 1, 1, 0.521569)
 layout_mode = 2
-offset_left = 1162.0
-offset_top = 809.0
-offset_right = 1241.0
-offset_bottom = 840.0
+offset_left = 1141.0
+offset_top = 897.0
+offset_right = 1335.0
+offset_bottom = 939.0
 theme = ExtResource("8_p7mtu")
 text = "Continue"
 
@@ -623,10 +623,9 @@ metadata/_edit_lock_ = true
 [node name="Tittle-screen" type="Sprite2D" parent="."]
 modulate = Color(0.35897, 0.620271, 0.594747, 1)
 z_index = -5
-position = Vector2(686.222, 386)
-scale = Vector2(0.714815, 0.714815)
+position = Vector2(960, 540)
+scale = Vector2(1, 1)
 texture = ExtResource("5_roicf")
-metadata/_edit_lock_ = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_o674r")

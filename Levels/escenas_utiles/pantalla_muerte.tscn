@@ -36,21 +36,32 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="PantallaMuerte" type="Node2D"]
+[node name="PantallaMuerte" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_w5xap")
 escena_menu_principal = ExtResource("2_o4eev")
 escena_a_reiniciar = ExtResource("3_ljp7a")
 metadata/_edit_lock_ = true
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -86.0
-offset_top = -41.0
-offset_right = 2094.0
-offset_bottom = 1193.0
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer"]
+layout_mode = 2
 color = Color(0.0646965, 0.0646965, 0.0646965, 1)
 metadata/_edit_lock_ = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="MarginContainer"]
 position = Vector2(823, 597)
 scale = Vector2(0.757407, 0.757407)
 sprite_frames = SubResource("SpriteFrames_mwrrm")
@@ -58,32 +69,31 @@ autoplay = "default"
 frame_progress = 0.241345
 metadata/_edit_lock_ = true
 
-[node name="FocoLuz" type="Sprite2D" parent="."]
+[node name="FocoLuz" type="Sprite2D" parent="MarginContainer"]
 position = Vector2(898, 579)
 scale = Vector2(1.07778, 1.07778)
 texture = ExtResource("8_7w8xg")
 metadata/_edit_lock_ = true
 
-[node name="BoxContainer" type="BoxContainer" parent="."]
-offset_right = 1922.0
-offset_bottom = 1080.0
+[node name="BoxContainer" type="BoxContainer" parent="MarginContainer"]
+layout_mode = 2
 alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="BoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/BoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 50
 alignment = 1
 
-[node name="izquierda" type="VBoxContainer" parent="BoxContainer/HBoxContainer"]
+[node name="izquierda" type="VBoxContainer" parent="MarginContainer/BoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 8
 alignment = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="BoxContainer/HBoxContainer/izquierda"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/BoxContainer/HBoxContainer/izquierda"]
 layout_mode = 2
 theme_override_constants/margin_bottom = 70
 
-[node name="boton_reiniciar" type="Button" parent="BoxContainer/HBoxContainer/izquierda/MarginContainer"]
+[node name="boton_reiniciar" type="Button" parent="MarginContainer/BoxContainer/HBoxContainer/izquierda/MarginContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 6
@@ -93,43 +103,43 @@ theme_override_font_sizes/font_size = 30
 theme_override_styles/hover = ExtResource("5_0gh40")
 text = "Volver a intentar"
 
-[node name="centro" type="VBoxContainer" parent="BoxContainer/HBoxContainer"]
+[node name="centro" type="VBoxContainer" parent="MarginContainer/BoxContainer/HBoxContainer"]
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="BoxContainer/HBoxContainer/centro"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/BoxContainer/HBoxContainer/centro"]
 layout_mode = 2
 theme_override_constants/margin_left = 0
 theme_override_constants/margin_top = 50
 theme_override_constants/margin_right = 0
 theme_override_constants/margin_bottom = 50
 
-[node name="titulos" type="VBoxContainer" parent="BoxContainer/HBoxContainer/centro/MarginContainer"]
+[node name="titulos" type="VBoxContainer" parent="MarginContainer/BoxContainer/HBoxContainer/centro/MarginContainer"]
 layout_mode = 2
 theme_override_constants/separation = 40
 
-[node name="titulo" type="Label" parent="BoxContainer/HBoxContainer/centro/MarginContainer/titulos"]
+[node name="titulo" type="Label" parent="MarginContainer/BoxContainer/HBoxContainer/centro/MarginContainer/titulos"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_x41yg")
 theme_override_font_sizes/font_size = 80
 text = "Perdiste"
 horizontal_alignment = 1
 
-[node name="subtitulo" type="Label" parent="BoxContainer/HBoxContainer/centro/MarginContainer/titulos"]
+[node name="subtitulo" type="Label" parent="MarginContainer/BoxContainer/HBoxContainer/centro/MarginContainer/titulos"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_x41yg")
 theme_override_font_sizes/font_size = 50
 text = "¡Evita los cables electrificados!"
 
-[node name="derrecha" type="VBoxContainer" parent="BoxContainer/HBoxContainer"]
+[node name="derrecha" type="VBoxContainer" parent="MarginContainer/BoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 8
 alignment = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="BoxContainer/HBoxContainer/derrecha"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/BoxContainer/HBoxContainer/derrecha"]
 layout_mode = 2
-theme_override_constants/margin_bottom = 70
+theme_override_constants/margin_bottom = 50
 
-[node name="boton_main_menu" type="Button" parent="BoxContainer/HBoxContainer/derrecha/MarginContainer"]
+[node name="boton_main_menu" type="Button" parent="MarginContainer/BoxContainer/HBoxContainer/derrecha/MarginContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 6
@@ -139,5 +149,5 @@ theme_override_font_sizes/font_size = 30
 theme_override_styles/hover = ExtResource("6_ljp7a")
 text = "Ir al menu"
 
-[connection signal="pressed" from="BoxContainer/HBoxContainer/izquierda/MarginContainer/boton_reiniciar" to="." method="_on_boton_reiniciar_pressed"]
-[connection signal="pressed" from="BoxContainer/HBoxContainer/derrecha/MarginContainer/boton_main_menu" to="." method="_on_boton_main_menu_pressed"]
+[connection signal="pressed" from="MarginContainer/BoxContainer/HBoxContainer/izquierda/MarginContainer/boton_reiniciar" to="." method="_on_boton_reiniciar_pressed"]
+[connection signal="pressed" from="MarginContainer/BoxContainer/HBoxContainer/derrecha/MarginContainer/boton_main_menu" to="." method="_on_boton_main_menu_pressed"]

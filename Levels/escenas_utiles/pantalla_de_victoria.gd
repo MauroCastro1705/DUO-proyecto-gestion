@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 @export var escena_menu_principal: PackedScene
 
 func _on_boton_main_menu_pressed() -> void:

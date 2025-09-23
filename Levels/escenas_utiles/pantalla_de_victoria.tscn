@@ -417,106 +417,108 @@ animations = [{
 "speed": 30.0
 }]
 
-[node name="PantallaVictoria" type="Node2D"]
+[node name="PantallaVictoria" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_e3t70")
 escena_menu_principal = ExtResource("2_6xxb4")
 metadata/_edit_lock_ = true
 
-[node name="ParallaxBackground" type="Node2D" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="ParallaxLayer" type="Parallax2D" parent="ParallaxBackground"]
+[node name="ParallaxBackground" type="Node2D" parent="MarginContainer"]
+
+[node name="ParallaxLayer" type="Parallax2D" parent="MarginContainer/ParallaxBackground"]
 scale = Vector2(1.8, 1.8)
 scroll_offset = Vector2(1869, 437)
 repeat_size = Vector2(1080, 0)
 autoscroll = Vector2(15, 0)
 repeat_times = 4
 
-[node name="FondoCieloLow" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+[node name="FondoCieloLow" type="Sprite2D" parent="MarginContainer/ParallaxBackground/ParallaxLayer"]
 position = Vector2(1105, 30.5556)
 scale = Vector2(0.84375, 1)
 texture = ExtResource("3_448r8")
 
-[node name="CervezasNEon" type="Sprite2D" parent="."]
+[node name="CervezasNEon" type="Sprite2D" parent="MarginContainer"]
 modulate = Color(1, 1, 1, 0.713726)
 position = Vector2(1712, 351)
 scale = Vector2(0.43, 0.43)
 texture = ExtResource("4_7e2kp")
 
-[node name="Parallax2D" type="Parallax2D" parent="."]
+[node name="Parallax2D" type="Parallax2D" parent="MarginContainer"]
 scale = Vector2(1.8, 1.8)
 
-[node name="FondoSkylineLow" type="Sprite2D" parent="."]
+[node name="FondoSkylineLow" type="Sprite2D" parent="MarginContainer"]
 position = Vector2(936, 459)
 scale = Vector2(1.58906, 1)
 texture = ExtResource("4_pqniq")
 
-[node name="ColorRect2" type="ColorRect" parent="."]
-offset_left = -111.0
-offset_top = 802.0
-offset_right = 1952.0
-offset_bottom = 1109.0
+[node name="ColorRect2" type="ColorRect" parent="MarginContainer"]
+custom_minimum_size = Vector2(100, 300)
+layout_mode = 2
+size_flags_vertical = 8
 color = Color(0, 0, 0, 1)
 
-[node name="boton_main_menu" type="Button" parent="."]
-offset_left = 802.0
-offset_top = 909.0
-offset_right = 1179.0
-offset_bottom = 999.0
-size_flags_horizontal = 6
-size_flags_vertical = 6
-theme_override_fonts/font = ExtResource("3_3ylpe")
-theme_override_font_sizes/font_size = 30
-text = "Volver al menu"
+[node name="Node2D" type="Node2D" parent="MarginContainer"]
 
-[node name="Node2D" type="Node2D" parent="."]
-
-[node name="Basura1" type="Sprite2D" parent="Node2D"]
+[node name="Basura1" type="Sprite2D" parent="MarginContainer/Node2D"]
 position = Vector2(250, 752)
 scale = Vector2(1.81667, 1.81667)
 texture = ExtResource("3_0nto8")
 
-[node name="Basura2" type="Sprite2D" parent="Node2D"]
+[node name="Basura2" type="Sprite2D" parent="MarginContainer/Node2D"]
 position = Vector2(1733, 773)
 scale = Vector2(1.61905, 1.61905)
 texture = ExtResource("4_6xxb4")
 
-[node name="Cables" type="Sprite2D" parent="Node2D"]
+[node name="Cables" type="Sprite2D" parent="MarginContainer/Node2D"]
 position = Vector2(446, 146)
 rotation = -0.292072
 scale = Vector2(1.52086, 1.52086)
 texture = ExtResource("5_v8mtt")
 
-[node name="Cables2" type="Sprite2D" parent="Node2D"]
+[node name="Cables2" type="Sprite2D" parent="MarginContainer/Node2D"]
 position = Vector2(1630, 103)
 rotation = 0.1869
 scale = Vector2(1.52086, 1.52086)
 texture = ExtResource("5_v8mtt")
 
-[node name="PosteDeLuz" type="Sprite2D" parent="Node2D"]
+[node name="PosteDeLuz" type="Sprite2D" parent="MarginContainer/Node2D"]
 position = Vector2(1787, 440)
 scale = Vector2(1.74211, 1.74211)
 texture = ExtResource("6_448r8")
 
-[node name="CartelPublicitario" type="Sprite2D" parent="Node2D"]
+[node name="CartelPublicitario" type="Sprite2D" parent="MarginContainer/Node2D"]
 position = Vector2(1427, 623)
 scale = Vector2(1.36038, 1)
 texture = ExtResource("7_pqniq")
 
-[node name="Basura3" type="Sprite2D" parent="Node2D"]
+[node name="Basura3" type="Sprite2D" parent="MarginContainer/Node2D"]
 position = Vector2(73, 761)
 scale = Vector2(2.09184, 2.09184)
 texture = ExtResource("8_ymbue")
 
-[node name="Parquimetro1" type="Sprite2D" parent="Node2D"]
+[node name="Parquimetro1" type="Sprite2D" parent="MarginContainer/Node2D"]
 position = Vector2(435, 621)
 scale = Vector2(2.64099, 2.64099)
 texture = ExtResource("9_7e2kp")
 
-[node name="CartelDeCalles" type="Sprite2D" parent="Node2D"]
+[node name="CartelDeCalles" type="Sprite2D" parent="MarginContainer/Node2D"]
 position = Vector2(153, 533)
 texture = ExtResource("10_riq4u")
 
-[node name="alejandra" type="AnimatedSprite2D" parent="."]
+[node name="alejandra" type="AnimatedSprite2D" parent="MarginContainer"]
 modulate = Color(0.530745, 0.511852, 0.516617, 1)
 position = Vector2(1220.25, 662.75)
 scale = Vector2(0.59668, 0.59668)
@@ -526,7 +528,7 @@ autoplay = "rockear"
 frame = 38
 frame_progress = 0.0733787
 
-[node name="bruno" type="AnimatedSprite2D" parent="."]
+[node name="bruno" type="AnimatedSprite2D" parent="MarginContainer"]
 modulate = Color(0.530745, 0.511852, 0.516617, 1)
 position = Vector2(619.958, 604.042)
 rotation = 3.14159
@@ -537,22 +539,51 @@ autoplay = "rockear"
 frame = 13
 frame_progress = 0.48568
 
-[node name="Label" type="Label" parent="."]
-offset_left = 494.0
-offset_top = 202.0
-offset_right = 1398.0
-offset_bottom = 252.0
-theme = ExtResource("110_pqniq")
-theme_type_variation = &"GraphFrameTitleLabel"
-theme_override_fonts/font = ExtResource("3_3ylpe")
-theme_override_font_sizes/font_size = 50
-text = "Primer Barrio completado!"
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="MarginContainer"]
 position = Vector2(913, 550)
 stream = ExtResource("111_ymbue")
 volume_db = 2.419
 autoplay = true
 bus = &"Music"
 
-[connection signal="pressed" from="boton_main_menu" to="." method="_on_boton_main_menu_pressed"]
+[node name="BoxContainer" type="BoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/BoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/BoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/BoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/margin_top = 120
+theme_override_constants/margin_bottom = 200
+
+[node name="titulo" type="Label" parent="MarginContainer/BoxContainer/HBoxContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme = ExtResource("110_pqniq")
+theme_type_variation = &"GraphFrameTitleLabel"
+theme_override_fonts/font = ExtResource("3_3ylpe")
+theme_override_font_sizes/font_size = 50
+text = "Primer Barrio completado!"
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/BoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_bottom = 80
+
+[node name="boton_main_menu" type="Button" parent="MarginContainer/BoxContainer/HBoxContainer/VBoxContainer/MarginContainer2"]
+custom_minimum_size = Vector2(150, 100)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+theme_override_fonts/font = ExtResource("3_3ylpe")
+theme_override_font_sizes/font_size = 30
+text = "Volver al menu"
+
+[connection signal="pressed" from="MarginContainer/BoxContainer/HBoxContainer/VBoxContainer/MarginContainer2/boton_main_menu" to="." method="_on_boton_main_menu_pressed"]
