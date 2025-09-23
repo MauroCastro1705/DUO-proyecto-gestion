@@ -56,35 +56,36 @@ scale = Vector2(0.757407, 0.757407)
 sprite_frames = SubResource("SpriteFrames_mwrrm")
 autoplay = "default"
 frame_progress = 0.241345
+metadata/_edit_lock_ = true
 
 [node name="FocoLuz" type="Sprite2D" parent="."]
-position = Vector2(950, 645)
-scale = Vector2(1.27037, 1.27037)
+position = Vector2(898, 579)
+scale = Vector2(1.07778, 1.07778)
 texture = ExtResource("8_7w8xg")
+metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="."]
-offset_left = 753.0
-offset_top = 71.0
-offset_right = 1193.0
-offset_bottom = 187.0
-theme_override_fonts/font = ExtResource("1_x41yg")
-theme_override_font_sizes/font_size = 80
-text = "Perdiste"
+[node name="BoxContainer" type="BoxContainer" parent="."]
+offset_right = 1922.0
+offset_bottom = 1080.0
+alignment = 1
 
-[node name="Label2" type="Label" parent="."]
-offset_left = 413.0
-offset_top = 193.0
-offset_right = 1506.0
-offset_bottom = 295.0
-theme_override_fonts/font = ExtResource("1_x41yg")
-theme_override_font_sizes/font_size = 50
-text = "¡Evita los cables electrificados!"
+[node name="HBoxContainer" type="HBoxContainer" parent="BoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+alignment = 1
 
-[node name="boton_reiniciar" type="Button" parent="."]
-offset_left = 150.0
-offset_top = 882.0
-offset_right = 527.0
-offset_bottom = 972.0
+[node name="izquierda" type="VBoxContainer" parent="BoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+alignment = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="BoxContainer/HBoxContainer/izquierda"]
+layout_mode = 2
+theme_override_constants/margin_bottom = 70
+
+[node name="boton_reiniciar" type="Button" parent="BoxContainer/HBoxContainer/izquierda/MarginContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
 theme_override_fonts/font = ExtResource("1_x41yg")
@@ -92,11 +93,45 @@ theme_override_font_sizes/font_size = 30
 theme_override_styles/hover = ExtResource("5_0gh40")
 text = "Volver a intentar"
 
-[node name="boton_main_menu" type="Button" parent="."]
-offset_left = 1425.0
-offset_top = 883.0
-offset_right = 1802.0
-offset_bottom = 973.0
+[node name="centro" type="VBoxContainer" parent="BoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="BoxContainer/HBoxContainer/centro"]
+layout_mode = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 50
+
+[node name="titulos" type="VBoxContainer" parent="BoxContainer/HBoxContainer/centro/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="titulo" type="Label" parent="BoxContainer/HBoxContainer/centro/MarginContainer/titulos"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_x41yg")
+theme_override_font_sizes/font_size = 80
+text = "Perdiste"
+horizontal_alignment = 1
+
+[node name="subtitulo" type="Label" parent="BoxContainer/HBoxContainer/centro/MarginContainer/titulos"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_x41yg")
+theme_override_font_sizes/font_size = 50
+text = "¡Evita los cables electrificados!"
+
+[node name="derrecha" type="VBoxContainer" parent="BoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+alignment = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="BoxContainer/HBoxContainer/derrecha"]
+layout_mode = 2
+theme_override_constants/margin_bottom = 70
+
+[node name="boton_main_menu" type="Button" parent="BoxContainer/HBoxContainer/derrecha/MarginContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
 theme_override_fonts/font = ExtResource("1_x41yg")
@@ -104,5 +139,5 @@ theme_override_font_sizes/font_size = 30
 theme_override_styles/hover = ExtResource("6_ljp7a")
 text = "Ir al menu"
 
-[connection signal="pressed" from="boton_reiniciar" to="." method="_on_boton_reiniciar_pressed"]
-[connection signal="pressed" from="boton_main_menu" to="." method="_on_boton_main_menu_pressed"]
+[connection signal="pressed" from="BoxContainer/HBoxContainer/izquierda/MarginContainer/boton_reiniciar" to="." method="_on_boton_reiniciar_pressed"]
+[connection signal="pressed" from="BoxContainer/HBoxContainer/derrecha/MarginContainer/boton_main_menu" to="." method="_on_boton_main_menu_pressed"]

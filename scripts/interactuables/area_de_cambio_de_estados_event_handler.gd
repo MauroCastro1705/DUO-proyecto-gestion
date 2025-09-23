@@ -30,7 +30,7 @@ func _find_area_nodes(node: Node, areas: Array):
 		_find_area_nodes(child, areas)
 
 
-func _on_area_cambio_de_estado_triggered(mode: int, personaje: Node2D, area: Area2D):
+func _on_area_cambio_de_estado_triggered(area: Area2D):
 	# Match por nombre de area disparada
 	match area.name:
 		"area_e_normal_post_bobo":
