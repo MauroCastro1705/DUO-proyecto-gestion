@@ -45,6 +45,22 @@ func _ready() -> void:
 		_inside = true
 		_do_activate("ready/player_inside")
 
+func _collect_targets() -> Array[Node]:
+	var out: Array[Node] = []
+	if use_groups:
+		for g in groups_to_toggle:
+			for n in get_tree().get_nodes_in_group(g):
+				out.append(n)
+	elif targets_root:
+		_walk_collect(targets_root, out)
+	return out
+
+func _walk_collect(n: Node, out: Array[Node]) -> void:
+	out.append(n)
+	for c in n.get_children():
+		_walk_collect(c, out)
+
+
 func _on_enter(body: Node) -> void:
 	if body.is_in_group("jugador"):
 		_inside = true
@@ -62,15 +78,44 @@ func _on_exit(body: Node) -> void:
 			_exit_timer.start(exit_delay)
 
 func _do_activate(origin: String) -> void:
-	var toggled := _for_each_target(func(n): _toggle_node(n, true))
-	_log_result(true, toggled, origin)
-	sector_toggled.emit(name, true, toggled.size())
+	var candidates := _collect_targets()
+	var changed: Array[Node] = []
+	for n in candidates:
+		if _toggle_node(n, true):
+			changed.append(n)
+	_log_detail(true, origin, candidates, changed)
 
 func _do_deactivate(origin: String) -> void:
 	if _inside: return
-	var toggled := _for_each_target(func(n): _toggle_node(n, false))
-	_log_result(false, toggled, origin)
-	sector_toggled.emit(name, false, toggled.size())
+	var candidates := _collect_targets()
+	var changed: Array[Node] = []
+	for n in candidates:
+		if _toggle_node(n, false):
+			changed.append(n)
+	_log_detail(false, origin, candidates, changed)
+
+func _log_detail(active: bool, origin: String, candidates: Array[Node], changed: Array[Node]) -> void:
+	if not debug_logs: return
+	var action := "[color=lightgreen]ON[/color]" if active else "[color=salmon]OFF[/color]"
+	var sample: Array[String] = []
+	var to_list: Array = changed if not debug_show_counts_only else []
+
+
+	to_list = to_list as Array[Node]
+
+	for i in range(min(to_list.size(), debug_list_limit)):
+		var n = to_list[i]
+		sample.append("%s(%s)" % [n.name, n.get_class()])
+	var tail := " … +%d más" % (to_list.size() - debug_list_limit) if to_list.size() > debug_list_limit else ""
+	var extra_sep := ""
+	var extra_txt := ""
+	if to_list.size() > 0:
+		extra_sep = " → "
+		extra_txt = ", ".join(sample) + tail
+
+	print_rich("▸ Sector [b]%s[/b] %s (%s): candidatos=%d, cambiados=%d%s%s" % [
+	name, action, origin, candidates.size(), changed.size(), extra_sep, extra_txt
+])
 
 func _for_each_target(cb: Callable) -> Array[Node]:
 	var touched: Array[Node] = []

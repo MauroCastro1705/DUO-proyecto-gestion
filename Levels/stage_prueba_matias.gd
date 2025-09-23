@@ -25,6 +25,7 @@ var _switch_mgr
 @onready var bondi_de_frente = $Parallaxes/Parallax2D_FONDO_vereda/BondiFrenteMotor
 
 func _ready() -> void:
+	_desactivar_todo()
 	# Referencias a los personajes
 	player1 = $Bruno
 	player2 = $Alejandra
@@ -152,3 +153,19 @@ func _resetar_dialogos():
 	Dialogos.mas_cables_pelados_bool = false
 	Dialogos.se_enojo_bruno_bool = false
 	
+func _desactivar_todo():
+	for node in get_tree().get_nodes_in_group("activable"):
+		# Apagar visibilidad solo si es algo dibujable
+		if node is CanvasItem:
+			node.visible = false
+		# Apagar lógica si el nodo lo permite
+		if node.has_method("set_process"):
+			node.set_process(false)
+		if node.has_method("set_physics_process"):
+			node.set_physics_process(false)
+			# Si es una luz
+		if node is Light2D:
+			node.enabled = false
+			# Si es partículas
+		if node.has_method("set_emitting"):
+			node.set_emitting(false)
