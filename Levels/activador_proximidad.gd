@@ -6,7 +6,7 @@ signal sector_toggled(sector_name: String, active: bool, count: int)
 @export_group("Objetivos")
 @export var use_groups := true
 @export var groups_to_toggle: Array[StringName] = ["activable"]
-@export var targets_root: Node = null # si no usas grupos, arrastra aquí la carpeta del sector
+@export var targets_root: Node = null
 
 @export_group("Comportamiento")
 @export var also_toggle_visibility := true
@@ -20,8 +20,10 @@ signal sector_toggled(sector_name: String, active: bool, count: int)
 @export var debug_list_limit := 12
 @export var debug_show_counts_only := false
 
-var _inside := false
 var _exit_timer: Timer
+var _players_inside := 0           # ← cuántos jugadores están dentro
+var _activated_once := false       # ← ya se activó al menos una vez
+var _inside := false               # compat con lógica existente
 
 func _ready() -> void:
 	body_entered.connect(_on_enter)
@@ -35,16 +37,51 @@ func _ready() -> void:
 	# Estado inicial
 	if start_active:
 		_do_activate("ready/start_active")
-	else:
-		_do_deactivate("ready/start_inactive")
+		_activated_once = true
 
+	# Primer frame: si ya nace un jugador dentro, contamos y activamos una sola vez
 	await get_tree().process_frame
-	# Si el player ya está dentro, activar
-	var player := get_tree().get_first_node_in_group("jugador")
-	if player and get_overlapping_bodies().has(player):
-		_inside = true
+	var already_inside := 0
+	for b in get_overlapping_bodies():
+		if b.is_in_group("jugador"):
+			already_inside += 1
+	_players_inside = already_inside
+	_inside = _players_inside > 0
+	if _inside and not _activated_once:
 		_do_activate("ready/player_inside")
+		_activated_once = true
 
+# ---------- ENTER / EXIT ----------
+func _on_enter(body: Node) -> void:
+	if not body.is_in_group("jugador"):
+		return
+	_players_inside += 1
+	_inside = true
+	# Cancelamos salida pendiente
+	if not _exit_timer.is_stopped():
+		_exit_timer.stop()
+
+	# SOLO la primera vez que entra cualquier jugador
+	if not _activated_once:
+		if enter_delay > 0.0:
+			await get_tree().create_timer(enter_delay).timeout
+		_do_activate("enter(first_time)")
+		_activated_once = true
+	# Si ya estaba activado previamente, no hacemos nada (evita re-disparos por 2º jugador)
+
+func _on_exit(body: Node) -> void:
+	if not body.is_in_group("jugador"):
+		return
+	_players_inside = max(0, _players_inside - 1)
+	_inside = _players_inside > 0
+	# Desactivar SOLO cuando sale el último jugador
+	if not _inside:
+		if exit_delay <= 0.0:
+			_do_deactivate("exit(last_player)")
+		else:
+			_exit_timer.start(exit_delay)
+
+# ---------- TOGGLE CORE ----------
 func _collect_targets() -> Array[Node]:
 	var out: Array[Node] = []
 	if use_groups:
@@ -60,23 +97,6 @@ func _walk_collect(n: Node, out: Array[Node]) -> void:
 	for c in n.get_children():
 		_walk_collect(c, out)
 
-
-func _on_enter(body: Node) -> void:
-	if body.is_in_group("jugador"):
-		_inside = true
-		if not _exit_timer.is_stopped(): _exit_timer.stop()
-		if enter_delay > 0.0:
-			await get_tree().create_timer(enter_delay).timeout
-		_do_activate("enter")
-
-func _on_exit(body: Node) -> void:
-	if body.is_in_group("jugador"):
-		_inside = false
-		if exit_delay <= 0.0:
-			_do_deactivate("exit")
-		else:
-			_exit_timer.start(exit_delay)
-
 func _do_activate(origin: String) -> void:
 	var candidates := _collect_targets()
 	var changed: Array[Node] = []
@@ -84,6 +104,7 @@ func _do_activate(origin: String) -> void:
 		if _toggle_node(n, true):
 			changed.append(n)
 	_log_detail(true, origin, candidates, changed)
+	sector_toggled.emit(name, true, changed.size())
 
 func _do_deactivate(origin: String) -> void:
 	if _inside: return
@@ -93,16 +114,15 @@ func _do_deactivate(origin: String) -> void:
 		if _toggle_node(n, false):
 			changed.append(n)
 	_log_detail(false, origin, candidates, changed)
+	sector_toggled.emit(name, false, changed.size())
 
+# ---------- LOG ----------
 func _log_detail(active: bool, origin: String, candidates: Array[Node], changed: Array[Node]) -> void:
 	if not debug_logs: return
 	var action := "[color=lightgreen]ON[/color]" if active else "[color=salmon]OFF[/color]"
 	var sample: Array[String] = []
 	var to_list: Array = changed if not debug_show_counts_only else []
-
-
 	to_list = to_list as Array[Node]
-
 	for i in range(min(to_list.size(), debug_list_limit)):
 		var n = to_list[i]
 		sample.append("%s(%s)" % [n.name, n.get_class()])
@@ -112,11 +132,11 @@ func _log_detail(active: bool, origin: String, candidates: Array[Node], changed:
 	if to_list.size() > 0:
 		extra_sep = " → "
 		extra_txt = ", ".join(sample) + tail
+	print_rich("▸ Sector [b]%s[/b] %s (%s): candidatos=%d, cambiados=%d%s%s | players_inside=%d, activated_once=%s" % [
+		name, action, origin, candidates.size(), changed.size(), extra_sep, extra_txt, _players_inside, str(_activated_once)
+	])
 
-	print_rich("▸ Sector [b]%s[/b] %s (%s): candidatos=%d, cambiados=%d%s%s" % [
-	name, action, origin, candidates.size(), changed.size(), extra_sep, extra_txt
-])
-
+# ---------- VISIT / APPLY ----------
 func _for_each_target(cb: Callable) -> Array[Node]:
 	var touched: Array[Node] = []
 	if use_groups:
@@ -159,7 +179,7 @@ func _toggle_node(n: Node, active: bool) -> bool:
 			n.set_emitting(active)
 			changed = true
 
-	# Procesos de script
+	# Procesos
 	if n.has_method("set_process"):
 		n.set_process(active); changed = true
 	if n.has_method("set_physics_process"):
@@ -177,22 +197,3 @@ func _toggle_node(n: Node, active: bool) -> bool:
 				changed = true
 
 	return changed
-
-func _log_result(active: bool, nodes: Array[Node], origin: String) -> void:
-	if not debug_logs: return
-	var sector := name
-	var action := "[color=lightgreen]ON[/color]" if active else "[color=salmon]OFF[/color]"
-	var total := nodes.size()
-
-	if debug_show_counts_only or total == 0:
-		print_rich("▸ Sector [b]%s[/b] %s (%s): %d nodos" % [sector, action, origin, total])
-		return
-
-	var sample := []
-	for i in range(min(total, debug_list_limit)):
-		var n := nodes[i]
-		sample.append("%s(%s)" % [n.name, n.get_class()])
-
-	var tail := " … +%d más" % (total - debug_list_limit) if total > debug_list_limit else ""
-	print_rich("▸ Sector [b]%s[/b] %s (%s): %d nodos → %s%s" %
-		[sector, action, origin, total, ", ".join(sample), tail])

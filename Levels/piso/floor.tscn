@@ -9,7 +9,7 @@ size = Vector2(1156, 117)
 cull_mode = 1
 polygon = PackedVector2Array(-593, -10, -593, 107, 563, 106, 563, -11)
 
-[node name="Floor" type="StaticBody2D" groups=["activable"]]
+[node name="Floor" type="StaticBody2D"]
 collision_mask = 15
 physics_material_override = SubResource("PhysicsMaterial_ij4hf")
 

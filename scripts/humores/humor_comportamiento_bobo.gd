@@ -27,10 +27,11 @@ func process_physics_mechanic(personaje: PersonajePunkBase, delta: float):
 	if dist_a_chico > personaje.distancia_minima_a_chico_cuando_grande_bobo:
 		if (hay_arista_a_der and direccion_x == 1) or (hay_arista_a_izq and direccion_x == -1):
 			personaje.velocity.x = 0
-			print("Grande en ARISTA")
+			if Engine.get_physics_frames() % 420 == 0:
+				print("Grande en ARISTA")
 		else:
 			personaje.velocity.x = direccion_x * personaje.move_speed_cuando_bobo
-			if Engine.get_physics_frames() % 120 == 0:
+			if Engine.get_physics_frames() % 420 == 0:
 				print("BOBO AI sets velocity.x to:", personaje.velocity.x, "dist_a_chico:", dist_a_chico)
 	else:
 		personaje.velocity.x = 0
