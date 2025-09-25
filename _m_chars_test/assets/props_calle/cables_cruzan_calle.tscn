@@ -40,7 +40,7 @@ func _update_light_properties():
 	point_light_2d.shadow_enabled = sombras_luz
 "
 
-[node name="CablesCruzanCalle" type="Node2D"]
+[node name="CablesCruzanCalle" type="Node2D" groups=["activable"]]
 script = SubResource("GDScript_gsc1i")
 
 [node name="ColorRect" type="ColorRect" parent="."]

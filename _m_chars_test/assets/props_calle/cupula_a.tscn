@@ -6,7 +6,7 @@
 atlas = ExtResource("1_dpte3")
 region = Rect2(10.7793, 18.4837, 129.152, 336.539)
 
-[node name="CupulaA" type="Node2D"]
+[node name="CupulaA" type="Node2D" groups=["activable"]]
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_left = -66.0

@@ -1,12 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://d0bqdj6o680ii"]
+[gd_scene load_steps=4 format=3 uid="uid://d0bqdj6o680ii"]
 
 [ext_resource type="Texture2D" uid="uid://c4t1o2vuo6s8l" path="res://_m_chars_test/assets/atlases/atlas_a_01.png" id="1_wwn2x"]
+[ext_resource type="PackedScene" uid="uid://blhbfdmwv86tg" path="res://_m_chars_test/assets/props_calle/farol_colgante_a.tscn" id="2_5m7h3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5m7h3"]
 atlas = ExtResource("1_wwn2x")
 region = Rect2(878.325, 0, 150.58, 0)
 
-[node name="poste_segba" type="Node2D"]
+[node name="poste_segba" type="Node2D" groups=["activable"]]
 
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2(-52, -723)
@@ -16,3 +17,39 @@ scale = Vector2(0.78, 0.78)
 offset_right = 150.0
 offset_bottom = 1024.0
 texture = SubResource("AtlasTexture_5m7h3")
+
+[node name="Node2D2" type="Node2D" parent="."]
+position = Vector2(1544, -722)
+scale = Vector2(0.78, 0.78)
+
+[node name="TextureRect" type="TextureRect" parent="Node2D2"]
+offset_right = 150.0
+offset_bottom = 1024.0
+texture = SubResource("AtlasTexture_5m7h3")
+
+[node name="Node2D3" type="Node2D" parent="."]
+position = Vector2(2887, -725)
+scale = Vector2(0.78, 0.78)
+
+[node name="TextureRect" type="TextureRect" parent="Node2D3"]
+offset_right = 150.0
+offset_bottom = 1024.0
+texture = SubResource("AtlasTexture_5m7h3")
+
+[node name="cables" type="Line2D" parent="."]
+position = Vector2(48, -579)
+points = PackedVector2Array(-25, -34, -20, -9, -10, 28, -4, 30, 1, -2, 310, 128, 678, 209, 1052, 226, 1211, 200, 1434, 83, 1518, 2, 1526, 23, 1549, 12, 1560, -9, 1574, -36, 1573, 17, 1575, 34, 1580, 42, 1590, 39, 1596, 15, 1598, -3, 1764, 56, 1978, 92, 2228, 112, 2477, 96, 2673, 63, 2940, -2, 2938, 16, 2933, 23, 2925, 19, 2915, -35, 2903, 9, 2887, 27, 2870, 29, 2860, 22, 2851, -8)
+width = 6.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="FarolColganteA" parent="." instance=ExtResource("2_5m7h3")]
+position = Vector2(739, -368)
+
+[node name="FarolColganteA2" parent="." instance=ExtResource("2_5m7h3")]
+position = Vector2(2162, -472)
+
+[node name="FarolColganteA3" parent="." instance=ExtResource("2_5m7h3")]
+position = Vector2(360, -451)
+
+[node name="FarolColganteA4" parent="." instance=ExtResource("2_5m7h3")]
+position = Vector2(2761, -528)

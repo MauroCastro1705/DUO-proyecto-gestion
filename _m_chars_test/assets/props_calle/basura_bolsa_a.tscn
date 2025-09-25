@@ -9,7 +9,7 @@ region = Rect2(326.239, 738.771, 145.465, 108.145)
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_6aruf"]
 polygon = PackedVector2Array(-17, -77, -22, -69, -16, -66, -20, -59, -32, -58, -43, -52, -55, -49, -61, -46, -58, -28, -63, -14, -56, 1, 56, 3, 58, -11, 46, -24, 49, -42, 33, -58, 42, -73, 24, -80, 11, -83, 5, -77)
 
-[node name="BasuraBolsaA" type="Node2D"]
+[node name="BasuraBolsaA" type="Node2D" groups=["activable"]]
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_left = -77.0

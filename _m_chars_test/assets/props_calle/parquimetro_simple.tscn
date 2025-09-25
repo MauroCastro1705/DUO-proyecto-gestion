@@ -6,7 +6,7 @@
 atlas = ExtResource("1_of0kg")
 region = Rect2(274.738, 587.264, 49.5869, 262.961)
 
-[node name="ParquimetroSimple" type="Node2D"]
+[node name="ParquimetroSimple" type="Node2D" groups=["activable"]]
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_left = -28.0
