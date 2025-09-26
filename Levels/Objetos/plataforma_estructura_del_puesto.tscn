@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://by4q4o6kc243i"]
+
+[ext_resource type="Texture2D" uid="uid://dfnb8kccccm8m" path="res://assets/PLATAFORMAS/new-sucios/Plataforma-PuestoDeDiarios/Plataforma_EstructuraDelPuesto.png" id="1_06dlh"]
+[ext_resource type="Texture2D" uid="uid://cni47svlb0rvv" path="res://assets/graffitis/Bondis-Graffiti.png" id="2_cwms8"]
+[ext_resource type="Texture2D" uid="uid://fo2vl8fiukip" path="res://assets/Foreground (SILUETAS)/Basura3.png" id="3_1m05w"]
+[ext_resource type="Texture2D" uid="uid://sd3uy2ve0ue4" path="res://assets/Foreground (SILUETAS)/Basura2.png" id="4_dd2aw"]
+
+[node name="PlataformaEstructuraDelPuesto" type="Sprite2D"]
+modulate = Color(0.6003, 0.70818, 0.87, 1)
+z_index = -30
+scale = Vector2(1.03448, 1.03448)
+texture = ExtResource("1_06dlh")
+
+[node name="Bondis-graffiti" type="Sprite2D" parent="."]
+modulate = Color(0.347041, 0.78079, 0.575908, 0.807843)
+position = Vector2(-43.1501, 0.966694)
+scale = Vector2(0.165159, 0.165159)
+texture = ExtResource("2_cwms8")
+
+[node name="Basura3" type="Sprite2D" parent="."]
+position = Vector2(148.249, 66.7002)
+scale = Vector2(0.966669, 0.966669)
+texture = ExtResource("3_1m05w")
+
+[node name="Basura2" type="Sprite2D" parent="."]
+position = Vector2(184.982, 71.5335)
+texture = ExtResource("4_dd2aw")

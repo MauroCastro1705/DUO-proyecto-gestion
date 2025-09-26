@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bm32legp6c6aq" path="res://Levels/cajas-de-emociones/zona_muerte.gd" id="1_70mhm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_70mhm"]
-size = Vector2(246, 114)
+size = Vector2(246, 54)
 
 [node name="Zona-muerte" type="Node2D" groups=["activable"]]
 script = ExtResource("1_70mhm")
@@ -13,7 +13,7 @@ collision_layer = 0
 collision_mask = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(138, 67)
+position = Vector2(138, 37)
 shape = SubResource("RectangleShape2D_70mhm")
 debug_color = Color(0.84, 0, 0.0980001, 0.0352941)
 

@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://cg25plqys0qsx"]
+
+[ext_resource type="Texture2D" uid="uid://dbkcyn7q4y2x5" path="res://_m_chars_test/assets/atlases/medidor_luz_a.tres" id="1_ghusf"]
+[ext_resource type="Texture2D" uid="uid://brp20lpjj5ppr" path="res://assets/graffitis/Ya-no-hay-bondis-6-5-2025.png" id="2_i6hk2"]
+
+[node name="muro_tapia" type="Polygon2D"]
+z_index = -32
+color = Color(0.046, 0.0484, 0.05, 1)
+polygon = PackedVector2Array(1, 37, 1, 0, 1, -144, 10, -171, 25, -171, 40, -182, 127, -183, 229, -178, 237, -180, 335, -181, 404, -179, 417, -168, 437, -165, 441, -158, 452, -156, 463, -142, 474, -124, 494, -114, 502, -103, 520, -95, 538, -83, 557, -84, 579, -90, 605, -88, 608, -72, 622, -68, 643, -39, 664, -18, 678, -13, 674, 5, 681, 40)
+metadata/_edit_group_ = true
+
+[node name="MedidorLuzA" type="Sprite2D" parent="."]
+modulate = Color(0.5428, 0.5546, 0.59, 1)
+position = Vector2(47.4951, -41.6296)
+scale = Vector2(0.49, 0.49)
+texture = ExtResource("1_ghusf")
+
+[node name="MedidorLuzA2" type="Sprite2D" parent="."]
+modulate = Color(0.5428, 0.5546, 0.59, 1)
+position = Vector2(86, -38)
+scale = Vector2(0.49, 0.49)
+texture = ExtResource("1_ghusf")
+
+[node name="Ya-no-hay-bondis-6-5-2025" type="Sprite2D" parent="."]
+modulate = Color(0.2772, 0.42, 0.42, 0.584314)
+position = Vector2(254, -77)
+rotation = -0.0733038
+scale = Vector2(0.247, 0.247)
+texture = ExtResource("2_i6hk2")

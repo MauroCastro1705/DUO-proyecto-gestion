@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1qbnimt1ck7r"]
+
+[ext_resource type="PackedScene" uid="uid://k53ay6c1cltd" path="res://_m_chars_test/assets/props_calle/segba_valla.tscn" id="1_t0mt8"]
+[ext_resource type="PackedScene" uid="uid://grdh8m8au6ev" path="res://_m_chars_test/assets/cables_pelados/cables_pelados.tscn" id="2_py0hb"]
+
+[node name="pozo_segba" type="Node2D"]
+z_index = -28
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="segba_valla" parent="." instance=ExtResource("1_t0mt8")]
+modulate = Color(0.493715, 0.639205, 0.539336, 1)
+position = Vector2(144, 7)
+scale = Vector2(0.664, 0.664)
+
+[node name="segba_valla2" parent="." instance=ExtResource("1_t0mt8")]
+modulate = Color(0.493715, 0.639205, 0.539336, 1)
+position = Vector2(-62, 7)
+scale = Vector2(0.664, 0.664)
+
+[node name="cables_pelados" parent="." instance=ExtResource("2_py0hb")]
+z_index = -10
+position = Vector2(-6, 25)
+scale = Vector2(0.27, 0.27)
+
+[node name="cables_pelados2" parent="." instance=ExtResource("2_py0hb")]
+z_index = -10
+position = Vector2(90, 34)
+rotation = -2.09439
+scale = Vector2(0.27, 0.27)
