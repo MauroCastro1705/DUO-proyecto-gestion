@@ -1,0 +1,54 @@
+[gd_scene load_steps=3 format=3 uid="uid://der4dh6hjoc8a"]
+
+[ext_resource type="PackedScene" uid="uid://tbbpbwsjlk7m" path="res://Levels/piso/floor.tscn" id="1_avd3h"]
+[ext_resource type="PackedScene" uid="uid://blhbfdmwv86tg" path="res://_m_chars_test/assets/props_calle/farol_colgante_a.tscn" id="2_p58pn"]
+
+[node name="puzzle_05" type="Node2D"]
+metadata/_edit_group_ = true
+
+[node name="Floor33" parent="." instance=ExtResource("1_avd3h")]
+z_index = 3
+position = Vector2(54, 389)
+scale = Vector2(0.065, 0.21)
+
+[node name="Floor35" parent="." instance=ExtResource("1_avd3h")]
+z_index = 3
+position = Vector2(632, 251)
+scale = Vector2(0.1, 0.21)
+
+[node name="Floor40" parent="." instance=ExtResource("1_avd3h")]
+z_index = 3
+position = Vector2(258, 252)
+scale = Vector2(0.195039, 0.21)
+
+[node name="Floor38" parent="." instance=ExtResource("1_avd3h")]
+z_index = 3
+position = Vector2(388, 47)
+rotation = 1.57079
+scale = Vector2(0.275, 0.21)
+
+[node name="Floor34" parent="." instance=ExtResource("1_avd3h")]
+z_index = 3
+position = Vector2(666.771, 510)
+scale = Vector2(0.319, 0.21)
+
+[node name="Floor36" parent="." instance=ExtResource("1_avd3h")]
+z_index = 3
+position = Vector2(1046, 510)
+scale = Vector2(0.199, 0.21)
+
+[node name="FarolColganteA8" parent="." instance=ExtResource("2_p58pn")]
+position = Vector2(167, -69)
+scale = Vector2(0.65, 0.65)
+
+[node name="FarolColganteA11" parent="." instance=ExtResource("2_p58pn")]
+position = Vector2(1925, 325)
+scale = Vector2(0.65, 0.65)
+
+[node name="FarolColganteA10" parent="." instance=ExtResource("2_p58pn")]
+position = Vector2(167, 288)
+scale = Vector2(0.65, 0.65)
+
+[node name="FarolColganteA9" parent="." instance=ExtResource("2_p58pn")]
+position = Vector2(-110, 326)
+scale = Vector2(0.65, 0.65)

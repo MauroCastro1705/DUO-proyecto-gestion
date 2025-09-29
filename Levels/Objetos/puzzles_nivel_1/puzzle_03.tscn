@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://dp8f1hhqigus0"]
+
+[ext_resource type="PackedScene" uid="uid://tbbpbwsjlk7m" path="res://Levels/piso/floor.tscn" id="1_yt3re"]
+[ext_resource type="Texture2D" uid="uid://cy3ah1luy0qnd" path="res://assets/PLATAFORMAS/new-sucios/Plataforma-Andamio/Plataforma_MaderaGrande_Andamio.png" id="2_a8skp"]
+
+[node name="puzzle_03" type="Node2D"]
+metadata/_edit_group_ = true
+
+[node name="Floor14" parent="." instance=ExtResource("1_yt3re")]
+z_index = 3
+position = Vector2(-16, 0)
+scale = Vector2(0.381, 0.21)
+
+[node name="PlataformaMaderaGrandeAndamio3" type="Sprite2D" parent="."]
+modulate = Color(0.553448, 0.500992, 0.481428, 1)
+z_index = 4
+position = Vector2(-15.3746, 5)
+scale = Vector2(1.78012, 1.02941)
+texture = ExtResource("2_a8skp")
+
+[node name="andamio_bajo" type="Node2D" parent="."]
+z_index = -29
+position = Vector2(187, -51)
+
+[node name="andamio" type="Polygon2D" parent="andamio_bajo"]
+position = Vector2(-341, 164)
+color = Color(0.054902, 0.0470588, 0.0509804, 1)
+polygon = PackedVector2Array(2.3363, -37.3967, -2.6637, -145.397, 68.3363, -140.397, 68.3363, -30.3967)
+
+[node name="Line2D" type="Line2D" parent="andamio_bajo"]
+position = Vector2(-332, 161)
+points = PackedVector2Array(-81, 7, -79, -97, 126, -102, 130, 4, 126, 26, 357, 23, 358, 11, 347, -102)
+width = 8.0
+default_color = Color(0.054902, 0.0470588, 0.0509804, 1)
+metadata/_edit_group_ = true
+
+[node name="Line2D2" type="Line2D" parent="andamio_bajo"]
+position = Vector2(-331, 161)
+points = PackedVector2Array(360, -11, 126, -75, 129, -95, 342, -92, 347, -80, 129, -14, -80, -87, -80, -99, 126, -98, 126, -82, -82, -10)
+width = 4.0
+default_color = Color(0.054902, 0.0470588, 0.0509804, 1)
