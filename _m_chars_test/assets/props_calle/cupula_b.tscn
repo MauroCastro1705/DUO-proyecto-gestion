@@ -9,5 +9,6 @@ region = Rect2(146.899, 14.1702, 124.805, 334.056)
 [node name="CupulaB" type="Node2D" groups=["activable"]]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -166)
+position = Vector2(0, -139)
+scale = Vector2(1, 1.16168)
 texture = SubResource("AtlasTexture_72ybh")

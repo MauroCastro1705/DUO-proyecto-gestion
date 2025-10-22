@@ -12,5 +12,5 @@ region = Rect2(10.7793, 18.4837, 129.152, 336.539)
 offset_left = -66.0
 offset_top = -324.0
 offset_right = 63.0
-offset_bottom = 12.0
+offset_bottom = 46.0
 texture = SubResource("AtlasTexture_dpte3")

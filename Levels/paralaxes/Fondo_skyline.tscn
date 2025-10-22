@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://45f4ms41e0gk"]
+
+[ext_resource type="Texture2D" uid="uid://c5gx0q4kwg6mg" path="res://_m_chars_test/assets/fondos/fondo_skyline_low.png" id="1_qi065"]
+
+[node name="Parallax2D_FONDO_skyline" type="Parallax2D"]
+z_index = -70
+scroll_scale = Vector2(0.25, 0.1)
+repeat_size = Vector2(1280, 0)
+repeat_times = 12
+metadata/_edit_lock_ = true
+
+[node name="FondoSkylineLow" type="Sprite2D" parent="."]
+position = Vector2(6644, 430)
+scale = Vector2(1, 1.18611)
+texture = ExtResource("1_qi065")

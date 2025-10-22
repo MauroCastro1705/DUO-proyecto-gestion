@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://dn45cy80k15vs"]
+
+[ext_resource type="Texture2D" uid="uid://ds55u6jjah6ci" path="res://assets/Background/nubes1024seamless_02png.png" id="1_esphy"]
+
+[node name="Parallax2D_FONDO_CIELO" type="Parallax2D"]
+z_index = -90
+scroll_scale = Vector2(0.11, 0.02)
+scroll_offset = Vector2(-1016, 106)
+repeat_size = Vector2(1920, 0)
+autoscroll = Vector2(-6, 0)
+repeat_times = 2
+limit_begin = Vector2(0, 0)
+limit_end = Vector2(0, 0)
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -1.0
+offset_top = -314.0
+offset_right = 1919.0
+offset_bottom = 766.0
+color = Color(0.101961, 0.117647, 0.137255, 1)
+
+[node name="Nubes1024Seamless" type="Sprite2D" parent="."]
+modulate = Color(0.462291, 0.462291, 0.462291, 1)
+position = Vector2(535, 102)
+texture = ExtResource("1_esphy")

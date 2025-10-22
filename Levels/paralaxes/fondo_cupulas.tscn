@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://bi0hdya3w536a"]
+
+[ext_resource type="PackedScene" uid="uid://drkii2rmndvxt" path="res://_m_chars_test/assets/props_calle/cupula_a.tscn" id="1_belcp"]
+[ext_resource type="PackedScene" uid="uid://w2emyqd1hhqa" path="res://_m_chars_test/assets/props_calle/cupula_b.tscn" id="2_dhakv"]
+
+[node name="Parallax2D_FONDO_cupulas" type="Parallax2D"]
+z_index = -80
+scroll_scale = Vector2(0.2, 0.07)
+repeat_size = Vector2(1186.43, 0)
+repeat_times = 12
+limit_begin = Vector2(0, 0)
+limit_end = Vector2(0, 0)
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="CupulaA" parent="." instance=ExtResource("1_belcp")]
+position = Vector2(6746, 378.705)
+scale = Vector2(0.765, 0.765)
+
+[node name="CupulaB" parent="." instance=ExtResource("2_dhakv")]
+position = Vector2(5868, 409)
+scale = Vector2(0.815, 0.815)
+
+[node name="CupulaB2" parent="." instance=ExtResource("2_dhakv")]
+modulate = Color(1, 1, 1, 0.654902)
+position = Vector2(6901, 476)
+scale = Vector2(0.797086, 0.797086)

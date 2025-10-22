@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://bnb5ejtmstcrr"]
+
+[ext_resource type="Texture2D" uid="uid://2o85iiayb163" path="res://_m_chars_test/assets/luces/teem_low.png" id="1_64okd"]
+[ext_resource type="Texture2D" uid="uid://fyk4im12vpxa" path="res://assets/Background/PumperNicNeonCartel.png" id="2_1gfaf"]
+
+[node name="Parallax2D_FONDO_neones" type="Parallax2D"]
+z_index = -75
+scroll_scale = Vector2(0.225, 0.09)
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="TeemLow" type="Sprite2D" parent="."]
+position = Vector2(1487, 282.075)
+scale = Vector2(0.775, 0.775)
+texture = ExtResource("1_64okd")
+
+[node name="PumperNicNeonCartel" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.713726)
+position = Vector2(2803, 314)
+scale = Vector2(0.34, 0.34)
+texture = ExtResource("2_1gfaf")
