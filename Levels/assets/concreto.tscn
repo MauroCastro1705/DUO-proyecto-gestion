@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://dcrajy07ndiox"]
+[gd_scene load_steps=40 format=3 uid="uid://dcrajy07ndiox"]
 
 [ext_resource type="Texture2D" uid="uid://7dinfdusy8ew" path="res://assets/Background/concreto_02_shad.png" id="1_ptu22"]
 [ext_resource type="Texture2D" uid="uid://bvysdv2apm0jb" path="res://assets/fx/luz_interior_concreto/luz_interior_cemento_00001.png" id="1_uwkpa"]
@@ -30,6 +30,8 @@
 [ext_resource type="Texture2D" uid="uid://dd847pbwx5qv1" path="res://assets/fx/luz_interior_concreto/luz_interior_cemento_00023.png" id="23_2prjr"]
 [ext_resource type="Texture2D" uid="uid://ckv3ul5wsico3" path="res://assets/fx/luz_interior_concreto/luz_interior_cemento_00024.png" id="24_ymi76"]
 [ext_resource type="Texture2D" uid="uid://dvb42hhjrhvqv" path="res://assets/Background/tuto_01.png" id="28_ad5ei"]
+[ext_resource type="PackedScene" uid="uid://c5nt14tw6kg7t" path="res://assets/particulas/humo_color.tscn" id="31_3by0f"]
+[ext_resource type="PackedScene" uid="uid://bruwn521hr0a7" path="res://Levels/Objetos/casa-concreto.tscn" id="32_e4a5s"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_05s78"]
 animations = [{
@@ -346,3 +348,11 @@ max_time_between_glitches = 0.6
 min_glitch_off_duration = 0.03
 max_glitch_off_duration = 0.08
 glitch_chance = 1.0
+
+[node name="HumoColorConcreto" parent="." instance=ExtResource("31_3by0f")]
+modulate = Color(0.579551, 0.801378, 0.854686, 1)
+position = Vector2(57.6468, -125.882)
+scale = Vector2(1.17647, 1.17647)
+
+[node name="casa" parent="." instance=ExtResource("32_e4a5s")]
+position = Vector2(501, 0)

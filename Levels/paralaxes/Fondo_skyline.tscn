@@ -11,5 +11,5 @@ metadata/_edit_lock_ = true
 
 [node name="FondoSkylineLow" type="Sprite2D" parent="."]
 position = Vector2(6644, 430)
-scale = Vector2(1, 1.18611)
+scale = Vector2(1, 1.74167)
 texture = ExtResource("1_qi065")

@@ -100,30 +100,13 @@ func _ready():
 	
 
 func _physics_process(delta: float):
-	
-	### DEBUG IA ###
-	#if personaje_tipo == GlobalEnumIndices.Personaje.GRANDE:
-		#if humor_actual_definicion:
-			#print("Grande humor actual:", humor_actual_definicion.humor)
-		#else:
-			#print("Grande humor_actual_definicion is null")
-	
-	#if personaje_tipo == GlobalEnumIndices.Personaje.GRANDE:
-		#print("Grande _es_personaje_activo:", _es_personaje_activo)
-	
-	
 	if _es_personaje_activo:
 		_procesar_input_jugador(delta)
 	else:
 		actualizar_comportamiento_ia(delta)
-	
-	
 	move_and_slide()
-	
 	_revisar_estado_hombros()
-	
 	_actualizar_animaciones()
-
 
 func _procesar_input_jugador(delta: float):
 	# --- Gravedad ---
@@ -231,18 +214,6 @@ func _actualizar_animaciones():
 	if not animation_tree:
 		print("NO hay Animation Tree")
 		return
-	
-	#if is_instance_valid(humor_actual_definicion.humor):
-		#print("index de humor actual: ", humor_actual_definicion.humor)
-	#else:
-		#print("no parece existir intancia valida de humor_actual_definicion")
-	# Valores a pasar al AnimationTree (velocity, is_on_floor) SOSPECHO QUE ESTAN MAL PASADOS
-	#animation_tree ["parameters/caminar_maestro/blend_position"] = 4
-	#animation_tree ["parameters/caminar_maestro/blend_position"] = humor_actual_definicion.humor
-	#animation_tree.set("parameters/idle_maestro/blend_position", humor_actual_definicion.humor)
-	#animation_tree.set("parameters/is_on_floor", is_on_floor())
-	#animation_tree.set("parameters/humor_actual_indice/blend_position", humor_actual_definicion.humor)
-	
 	pass
 
 # --- Funciones CENTRALES ---
@@ -289,7 +260,6 @@ func _actualizar_animaciones():
 		#
 		#if not ruta_parametro.is_empty():
 			#animation_tree.set(ruta_parametro, nuevo_humor_indice)
-
 # Temporarily replace the function in personaje_punk_base.gd
 
 #func aplicar_humor_definicion(nueva_humor_def: HumorDefinicion):
@@ -373,28 +343,6 @@ func aplicar_humor_definicion(nueva_humor_def: HumorDefinicion):
 	_update_debug_humor_label(GlobalEnumIndices.Humor.find_key(nuevo_humor_tipo))
 	print("nueva funcion recorre states ",get_root_blendspace_nodes())
 		
-		
-# This helper function is called by the function above.
-# It replaces the old _get_blend_y_eje_maestro_actual.
-#func _actualizar_todos_los_blends_de_humor(nuevo_humor_indice: int):
-	#var state_machine_node = animation_tree.get("nodes/StateMachine/node")
-	#if not state_machine_node: 
-		#printerr("Error: No se pudo encontrar el nodo 'StateMachine' en el AnimationTree.")
-		#return
-#
-	#for state_name in state_machine_node.get_travel_points():
-		#var parametro_final = ""
-		#var nodo_de_estado = animation_tree.get("nodes/" + state_name + "/node")
-		#
-		#if nodo_de_estado is AnimationNodeBlendSpace1D:
-			#parametro_final = "blend_position"
-		#elif nodo_de_estado is AnimationNodeBlendSpace2D:
-			#parametro_final = "blend_position.x" # Defaulting to x-axis
-		#
-		#if not parametro_final.is_empty():
-			#var ruta_parametro = "parameters/%s/%s" % [state_name, parametro_final]
-			#animation_tree.set(ruta_parametro, nuevo_humor_indice)
-#
 	#
 	##for param_path in all_params:
 		### The parameters for our maestro states look like: "parameters/idle_maestro/blend_position"
@@ -423,7 +371,6 @@ func _actualizar_todos_los_blends_de_humor(nuevo_humor_indice: int):
 		# The path for the .set() method is "parameters/ParameterName".
 		var ruta_parametro = "parameters/" + param_name + "/blend_position"
 		
-		# Use the .set() method. This is the official, documented way.
 		animation_tree [ruta_parametro] = nuevo_humor_float
 		
 		print("OK para nodo Blend 1d: ", param_name)
@@ -431,7 +378,6 @@ func _actualizar_todos_los_blends_de_humor(nuevo_humor_indice: int):
 	# Fuerzo el cambio inmediato. un poco desprolijo
 	animation_tree.set("active", false)
 	animation_tree.set("active", true)
-	#animation_tree.advance(00.0)
 		
 
 
@@ -492,11 +438,9 @@ func play_animation_and_wait(anim_nombre: StringName):
 
 func play_transicion_adicional(efecto_def: TransicionDefinicion):
 	if efecto_def.sound_effect:
-		# logica de SFX
-		pass
+		pass # logica de SFX
 	if efecto_def.particle_effect:
-		# logica de particulas
-		pass
+		pass # logica de particulas
 
 
 # --- Interacciones y Habilitaciones ---
@@ -534,7 +478,6 @@ func _comenzar_empujar():
 		if interaccion_potencial.comenzar_empujar(self, empuje):
 			esta_empujando = true
 			interaccion_activa = interaccion_potencial
-			# --- Joint creation logic (Godot 4.x) ---
 			if pin_joint_empujar and pin_joint_empujar.is_inside_tree():
 				pin_joint_empujar.queue_free()  # Clean up any existing joint
 			pin_joint_empujar = PinJoint2D.new()
@@ -598,7 +541,6 @@ func _al_perder_interactuable(body: Node2D):
 # llamado por PersonajesSwitchManager
 func set_active_state(is_active: bool):
 	_es_personaje_activo = is_active
-	
 	# reseteo al desactivar
 	if not is_active:
 		velocity.x = 0
@@ -608,15 +550,9 @@ func set_active_state(is_active: bool):
 		if interaccion_activa:
 			_finalizar_empujar()
 		
-	
 	if is_active:
 		_mostrar_indicador_personaje_activo()
-	
-	#modulate.a = 1.0 if is_active else 0.5 # fantasma el inactivo
-	
-	#set_physics_process(is_active) # Note: For non-active AI, this needs refinement
-	#$visible = is_active
-	# May need to toggle collision layers/masks as well
+
 
 
 # --- Mecanica HOMBROS funciones del portador ---
@@ -645,10 +581,6 @@ func _revisar_estado_hombros():
 	
 	if hombros_detector_raycast.is_colliding():
 		var collider = hombros_detector_raycast.get_collider()
-		# --- THIS IS THE MOST IMPORTANT DEBUG LINE ---
-		#print("Raycast detectado Target: %s, en Layer: %s" % [collider.name, collider.get_collision_layer()])
-		
-		# Now we check the actual type.
 		if collider is StaticBody2D and collider.name == "HombrosPlataforma":
 			if not is_instance_valid(esta_sobre_hombros_de):
 				# The collider is the StaticBody, its owner is Grande
@@ -684,7 +616,6 @@ func _revisar_estado_hombros():
 
 
 func _desmontar_hombros():
-	# ... (This function remains unchanged) ...
 	if not is_instance_valid(esta_sobre_hombros_de): return
 	if esta_sobre_hombros_de.has_method("_notificar_hombros_desmonte"):
 		esta_sobre_hombros_de._notificar_hombros_desmonte()

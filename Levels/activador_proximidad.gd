@@ -79,7 +79,8 @@ func _on_exit(body: Node) -> void:
 		if exit_delay <= 0.0:
 			_do_deactivate("exit(last_player)")
 		else:
-			_exit_timer.start(exit_delay)
+			if _exit_timer:
+				_exit_timer.start(exit_delay)
 
 # ---------- TOGGLE CORE ----------
 func _collect_targets() -> Array[Node]:
